@@ -1,97 +1,97 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
-def simular_crecimiento_cristal_hielo(radio_inicial_nm, tasa_crecimiento_nm_por_seg, tiempo_simulacion_seg):
+def simular_dispersao_agente_nucleante(
+    pos_inicial_x, pos_inicial_y,
+    vel_viento_x, vel_viento_y,
+    coef_difusion,
+    tiempo_simulacion_seg,
+    num_particulas,
+    limite_x, limite_y
+):
     """
-    Simula el crecimiento del radio de un cristal de hielo.
-    radio_inicial_nm: Radio inicial del núcleo (en nanómetros).
-    tasa_crecimiento_nm_por_seg: Tasa a la que el radio aumenta (en nm/seg).
-                                  Esta tasa es simplificada y representa la atracción de vapor de agua.
-    tiempo_simulacion_seg: Duración total de la simulación (en segundos).
+    Simula la dispersión de partículas de agente nucleante (ej. AgI) en un espacio 2D.
+    
+    pos_inicial_x, pos_inicial_y: Coordenadas iniciales del punto de liberación.
+    vel_viento_x, vel_viento_y: Componentes de la velocidad del viento (unidades/seg).
+    coef_difusion: Coeficiente de difusión (dispersión aleatoria) de las partículas.
+    tiempo_simulacion_seg: Duración total de la simulación en segundos.
+    num_particulas: Número de partículas a simular.
+    limite_x, limite_y: Dimensiones del área de simulación (e.g., tamaño de la nube).
     """
-    tiempos = np.arange(0, tiempo_simulacion_seg + 1, 1) # Pasos de 1 segundo
-    radios = []
 
-    for t in tiempos:
-        radio_actual = radio_inicial_nm + (t * tasa_crecimiento_nm_por_seg)
-        radios.append(radio_actual)
+    # Posiciones iniciales de todas las partículas
+    # np.full crea un array lleno con el valor especificado
+    pos_x = np.full(num_particulas, pos_inicial_x, dtype=float)
+    pos_y = np.full(num_particulas, pos_inicial_y, dtype=float)
 
-    return np.array(tiempos), np.array(radios)
+    # Lista para almacenar las posiciones de las partículas en cada paso de tiempo
+    historial_posiciones = []
+
+    # Bucle de simulación por pasos de tiempo
+    for t in range(tiempo_simulacion_seg + 1):
+        # Almacenar las posiciones actuales
+        historial_posiciones.append((pos_x.copy(), pos_y.copy()))
+
+        # Movimiento debido al viento (componente determinista)
+        pos_x += vel_viento_x
+        pos_y += vel_viento_y
+
+        # Movimiento debido a la difusión (componente aleatoria)
+        # np.random.normal(media, desviacion_estandar, tamaño)
+        # La desviación estándar está relacionada con el coeficiente de difusión y el tiempo
+        # sqrt(2 * D * dt) donde D es el coeficiente de difusión y dt es el paso de tiempo (aquí 1 segundo)
+        pos_x += np.random.normal(0, np.sqrt(2 * coef_difusion * 1), num_particulas)
+        pos_y += np.random.normal(0, np.sqrt(2 * coef_difusion * 1), num_particulas)
+
+        # Rebotar en los límites del área de simulación
+        # Si una partícula supera un límite, la movemos hacia adentro
+        pos_x[pos_x < 0] = 0
+        pos_x[pos_x > limite_x] = limite_x
+        pos_y[pos_y < 0] = 0
+        pos_y[pos_y > limite_y] = limite_y
+
+    return historial_posiciones, limite_x, limite_y
 
 # --- Parámetros de la simulación ---
-RADIO_INICIAL_NUCLEO_NM = 0.5  # Asumiendo un núcleo pequeño, por ejemplo, el tamaño de AgI
-# Radio crítico para que la gota caiga (aproximadamente 100 micrómetros = 100,000 nanómetros)
-RADIO_CRITICO_PARA_CAER_NM = 100 * 1000 # 100 micrómetros, un valor de referencia simplificado
+POS_INICIAL_X = 50   # Centro de la nube, en unidades arbitrarias (e.g., km)
+POS_INICIAL_Y = 50
+VEL_VIENTO_X = 2     # Velocidad del viento en eje X (e.g., km/seg)
+VEL_VIENTO_Y = 0.5   # Velocidad del viento en eje Y (e.g., km/seg)
+COEF_DIFUSION = 5    # Grado de dispersión aleatoria (unidades^2/seg)
+TIEMPO_SIMULACION_SEG = 100 # Segundos
+NUM_PARTICULAS = 500 # Número de partículas de AgI a simular
+LIMITE_X = 200       # Tamaño de la nube en X
+LIMITE_Y = 100       # Tamaño de la nube en Y
 
-TIEMPO_SIMULACION_SEG = 600 # 10 minutos para ver mejor el crecimiento
-
-# --- Ejemplos concretos de tasas de crecimiento (reflejando condiciones de la nube) ---
-# Caso 1: Nube con ALTA HUMEDAD y MAYOR SUBENFRIAMIENTO (e.g., -15°C) -> TASA DE CRECIMIENTO RÁPIDA
-TASA_CRECIMIENTO_CONDICIONES_FAVORABLES = 300 # nm/seg (valor hipotético alto)
-
-# Caso 2: Nube con BAJA HUMEDAD y MENOR SUBENFRIAMIENTO (e.g., -5°C) -> TASA DE CRECIMIENTO LENTA
-TASA_CRECIMIENTO_CONDICIONES_DESFAVORABLES = 50 # nm/seg (valor hipotético bajo)
-
-# --- Ejecutar simulaciones ---
-tiempos_favorables, radios_favorables = simular_crecimiento_cristal_hielo(
-    RADIO_INICIAL_NUCLEO_NM, TASA_CRECIMIENTO_CONDICIONES_FAVORABLES, TIEMPO_SIMULACION_SEG
+# --- Ejecutar la simulación ---
+historial_pos, lx, ly = simular_dispersao_agente_nucleante(
+    POS_INICIAL_X, POS_INICIAL_Y,
+    VEL_VIENTO_X, VEL_VIENTO_Y,
+    COEF_DIFUSION,
+    TIEMPO_SIMULACION_SEG,
+    NUM_PARTICULAS,
+    LIMITE_X, LIMITE_Y
 )
 
-tiempos_desfavorables, radios_desfavorables = simular_crecimiento_cristal_hielo(
-    RADIO_INICIAL_NUCLEO_NM, TASA_CRECIMIENTO_CONDICIONES_DESFAVORABLES, TIEMPO_SIMULACION_SEG
-)
+# --- Visualización de la simulación (Animación) ---
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.set_xlim(0, lx)
+ax.set_ylim(0, ly)
+ax.set_title('Dispersión de Agente Nucleante (AgI) en una Nube')
+ax.set_xlabel('Posición X (km)')
+ax.set_ylabel('Posición Y (km)')
+ax.grid(True)
 
-# --- Graficar resultados ---
-plt.figure(figsize=(10, 6))
-plt.plot(tiempos_favorables, radios_favorables, label=f'Condiciones Favorables (Alta humedad, Mayor subenfriamiento)', color='green')
-plt.plot(tiempos_desfavorables, radios_desfavorables, label=f'Condiciones Desfavorables (Baja humedad, Menor subenfriamiento)', color='orange', linestyle='--')
+# Crear el scatter plot inicial
+scatter = ax.scatter([], [], s=5, alpha=0.6, color='blue')
 
-# Marcar el radio crítico
-plt.axhline(y=RADIO_CRITICO_PARA_CAER_NM, color='red', linestyle=':', label=f'Radio Crítico para Caer ({RADIO_CRITICO_PARA_CAER_NM/1000:.0f} µm)')
+# Función para actualizar la animación
+def update(frame):
+    current_pos_x, current_pos_y = historial_pos[frame]
+    scatter.set_offsets(np.c_[current_pos_x, current_pos_y])
+    ax.set_title(f'Dispersión de Agente Nucleante (AgI) en una Nube\nTiempo: {frame} segundos')
+    return scatter,
 
-plt.title('Simulación del Crecimiento de un Cristal de Hielo en Diferentes Condiciones de Nube')
-plt.xlabel('Tiempo (segundos)')
-plt.ylabel('Radio del Cristal de Hielo (nanómetros)')
-plt.grid(True)
-plt.legend()
-plt.ylim(bottom=0) # Asegurar que el eje y empiece en 0
-plt.ticklabel_format(style='plain', axis='y') # Evita notación científica en el eje Y
-
-# Anotaciones
-idx_caer_favorables = np.where(radios_favorables >= RADIO_CRITICO_PARA_CAER_NM)[0]
-if len(idx_caer_favorables) > 0:
-    tiempo_caer_favorables = tiempos_favorables[idx_caer_favorables[0]]
-    plt.annotate(f'Caída esperada en: {tiempo_caer_favorables:.0f} s',
-                 xy=(tiempo_caer_favorables, RADIO_CRITICO_PARA_CAER_NM),
-                 xytext=(tiempo_caer_favorables + 50, RADIO_CRITICO_PARA_CAER_NM * 0.8),
-                 arrowprops=dict(facecolor='black', shrink=0.05),
-                 ha='left')
-else:
-    plt.annotate(f'No alcanza radio crítico en {TIEMPO_SIMULACION_SEG} s',
-                 xy=(TIEMPO_SIMULACION_SEG, radios_favorables[-1]),
-                 xytext=(TIEMPO_SIMULACION_SEG - 100, radios_favorables[-1] * 1.2),
-                 color='blue', fontsize=10)
-
-idx_caer_desfavorables = np.where(radios_desfavorables >= RADIO_CRITICO_PARA_CAER_NM)[0]
-if len(idx_caer_desfavorables) > 0:
-    tiempo_caer_desfavorables = tiempos_desfavorables[idx_caer_desfavorables[0]]
-    plt.annotate(f'Caída esperada en: {tiempo_caer_desfavorables:.0f} s',
-                 xy=(tiempo_caer_desfavorables, RADIO_CRITICO_PARA_CAER_NM),
-                 xytext=(tiempo_caer_desfavorables - 150, RADIO_CRITICO_PARA_CAER_NM * 1.1),
-                 arrowprops=dict(facecolor='black', shrink=0.05),
-                 ha='right')
-else:
-    plt.annotate(f'No alcanza radio crítico en {TIEMPO_SIMULACION_SEG} s',
-                 xy=(TIEMPO_SIMULACION_SEG, radios_desfavorables[-1]),
-                 xytext=(TIEMPO_SIMULACION_SEG - 100, radios_desfavorables[-1] * 1.2),
-                 color='red', fontsize=10)
-
-
-plt.tight_layout()
-plt.show()
-
-print("\nAnálisis de los resultados de la simulación de crecimiento de cristal de hielo:")
-print(f"Esta simulación demuestra cómo la 'tasa de crecimiento' de los cristales de hielo, influenciada por factores como la humedad y el subenfriamiento de la nube, afecta el tiempo necesario para que las partículas de hielo alcancen un tamaño suficiente para caer como precipitación.")
-print(f"Bajo 'condiciones favorables' (alta humedad, mayor subenfriamiento, representado por una tasa de crecimiento de {TASA_CRECIMIENTO_CONDICIONES_FAVORABLES} nm/s), los cristales crecen mucho más rápido y alcanzan el tamaño de caída de {RADIO_CRITICO_PARA_CAER_NM/1000:.0f} µm en un tiempo menor.")
-print(f"Por el contrario, bajo 'condiciones desfavorables' (baja humedad, menor subenfriamiento, representado por una tasa de crecimiento de {TASA_CRECIMIENTO_CONDICIONES_DESFAVORABLES} nm/s), el crecimiento es más lento, y puede que los cristales no alcancen el tamaño de caída deseado en el mismo período de tiempo.")
-print(f"Esto resalta que, incluso con la nucleación, el crecimiento del cristal es un paso crítico para que la lluvia ocurra.")
+# Crear la animación
