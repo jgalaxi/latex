@@ -16,13 +16,19 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage[hyphens]{url}        % Permite cortar URLs largas con guiones
-\usepackage[colorlinks=true]{hyperref}  % Opción estándar para enlaces
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            urlcolor=myblue,
+            citecolor=black,
+            filecolor=black]{hyperref}
+ % Opción estándar para enlaces
 \Urlmuskip=0mu plus 1mu          % Mejora el espaciado para permitir cortes
-\usepackage{hyperref}
 \usepackage{subcaption}  % en el preámbulo
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{42, 127, 179}
 
 % Encabezado
 \pagestyle{fancy}
