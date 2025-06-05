@@ -1,6 +1,8 @@
-import numpy as np
+import matplotlib
+matplotlib.use('QtAgg')
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import numpy as np
 
 def simular_dispersao_agente_nucleante(
     pos_inicial_x, pos_inicial_y,
