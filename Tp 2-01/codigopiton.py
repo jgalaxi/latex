@@ -1,62 +1,97 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def probabilidad_nucleacion_simplificada(temperatura_celsius, temp_nucleacion_minima):
+def simular_crecimiento_cristal_hielo(radio_inicial_nm, tasa_crecimiento_nm_por_seg, tiempo_simulacion_seg):
     """
-    Función simplificada para representar la "probabilidad" o "facilidad" de nucleación.
-    Se asume una probabilidad muy baja por encima de la temperatura mínima,
-    y que aumenta exponencialmente a medida que la temperatura desciende por debajo de ella,
-    llegando a 1 (o un valor alto) muy por debajo.
+    Simula el crecimiento del radio de un cristal de hielo.
+    radio_inicial_nm: Radio inicial del núcleo (en nanómetros).
+    tasa_crecimiento_nm_por_seg: Tasa a la que el radio aumenta (en nm/seg).
+                                  Esta tasa es simplificada y representa la atracción de vapor de agua.
+    tiempo_simulacion_seg: Duración total de la simulación (en segundos).
     """
-    if temperatura_celsius >= temp_nucleacion_minima:
-        return 0.01  # Muy baja probabilidad si está por encima o justo en la temp mínima
-    else:
-        # Usamos una función sigmoide inversa o algo similar para que crezca rápido
-        # Cuanto más frío, mayor la "probabilidad"
-        delta_t = temp_nucleacion_minima - temperatura_celsius
-        # Ajustamos el factor para que la curva sea significativa
-        return 1.0 - np.exp(-delta_t / 5) # El '5' controla la pendiente de la curva
+    tiempos = np.arange(0, tiempo_simulacion_seg + 1, 1) # Pasos de 1 segundo
+    radios = []
 
-# Temperaturas de nucleación dadas en el texto [cite: 12, 24]
-TEMP_HOMOGENEA = -40  # °C [cite: 12]
-TEMP_HETEROGENEA_AGI = -4  # °C (con yoduro de plata) [cite: 24]
+    for t in tiempos:
+        radio_actual = radio_inicial_nm + (t * tasa_crecimiento_nm_por_seg)
+        radios.append(radio_actual)
 
-# Rango de temperaturas a simular
-temperaturas = np.arange(-50, 5, 0.5) # Desde -50°C hasta 5°C
+    return np.array(tiempos), np.array(radios)
 
-# Calcular la "probabilidad" o "facilidad" para cada escenario
-prob_homogenea = [probabilidad_nucleacion_simplificada(T, TEMP_HOMOGENEA) for T in temperaturas]
-prob_heterogenea = [probabilidad_nucleacion_simplificada(T, TEMP_HETEROGENEA_AGI) for T in temperaturas]
+# --- Parámetros de la simulación ---
+RADIO_INICIAL_NUCLEO_NM = 0.5  # Asumiendo un núcleo pequeño, por ejemplo, el tamaño de AgI
+# Radio crítico para que la gota caiga (aproximadamente 100 micrómetros = 100,000 nanómetros)
+RADIO_CRITICO_PARA_CAER_NM = 100 * 1000 # 100 micrómetros, un valor de referencia simplificado
 
-# Graficar los resultados
+TIEMPO_SIMULACION_SEG = 600 # 10 minutos para ver mejor el crecimiento
+
+# --- Ejemplos concretos de tasas de crecimiento (reflejando condiciones de la nube) ---
+# Caso 1: Nube con ALTA HUMEDAD y MAYOR SUBENFRIAMIENTO (e.g., -15°C) -> TASA DE CRECIMIENTO RÁPIDA
+TASA_CRECIMIENTO_CONDICIONES_FAVORABLES = 300 # nm/seg (valor hipotético alto)
+
+# Caso 2: Nube con BAJA HUMEDAD y MENOR SUBENFRIAMIENTO (e.g., -5°C) -> TASA DE CRECIMIENTO LENTA
+TASA_CRECIMIENTO_CONDICIONES_DESFAVORABLES = 50 # nm/seg (valor hipotético bajo)
+
+# --- Ejecutar simulaciones ---
+tiempos_favorables, radios_favorables = simular_crecimiento_cristal_hielo(
+    RADIO_INICIAL_NUCLEO_NM, TASA_CRECIMIENTO_CONDICIONES_FAVORABLES, TIEMPO_SIMULACION_SEG
+)
+
+tiempos_desfavorables, radios_desfavorables = simular_crecimiento_cristal_hielo(
+    RADIO_INICIAL_NUCLEO_NM, TASA_CRECIMIENTO_CONDICIONES_DESFAVORABLES, TIEMPO_SIMULACION_SEG
+)
+
+# --- Graficar resultados ---
 plt.figure(figsize=(10, 6))
-plt.plot(temperaturas, prob_homogenea, label=f'Nucleación Homogénea (sin catalizador, umbral: {TEMP_HOMOGENEA}°C)', color='blue')
-plt.plot(temperaturas, prob_heterogenea, label=f'Nucleación Heterogénea (con Yoduro de Plata, umbral: {TEMP_HETEROGENEA_AGI}°C)', color='red', linestyle='--')
+plt.plot(tiempos_favorables, radios_favorables, label=f'Condiciones Favorables (Alta humedad, Mayor subenfriamiento)', color='green')
+plt.plot(tiempos_desfavorables, radios_desfavorables, label=f'Condiciones Desfavorables (Baja humedad, Menor subenfriamiento)', color='orange', linestyle='--')
 
-# Marcar las temperaturas umbral
-plt.axvline(x=TEMP_HOMOGENEA, color='blue', linestyle=':', label=f'Umbral Homogéneo ({TEMP_HOMOGENEA}°C)')
-plt.axvline(x=TEMP_HETEROGENEA_AGI, color='red', linestyle=':', label=f'Umbral Heterogéneo ({TEMP_HETEROGENEA_AGI}°C)')
+# Marcar el radio crítico
+plt.axhline(y=RADIO_CRITICO_PARA_CAER_NM, color='red', linestyle=':', label=f'Radio Crítico para Caer ({RADIO_CRITICO_PARA_CAER_NM/1000:.0f} µm)')
 
-plt.title('Facilidad de Nucleación de Hielo vs. Temperatura')
-plt.xlabel('Temperatura (°C)')
-plt.ylabel('Facilidad de Nucleación (Valor relativo)')
+plt.title('Simulación del Crecimiento de un Cristal de Hielo en Diferentes Condiciones de Nube')
+plt.xlabel('Tiempo (segundos)')
+plt.ylabel('Radio del Cristal de Hielo (nanómetros)')
 plt.grid(True)
 plt.legend()
-plt.annotate(f'Las nubes rara vez se enfrían a {TEMP_HOMOGENEA}°C[cite: 13].', xy=(TEMP_HOMOGENEA, 0.8), xytext=(TEMP_HOMOGENEA + 5, 0.9),
-             arrowprops=dict(facecolor='black', shrink=0.05),
-             ha='left', va='center')
-plt.annotate(f'El yoduro de plata reduce el subenfriamiento a {abs(TEMP_HETEROGENEA_AGI)}°C[cite: 24].', xy=(TEMP_HETEROGENEA_AGI, 0.8), xytext=(TEMP_HETEROGENEA_AGI - 15, 0.7),
-             arrowprops=dict(facecolor='black', shrink=0.05),
-             ha='right', va='center')
+plt.ylim(bottom=0) # Asegurar que el eje y empiece en 0
+plt.ticklabel_format(style='plain', axis='y') # Evita notación científica en el eje Y
+
+# Anotaciones
+idx_caer_favorables = np.where(radios_favorables >= RADIO_CRITICO_PARA_CAER_NM)[0]
+if len(idx_caer_favorables) > 0:
+    tiempo_caer_favorables = tiempos_favorables[idx_caer_favorables[0]]
+    plt.annotate(f'Caída esperada en: {tiempo_caer_favorables:.0f} s',
+                 xy=(tiempo_caer_favorables, RADIO_CRITICO_PARA_CAER_NM),
+                 xytext=(tiempo_caer_favorables + 50, RADIO_CRITICO_PARA_CAER_NM * 0.8),
+                 arrowprops=dict(facecolor='black', shrink=0.05),
+                 ha='left')
+else:
+    plt.annotate(f'No alcanza radio crítico en {TIEMPO_SIMULACION_SEG} s',
+                 xy=(TIEMPO_SIMULACION_SEG, radios_favorables[-1]),
+                 xytext=(TIEMPO_SIMULACION_SEG - 100, radios_favorables[-1] * 1.2),
+                 color='blue', fontsize=10)
+
+idx_caer_desfavorables = np.where(radios_desfavorables >= RADIO_CRITICO_PARA_CAER_NM)[0]
+if len(idx_caer_desfavorables) > 0:
+    tiempo_caer_desfavorables = tiempos_desfavorables[idx_caer_desfavorables[0]]
+    plt.annotate(f'Caída esperada en: {tiempo_caer_desfavorables:.0f} s',
+                 xy=(tiempo_caer_desfavorables, RADIO_CRITICO_PARA_CAER_NM),
+                 xytext=(tiempo_caer_desfavorables - 150, RADIO_CRITICO_PARA_CAER_NM * 1.1),
+                 arrowprops=dict(facecolor='black', shrink=0.05),
+                 ha='right')
+else:
+    plt.annotate(f'No alcanza radio crítico en {TIEMPO_SIMULACION_SEG} s',
+                 xy=(TIEMPO_SIMULACION_SEG, radios_desfavorables[-1]),
+                 xytext=(TIEMPO_SIMULACION_SEG - 100, radios_desfavorables[-1] * 1.2),
+                 color='red', fontsize=10)
+
 
 plt.tight_layout()
 plt.show()
 
-# Explicación de los resultados
-print("\nAnálisis de los resultados:")
-print(f"El gráfico muestra cómo la 'facilidad' o 'probabilidad' de nucleación de hielo cambia con la temperatura.")
-print(f"Para la nucleación homogénea (sin impurezas/catalizadores), el hielo solo se forma si la nube se enfría hasta una temperatura muy baja de {TEMP_HOMOGENEA}°C[cite: 12].")
-print(f"Las nubes rara vez alcanzan esta temperatura tan baja[cite: 13].")
-print(f"Sin embargo, con la introducción de un catalizador como el yoduro de plata, la nucleación heterogénea puede ocurrir a temperaturas mucho más cercanas a 0°C, específicamente a tan solo {TEMP_HETEROGENEA_AGI}°C de subenfriamiento[cite: 24].")
-print(f"Esto demuestra por qué el yoduro de plata es tan efectivo para provocar lluvia artificial: reduce drásticamente el requerimiento de temperatura para que las gotas de agua se congelen y formen núcleos de hielo[cite: 24].")
-print("La polución industrial, con sus impurezas, también puede catalizar la nucleación a temperaturas cercanas a 0°C, lo que explica el aumento de precipitaciones a favor del viento de las chimeneas industriales[cite: 20, 21].")
+print("\nAnálisis de los resultados de la simulación de crecimiento de cristal de hielo:")
+print(f"Esta simulación demuestra cómo la 'tasa de crecimiento' de los cristales de hielo, influenciada por factores como la humedad y el subenfriamiento de la nube, afecta el tiempo necesario para que las partículas de hielo alcancen un tamaño suficiente para caer como precipitación.")
+print(f"Bajo 'condiciones favorables' (alta humedad, mayor subenfriamiento, representado por una tasa de crecimiento de {TASA_CRECIMIENTO_CONDICIONES_FAVORABLES} nm/s), los cristales crecen mucho más rápido y alcanzan el tamaño de caída de {RADIO_CRITICO_PARA_CAER_NM/1000:.0f} µm en un tiempo menor.")
+print(f"Por el contrario, bajo 'condiciones desfavorables' (baja humedad, menor subenfriamiento, representado por una tasa de crecimiento de {TASA_CRECIMIENTO_CONDICIONES_DESFAVORABLES} nm/s), el crecimiento es más lento, y puede que los cristales no alcancen el tamaño de caída deseado en el mismo período de tiempo.")
+print(f"Esto resalta que, incluso con la nucleación, el crecimiento del cristal es un paso crítico para que la lluvia ocurra.")
