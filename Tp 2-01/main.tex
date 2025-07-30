@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{article}
+
+% Paquetes de configuración del documento
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+%Paquetes para simbologia%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[hyphens]{url}        % Permite cortar URLs largas con guiones
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            urlcolor=myblue,
+            citecolor=black,
+            filecolor=black]{hyperref}
+ % Opción estándar para enlaces
+\Urlmuskip=0mu plus 1mu          % Mejora el espaciado para permitir cortes
+\usepackage{subcaption}  % en el preámbulo
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{42, 127, 179}
+
+% Encabezado
+\pagestyle{fancy}
+\lhead{\textit{Ingeniería Mecánica}}
+\chead{\textit{Materiales Metálicos}}
+\rhead{\textit{UTN-FRVM}}
+
+\begin{document}
+\include{Portada}
+\tableofcontents
+\begin{abstract}
+    Analice, investigue e interprete el contenido relacionado con los Casos de Estudio de la bibliografía que se indica a continuación a fin de efectuar una explicación detallada de los mismos. Adicionalmente, debe emplear Matlab y Python para estar en capacidad de determinar los efectos de la variación de los requerimientos iniciales y de los valores de las propiedades en el modelo de solución adoptado. [NOTA: Anualmente la Cátedra asignará los Casos de Estudio a cada equipo de trabajo].
+    \begin{itemize}
+        \item Software. {MM-CAD-TP 1-03}.
+        \item Ashby, M.F. y Jones, D.R.H. Materiales para Ingeniería 2. 1ra Edición. 2009. Cap. 4 Casos prácticos de diagramas de fases (pp. 40-52) y Cap. 9 Casos prácticos de transformaciones de fase (pp. 107-118) {MM-CAD-0.0.0}.
+        \item 9.2 Provocar lluvia (1*) [Caso 2025] Equipo 2.
+    \end{itemize}
+\end{abstract}
+\section{Provocar precipitación.}
+Primero debemos hablar de algunos términos para entender el tema.
+
+Las nubes son suspensiones de un montón de partículas de agua que son demasiado pequeñas para caer a causa de la gravedad, para contrarrestar esto, lo que hacen es unirse en gotas más grandes para así caer, lo que conocemos como lluvia. Para que ocurra dicho fenómeno, esas gotas de lluvia deben congelarse formando núcleos de hielo que sí pueden crecer por atracción de vapor de agua, hasta que tienen un peso suficiente para ser atraídos por la gravedad.
+
+El hielo se ordena de manera hexagonal con parámetros de red $a=0,452\:nm$ y $c=0,736\:nm$. Para que estos núcleos de hielo formasen tiene que haber una temperatura de alrededor de -40 °C y unas condiciones de aire \textquotedblleft{}limpio\textquotedblright{}, a esto se le conoce como nucleación homogénea. Generalmente estas condiciones no se cumplen, lo que genera que haya más lluvia de la que debería. En este caso en particular, se vió que cuando había fábricas cerca la lluvia se genera regularmente. Lo que causó eso fue el yoduro de plata, y la explicación es que también se ordena de manera hexagonal y los parámetros de red son parecidos ($a=0,458\:nm$ y $c=0,749\: nm$) con una temperatura de nucleación cercana a 0 °C, lo que estas impurezas hacen es que al estar entre el hielo la temperatura de nucleación (heterogénea) sea de cerca de 0 °C y así llueva más de lo común.
+
+Más detalladamente, lo que ocurre en la nube al introducir el yoduro de plata es que las gotas de agua al entrar en contacto con el compuesto inorgánico empiezan a formar cristales de hielo que crecen hasta tener el tamaño suficiente y por gravedad caigan, y si esos cristales tienen forma de copo de nieve, se romperan al caer esparciendo cristales de hielo, que son el apoyo perfecto para formar nuevos nucleos de hielo y el proceso se repita una y otra vez, pero ahora sin la necesidad de impurezas de otros materiales.
+
+\section{Bajada de línea de la teoría con los lenguajes de programación pedidos.}
+Aquí nos detenemos a explicar los códigos hechos en Python y MATLAB, centrándonos en las partes que interesan con la teoría del tema dado por la cátedra:
+ 
+\subsection{Teoría base.}
+Para hacer los codigos en python nos basamos en la siguiente ecuacion que calcula la probabilidad de la formacion de nucleos y caida de los granos de hielo ya formados
+\begin{equation}
+    P(\Delta T) \propto  e^{-\frac{B}{(\Delta T)²} }
+\end{equation}
+\end{document}
