@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.10)  9 JUN 2025 11:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.10)  30 JUL 2025 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Descargas/Latex/latex-1/Tp 2-02/main.tex"
-(d:/Descargas/Latex/latex-1/Tp 2-02/main.tex
+**"d:/Descargas/Latex/latex/Tp 2-02/main.tex"
+(d:/Descargas/Latex/latex/Tp 2-02/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -709,12 +709,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62     \item C
-                alcular la resistencia a la tracción a partir de los modelo... [1
+l.61     \item �
+                �Para qué se usa el parámetro crítico del metal (Pcm) ado... [1
 
 
 ]
-<figuras/imagen 1.png, id=71, 727.71875pt x 410.53375pt>
+<figuras/imagen 1.png, id=76, 727.71875pt x 410.53375pt>
 File: figuras/imagen 1.png Graphic file (type png)
 <use figuras/imagen 1.png>
 Package pdftex.def Info: figuras/imagen 1.png  used on input line 72.
@@ -728,7 +728,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2 <./figuras/imagen 1.png (PNG copy)>]
-<figuras/imagen 2.png, id=86, 540.0175pt x 388.45125pt>
+<figuras/imagen 2.png, id=91, 540.0175pt x 388.45125pt>
 File: figuras/imagen 2.png Graphic file (type png)
 <use figuras/imagen 2.png>
 Package pdftex.def Info: figuras/imagen 2.png  used on input line 101.
@@ -742,12 +742,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [3 <./figuras/imagen 2.png (PNG copy)>]
-<figuras/imagen 3.png, id=97, 499.8675pt x 523.9575pt>
+<figuras/imagen 3.png, id=102, 499.8675pt x 523.9575pt>
 File: figuras/imagen 3.png Graphic file (type png)
 <use figuras/imagen 3.png>
 Package pdftex.def Info: figuras/imagen 3.png  used on input line 126.
 (pdftex.def)             Requested size: 227.62206pt x 238.59291pt.
+<Figuras/Del-Rio_6.png, id=103, 2047.65pt x 1533.73pt>
+File: Figuras/Del-Rio_6.png Graphic file (type png)
+<use Figuras/Del-Rio_6.png>
+Package pdftex.def Info: Figuras/Del-Rio_6.png  used on input line 137.
+(pdftex.def)             Requested size: 204.85846pt x 153.42879pt.
+<Figuras/Del-Rio_7.png, id=104, 2047.65pt x 1533.73pt>
+File: Figuras/Del-Rio_7.png Graphic file (type png)
+<use Figuras/Del-Rio_7.png>
+Package pdftex.def Info: Figuras/Del-Rio_7.png  used on input line 143.
+(pdftex.def)             Requested size: 204.85846pt x 153.42879pt.
+<Figuras/Del-Rio_8.png, id=105, 2047.65pt x 1533.73pt>
+File: Figuras/Del-Rio_8.png Graphic file (type png)
+<use Figuras/Del-Rio_8.png>
+Package pdftex.def Info: Figuras/Del-Rio_8.png  used on input line 152.
+(pdftex.def)             Requested size: 273.14923pt x 204.58733pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 161.
+(C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -755,7 +777,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4 <./figuras/imagen 3.png (PNG copy)>] (main.aux (Portada.aux)
+[4 <./figuras/imagen 3.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5 <./Figuras/Del-Rio_6.png> <./Figuras/Del-Rio_7.png> <./Figuras/Del-Rio_8.png>] (main.aux (Portada.aux)
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -764,20 +794,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DB19F09B9053005E5D381EA5B50F8ECD;2092.
+(rerunfilecheck)             Checksum: 08EB62F908B6FDC4EA1E48E24EF6B00B;2290.
  ) 
 Here is how much of TeX's memory you used:
- 34836 strings out of 474486
- 795565 string characters out of 5743755
+ 34908 strings out of 474486
+ 797282 string characters out of 5743755
  1938542 words of memory out of 5000000
- 56557 multiletter control sequences out of 15000+600000
- 573853 words of font info for 69 fonts, out of 8000000 for 9000
+ 56620 multiletter control sequences out of 15000+600000
+ 574935 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,107p,1660b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti2074.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti2488.pk><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (5 pages, 702752 bytes).
+ 99i,12n,107p,1658b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti2074.pk> <C:\Users\admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti2488.pk><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (6 pages, 7411489 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 516 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

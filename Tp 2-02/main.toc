@@ -8,4 +8,5 @@
 \contentsline {subsection}{\numberline {4.3}ORIENTACIÓN 003: Información de referencia:}{4}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}ORIENTACIÓN 004: Información de referencia:}{4}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}ORIENTACIÓN 005: Información de referencia:}{4}{subsection.4.5}%
-\contentsline {section}{\numberline {5}}{4}{section.5}%
+\contentsline {section}{\numberline {5}Datos principales.}{4}{section.5}%
+\contentsline {section}{\numberline {6}Resolución}{5}{section.6}%
