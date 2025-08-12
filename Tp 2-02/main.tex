@@ -128,6 +128,39 @@
         \end{figure}
     \end{itemize}
 
-\section{}
+\section{Datos principales.}
+Primero contamos con las imágenes de la pieza seleccionada:
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figuras/Del-Rio_6.png}
+        \caption{Acero IRAM 1020 100x.}
+        \label{100x}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figuras/Del-Rio_7.png}
+        \caption{Acero IRAM 1020 400x.}
+        \label{400x}
+    \end{subfigure}
+
+    \vspace{1em}
+
+    \begin{subfigure}[b]{0.6\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figuras/Del-Rio_8.png}
+        \caption{Acero IRAM 1020 1000x.}
+        \label{1000x}
+    \end{subfigure}
+    \caption{Micrografías hechas en el Laboratorio de Materiales.}
+\end{figure}
+En base a esto podemos obetener el diámetro promedio de los granos. Para ello empleamos "ChatGPT 4o" acompañado de un código en Python para saber cuantos granos hay en la imagen, el resultado son 613 granos como se puede ver ejecutando el código adjunto. Luego procedemos a esta herramienta nuevamente para saber cual es el diámetro promiedo de $116,84\: \mu m$.
+
+\section{Resolución}
+Usando la ecuación de Hall-Petch, resultados experimentales y el diámetro que sacamos anteriormente podemos resolver y sacar las constantes $\sigma_0$ y $k$. Los datos experimentales los obtuvimos de un estracto del trabajo de Z.G. Yang, profesor de la Universidad de Tsinghua (DOI: \url{http://dx.doi.org/10.1007/s11431-012-4876-8}).
+\begin{equation}
+    \sigma_y = \sigma_0 +k\cdot d^{-\frac{1}{2}}
+\end{equation}
 
 \end{document}
