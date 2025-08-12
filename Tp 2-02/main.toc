@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {3}Datos:}{2}{section.3}%
 \contentsline {section}{\numberline {4}ORIENTACIONES:}{3}{section.4}%
 \contentsline {subsection}{\numberline {4.1}ORIENTACIÓN 001: Emplear la técnica del paper de referencia:}{3}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}ORIENTACIÓN 002: Información de referencia.}{3}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}ORIENTACIÓN 002: Información de referencia.}{4}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}ORIENTACIÓN 003: Información de referencia:}{4}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}ORIENTACIÓN 004: Información de referencia:}{4}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}ORIENTACIÓN 005: Información de referencia:}{4}{subsection.4.5}%
