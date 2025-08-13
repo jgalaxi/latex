@@ -164,5 +164,39 @@ Usando la ecuación de Hall-Petch, resultados experimentales y el diámetro que 
 \end{equation}
 
 Los datos que tomamos para sacar las constantes son:
+\begin{itemize}
+    \item\(\sigma_1=1150\text{ MPA}\)
+    \item\(d^{-\frac{1}{2}}_1=0,75\mu m^{-\frac{1}{2}}\)
+    \item\(\sigma_2=1070\text{ MPA}\)
+    \item\(d^{-\frac{1}{2}}_2=0,55\mu m^{-\frac{1}{2}}\)
+\end{itemize}
 
+con los cuales podemos obtener las constantes al remplazar en la ecuación de Hall-Petch.
+\begin{equation}
+    \sigma_1 = \sigma_0 +k\cdot d^{-\frac{1}{2}}_1
+\end{equation}
+\begin{equation}
+    \sigma_2 = \sigma_0 +k\cdot d^{-\frac{1}{2}}_2
+\end{equation}
+\begin{equation}
+    \sigma_0 = \sigma_1 -k\cdot d^{-\frac{1}{2}}_1
+\end{equation}
+\begin{equation}
+    \sigma_2 = \sigma_1 -k\cdot d^{-\frac{1}{2}}_1 +k\cdot d^{-\frac{1}{2}}_2
+\end{equation}
+\begin{equation}
+    k = \frac{\sigma_2 - \sigma_1}{d^{-\frac{1}{2}}_2 - d^{-\frac{1}{2}}_1 }
+\end{equation}
+\begin{equation}
+    k = \frac{1070 \text{MPA} - 1150 \text{MPA}}{0,55\mu m^{-\frac{1}{2}} - 0,75\mu m^{-\frac{1}{2}}}
+\end{equation}
+\begin{equation}
+    k = 380,95 \text{MPA}\mu m^{\frac{1}{2}}
+\end{equation}
+\begin{equation}
+    \sigma_0 = 1150 \text{MPA} - 380,95 \text{MPA}\mu m^{\frac{1}{2}}\cdot 0,75\mu m^{-\frac{1}{2}}
+\end{equation}
+\begin{equation}
+    \sigma_0 = 861,2 \text{MPA} 
+\end{equation}
 \end{document}
