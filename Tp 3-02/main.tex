@@ -13,6 +13,7 @@
 \usepackage{physics}
 \usepackage{longtable}
 \usepackage{graphicx}
+\usepackage{tabularx}
 \usepackage{caption}
 \usepackage{float}
 \usepackage[hyphens]{url}        % Permite cortar URLs largas con guiones
@@ -120,15 +121,17 @@ El acero se obtiene a partir del arrabio mediante procesos de afino, donde se re
 \begin{table}[h]
     \centering
     \caption{Comparación de Hornos para Acero}
+    \resizebox{\textwidth}{!}{
     \begin{tabular}{|l|c|c|c|c|}
         \hline
         Horno & Tipo de Energía & Uso Principal & Ventajas & Desventajas \\ \hline
         Bessemer/Thomas & Aire & Afino rápido de arrabio & Económico, simple & Obsoleto, alto P/S en producto \\
         LD/BOF & Oxígeno puro & Producción masiva de acero & Alta eficiencia, bajo costo & Requiere arrabio puro \\
         Siemens-Martin & Gas/combustibles & Afino con chatarra & Flexible para aleaciones & Alto consumo energético \\
-        Arco Eléctrico & Eléctrica (arco) & Reciclaje de chatarra & Bajo impacto ambiental, preciso & Alto costo eléctrico \\
-        Inducción & Eléctrica (inducción) & Aceros especiales & Uniformidad, sin contaminación & Capacidad limitada \\ \hline
+        Arco Eléctrico & Eléctrica & Reciclaje de chatarra & Bajo impacto ambiental, preciso & Alto costo eléctrico \\
+        Inducción & Eléctrica & Aceros especiales & Uniformidad, sin contaminación & Capacidad limitada \\ \hline
     \end{tabular}
+    }
 \end{table}
 
 \section{Obtención de Fundición (Cast Iron)}
@@ -151,15 +154,15 @@ La fundición o hierro colado se obtiene remoldeando arrabio y chatarra, con alt
     \item \textbf{Características:} Contacto directo entre combustible, material y productos de combustión. Bajo costo, pero alto consumo de coque.
 \end{itemize}
 
-\begin{table}[h]
-    \centering
+\begin{table}
     \caption{Tipos de Fundición}
+     \resizebox{\textwidth}{!}{
     \begin{tabular}{|l|c|c|c|}
         \hline
         Tipo de Fundición & Contenido de C & Horno & Uso \\ \hline
         Fundición Gris & 2.5-3.75\% & Cubilote & Piezas fundidas maleables (e.g., motores) \\
         Fundición Blanca & 2-4\% & Cubilote o Inducción & Material duro para laminación o aleaciones \\ \hline
-    \end{tabular}
+    \end{tabular}}
 \end{table}
 
 Estos métodos permiten explicar la transformación del mineral de hierro en productos útiles, con hornos diseñados para eficiencia energética y control de impurezas. El alto horno es clave para arrabio, convertidores y eléctricos para acero, y cubilote para fundición.
