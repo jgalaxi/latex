@@ -69,7 +69,7 @@
     \item Imagen:
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.5\linewidth]{figuras/imagen 1.png}
+        \includegraphics[width=0.5\linewidth]{Figuras/imagen 1.png}
         \label{figura1}
     \end{figure}
     \item Composición química material 1:
@@ -158,16 +158,16 @@ Primero contamos con las imágenes de la pieza seleccionada:
 En base a esto podemos obetener el diámetro promedio de los granos. Para ello empleamos "ChatGPT 4o" acompañado de un código en Python para saber cuantos granos hay en la imagen, el resultado son 613 granos como se puede ver ejecutando el código adjunto. Luego procedemos a esta herramienta nuevamente para saber cual es el diámetro promiedo de $116,84\: \mu m$.
 
 \section{Resolución}
-Usando la ecuación de Hall-Petch, resultados experimentales y el diámetro que sacamos anteriormente podemos resolver y sacar las constantes $\sigma_0$ y $k$. Los datos experimentales los obtuvimos de un estracto del trabajo de Z.G. Yang, profesor de la Universidad de Tsinghua (DOI: \url{https://www.researchgate.net/publication/257685788_Third_generation_high_strength_low_alloy_steels_with_improved_toughness}).
+Usando la ecuación de Hall-Petch, resultados experimentales y el diámetro que sacamos anteriormente podemos resolver y sacar las constantes $\sigma_0$ y $k$. Los datos experimentales los obtuvimos de un estracto del trabajo de Z.G. Yang, profesor de la Universidad de Tsinghua (\url{https://www.researchgate.net/publication/257685788_Third_generation_high_strength_low_alloy_steels_with_improved_toughness}).
 \begin{equation}
     \sigma_y = \sigma_0 +k\cdot d^{-\frac{1}{2}}
 \end{equation}
 
 Los datos que tomamos para sacar las constantes son:
 \begin{itemize}
-    \item\(\sigma_1=1150\text{ MPA}\)
+    \item\(\sigma_1=1150\text{ MPa}\)
     \item\(d^{-\frac{1}{2}}_1=0,75\mu m^{-\frac{1}{2}}\)
-    \item\(\sigma_2=1070\text{ MPA}\)
+    \item\(\sigma_2=1070\text{ MPa}\)
     \item\(d^{-\frac{1}{2}}_2=0,55\mu m^{-\frac{1}{2}}\)
 \end{itemize}
 
@@ -175,37 +175,45 @@ con los cuales podemos obtener las constantes al remplazar en la ecuación de Ha
 \begin{equation}
     \sigma_1 = \sigma_0 +k\cdot d^{-\frac{1}{2}}_1
 \end{equation}
+
 \begin{equation}
     \sigma_2 = \sigma_0 +k\cdot d^{-\frac{1}{2}}_2
 \end{equation}
+
 \begin{equation}
     \sigma_0 = \sigma_1 -k\cdot d^{-\frac{1}{2}}_1
 \end{equation}
+
 \begin{equation}
     \sigma_2 = \sigma_1 -k\cdot d^{-\frac{1}{2}}_1 +k\cdot d^{-\frac{1}{2}}_2
 \end{equation}
+
 \begin{equation}
     k = \frac{\sigma_2 - \sigma_1}{d^{-\frac{1}{2}}_2 - d^{-\frac{1}{2}}_1 }
 \end{equation}
+
 \begin{equation}
-    k = \frac{1070 \text{MPA} - 1150 \text{MPA}}{0,55\mu m^{-\frac{1}{2}} - 0,75\mu m^{-\frac{1}{2}}}
+    k = \frac{1070\: \text{MPa} - 1150\: \text{MPa}}{0,55\: \mu m^{-\frac{1}{2}} - 0,75\: \mu m^{-\frac{1}{2}}}
 \end{equation}
+
 \begin{equation}
-    k = 380,95 \text{MPA}\mu m^{\frac{1}{2}}
+    k = 380,95\: \text{MPa}\mu m^{\frac{1}{2}} 
 \end{equation}
+
 \begin{equation}
-    \sigma_0 = 1150 \text{MPA} - 380,95 \text{MPA}\mu m^{\frac{1}{2}}\cdot 0,75\mu m^{-\frac{1}{2}}
+    \sigma_0 = 1150\: \text{MPa} - 380,95\: \text{MPa}\cdot \mu m^{\frac{1}{2}}\cdot 0,75\: \mu m^{-\frac{1}{2}}
 \end{equation}
+
 \begin{equation}
-    \sigma_0 = 861,2 \text{MPA} 
+    \sigma_0 = 861,2\: \text{MPa} 
 \end{equation}
 
 Teniendo $\sigma_0$ y $k$ ya ponemos calcular la fluencia de la pieza analizada.
 
 \begin{equation}
-    \sigma_y = 861,2 \text{MPA} + 380,95 \text{MPA}\mu m^{\frac{1}{2}}\cdot (116,84\: \mu m)^{-\frac{1}{2}}
+    \sigma_y = 861,2\: \text{MPa} + 380,95\: \text{MPa}\cdot \mu \cdot m^{\frac{1}{2}} (116,84\: \mu m)^{-\frac{1}{2}}
 \end{equation}
 \begin{equation}
-    \sigma_y = 896,44 \text{MPA} 
+    \sigma_y = 896,44\: \text{MPa} 
 \end{equation}
 \end{document}
