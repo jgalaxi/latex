@@ -218,4 +218,113 @@ Teniendo $\sigma_0$ y $k$ ya ponemos calcular la fluencia de la pieza analizada.
 \begin{equation}
     \sigma_y = 896,44\: \text{MPa} 
 \end{equation}
+
+\section{Soldabilidad de los materiales.}
+En esta parte veremos la soldabilidad de los distintos materiales de la pieza empleando las expresiones de la American Welding Society
+(AWS) y del Instituto Internacional de Soldadura (IIW).\\
+primero tenemos que saber las composiciones de los distintos materiales.
+\begin{table}[h]
+    \centering
+    \caption{Composicion de los materiales}
+    \begin{tabular}{l|c|c|c}
+        \hline
+        Composicion & material 1 & material 2 & material 3\\
+        \hline
+        C & 0,455 & 0,2 & 0,1\\
+        Mn & 0,745 & 0.45 & 1,11\\
+        Si & 0,231 & 0,225 & 0,72\\
+        Cr & 0,041 & 0 & 0\\
+        Ni & 0,037 & 0 & 0\\
+        Mo & 0,007 & 0 & 0\\
+        \hline
+    \end{tabular}
+\end{table}
+Para medir la soldabilidad de un material nos basamos en el contenido de \textbf{carbono equivalente} (\textbf{CE}), que sirve para comprender como los diferentes elementos aleantes aumentan la dureza del material, la cual puede provocar el agrientamiento en frio inducido por hidrogeno.
+Pero no todos los aleantes afectan por igual a la dureza por los cuales se crearon relaciones que igualan el impacto de cada elemento a la dureza segun su concentracion.
+Y ahora utilizamos las expresiones del AWS y el IIW las cuales son:\\
+\subsubsection{AWS:}
+\begin{equation*}
+    CE = \text{\%C} + \frac{\text{\%Mn}+\text{\%Si}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
+\end{equation*}
+La AWS establece que para un contenido de carbono equivalente superior al 0,40\% existe la posibilidad de que se produzcan grietas en la zona afectada por el calor 
+
+\subsubsection{IIW:}
+\begin{equation*}
+    CE = \text{\%C} + \frac{\text{\%Mn}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
+\end{equation*}
+Para medir la soldabilidad la IIW establece un rango de valores de \textbf{carbono equivalente} los cuales son:
+
+\begin{table}[h]
+    \centering
+    \caption{Rango de valores de CE}
+    \begin{tabular}{l|c}
+        \hline
+        \textbf{Carbon equivalent (CE)} & \textbf{Soldabilidad} \\ \hline
+        Hasta 0.35 & Excelente \\ \hline
+        0,36--0,40 & Muy bien. \\ \hline
+        0,41--0,45 & Bien. \\ \hline
+        0,46--0,50 & Feria \\ \hline
+        Más de 0,50 & Pobre \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\subsection{Soldabilidad de los materiales metodo AWS:}
+\subsubsection{Material 1}
+\begin{equation*}
+    CE = 0,455 + \frac{0,745 + 0,231}{6} + \frac{0,041 + 0,007}{5} + \frac{0,037}{15}
+\end{equation*}
+\begin{equation*}
+    CE = 0,63
+\end{equation*}
+Teniendo esa cantidad de carbono equivalente existe la posibilidad que se formen grietas en las zonas afectadas por el calor.
+
+\subsubsection{Material 2}
+\begin{equation*}
+    CE = 0,2 + \frac{0,45 + 0,225}{6} 
+\end{equation*}
+\begin{equation*}
+    CE = 0,3125
+\end{equation*}
+Teniendo en cuenta la cantidad de carbono equivalente el acero 1020 tiene buena sol
+
+\subsubsection{Material 3}
+\begin{equation*}
+    CE = 0,1 + \frac{1,11 + 0,72}{6} 
+\end{equation*}
+\begin{equation*}
+    CE = 0,405
+\end{equation*}
+
+
+\subsection{Soldabilidad de los materiales metodo IIW:}
+\subsubsection{Material 1}
+\begin{equation*}
+    CE = 0,455 + \frac{0,745}{6} + \frac{0,041 + 0,007}{5} + \frac{0,037}{15}
+\end{equation*}
+\begin{equation*}
+    CE = 0,59
+\end{equation*}
+
+\subsubsection{Material 2}
+\begin{equation*}
+    CE = 0,2 + \frac{0,45}{6} 
+\end{equation*}
+\begin{equation*}
+    CE = 0,275
+\end{equation*}
+
+\subsubsection{Material 3}
+\begin{equation*}
+    CE = 0,1 + \frac{1,11}{6} 
+\end{equation*}
+\begin{equation*}
+    CE = 0,285
+\end{equation*}
+
+\subsection{conclucion}
+Teniendo en cuenta el metodo del AWS el material 1 y 2 tienen una soldabilidad baja y pueden llegar a aparecer grietas y presentar fragilidad en las zonas afectadas por el calor.
+Y para el material 2 la soldabilidad es mejor que los anteriores al tener un carbono equivalente dentro del limite aceptable.
+
+Y segun el metodo del IIW el material 1 tiene una soldabilidad muy pobre y los materiales 2 y 3 tienen una muy buena soldabilidad.
 \end{document}
