@@ -51,8 +51,87 @@
     \end{itemize}
 \end{abstract}
 
-\section{Propósito y Fundamento del Caso de Estudio.}
+\section{Propósito y Fundamento del Caso de Estudio}
+Este caso práctico tiene como finalidad comprender cómo los fenómenos metalúrgicos y mecánicos influyen en la falla de componentes de servicio a alta temperatura. 
+Se estudiará la rotura de un tubo de caldera de acero al carbono sometido a presión interna y temperaturas elevadas, con el fin de relacionar la microestructura obtenida, las propiedades mecánicas y el mecanismo de fallo observado.
 
+\section{Análisis Metalúrgico del Caso}
+La tubería estudiada estaba fabricada en un acero de bajo carbono (Fe-0,18\%C, 0,45\%Mn, 0,20\%Si).
+Bajo condiciones normales debería presentar microestructura de ferrita + perlita (dureza $\approx 1.5$ GPa).
+El análisis del tubo roto evidenció:
+\begin{itemize}
+    \item En el borde de la rotura: dureza $\approx$ 4 GPa $\rightarrow$ martensita (producto de enfriamiento muy rápido).
+    \item En el interior: dureza $\approx$ 2.2 GPa $\rightarrow$ bainita (enfriamiento intermedio).
+\end{itemize}
+Esto indica que la tubería se sobrecalentó por encima de la temperatura crítica $A_3 \approx 870^{\circ}$C y sufrió un enfriamiento brusco durante la explosión, generando una microestructura templada.
+
+Las posibles causas del sobrecalentamiento local fueron:
+\begin{enumerate}
+    \item Formación de depósitos de incrustaciones (agua dura) en la pared interna, actuando como aislante térmico.
+    \item Alteraciones en la convección natural, generando una película de vapor seco que impidió el enfriamiento.
+\end{enumerate}
+
+\section{Modelo Matemático Adoptado}
+El modelo de fluencia utilizado se basa en la ecuación simplificada:
+
+\begin{equation}
+    t_r = A \, \sigma^{-n} \, e^{\frac{Q}{R T}}
+\end{equation}
+
+donde:
+\begin{itemize}
+    \item $t_r$ = tiempo a rotura (s).
+    \item $\sigma$ = tensión circunferencial de la tubería (MPa).
+    \item $T$ = temperatura absoluta (K).
+    \item $R = 8.314 \, J/mol\cdot K$.
+    \item $Q = 240 \, kJ/mol$ (energía de activación).
+    \item $n = 4$ (exponente de tensión).
+    \item $A$ = constante calibrada para cumplir que a 900 °C y $\sigma=50$ MPa $\rightarrow$ $t_r \approx 15$ min.
+\end{itemize}
+
+La tensión circunferencial se estima como:
+
+\begin{equation}
+    \sigma = \frac{p \, r}{t}
+\end{equation}
+
+donde $p$ es la presión interna, $r$ el radio del tubo y $t$ el espesor de pared.
+
+\section{Resultados de Simulación}
+Se realizaron simulaciones en \textbf{Python} y \textbf{MATLAB} utilizando los scripts \texttt{creep\_model\_full.py} y \texttt{creep\_model\_full.m}.
+Se generaron las siguientes gráficas:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{tr_vs_T.png}
+    \caption{Tiempo a rotura en función de la temperatura para distintas tensiones.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{tr_vs_sigma.png}
+    \caption{Tiempo a rotura en función de la tensión circunferencial a distintas temperaturas.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{sens_espesor.png}
+    \caption{Sensibilidad del tiempo a rotura con respecto al espesor de pared.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{sens_presion.png}
+    \caption{Sensibilidad del tiempo a rotura con respecto a la presión interna.}
+\end{figure}
+
+\section{Conclusiones}
+\begin{itemize}
+    \item La falla del tubo se debió a un episodio de sobrecalentamiento local que llevó al acero a superar los 870 °C, transformándose a austenita.
+    \item La brusca liberación de presión provocó un enfriamiento rápido, generando martensita y bainita en la zona afectada.
+    \item El modelo de fluencia muestra que a 900 °C y $\sigma \approx 50$ MPa, el tiempo a rotura esperado es de minutos, coherente con el caso real.
+    \item Variaciones en espesor y presión modifican fuertemente la vida en servicio, evidenciando la importancia del diseño seguro.
+\end{itemize}
 
 \vfill
 \textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo.}}
