@@ -4,9 +4,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{siunitx}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{fancyhdr}
 %Paquetes para simbologia%
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -31,6 +33,7 @@
 \usepackage{xcolor}
 \definecolor{myblue}{RGB}{42, 127, 179}
 
+
 % Encabezado
 \pagestyle{fancy}
 \lhead{\textit{Ingeniería Mecánica}}
@@ -52,24 +55,26 @@
 \end{abstract}
 
 \section{Introducción.}
-Antes de comenzar a explicar como se obtiene el arrabio, el acero, la fundición y qué hornos están asociados a la obtención de cada uno, primero vamos a defir una serie de términos que son importantes para entender de que estamos hablando. También cabe destacar que solo nos concentraremos en la obtención de los tres materiales mencionados, sus materias primas y la descripción de los hornos correspondientes a la fabricación, dejando de lado cuestiones que tienen que ver con la minería y la obtención de la materia prima.
+Antes de comenzar a explicar cómo se obtiene el arrabio, el acero, la fundición y qué hornos están asociados con la obtención de cada uno, primero vamos a definir una serie de términos que son importantes para entender de que estamos hablando. También cabe destacar que sólo nos concentraremos en la obtención de los tres materiales mencionados, sus materias primas y la descripción de los hornos correspondientes a la fabricación, dejando de lado cuestiones que tienen que ver con la minería y la obtención de la materia prima.
 
 \subsection{Arrabio.}
 \begin{itemize}
     \item \textbf{¿Qué es?}
 \end{itemize}
 
-El arrabio es el producto metálico intermedio que se obtiene de la reducción de los minerales de hierro en el alto horno. Es una aleación de hierro con un alto contenido de carbono, normalmente entre 3\% y 4,5\%, y que además incluye impurezas como silicio, fósforo, manganeso y azufre. El nombre “arrabio” proviene del antiguo término “hierro bruto”, ya que se trata de un material inicial que no tiene aplicación directa salvo como materia prima para fabricar acero o fundición.
+El arrabio es el producto metálico intermedio que se obtiene de la reducción de los minerales de hierro en el alto horno (En la sección \hyperref[asociados]{2.2} se explicará más a detalle). Es una aleación de hierro con un alto contenido de carbono, normalmente entre 3\% y 4,5\%, y que además incluye impurezas como silicio, fósforo, manganeso y azufre. El nombre “arrabio” proviene del antiguo término “hierro bruto”, ya que se trata de un material inicial que no tiene aplicación directa salvo como materia prima para fabricar acero o fundición.
 
 \begin{figure}[H]    
     \centering         
     \includegraphics[width=0.7\textwidth]{Inagenes para latex/1 Arrabio.jpg}
+    \caption{Arrabio encontrado en la naturaleza}
 \end{figure}
+
 \begin{itemize}
     \item \textbf{Características y propiedades:}
 \end{itemize}
 
-El arrabio se presenta en estado líquido a la salida del alto horno, con temperaturas entre 1250 °C y 1450 °C. Debido a su elevado contenido de carbono y a la presencia de impurezas, es un material duro pero muy frágil, con baja tenacidad y escasa resistencia a los esfuerzos de tracción. Existen dos tipos principales: el arrabio gris, en el cual el carbono precipita en forma de grafito, lo que le otorga una apariencia grisácea y algo más de facilidad de mecanizado; y el arrabio blanco, donde el carbono está combinado químicamente en forma de cementita $Fe_3C$, lo que lo vuelve más duro y quebradizo.
+El arrabio se presenta en estado líquido a la salida del alto horno, con temperaturas $\approx$  . Debido a su elevado contenido de carbono y a la presencia de impurezas, es un material duro pero muy frágil, con baja tenacidad y escasa resistencia a los esfuerzos de tracción. Existen dos tipos principales: el arrabio gris, en el cual el carbono precipita en forma de grafito, lo que le otorga una apariencia grisácea y algo más de facilidad de mecanizado; y el arrabio blanco, donde el carbono está combinado químicamente en forma de cementita $Fe_3C$, lo que lo vuelve más duro y quebradizo.
 
 \begin{itemize}
     \item \textbf{Usos:}
@@ -80,7 +85,7 @@ El arrabio no se utiliza de manera directa en aplicaciones industriales, sino qu
 \subsection{Fundición.}
 
 \begin{itemize}
-    \item \textbf{Qué es:}
+    \item \textbf{¿Qué es?}
 \end{itemize}
 
  La fundición es una aleación de hierro y carbono cuyo contenido de carbono se sitúa entre 2,1\% y 4,5\%. Se obtiene a partir de la refundición del arrabio, generalmente en hornos como el cubilote, el crisol o el arco eléctrico. A diferencia del acero, la fundición conserva un mayor porcentaje de carbono, lo que modifica sus propiedades y determina que sea un material excelente para ser colado en moldes, de ahí su nombre.
@@ -215,7 +220,7 @@ Otros procesos alternativos como: Corex, Finex, HIsmelt. Estos producen arrabio 
     \includegraphics[width=0.9\textwidth]{Inagenes para latex/obtencion de arrabio.png}
 \end{figure}
 
-\subsection{Método Conseptual.}
+\subsection{Método Conceptual.}
 
 \begin{itemize}
     \item \textbf{Carga:} mineral de hierro (2 t), coque (1 t), caliza (0.5 t) y aire (4 t).
@@ -224,10 +229,11 @@ Otros procesos alternativos como: Corex, Finex, HIsmelt. Estos producen arrabio 
     \item \textbf{Eficiencia:} se mejora con aire precalentado (1030°C) y enriquecido en oxígeno, reduciendo pérdidas térmicas.
 \end{itemize}
 
-\subsection{Horno Asociado.}
+\subsection{Horno Asociado.} \label{asociados}
+
+\textbf{Tipo: Alto Horno (Blast Furnace).}
 
 \begin{itemize}
-    \item \textbf{Tipo: Alto Horno (Blast Furnace).}
     \item \textbf{Uso:} Reducción de minerales de hierro en estado sólido para producir arrabio líquido. Es un horno continuo de gran capacidad (hasta 5000 t/día), con estructura cilíndrica refractaria, toberas para inyección de aire caliente y regeneradores para precalentar el aire.
     \item \textbf{Características:} Es una estructura monumental de forma cilíndrica, con una altura de entre 20 y 40 metros, revestida con ladrillos refractarios capaces de soportar temperaturas superiores a 1600 °, funciona a contracorriente (carga por arriba, gases por abajo). Asociado a procesos como sinterización de minerales y producción de coque. Su funcionamiento es continuo, lo que significa que puede operar durante años sin interrupciones, recibiendo constantemente mineral de hierro, coque y caliza.
 \end{itemize}
@@ -287,7 +293,7 @@ Por lo tanto, la obtención de fundición implica no solo la simple fusión del 
 
 \begin{itemize}
     \item \textbf{Uso:} Se utiliza tanto en fundiciones especiales como en la producción de aceros aleados e inoxidables.
-    \item \textbf{Características:} Su principio de funcionamiento se basa en la generación de un arco eléctrico entre uno o varios electrodos de grafito y la carga metálica. Este arco produce temperaturas extremadamente altas (más de 3000°C en la zona del arco), suficientes para fundir chatarra, arrabio sólido, hierro esponja (DRI) o una combinación de ellos.
+    \item \textbf{Características:} Su principio de funcionamiento se basa en la generación de un arco eléctrico entre uno o varios electrodos de grafito y la carga metálica. Este arco produce temperaturas extremadamente altas (más de 3000 °C en la zona del arco), suficientes para fundir chatarra, arrabio sólido, hierro esponja (DRI) o una combinación de ellos.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -372,7 +378,7 @@ Un convertidor es un gran recipiente en forma de pera, revestido interiormente d
     El equipo está formado por un crisol refractario rodeado por una bobina de cobre refrigerada por agua. Al hacer pasar una corriente alterna de alta frecuencia por la bobina, se genera un campo electromagnético variable que induce corrientes parásitas (corrientes de Foucault) en la carga metálica. Estas corrientes circulan dentro del metal y lo calientan hasta fundirlo.
 \end{itemize}
 
- \begin{figure}
+ \begin{figure}[h!]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -402,6 +408,8 @@ La comparación de estos hornos y procesos muestra cómo la siderurgia evolucion
 
 La obtención de arrabio, fundición y acero constituye una cadena productiva compleja que comienza con la extracción de la mena y su separación de la ganga, continúa con la reducción en el alto horno y se diversifica en fundiciones o aceros según el tipo de horno utilizado. El conocimiento detallado de los hornos industriales es esencial, ya que cada uno aporta ventajas y limitaciones específicas. Mientras que el alto horno es el corazón de la producción primaria, hornos como el cubilote o el LD representan la especialización y modernización de la industria siderúrgica.
 
+\vfill
+\textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo; y la búsqueda de información para complementar la dada por la cátedra.}}
 
 \newpage
 \section{Bibliografía}
@@ -417,11 +425,10 @@ La obtención de arrabio, fundición y acero constituye una cadena productiva co
     \item \url{http://www.eet485.com.ar/Archivos/Conocimiento%20de%20los%20materiales%203eros_z5j.pdf}
     \item \url{https://www.youtube.com/watch?v=s1Lr0fpTj-0}
     \item \url{lhttps://metalurgia.usach.cl/sites/metalurgia/files/documentos/capitulo08fab-aceros.pdf}
-    \item Aguilar Schafer, J.A. Yacimientos minerales y procesos geológicos. Sitio Web: biblio3
-    \item Aguilar Schafer, J.A. Explotación minera, preparación y concentración. Sitio Web: biblio3.
-    \item Aguilar Schafer, J.A. Metalurgia extractiva del hierro. Sitio Web: biblio3.u
-    \item Aguilar Schafer, J.A. Hornos Industriales. Sitio Web: biblio3.ur
-    \item Ayuda de inteligencia artificial; chatgpt.
+    \item Aguilar Schafer, J.A. Yacimientos minerales y procesos geológicos.
+    \item Aguilar Schafer, J.A. Explotación minera, preparación y concentración.
+    \item Aguilar Schafer, J.A. Metalurgia extractiva del hierro.
+    \item Aguilar Schafer, J.A. Hornos Industriales.
 \end{itemize}
 
 \end{document}
