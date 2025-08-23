@@ -1,5 +1,5 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Datos principales.}{3}{section.1}%
+\contentsline {section}{\numberline {1}Datos principales.}{4}{section.1}%
 \contentsline {section}{\numberline {2}Resolución}{4}{section.2}%
 \contentsline {section}{\numberline {3}Soldabilidad de los materiales.}{6}{section.3}%
 \contentsline {subsubsection}{\numberline {3.0.1}AWS:}{6}{subsubsection.3.0.1}%
