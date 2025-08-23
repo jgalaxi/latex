@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.6.5)  23 AUG 2025 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.6.5)  23 AUG 2025 19:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -683,7 +683,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Figuras/imagen 1.png, id=16, 727.71875pt x 410.53375pt>
 File: Figuras/imagen 1.png Graphic file (type png)
 <use Figuras/imagen 1.png>
-Package pdftex.def Info: Figuras/imagen 1.png  used on input line 72.
+Package pdftex.def Info: Figuras/imagen 1.png  used on input line 73.
 (pdftex.def)             Requested size: 227.62206pt x 128.41049pt.
 
 
@@ -700,31 +700,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90         \item \(
+l.91         \item \(
                      \textit{HV}_0=\) usar el dato medido en alguno de los d... [1
 
 
 ]
-Overfull \hbox (10.4869pt too wide) in paragraph at lines 97--98
+Overfull \hbox (10.4869pt too wide) in paragraph at lines 98--99
 \T1/cmr/m/n/10.95 B.; Far-mer, Jo-seph, C.; To-rres, S.; Maho-ney, M.; San-der-son, S. (2014). Processing-
  []
 
 
-LaTeX Warning: File `figuras/imagen 2.png' not found on input line 102.
+LaTeX Warning: File `figuras/imagen 2.png' not found on input line 103.
 
 
-/home/erickjutz/latex/2.2.1/latex/Tp 2-02/main.tex:102: Package pdftex.def Error: File `figuras/imagen 2.png' not found: using draft setting.
+/home/erickjutz/latex/2.2.1/latex/Tp 2-02/main.tex:103: Package pdftex.def Error: File `figuras/imagen 2.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.102 ...idth=0.5\linewidth]{figuras/imagen 2.png}
+l.103 ...idth=0.5\linewidth]{figuras/imagen 2.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 102.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 103.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -740,16 +740,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2 <./Figuras/imagen 1.png (PNG copy)>]
 
-LaTeX Warning: File `figuras/imagen 3.png' not found on input line 127.
+LaTeX Warning: File `figuras/imagen 3.png' not found on input line 128.
 
 
-/home/erickjutz/latex/2.2.1/latex/Tp 2-02/main.tex:127: Package pdftex.def Error: File `figuras/imagen 3.png' not found: using draft setting.
+/home/erickjutz/latex/2.2.1/latex/Tp 2-02/main.tex:128: Package pdftex.def Error: File `figuras/imagen 3.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 ...idth=0.5\linewidth]{figuras/imagen 3.png}
+l.128 ...idth=0.5\linewidth]{figuras/imagen 3.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -757,17 +757,17 @@ If that doesn't work, type  X <return>  to quit.
 <Figuras/Del-Rio_6.png, id=42, 2047.65pt x 1533.73pt>
 File: Figuras/Del-Rio_6.png Graphic file (type png)
 <use Figuras/Del-Rio_6.png>
-Package pdftex.def Info: Figuras/Del-Rio_6.png  used on input line 139.
+Package pdftex.def Info: Figuras/Del-Rio_6.png  used on input line 140.
 (pdftex.def)             Requested size: 204.85846pt x 153.42879pt.
 <Figuras/Del-Rio_7.png, id=43, 2047.65pt x 1533.73pt>
 File: Figuras/Del-Rio_7.png Graphic file (type png)
 <use Figuras/Del-Rio_7.png>
-Package pdftex.def Info: Figuras/Del-Rio_7.png  used on input line 145.
+Package pdftex.def Info: Figuras/Del-Rio_7.png  used on input line 146.
 (pdftex.def)             Requested size: 204.85846pt x 153.42879pt.
 <Figuras/Del-Rio_8.png, id=44, 2047.65pt x 1533.73pt>
 File: Figuras/Del-Rio_8.png Graphic file (type png)
 <use Figuras/Del-Rio_8.png>
-Package pdftex.def Info: Figuras/Del-Rio_8.png  used on input line 154.
+Package pdftex.def Info: Figuras/Del-Rio_8.png  used on input line 155.
 (pdftex.def)             Requested size: 273.14923pt x 204.58733pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -785,7 +785,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4 <./Figuras/Del-Rio_6.png> <./Figuras/Del-Rio_7.png> <./Figuras/Del-Rio_8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 223--245
+Underfull \hbox (badness 10000) in paragraph at lines 224--246
 
  []
 
@@ -794,7 +794,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 245.
+(hyperref)                than one, level fixed on input line 246.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -857,7 +857,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,12n,107p,1667b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (9 pages, 7481853 bytes).
+Output written on main.pdf (9 pages, 7481858 bytes).
 PDF statistics:
  208 PDF objects out of 1000 (max. 8388607)
  150 compressed objects within 2 object streams
