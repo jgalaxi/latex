@@ -14,3 +14,5 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Material 3}{7}{subsubsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.3}conclucion}{7}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Parametro critico del metal (Pcm)}{8}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Calculo de dureza Brinell}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Modelos empíricos:}{8}{subsection.4.1}%
