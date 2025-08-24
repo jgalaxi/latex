@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{siunitx}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -139,8 +140,9 @@
 
 \section{Datos principales.}
 
-Primero contamos con las imágenes de la pieza seleccionada:
-\begin{figure}[h]
+Primero contamos con las imágenes de la pieza seleccionada, las cuales se observan en la \autoref{fig:metalografia}. En base a esto podemos obetener el diámetro promedio de los granos. Para ello empleamos "ChatGPT 4o" acompañado de un código en Python para saber cuantos granos hay en la imagen, el resultado son 613 granos como se puede ver ejecutando el código adjunto. Luego procedemos a esta herramienta nuevamente para saber cual es el diámetro promiedo de \SI{116,84}{\micro\metre}.
+
+\begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.45\linewidth}
         \centering
@@ -164,8 +166,8 @@ Primero contamos con las imágenes de la pieza seleccionada:
         \label{1000x}
     \end{subfigure}
     \caption{Micrografías hechas en el Laboratorio de Materiales.}
+    \label{fig:metalografia}
 \end{figure}
-En base a esto podemos obetener el diámetro promedio de los granos. Para ello empleamos "ChatGPT 4o" acompañado de un código en Python para saber cuantos granos hay en la imagen, el resultado son 613 granos como se puede ver ejecutando el código adjunto. Luego procedemos a esta herramienta nuevamente para saber cual es el diámetro promiedo de $116,84\: \mu m$.
 
 \section{Resolución}
 Usando la ecuación de Hall-Petch, resultados experimentales y el diámetro que sacamos anteriormente podemos resolver y sacar las constantes $\sigma_0$ y $k$. Los datos experimentales los obtuvimos de un estracto del trabajo de Z.G. Yang, profesor de la Universidad de Tsinghua (\url{https://www.researchgate.net/publication/257685788_Third_generation_high_strength_low_alloy_steels_with_improved_toughness}).
@@ -175,9 +177,9 @@ Usando la ecuación de Hall-Petch, resultados experimentales y el diámetro que 
 
 Los datos que tomamos para sacar las constantes son:
 \begin{itemize}
-    \item\(\sigma_1=1150\text{ MPa}\)
+    \item$\sigma_1=$ \SI{1 150}{\mega\pascal}
     \item\(d_1 \textsuperscript{-1/2}=0,75\: \mu m\textsuperscript{-1/2}\)
-    \item\(\sigma_2=1070\text{ MPa}\)
+    \item$\sigma_2=$ \SI{1 070}{\mega\pascal}
     \item\(d_2 \textsuperscript{-1/2}=0,55\: \mu m\textsuperscript{-1/2}\)
 \end{itemize}
 
@@ -203,7 +205,7 @@ con los cuales podemos obtener las constantes al remplazar en la ecuación de Ha
 \end{equation}
 
 \begin{equation}
-    k = \frac{1070\: \text{MPa} - 1150\: \text{MPa}}{{0,55\: \mu m\textsuperscript{-1/2}} - 0,75\: \mu m\textsuperscript{-1/2}}
+    k = \frac{\SI{1 070}{\mega\pascal} - \SI{1 150}{\mega\pascal}}{{0,55\: \mu m\textsuperscript{-1/2}} - 0,75\: \mu m\textsuperscript{-1/2}}
 \end{equation}
 
 \begin{equation}
@@ -211,20 +213,20 @@ con los cuales podemos obtener las constantes al remplazar en la ecuación de Ha
 \end{equation}
 
 \begin{equation}
-    \sigma_0 = 1150\: \text{MPa} - 380,95\: \text{MPa}\cdot \mu m\textsuperscript{1/2} \cdot 0,75\: \mu m\textsuperscript{-1/2}
+    \sigma_0 = \SI{1 150}{\mega\pascal} - 380,95\: \text{MPa}\cdot \mu m\textsuperscript{1/2} \cdot 0,75\: \mu m\textsuperscript{-1/2}
 \end{equation}
 
 \begin{equation}
-    \sigma_0 = 861,2\: \text{MPa} 
+    \sigma_0 = \SI{861,2}{\mega\pascal} 
 \end{equation}
 
 Teniendo $\sigma_0$ y $k$ ya ponemos calcular la fluencia de la pieza analizada.
 
 \begin{equation}
-    \sigma_y = 861,2\: \text{MPa} + 380,95\: \text{MPa}\cdot \mu m\textsuperscript{1/2} (116,84\: \mu m)\textsuperscript{-1/2}
+    \sigma_y = \SI{861,2}{\mega\pascal} + 380,95\: \text{MPa}\cdot \mu m\textsuperscript{1/2} (116,84\: \mu m)\textsuperscript{-1/2}
 \end{equation}
 \begin{equation}
-    \sigma_y = 896,44\: \text{MPa} 
+    \sigma_y = \SI{896,44}{\mega\pascal} 
 \end{equation}
 
 \section{Soldabilidad de los materiales.}
