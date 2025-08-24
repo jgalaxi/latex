@@ -339,4 +339,27 @@ Y segun el metodo del IIW el material 1 tiene una soldabilidad muy pobre y los m
 Segun el reglamento CIRSOC-304, que habla sobre soldadura de aceros en estructuras, y la tabla A.IV-2 que muestra la velocidad de enfriamiento maxima segun para cierta dureza critica, alcanzable en la zona afectada por el calor en la soldadura, segun el porcentaje de \textbf{CE}. la cual nos muestra que el material 2 y el tres no llegan a ninguna de las durezas criticas con las velocidades de la tabla lo que muestra su buena soldabilidad, encabio el material 3 si llega a una dureza critica con una velocidad de enfriamiento de 9$C/s$ por lo que de no tener un precalentamiento a alta temperatura y posible poscalentamiento, la zona afectadas por el calor en el material 1 se volverian muy fragiles.
 
 y esto se puede observar en la macrografía de la pieza donde las zonas cercanas al cordon de soldadura en el material 1, las zonas afectadas por el calor, se encuentran de un color distinto al resto del material de la pieza, en donde es posible que el material se haya fragilizado al no contar con un precalentamiento.
+
+\subsection{Parametro critico del metal (Pcm)}
+El Pcm es al igual que las ecuaciones del IIW y la AWS sirve para calcular el carbono equivalente, pero se usa especificamente para aceros donde el porcentaje de carbono no excede el 0,11\% y usualmente se usa en la fabricacion de tuberias
+
+Su ecuacion es:
+\begin{equation}
+    P_{cm} = \text{\%C} + \frac{\text{\%Si}}{30} + \frac{\text{\%Mn}+\text{\%Cu}+\text{\%Cr}}{20} + \frac{\text{\%Ni}}{60} + \frac{\text{\%Mo}}{15} + \frac{\text{\%V}}{10} + \text{5B\%}
+\end{equation}
+
+\section{Calculo de dureza Brinell}
+
+A la hora de trabajar con aceros tener el dato de la dureza Brinell (HB) es muy util debido a que con el se puede obtener de forma aproximada la resistencia a la traccion del material con en el que estamos trabajando, 
+lo cual es muy util ya que hacer un ensayo de dureza es mas sencillo y rapido que hacer un ensayo de traccion.
+
+\subsection{Modelos empíricos:}
+
+\begin{equation}
+    \sigma_y = X \cdot \text{HB}
+\end{equation}
+
+Siendo $X$ la constante de conversion que en este caso para un acero al carbono es 0,36.
+
+
 \end{document}
