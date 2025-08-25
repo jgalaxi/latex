@@ -56,7 +56,21 @@
 
 Este caso práctico tiene como finalidad comprender cómo los fenómenos metalúrgicos y mecánicos influyen en la falla de componentes de servicio a alta temperatura.
 
-Se estudiará la rotura de un tubo de caldera de acero al carbono sometido a presión interna y temperaturas elevadas, con el fin de relacionar la microestructura obtenida, las propiedades mecánicas y el mecanismo del fallo observado.
+Se estudiará la rotura de un tubo de caldera de acero al carbono sometido a presión interna y temperaturas elevadas (como se ve en la \autoref{fig:caldera}), con el fin de relacionar la microestructura obtenida, las propiedades mecánicas y el mecanismo del fallo observado.
+
+\begin{figure} [h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/Caldera.png}
+        \subcaption{Esquema de la caldera.}
+        \label{fig:caldera}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/caño.png}
+        \subcaption{Esquema de la tubería dañada.}
+        \label{fig:tubo}
+    \end{subfigure}
+\end{figure}
 
 \section{Análisis Metalúrgico del Caso.}
 La tubería estudiada estaba fabricada en un acero de bajo carbono (Fe-0,18\% C, 0,45\% Mn, 0,20\% Si). Bajo condiciones normales debería presentar microestructura de ferrita $+$ perlita (dureza $\approx$ \SI{1,5}{\giga\pascal}).
@@ -111,25 +125,25 @@ Se generaron las siguientes gráficas:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{tr_vs_T.png}
+    \includegraphics[width=0.7\linewidth]{Figuras/tr_vs_T.png}
     \caption{Tiempo a rotura en función de la temperatura para distintas tensiones.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{tr_vs_sigma.png}
+    \includegraphics[width=0.7\linewidth]{Figuras/tr_vs_sigma.png}
     \caption{Tiempo a rotura en función de la tensión circunferencial a distintas temperaturas.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{sens_espesor.png}
+    \includegraphics[width=0.7\linewidth]{Figuras/sens_espesor.png}
     \caption{Sensibilidad del tiempo a rotura con respecto al espesor de pared.}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{sens_presion.png}
+    \includegraphics[width=0.7\linewidth]{Figuras/sens_presion.png}
     \caption{Sensibilidad del tiempo a rotura con respecto a la presión interna.}
 \end{figure}
 
