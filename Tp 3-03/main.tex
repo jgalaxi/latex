@@ -9,6 +9,8 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{siunitx}
+\sisetup{per-mode=symbol}
+\usepackage{csquotes}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -50,6 +52,13 @@
         \begin{itemize}
             \item Cap. X Aceros para la fabricación de chapa magnética (pp.221-248) [Caso 2025].
         \end{itemize}
+        \item Apraiz Barreiro, J. Aceros Especiales y Otras Aleaciones. Dossat. 5ta Edición. Madrid, 1975. [NOTA 3: Si le ha sido asignado un tema de esta bibliografía, tenga en cuenta el requerimiento adicional] {MM-CAD-0.0.0}
+        \begin{itemize}
+            \item Secciones 139 a140. Permalloy, Superpermalloy, Hipernik. (pp.242-243).
+            \item Sección 141. Hiperco y Permendur. (pp. 243-244) (1*).
+            \item Sección 142. Copernik, Isopern, Perminvar. (pp. 244-245) (1*).
+            \item Sección 143. Compensator y Thermopern. (pp. 245-246) (1*).
+        \end{itemize}
     \end{itemize}
 \end{abstract}
 
@@ -60,13 +69,16 @@
     \begin{equation} \label{eq:magnetismo}
         \mu  = \frac{B}{H}
     \end{equation}
-    \item \textbf{Pérdidas por histéresis:} la histéresis magnética es la propiedad que tienen los materiales magnéticos de presentar resistencia al cambio de orientación de sus dipolos magnéticos, al variar la intensidad y el sentido de un campo magnético exterior que actúa sobre ellos. La pérdida de la propiedad ya mencionada representa la energía absorbida por un material bajo la influencia de un campo magnético variable. Se expresa en $Wlb\textsuperscript{-1}$ o \si{\watt\per\kilogram}.
+    \item \textbf{Pérdidas por histéresis:} la histéresis magnética es la propiedad que tienen los materiales magnéticos de presentar resistencia al cambio de orientación de sus dipolos magnéticos, al variar la intensidad y el sentido de un campo magnético exterior que actúa sobre ellos. La pérdida de la propiedad ya mencionada representa la energía absorbida por un material bajo la influencia de un campo magnético variable. Se expresa en $W/lb$ o \si{\watt\per\kilogram}.
+    \item \textbf{Pérdidas por corriente de Foucault:} cuando el material se somete a un campo magnético variable, por ley de Faraday, se induce una fuerza electromotiz (f.e.m.), éstas f.e.m. generan corrientes circulares cerradas, que son las llamadas \enquote{Corrientes de Foucault}. Se expresan en \si{\watt\per\kilo\gram} o $W/lb$.
     \item \textbf{Inducción:} flujo magnético por unidad de superficie que atraviesa un material bajo la influencia de un campo magnético exterior, expresado en $\mathrm{gauss}$\footnote{Para ser más prácticos hemos decidido conservar gauss como unidad y no el tesla como dicta el SI para mayor comodidad.}.
     \item \textbf{Saturación:} máximo valor que puede alcanzar la inducción en un material.
     \item \textbf{Modificación Magnética:} variación de propiedades magnéticas que experimentan los materiales con el transcurso del tiempo, por efecto del fenómeno de envejecimiento a temperaturas variables (\SI{20}{\celsius} - \SI{150}{\celsius}). En consecuencia de la existencia de estefenómeno, con el transcurso del tiempo se modifica la microestructura de los materiales, generalmente por precipitación de partículas submicroscópicas en las retículas de los granos aumentando ligeramente su dureza y originando tensiones internas que elevan las  pérdidas magnéticas.
+    \item \textbf{Resistividad eléctrica\footnote{Aunque no sea una propiedad magnética, merece mencionarla ya que tiene una fuerte relación con las propiedades magnéticas.}:} es una propiedad intrínseca de los materiales que mide qué tanto se oponen al paso de la corriente eléctrica. No depende de la forma ni del tamaño de la muestra. Depende de la temperatura; impurezas que se puedan encontrar en el material; los defectos cristalinos; y la estructura electrónica.
 \end{itemize}
 
 En la actualidad, se emplean muchos materiales que se usan en máquinas, instalaciones o aparatos eléctricos, y también son más complejas las características y propiedades que a los mismos se les exigen.
+
 Los aceros o aleaciones que se fabrican especialmente para cumplir especificaciones de carácter eléctrico se pueden clasificar en grupos:
 
 \begin{itemize}
@@ -84,7 +96,7 @@ Se emplean generalmente en forma de chapa o fleje para la fabricación de núcle
 
 \subsection{Materiales más usados:}
 \begin{itemize}
-    \item El material más usado en la actualidad es el acero de bajo carbono (0,25\% - 0,5\%, y con Si 2\% - 4,5\%)
+    \item El material más usado en la actualidad\footnote{Por comodidad hemos decidido dejar la palabra "actualidad", aun cuando el libro es del año 1975.} es el acero de bajo carbono (0,25\% - 0,5\%, y con Si 2\% - 4,5\%)
     \item Otros materiales: 
     \begin{itemize}
         \item Hierro dulce de calidad corriente.
@@ -98,38 +110,35 @@ Se emplean generalmente en forma de chapa o fleje para la fabricación de núcle
 
 Es interesante que este tipo de material tenga alta permeabilidad, y que a su vez las pérdidas por histéresis y pérdidas por corrientes de Foucault, es decir, las pérdidas totales sean pequeñas. También conviene que se pueda laminar sin dificultad, es necesario que tenga buena aptitud al corte (haciendo referencia a una buena maquinabilidad), y por último, que no sea frágil (suficiente resistencia y tenacidad).
 
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=1\textwidth]{IMAGENES LATEX/2.png}
-\end{figure}
+Las pérdidas por histéresis aumentan al disminuir el tamaño de granos y al aumentar el porcentaje de carbono en los aceros. Por caso contrario, las podemos disminuir si se consigue aumentar la resistividad del acero, aunque esto es útil si la tener una gran disminución de $\mu$. Las \enquote{pérdidas de Foucault} aumentan al cuadrado de la inducción, con la frecuencia y con el espesor de la chapa; por eso conviene que las chapas tengan el menor espesor posible y que estén bien aisladas unas de otras. En resumen, deben poder las siguientes propiedades:
 
-Las pérdidas por histéresis aumentan al disminuir el tamaño de granos y al aumentar el porcentaje de carbono en los aceros. Por caso contrario, las podemos disminuir si se consigue aumentar la resistividad del acero. Conviene que las chapas tengan el menor espesor posible y que estén bien aisladas unas de otras. En resumen, deben poder las siguientes propiedades:
-
-\begin{itemize}
-    \item Pérdidas magnéticas totales pequeñas (para un elevado rendimiento eléctrico).
-    \item Elevada permeabilidad magnética (favorecer el paso y concentración del flujo magnético).
-    \item Pérdidas por histéresis pequeñas (tamaño de granos grande).
-    \item Pequeñas pérdidas por corrientes parásitas o de Foucault (resistividad elevada).
+\begin{enumerate}
+    \item Pérdidas magnéticas totales pequeñas, para un elevado rendimiento eléctrico.
+    \item Elevada permeabilidad magnética para favorecer el paso y concentración del flujo magnético.
+    \item Pérdidas por histéresis pequeñas, lo que exige un tamaño de grano grande.
+    \item Pequeñas pérdidas por corrientes parásitas o de Foucault para una resistividad eléctica elevada.
     \item Alto valor de saturación.
     \item No deben sufrir el fenómeno de envejecimiento.
-\end{itemize}
+\end{enumerate}
 
-\subsection{Evolución de los diferentes tipos de aceros.}
+\subsection{Evolución de los diferentes tipos de aceros.} \label{silicio}
 
-La historia comienza al final del siglo XIX, cuando empezaron a usar láminas de hierro con muy poco contenido de C, éstas tenían unas pérdidas por \SI{5}{\watt\per\kilogram} o \SI{7}{\watt\per\kilogram}. En el año 1900 se empezaron a utilizar hierros extradulces que mejoraron notablemente en la pérdida (\SI{3}{\watt\per\kilogram} a \SI{4}{\watt\per\kilogram}). El inconveniente más grande que tenían estas chapas es que al cabo de unos meses se envejecían y tenías unas pérdidas mucho mayores, pero para el año 1904 se descubrió que el uso de silicio en los aceros mejoraba las propiedades magnéticas, cuando en el 1910 las pérdidas eran de \SI{1,8}{\watt\per\kilogram} y luego de \SI{1,3}{\watt\per\kilogram} para el año 1920. Llegando a 1945 se logró una pérdida de \SI{0,75}{\watt\per\kilogram} con chapas de alta calidad.
+La historia comienza al final del siglo XIX, cuando empezaron a usar láminas de hierro con muy poco contenido de C, éstas tenían unas pérdidas por \SI{5}{\watt\per\kilogram} o \SI{7}{\watt\per\kilogram}. En el año 1900 se empezaron a utilizar hierros extradulces que mejoraron notablemente en la pérdida (\SI{3}{\watt\per\kilogram} a \SI{4}{\watt\per\kilogram}). El inconveniente más grande que tenían estas chapas es que al cabo de unos meses se envejecían y tenías unas pérdidas mucho mayores, pero para el año 1904 se descubrió que el uso de silicio en los aceros mejoraba las propiedades magnéticas, cuando en el 1910 las pérdidas eran de \SI{1,8}{\watt\per\kilogram} y luego de \SI{1,3}{\watt\per\kilogram} para el año 1920. Llegando a 1945 se logró una pérdida de \SI{0,75}{\watt\per\kilogram} con chapas de alta calidad. En la \autoref{fig:evolucion} se aprecia la evolución.
 
-Éstas mejoras en las propiedades magnéticas se debe a que el Si tiene alta resistividad eléctrica, y el acero tiene un tamaño de grano relativamente grande debido a la ferrita formada. Sumado a que las chapas de alta calidad no sufren un envejecimiento que sí sufren las chapas de hierros extradulces.
+Éstas mejoras en las propiedades magnéticas se debe a que el Si tiene alta resistividad eléctrica ($\approx$ \SI{55}{\micro\ohm\centi\meter}), y el acero tiene un tamaño de grano relativamente grande debido a la ferrita formada. Sumado a que las chapas de alta calidad no sufren un envejecimiento que sí sufren las chapas de hierros extradulces.
 
-\begin{figure}[H]    
+\begin{figure}[t]    
     \centering         
-    \includegraphics[width=0.5\textwidth]{IMAGENES LATEX/3.jpg}
+    \includegraphics[width=0.5\textwidth]{IMAGENES LATEX/3.png}
+    \caption{Evolución de las pérdidas magnéticas a través de los años.}
+    \label{fig:evolucion}
 \end{figure}
 
 \subsection{Modernos estudios sobre chapas magnéticas.}
 
-Algunos factores que más se controlan en la fabricación para chapas magnéticas de las mas alta calidad son: 
+Algunos factores que más se controlan en la fabricación para chapas magnéticas de las más alta calidad son:
 
-\subsubsection{La pureza del material:}
+\subsubsection{La pureza del material.}
 
 En este caso podemos destacar 5 puntos claves. Entre ellos:
 
@@ -145,55 +154,64 @@ En este caso podemos destacar 5 puntos claves. Entre ellos:
 
 En este factor encontraremos 3 puntos:
 \begin{itemize}
-    \item Se sabe que el tamaño y forma del grano influye en las pérdidas magnéticas aunque no todos los investigadores coinciden. En general, que los granos sean más grandes es igual a menos pérdidas por histéresis pero se genera un problema, si los granos son demasiados grandes, aumentan las pérdidas por corriente de foucault, por lo tanto, lo ideal, es regular y controlar el tamaño de grano.
-    \item Los pequeños cristales elementales que componen el acero están orientados de forma que las aristas siguen la dirección del flujo, provocando que se necesite menos fuerza para su magnetización. A su vez los cristales cuyas caras forman 45° con la dirección de flujo oponen más resistencia al paso del flujo. En conclusión, la permeabilidad de una chapas con grano orientado es mayor y las pérdidas menores que las chapas con el grano sin orientar.
-    \item Mediante el método Goss (obtención de chapas magnéticas con cristales orientados), el cual consiste en someter a la chapas a una serie de laminados en frío con un grado de reducción determinado, seguido de recocidos a determinadas temperaturas con las que se consigue un notable crecimiento del grano. Finalmente se las atraviesa por campos magnéticos orientados en la dirección del laminado se logra un gran aumento de permeabilidad, obteniendo de esta manera aceros de media aleación de silicio, los cuales luego de este procedimiento tienen pérdidas muy bajas, menor fragilidad, mejor ductilidad y fácil laminado. Este tipo de acero es conocido como: “Hipersil” o “High Permeability (HiB)”.
+    \item Se sabe que el tamaño y forma del grano influye en las pérdidas magnéticas aunque no todos los investigadores coinciden. En general, que los granos sean más grandes es igual a menos pérdidas por histéresis pero se genera un problema; si los granos son demasiados grandes aumentan las pérdidas por corriente de foucault, por lo tanto; lo ideal es regular y controlar el tamaño de grano.
+    \item Los pequeños cristales elementales que componen el acero están orientados de forma que las aristas siguen la dirección del flujo, provocando que se necesite menos fuerza para su magnetización. A su vez los cristales cuyas caras forman 45° con la dirección de flujo oponen más resistencia al paso del flujo. En conclusión, la $\mu$ de una chapas con grano orientado es mayor y las pérdidas menores que las chapas con el grano sin orientar.
+    \item Mediante el método Goss (obtención de chapas magnéticas con cristales orientados), el cual consiste en someter a la chapas a una serie de laminados en frío con un grado de reducción determinado, seguido de recocidos a determinadas temperaturas con las que se consigue un notable crecimiento del grano. Finalmente se las atraviesa por campos magnéticos orientados en la dirección del laminado donde, se logra un gran aumento de permeabilidad, obteniendo de esta manera aceros de media aleación de Si, los cuales luego de este procedimiento tienen pérdidas muy bajas, menor fragilidad, mejor ductilidad y fácil laminado. Este tipo de acero es conocido como: \textit{\enquote{Hipersil}} o \textit{\enquote{High Permeability (HiB)}}.
 \end{itemize}
 
 \subsubsection{Las tensiones Internas.}
-Las tensiones internas con que quedan los materiales, debido a los procesos de laminación o de transformación mecánica, corte o estampación, son muy perjudiciales y deben evitarse por medio de tratamientos de recocidos adecuados, posteriores a todo trabajo mecánico, teniendo cuidado también que los enfriamientos sean suficientemente lentos para que en ellos no nazcan nuevas tensiones.
+
+Las tensiones internas con las que quedan los materiales, debido a los procesos de laminación o de transformación mecánica, corte o estampación, son muy perjudiciales y deben evitarse por medio de tratamientos de recocidos adecuados, posteriores a todo trabajo mecánico, teniendo cuidado también que los enfriamientos sean suficientemente lentos para que no se generen nuevas tensiones.
 
 \subsection{Procesos industriales que se utilizan para la fabricación de chapas magnéticas.}
 
 Se suele obtener en hornos Siemens ácidos empleando chatarras y procesos de trabajo especiales, obteniendo así muy bajos porcentajes de ciertos elementos. En casos menos frecuentes, también se fabrican en hornos Siemens básicos y en hornos de arco eléctrico. Cuando se trata de fabricaciones muy especiales se utilizan también hornos de alta frecuencia con vacío o atmósferas controladas.
-Además de para poder orientar los cristales debidamente tenemos que aumentar el tamaño de grano y para eso se suele someter el material al procesos de laminación antes mencionado y a tratamientos térmicos especiales. El proceso se realiza dando primero al material un tratamiento inicial a \SI{750}{\celsius} - \SI{900}{\celsius}, de manera que el acero no llegue a alcanzar el estado austenítico. Luego se suele laminar el material a relativamente baja temperatura (\SI{650}{\celsius} - \SI{800}{\celsius}) no debiendo producirse en el medio una reducción de sección superior al 30\%. Después se da otro tratamiento a temperatura algo más elevada (\SI{800}{\celsius} - \SI{1000}{\celsius}) cuidando también que no se produzca la transformación ferrita-austenita, luego se da el laminado final. A continuación se les da otro tratamiento a \SI{1 000}{\celsius} - \SI{2 000}{\celsius} en atmósfera de hidrógeno o amoníaco disociado con enfriamiento lento hasta los \SI{700}{\celsius} (todos los intervalos de temperatura tienen un sentido en el diagrama de fases, ya que no siempre va haber un cambio de fase a la misma temperatura). En este punto, quedan orientados en el sentido de la laminación de un 25\% - 30\% de los cristales del acero. Luego el montaje en los transformadores debe hacerse de manera que la dirección del flujo magnético sea la misma que la de los cristales.
+
+Además de para poder orientar los cristales debidamente tenemos que aumentar el tamaño de grano y para eso se suele someter el material al procesos de laminación antes mencionado y a tratamientos térmicos especiales. El proceso se realiza dando primero al material un tratamiento inicial a \SI{750}{\celsius} - \SI{900}{\celsius}, de manera que el acero no llegue a alcanzar el estado austenítico. Luego se suele laminar el material a relativamente baja temperatura (\SI{650}{\celsius} - \SI{800}{\celsius}) no debiendo producirse en el medio una reducción de sección superior al 30\%. Después se da otro tratamiento a temperatura algo más elevada (\SI{800}{\celsius} - \SI{1000}{\celsius}) cuidando también que no se produzca la transformación $\alpha-\gamma$, luego se da el laminado final. A continuación se les da otro tratamiento a \SI{1 000}{\celsius} - \SI{2 000}{\celsius} en atmósfera de H o NH\textsubscript{3} disociado con enfriamiento lento hasta los \SI{700}{\celsius}. Todos los intervalos de temperatura tienen un sentido en el diagrama de fases, ya que no siempre va haber un cambio de fase a la misma temperatura. En este punto, quedan orientados en el sentido de la laminación de un 25\% - 30\% de los cristales del acero. Luego el montaje en los transformadores debe hacerse de manera que la dirección del flujo magnético sea la misma que la de los cristales.
 
 En la fabricación normal de chapas magnéticas para grandes transformadores es normal realizar recocidos a \SI{800}{\celsius} - \SI{900}{\celsius} en atmósfera de hidrógeno, manteniendo esa temperatura unas 4 a 8 horas según sea el espesor de las chapas y enfriando luego lentamente hasta los \SI{650}{\celsius}.
 
 Para chapas de muy alta calidad se suelen dar recocidos a temperaturas entre \SI{1 000}{\celsius} y \SI{1 200}{\celsius} en atmósferas de hidrógeno seco, enfriando luego lentamente hasta los \SI{850}{\celsius}. En estos recocidos a muy alta temperatura, empleando atmósferas especiales altamente controladas se llega a mejorar la pureza de los aceros, reduciendo los contenidos en C, O y S.
 
-Con frecuencia, posteriormente a estos tratamientos a alta temperatura se les da un recocido oxidante, es decir, calentar un material en una atmósfera de O, generando una capa de óxido en la superficie a \SI{675}{\celsius} para mejorar la permeabilidad.
+Con frecuencia, posteriormente a estos tratamientos a alta temperatura, se les da un recocido oxidante, es decir, calentar un material en una atmósfera de O, generando una capa de óxido en la superficie a \SI{675}{\celsius} para mejorar la permeabilidad.
 
 \section{Aceros al carbono extradulce.}
 
-En este grupo se incluyen los aceros extradulces que se fabrican normalmente con 0,07\% - 0,12\% de C, 0,10 - 0,30\% de Mn y menos de 0,30\% de Si. Usados algunas veces debido a su bajo precio y a su fácil adquisición, a pesar que sus características magnéticas son bastantes bajas. Su máxima permeabilidad (varía según la cantidad de carbono y otras impurezas) es de $1\ 900 \ a \ 5\  000 \ \mathrm{gauss}$ para un campo de $9\ 000 \ \mathrm{gauss}$. La saturación es muy elevada ($21\ 300 \ \mathrm{gauss}$) y la resistividad es de \SI{13e-6}{\Omega}. Por ser la resistividad de estos aceros baja, las pérdidas de Foucault son elevadas, no pudiéndose emplear cuando interesa que las pérdidas sean muy reducidas. Un gran inconveniente de este tipo de acero es que con el tiempo aumentan las pérdidas que tienen inicialmente. Por ser muy sensibles al fenómeno de envejecimiento, pudiendo llegar a duplicar las pérdidas magnéticas después de varios meses de trabajo.
+En este grupo se incluyen los aceros extradulces que se fabrican normalmente con 0,07\% - 0,12\% de C, 0,1\% - 0,3\% de Mn y menos de 0,3\% de Si. Usados algunas veces debido a su bajo precio y a su fácil adquisición, a pesar que sus características magnéticas son bastantes bajas. Su máxima permeabilidad (varía según la cantidad de carbono y otras impurezas) es de 1 900 a 5 000 para un campo de $9\ 000 \ \mathrm{gauss}$. La saturación es muy elevada ($21\ 300 \ \mathrm{gauss}$) y la resistividad es de \SI{13e-6}{\ohm\centi\meter}. Por ser la resistividad de estos aceros baja, las \enquote{pérdidas de Foucault} son elevadas, no pudiéndose emplear cuando interesa que las pérdidas sean muy reducidas. Un gran inconveniente de este tipo de acero es que con el tiempo aumentan las pérdidas que tienen inicialmente por ser muy sensibles al fenómeno de envejecimiento, pudiendo llegar a duplicar las pérdidas magnéticas después de varios meses de trabajo.
 
-El acero con 0,07\% a 0,12\% de carbono y 0,60\% - 0,90\% de silicio, es decir, con las misma cantidad de carbono que el normal pero con un elevado contenido de Si, tiene mejores propiedades magnéticas que el acero al carbono extradulce ordinario, y puede usarse en algunas máquinas o instalaciones con mejor rendimiento que ellos.
+El acero con 0,07\% a 0,12\% de C y 0,6\% - 0,9\% de Si, es decir, con las misma cantidad de carbono que el normal pero con un elevado contenido de silicio, tiene mejores propiedades magnéticas que el acero al carbono extradulce ordinario, y puede usarse en algunas máquinas o instalaciones con mejor rendimiento que ellos.
 
 \section{Hierro Armco.}
 
-Aunque el hierro puro es en muchos aspectos un material ferromagnético ideal, ya que su permeabilidad es bastante elevada al resto de materiales, no se puede utilizar para corrientes alternas porque, debido a su baja resistividad, las pérdidas por corriente de Foucault son muy elevadas.
+Aunque el hierro puro es en muchos aspectos un material ferromagnético ideal, ya que su permeabilidad es bastante elevada al resto de materiales, no se puede utilizar para corrientes alternas porque, debido a su baja $\rho$, las pérdidas por corriente de Foucault son muy elevadas.
 
 El hierro Armco puede considerarse como el hierro más puro que se obtiene industrialmente en la actualidad y aunque no se fabrica especialmente para utilizarlo en máquinas eléctricas podemos mencionar ciertas propiedades magnéticas que podrían resultar interesante para su utilización en algunos casos determinados.
 
-Se fabrica generalmente en hornos Siemens ácidos y, en general, su contenido en carbono no suele pasar de 0,04\%; el manganeso es inferior a 0,1\%; y el azufre y el fósforo inferiores a 0,02\%. Su máxima permeabilidad es de 6 000 a 8 000 ante un campo de $6\ 000\ \mathrm{gauss}$, al someterlo a tratamientos especiales se reduce el contenido en carbono y otras impurezas elevando de esta manera su permeabilidad a 220 000. La saturación es muy elevada ($21\ 000\ \mathrm{gauss}$) y la resistividad es muy baja (\SI{11e-6}{\ohm\centi\metre}) por esta razón las pérdidas de corrientes Foucault son muy elevadas evitando que se utilice este material para fabricar núcleos para máquinas o aparatos de corriente alterna; lo contrario ocurre con corriente continua; debido a su gran permeabilidad, alta saturación y baja fuerza coercitiva se suele emplear para algunos tipos de dinamos, motores de corriente continua, etc. Incluso con su alta pureza muchas veces se utiliza como materia prima.
+Se fabrica generalmente en hornos Siemens ácidos y, en general, su contenido en carbono no suele pasar de 0,04\%; Mn es inferior a 0,1\%; y el azufre y el fósforo inferiores a 0,02\%. Su máxima permeabilidad es de 6 000 a 8 000 ante un campo de $6\ 000\ \mathrm{gauss}$, al someterlo a tratamientos especiales se reduce el contenido en C y otras impurezas elevando de esta manera su permeabilidad a 220 000. La saturación es muy elevada ($21\ 000\ \mathrm{gauss}$) y la resistividad es muy baja (\SI{11e-6}{\ohm\centi\metre}), por esta razón las pérdidas de corrientes Foucault son muy elevadas evitando que se utilice este material para fabricar núcleos para máquinas o aparatos de corriente alterna; lo contrario ocurre con corriente continua; debido a su gran permeabilidad, alta saturación y baja fuerza coercitiva se suele emplear para algunos tipos de dinamos, motores de corriente continua, etc. Incluso con su alta pureza muchas veces se utiliza como materia prima.
 
-El aumento de permeabilidad experimentado al reducir contenidos de impurezas, carbono y otras sustancias, es de 7 000 a 227 000.
+Haciendo una serie de tratamientos al hierro Armco, se puede observar un aumento en su $\mu$ de 7 000 a 227 000, como se aprecia en la \autoref{tab:armco}.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{X|c|c|c|c|c|c|c|c}
+        & \% C & \% S & \% Mn & \% P & \% Si & \% O & \% N & $\mu_{\text{máx}}$ \\ \hline
+        Hierro Armco de calidad corriente & 0,012 & 0,018 & 0,03 & 0,004 & 0,002 & 0,03 & 0,0018 & 7 000 \\
+        Después de un recocido de 3 h a \SI{1475}{\celsius} en H seco & 0,005 & 0,006 & 0,028 & 0,004 &  & 0,003 & 0,0003 & 30 000 \\
+        Después de 18 h a \SI{1475}{\celsius} en H seco & 0,005 & 0,003 & 0,028 & 0,004 &  & 0,003 & 0,0001 & 227 000 \\
+    \end{tabularx}
+    \caption{Diferencias entre los tratamientos que pueden hacerse en un hierro Armco.}
+    \label{tab:armco}
+\end{table}
 
 \section{Hierros de gran pureza.}
 
 Aunque se sabía desde tiempos muy antiguos que para la fabricación de chapas magnéticas era conveniente el mayor grado de pureza posible, no fue hasta hace algunos años, que se consiguieron mejoras en las propiedades magnéticas del hierro al reducir el contenido de ciertas impurezas hasta porcentajes más pequeños de lo habitual. Para ello se han realizados ensayos fabricando el acero en hornos de inducción de alta frecuencia, en hornos con atmósfera controlada o fundiendo en vacío y también sometiendo las chapas a recocidos en temperaturas altas (próximas al punto de fusión), en vacío o en atmósferas especiales con hidrógeno seco. 
 
- \begin{figure}[H]    
-    \centering         
-    \includegraphics[width=0.5\textwidth]{IMAGENES LATEX/4.jpg}
-\end{figure}
-
-%Como se ve, el hierro Armco a pesar de su gran pureza contiene todavía ciertas cantidades de carbono, nitrógeno, azufre y oxígeno, que al situarse en los espacios intersticiales de la retícula cristalina del hierro originan tensiones internas que disminuyen sus propiedades magnéticas. El hierro muy puro tiene además la ventaja de no sufrir el fenómeno de envejecimiento. A la vista de esas características, observando la elevadísima permeabilidad de los hierros muy puros, se comprende que pueda tener en algunos casos aplicaciones de gran interés. Sin embargo, en la actualidad, las dificultades para su fabricación son tan grandes que no se producen industrialmente con normalidad esas calidades, y por lo tanto el empleo de esas clases de pureza muy elevada está casi reducido a ensayos y experiencias de laboratorio.
+Como se ve, el hierro Armco a pesar de su gran pureza contiene todavía ciertas cantidades de carbono, nitrógeno, azufre y oxígeno, que al situarse en los espacios intersticiales de la retícula cristalina del hierro originan tensiones internas que disminuyen sus propiedades magnéticas. El hierro muy puro tiene además la ventaja de no sufrir el fenómeno de envejecimiento. A la vista de esas características, observando la elevadísima permeabilidad de los hierros muy puros, se comprende que pueda tener en algunos casos aplicaciones de gran interés. Sin embargo, en la actualidad, las dificultades para su fabricación son tan grandes que no se producen industrialmente con normalidad esas calidades, y por lo tanto el empleo de esas clases de pureza muy elevada está casi reducido a ensayos y experiencias de laboratorio.
 
 \section{Fundición.}
 
-Fue bastante usada en los primeros tiempos de la maquinaria eléctrica. Su máxima permeabilidad es muy baja (de 250 a 500 para un campo de $2\ 000\ a\ 5\ 000\ \mathrm{gauss}$). La saturación también es baja ($14\ 000\ \mathrm{gauss}$) y la resistividad en cambio es muy elevada (\SI{10e-5}{\ohm\centi\metre}). 
+Fue bastante usada en los primeros tiempos de la maquinaria eléctrica. La $\mu$ máxima es muy baja (de 250 a 500 para un campo de $2\ 000\ a\ 5\ 000\ \mathrm{gauss}$). La saturación también es baja ($14\ 000\ \mathrm{gauss}$) y la $\rho$ en cambio es muy elevada (\SI{10e-5}{\ohm\centi\metre}). 
 
 Sus características magnéticas son muy bajas, pero por su bajo precio y la facilidad de fundir y mecanizar se emplea todavía en algunas ocasiones en la fabricación de inductores de máquinas de corriente continua.
 
@@ -203,13 +221,21 @@ Las características magnéticas del acero moldeado (0,1\% - 0,3\% de C) son sup
 
 \section{Aceros al Si.}
 
-Como vimos en la sección 2.3, a comienzos del siglo pasado, las primeras chapas de acero aleado con silicio se usaban para usos eléctricos que permitieron mejorar notablemente el rendimiento de los transformadores de máquinas eléctricas. El Si y el Al son de los elementos de aleación que más aumentan la resistividad del acero y, como consecuencia, disminuyen extraordinariamente las pérdidas, ya que al ser elevada la resistividad del material hay dificultad para que se produzcan las corrientes inducidas y, por lo tanto, disminuyen las pérdidas por corrientes de Foucault. Cada 1\% de silicio aumenta en \SI{11}{\micro\ohm\centi\metre} la resistividad de los aceros. El aluminio no se emplea para la fabricación de chapas magnéticas, porque su fabricación presenta dificultades casi insuperables. En los aceros al silicio no se presenta además el fenómeno de envejecimiento tan perjudicial en los aceros al carbono extradulces.
+Como vimos en la sección \ref{silicio}, a comienzos del siglo pasado, las primeras chapas de acero aleado con silicio se usaban para usos eléctricos que permitieron mejorar notablemente el rendimiento de los transformadores de máquinas eléctricas. El Si y el Al son de los elementos de aleación que más aumentan la resistividad del acero y, como consecuencia, disminuyen extraordinariamente las pérdidas, ya que al ser elevada la $\rho$ del material hay dificultad para que se produzcan las corrientes inducidas y, por lo tanto, disminuyen las \enquote{pérdidas por corrientes de Foucault}. Cada 1\% de silicio aumenta en \SI{11}{\micro\ohm\centi\metre} la resistividad de los aceros como se aprecia en la \autoref{fig:silicio1}. El aluminio no se emplea para la fabricación de chapas magnéticas, porque su fabricación presenta dificultades casi insuperables. En los aceros al silicio no se presenta además el fenómeno de envejecimiento tan perjudicial en los aceros al carbono extradulces.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.45\textwidth]{IMAGENES LATEX/silicio.png}
-    \caption{Pérdida de saturación a medida que aumenta el \% de Si.}
-    \label{fig:silicio}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{IMAGENES LATEX/silicio_2.png}
+        \subcaption{Pérdida de saturación a medida que aumenta el \% de Si.}
+        \label{fig:silicio2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics{IMAGENES LATEX/silicio_1.png}
+        \subcaption{Resistividad a medida que aumenta el \% de Si.}
+        \label{fig:silicio1}
+    \end{subfigure}
+    \caption{Cambio de propiedades magnéticas según el \% de Si.}
 \end{figure}
 
 Con un mayor porcentaje a 2,5\% de Si hace que los aceros sean ferríticos, haciendo referencia a que no se forma austenita al ser calentados a temperaturas altas, favoreciendo a que los granos aumenten en los sucesivos calentamientos a los que el material es sometido reduciendo de esta manera las pérdidas por histéresis.
@@ -242,7 +268,7 @@ Los acero de alto contenido de silicio se emplean exclusivamente en transformado
 
 Hay un grupo de aleaciones de Fe-Ni y otros elementos con 35\% - 80\% de níquel que se caracterizan por su alta permeabilidad y además porque tienen valores de permeabilidad muy elevados cuando se encuentran sometidos a la acción de campos débiles, de baja densidad de flujo. Éstas aleaciones son muy utilizadas para cables telefónicos, instrumentos eléctricos, instalaciones de radar, radio, televisión, etc., donde nos interesa utilizar materiales que posean esas características especiales que acabamos de citar.
 
-Sus pérdidas eléctricas son muy bajas y además las mecánicas de las chapas fabricadas con éstas aleaciones son mucho mejores que las chapas con 2\% - 4\% de Si. Es interesante destacar que éstas aleaciones son muy fáciles de laminar aún en perfiles delgados. Pero tienen un inconveniente, ya que se suelen saturar con indicaciones relativamente bajas ($8\ 000\ a\ 12\ 000\ \mathrm{gauss}$), además, su alto precio impide su utilización en aparatos baratos de uso corriente, por lo que no sirven todavía para reemplazar los aceros de silicio que tienen un precio más bajo y una saturación de aproximadamente de $20\ 000\ \mathrm{gauss}$.
+Sus pérdidas eléctricas son muy bajas y además las características mecánicas de las chapas fabricadas con éstas aleaciones son mucho mejores que las chapas con 2\% - 4\% de Si. Es interesante destacar que éstas aleaciones son muy fáciles de laminar aun en perfiles delgados. Pero tienen un inconveniente, ya que se suelen saturar con indicaciones relativamente bajas ($8\ 000\ a\ 12\ 000\ \mathrm{gauss}$), además, su alto precio impide su utilización en aparatos baratos de uso corriente, por lo que no sirven todavía para reemplazar los aceros de silicio que tienen un precio más bajo y una saturación de aproximadamente de $20\ 000\ \mathrm{gauss}$.
 
 Las aleaciones de alta permeabilidad se pueden clasificar en los siguientes grupos:
 
@@ -256,11 +282,13 @@ Las aleaciones de alta permeabilidad se pueden clasificar en los siguientes grup
 
 \subsection{Aleaciones con muy alta permeabilidad inicial (\textit{Permalloy}, \textit{Permalloy C} y \textit{Supermalloy}).}
 
-Existen una serie de aleaciones de hierro-níquel con 30\% - 90\% de níquel que tienen permeabilidades iniciales muy elevadas (10 000 a 100 000) y superiores a la del hierro dulce (250) y a la del acero al Si (600).
+Existen una serie de aleaciones de hierro-níquel con 30\% - 90\% de Ni que tienen permeabilidades iniciales muy elevadas (10 000 a 100 000) y superiores a la del hierro dulce (250) y a la del acero al Si (600). Como se aprecia en la \autoref{fig:aleaciones}.
 
-\begin{figure}[H]    
+\begin{figure}[t]    
     \centering         
     \includegraphics[width=0.5\textwidth]{IMAGENES LATEX/7.png}
+    \caption{Influencia de la intensidad del campo magnético en la $\mu$ máx e inicial de diversas aleaciones.}
+    \label{fig:aleaciones}
 \end{figure}
 
 En las aleaciones con más de 50\% de Ni se consigue mejorar extraordinariamente la permeabilidad inicial por temple al aire, llegando de esa forma a obtener valores altos. 
@@ -273,9 +301,9 @@ La ventaja del empleo de aleaciones con molibdeno es que no es necesario someter
 
 Para numerosas aplicaciones en que se desean altos valores de permeabilidad, pero en los que no interesa en cambio que la permeabilidad inicial sea elevada, se pueden emplear aleaciones Fe-Ni con 50\% de Ni, siendo más baratas que las anteriormente mencionadas manteniendo también altos valores de permeabilidad.
 
-La aleación \textit{Permalloy B} (o \textit{Permalloy 45}), que tiene una permeabilidad inicial de 2 700 y una permeabilidad máxima de 23 000. Las características eléctricas de esta aleación se suelen mejorar por recocido a \SI{1 100}{\celsius} en hidrógeno seco. Reduciendo de esta forma el contenido de C y S, ya que son elementos perjudiciales. La aleación níquel-hierro 50-50 recibe el nombre de \textit{Pernik} y tiene una permeabilidad inicial de 4 500 y una permeabilidad máxima de 100 000.
+La aleación \textit{Permalloy B} (o \textit{Permalloy 45}), que tiene una permeabilidad inicial de 2 700 y una permeabilidad máxima de 23 000. Las características eléctricas de esta aleación se suelen mejorar por recocido a \SI{1 100}{\celsius} en hidrógeno seco. Reduciendo de esta forma el contenido de C y S, ya que son elementos perjudiciales. La aleación Ni-Fe 50-50 recibe el nombre de \textit{Pernik} y tiene una permeabilidad inicial de 4 500 y una permeabilidad máxima de 100 000.
 
-\begin{figure}[H]    
+\begin{figure}[t]    
     \centering         
     \includegraphics[width=0.5\textwidth]{IMAGENES LATEX/8.jpg}
 \end{figure}
@@ -363,7 +391,7 @@ En todos los casos, para conseguir mejores resultados, conviene someter las piez
         & de 16 450 a 21 300 G 
         & de 8 000 a 12 000 G \\ \hline
 
-        Resistividad 
+        Resistivi-dad 
         &  \SI{13e-6}{\ohm\centi\metre}
         &  \SI{11e-6}{\ohm\centi\metre}
         &  \SI{10e-5}{\ohm\centi\metre}
@@ -373,5 +401,50 @@ En todos los casos, para conseguir mejores resultados, conviene someter las piez
     \end{tabularx}
     \caption{Tabla comparativa de propiedades magnéticas de las aleaciones vistas anteriormente.}
 \end{table}
+
+\section{Uso actual de las aleaciones.}
+
+Las siguientes aleaciones siguen vigentes en la industria:
+\begin{itemize}
+    \item \textit{Permalloy};
+    \item \textit{Supermalloy};
+    \item \textit{Permalloy D};
+    \item \textit{Hipernik} (aunque su uso es pincipalmente para la investigación de aleaciones, su uso en la industria sigue vigente en menor medida);
+    \item \textit{Hiperco};
+    \item \textit{Permendur};
+    \item \textit{Compensator};
+    \item \textit{Thermopern}.
+\end{itemize}
+La mayoría de ellos han sido integrados u optimizados con otras aleaciones. (Aunque no sea la consigna del trabajo merece ser contado ya que hay una diferencia de 50 años entre el libro dado por la cátedra y la actualidad).
+
+\section{Aleaciones reemplazadas.}
+
+Y las siguientes aleaciones sí han sido reemplazadas:
+\begin{itemize}
+    \item \textit{Copernik};
+    \item \textit{Isoperm};
+    \item \textit{Perminvar}.
+\end{itemize}
+
+\subsection{¿Por cuáles fueron reemplazadas?}
+
+La consigna no especifica al decir por cuales fueron reemplazados, pero los autores ven consecuente nombrar mínimamente los reemplazos, y estos son:
+\begin{itemize}
+    \item Para \textit{Copernik}, aleaciones nanocristalinas como \textit{Vitroperm} y \textit{Finemet}; y aleaciones amorfas como \textit{Metglas}.
+    \item Para \textit{Isoperm}, aleaciones nanocristalinas como \textit{Nanoperm} y \textit{Vitroperm}; en menor medida \textit{HyMu 80} o \textit{Mu Metal\textsuperscript{\textregistered}}.
+    \item Para \textit{Perminvar}, las mismas que para \textit{Copernik}.
+\end{itemize}
+
+\vfill
+\textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA para facilitar la confección y disposición de los elementos en dicho trabajo.}}
+\newpage
+
+\section{Bibliografía.}
+
+\begin{itemize}
+    \item \url{https://pubs.aip.org/aip/jap/article-abstract/30/7/1000/162323/Magnetic-Annealing-in-Perminvar-II-Magnetic?redirectedFrom=fulltext}.
+    \item \url{https://vtda.org/pubs/BSTJ/vol08-1929/articles/bstj8-1-21.pdf}.
+    \item \url{https://patents.google.com/patent/EP0240600B1/en}.
+\end{itemize}
 
 \end{document}
