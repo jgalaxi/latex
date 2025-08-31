@@ -229,6 +229,19 @@ Teniendo $\sigma_0$ y $k$ ya ponemos calcular la fluencia de la pieza analizada.
     \sigma_y = \SI{896,44}{\mega\pascal} 
 \end{equation}
 
+\subsection{Calculo de la dureza con Hall-Petch.}
+
+A la probeta analizada se le realizaron varios ensayos de dureza con el objetivo de evaluar las modificaciones en la microestructura y, en consecuencia, en la dureza, ocasionadas por el efecto térmico del proceso de soldadura.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{mapa de durezas.png} 
+    \caption{Mapa de las durezas tomadas en la muestra} +
+    \label{fig:durezas}
+\end{figure}
+
+En la \ref{fig:durezas} podemos ver todos los lugares en donde se hizo un ensayo de dureza Vickers. y las zona en la que se hizo la metalografia es: la zona 8 y la zona con el matel base es la 15 que utilizaremos como referencia.
+
 \section{Soldabilidad de los materiales.}
 En esta parte veremos la soldabilidad de los distintos materiales de la pieza empleando las expresiones de la American Welding Society
 (AWS) y del Instituto Internacional de Soldadura (IIW).\\
@@ -252,13 +265,13 @@ primero tenemos que saber las composiciones de los distintos materiales.
 Para medir la soldabilidad de un material nos basamos en el contenido de \textbf{carbono equivalente} (\textbf{CE}), que sirve para comprender como los diferentes elementos aleantes aumentan la dureza del material, la cual puede provocar el agrientamiento en frio inducido por hidrogeno.
 Pero no todos los aleantes afectan por igual a la dureza por los cuales se crearon relaciones que igualan el impacto de cada elemento a la dureza segun su concentracion.
 Y ahora utilizamos las expresiones del AWS y el IIW las cuales son:\\
-\subsubsection{AWS:}
+\subsection{AWS:}
 \begin{equation*}
     CE = \text{\%C} + \frac{\text{\%Mn}+\text{\%Si}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
 \end{equation*}
 La AWS establece que para un contenido de carbono equivalente superior al 0,40\% existe la posibilidad de que se produzcan grietas en la zona afectada por el calor 
 
-\subsubsection{IIW:}
+\subsection{IIW:}
 \begin{equation*}
     CE = \text{\%C} + \frac{\text{\%Mn}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
 \end{equation*}
