@@ -409,12 +409,41 @@ lo cual es muy util ya que hacer un ensayo de dureza es mas sencillo y rapido qu
 \subsection{Modelos empíricos:}
 
 \begin{equation}
-    \sigma_y = X \cdot \text{HB}
+    \sigma_t = X \cdot \text{HB}
+\end{equation}
+Estando $\sigma_t$  es kilopondio sobre milimetro cuadrado.
+Siendo $X$ la constante de conversion que en este caso para un acero al carbono es 0,36. 
+Y teniendo la dureza Vickers del material se puede hacer una conversion a la dureza brinell y de esta manera conseguir la resistencia a la traccion del acero 1020 afectado por el calor.
+
+Eso se calcula con la siguiente ecuacion:
+\begin{equation}
+    HB = HV \cdot 0,95
 \end{equation}
 
-Siendo $X$ la constante de conversion que en este caso para un acero al carbono es 0,36.
+Entonces podemos sacar la dureza Brinell.
 
+\begin{equation}
+    HB = 138,9 \cdot 0,95
+\end{equation}
 
+\begin{equation}
+    HB = 132
+\end{equation}
+
+Y ahora sacamos la tension de tracción del material.
+\begin{equation}
+    \sigma_t = 132 \cdot 0,36
+\end{equation}
+
+\begin{equation}
+    \sigma_t = 47,52 \frac{\text{Kp}}{\text{mm}^2}
+\end{equation}
+
+Por ultimo pasamos el resultado a MPa
+
+\begin{equation}
+    \sigma_t = 466 \text{MPa}
+\end{equation}
 \section{Deslizamiento de bordes de grano y de dislocaciones: }
 
 El endurecimiento por Hall-Petch se presenta debido a que al hacerse mas pequeños los granos de un material metalico, aumenta la densidad de bordes de grano y por ende aumenta la cantidad de dislocaciones retenidas en los mismos y se detiene el principal mecanismo de deformación de los metales provocando un aumento de su resistencia a la fluencia y a la traccion (sobretodo el primero al volverse menos ductil el material), pero llegados a un diámetro de grano de 10 nanómetros, los bordes de granos se desplazan, perdiendo parte de la resistencia obtenida la restringir a los desplazamientos de dislocaciones.
