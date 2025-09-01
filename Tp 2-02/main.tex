@@ -43,6 +43,8 @@
 \tableofcontents
 
 \begin{abstract}
+    \underline{\textbf{TEMAS TRATADOS EN EL PROBLEMA.}}
+
     \begin{itemize}
         \item Tamaño de grano.
         \item Micrografía.
@@ -86,12 +88,14 @@
             \end{table}
         \item Composición del material 2: acero IRAM 1020.
         \item Composición del material aporte, web: \href{https://esab.com/ar/sam_es/products-solutions/product/filler-metals/mild-steel/mig-wires-tig-rods-gmaw-gtaw/ok-autrod-12-51/}{esab-ok-autrod-12-51/}
-        \item \(\textit{HV}_0=\) obtenerla con el durómetro en la zona no tratada.
-        \item \(\sigma_0=\) obtenerlo de la hoja técnica del acero que corresponda por hoja técnica.
-        \item \(d=\) medirla con el microscopio.
+        \item $\textit{HV}_0=$ obtenerla con el durómetro en la zona no tratada.
+        \item $\sigma_0=$ obtenerlo de la hoja técnica del acero que corresponda por hoja técnica.
+        \item $d=$ medirla con el microscopio.
         \item modelo físico matemático:
-        \item \(\sigma_y=\) usar el modelo de Hall Petch.
-        \item \(\textit{HV}_0=\) usar el dato medido en alguno de los durómetros del laboratorio.
+        \begin{itemize}
+            \item $\sigma_y=$ usar el modelo de Hall Petch.
+            \item $\textit{HV}_0=$ usar el dato medido en alguno de los durómetros del laboratorio.
+        \end{itemize}
     \end{itemize}
 
     \underline{\textbf{ORIENTACIONES:}}
@@ -99,7 +103,7 @@
     \underline{\textbf{ORIENTACIÓN 001: Emplear la técnica del paper de referencia:}}
 
     \begin{itemize}
-        \item Artículo científico:  Baker, B.; Menon, E.; Mcnelley, T.; Brewer, L.; El-Dasher, B.; Farmer, Joseph, C.; Torres, S.; Mahoney, M.; Sanderson, S. (2014). Processing-Microstructure Relationships in Friction Stir Welding of MA956 Oxide Dispersion Strengthened Steel. Metallurgical and Materials Transactions E. 1. 1-13. DOI: \href{http://dx.doi.org/10.1007/s40553-014-0033-6}{10.1007/s40553-014-0033-6}. Sitio Web: \href{https://www.researchgate.net/publication/305807425_Processing-Microstructure_Relationships_in_Friction_Stir_Welding_of_MA956_Oxide_Dispersion_Strengthened_Steel#fullTextFileContent}{researchgate}.
+        \item Artículo científico:  Baker, B.; Menon, E.; Mcnelley, T.; Brewer, L.; El-Dasher, B.; Farmer, Joseph, C.; Torres, S.; Mahoney, M.; Sanderson, S. (2014). Proce-ssing-Microstructure Relationships in Friction Stir Welding of MA956 Oxide Dispersion Strengthened Steel. Metallurgical and Materials Transactions E. 1. 1-13. DOI: \href{http://dx.doi.org/10.1007/s40553-014-0033-6}{10.1007/s40553-014-0033-6}. Sitio Web: \href{https://www.researchgate.net/publication/305807425_Processing-Microstructure_Relationships_in_Friction_Stir_Welding_of_MA956_Oxide_Dispersion_Strengthened_Steel#fullTextFileContent}{researchgate}.
         \item Último párrafo de la Sección IV + la Figura 14:\\
         Cuando los datos de dureza actuales se trazan frente a la raíz cuadrada inversa del tamaño de grano del material de la zona de agitación, se observa una gráfica relativamente lineal para cuatro de las condiciones de FSW (Figura 14). Esta relación lineal sugiere la relación Hall-Petch que describe la conexión entre el tamaño del grano y el límite elástico en materiales cristalinos. Por el contrario, la dureza del material base es mucho mayor y no cae en esta línea de regresión lineal. Se reconoce que la dureza es una medida de la resistencia al flujo plástico de un material y, por lo tanto, es una función tanto del límite elástico como del endurecimiento por deformación. Un trabajo reciente de Baker et al. Ha realizado experimentos reales de tracción uniaxial en material extraído de la zona de agitación. El límite elástico a temperatura ambiente del material de la zona de agitación sigue, de hecho, una relación de Hall-Petch. La principal diferencia en el límite elástico a baja temperatura entre el material base y el material de la zona de agitación; por lo tanto, se debe al engrosamiento de las partículas de itrio-óxido de aluminio en el material con la correspondiente pérdida en la fuerza de dispersión. Esta pérdida de fortalecimiento por dispersión es la razón por la que el valor de dureza del material base no cae en la línea Hall-Petch de la Figura 14. Se pueden encontrar más detalles sobre la evolución de estos óxidos y su impacto en el comportamiento a tracción del material de soldadura en otros trabajos recientes. Por Baker.
             \begin{figure}[h]
@@ -241,11 +245,11 @@ A la probeta analizada se le realizaron varios ensayos de dureza con el objetivo
     \label{fig:durezas}
 \end{figure}
 
-En la \autoref{fig:durezas} podemos ver todos los lugares en donde se hizo un ensayo de dureza Vickers. y las zona en la que se hizo la metalografia es: la zona 8 y la zona con el matel base es la 15 que utilizaremos como referencia.
+En la \autoref{fig:durezas} podemos ver todos los lugares en donde se hizo un ensayo de dureza Vickers y las zona en la que se hizo la metalografia es: la zona 8 y la zona con el metal base es la 15 que utilizaremos como referencia.
 
 \begin{itemize}
-    \item  zona 8, HV = 138,9
-    \item  zona 15, HV = 122
+    \item zona 8, HV = 138,9
+    \item zona 15, HV = 122
 \end{itemize}
 
 Y ahora utililizando la extensión del modelo matemático de Hall-Petch:
@@ -258,13 +262,12 @@ Y ahora utililizando la extensión del modelo matemático de Hall-Petch:
 Donde:
 
 \begin{itemize}
-    \item $HV$ = dureza despues del tratamiento termico.
-    \item $HV_0$ = dureza despues del tratamiento termico.
+    \item $\textit{HV}$ = dureza despues del tratamiento termico.
+    \item $\textit{HV}_0$ = dureza despues del tratamiento termico.
     \item $k$ = constante del material.
     \item $d$ = diametro del grano.
 \end{itemize}
-
-remplazando $HV$ con la dureza de la zona 8 (zona afectada por el calor) y $HV_0$ con la dureza de la zona 15 (material base) y $d$ con el diametro de grano que obtuvimos se puede sacar $k$ y con esos se podria sacar la dureza del material en cualquier punto sabiendo el diametro del grano.
+remplazando $\textit{HV}$ con la dureza de la zona 8 (zona afectada por el calor) y $\textit{HV}_0$ con la dureza de la zona 15 (material base) y $d$ con el diámetro de grano que obtuvimos se puede sacar $k$ y con esos se puede sacar la dureza del material en cualquier punto sabiendo el diámetro del grano.
 
 Entonces remplazamos en la \autoref{eq:HV}:
 
@@ -282,14 +285,15 @@ Entonces remplazamos en la \autoref{eq:HV}:
 
 \section{Soldabilidad de los materiales.}
 En esta parte veremos la soldabilidad de los distintos materiales de la pieza empleando las expresiones de la American Welding Society
-(AWS) y del Instituto Internacional de Soldadura (IIW).\\
-primero tenemos que saber las composiciones de los distintos materiales.
+(AWS) y del Instituto Internacional de Soldadura (IIW).
+
+Primero tenemos que saber las composiciones de los distintos materiales.
+
 \begin{table}[h]
     \centering
-    \caption{Composicion de los materiales}
     \begin{tabular}{l|c|c|c}
         \hline
-        Composicion & material 1 & material 2 & material 3\\
+        Composición & material 1 & material 2 & material 3\\
         \hline
         C & 0,455 & 0,2 & 0,1\\
         Mn & 0,745 & 0.45 & 1,11\\
@@ -299,97 +303,118 @@ primero tenemos que saber las composiciones de los distintos materiales.
         Mo & 0,007 & 0 & 0\\
         \hline
     \end{tabular}
+    \caption{Composicion de los materiales.}
 \end{table}
-Para medir la soldabilidad de un material nos basamos en el contenido de \textbf{carbono equivalente} (\textbf{CE}), que sirve para comprender como los diferentes elementos aleantes aumentan la dureza del material, la cual puede provocar el agrientamiento en frio inducido por hidrogeno.
-Pero no todos los aleantes afectan por igual a la dureza por los cuales se crearon relaciones que igualan el impacto de cada elemento a la dureza segun su concentracion.
-Y ahora utilizamos las expresiones del AWS y el IIW las cuales son:\\
-\subsection{AWS:}
+
+Para medir la soldabilidad de un material nos basamos en el contenido de \textbf{carbono equivalente (CE)}, que sirve para comprender como los diferentes elementos aleantes aumentan la dureza del material, la cual puede provocar el agrietamiento en frio inducido por hidrógeno. Pero no todos los aleantes afectan por igual a la dureza por los cuales se crearon relaciones que igualan el impacto de cada elemento a la dureza segun su concentración.
+
+Ahora utilizamos las expresiones del AWS y el IIW las cuales son:
+
+\subsection{AWS.}
+
 \begin{equation*}
     CE = \text{\%C} + \frac{\text{\%Mn}+\text{\%Si}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
 \end{equation*}
-La AWS establece que para un contenido de carbono equivalente superior al 0,40\% existe la posibilidad de que se produzcan grietas en la zona afectada por el calor 
 
-\subsection{IIW:}
+La AWS establece que para un contenido de carbono equivalente superior al 0,4\% existe la posibilidad de que se produzcan grietas en la zona afectada por el calor.
+
+\subsection{IIW.}
+
 \begin{equation*}
     CE = \text{\%C} + \frac{\text{\%Mn}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
 \end{equation*}
-Para medir la soldabilidad la IIW establece un rango de valores de \textbf{carbono equivalente} los cuales son:
 
-\begin{table}[h]
+Para medir la soldabilidad, la IIW establece un rango de valores de \textbf{carbono equivalente} los cuales son:
+
+\begin{table}[h!]
     \centering
-    \caption{Rango de valores de CE}
-    \begin{tabular}{l|c}
+    \begin{tabular}{|c|c|}
         \hline
-        \textbf{Carbon equivalent (CE)} & \textbf{Soldabilidad} \\ \hline
-        Hasta 0.35 & Excelente \\ \hline
-        0,36--0,40 & Muy bien. \\ \hline
-        0,41--0,45 & Bien. \\ \hline
-        0,46--0,50 & Feria \\ \hline
-        Más de 0,50 & Pobre \\ \hline
+        \textbf{CE} & \textbf{Soldabilidad} \\ \hline
+        Hasta 0.35\% & Excelente \\ \hline
+        0,36\%--0,4\% & Muy bien. \\ \hline
+        0,41\%--0,45\% & Bien. \\ \hline
+        0,46\%--0,5\% & Regular. \\ \hline
+        Más de 0,5\% & Pobre. \\ \hline
     \end{tabular}
+    \caption{Rango de valores de CE.}
 \end{table}
 
+\subsection{Soldabilidad de los materiales por el método AWS.}
 
-\subsection{Soldabilidad de los materiales metodo AWS:}
-\subsubsection{Material 1}
+\subsubsection{Material 1.}
+
 \begin{equation*}
     CE = 0,455 + \frac{0,745 + 0,231}{6} + \frac{0,041 + 0,007}{5} + \frac{0,037}{15}
 \end{equation*}
+
 \begin{equation*}
     CE = 0,63
 \end{equation*}
+
 Teniendo esa cantidad de carbono equivalente existe la posibilidad que se formen grietas en las zonas afectadas por el calor.
 
-\subsubsection{Material 2}
+\subsubsection{Material 2.}
+
 \begin{equation*}
     CE = 0,2 + \frac{0,45 + 0,225}{6} 
 \end{equation*}
+
 \begin{equation*}
     CE = 0,3125
 \end{equation*}
-Teniendo en cuenta la cantidad de carbono equivalente el acero 1020 tiene buena sol
 
-\subsubsection{Material 3}
+Teniendo en cuenta la cantidad de carbono equivalente el acero 1020 tiene buena soldabilidad.
+
+\subsubsection{Material 3.}
+
 \begin{equation*}
     CE = 0,1 + \frac{1,11 + 0,72}{6} 
 \end{equation*}
+
 \begin{equation*}
     CE = 0,405
 \end{equation*}
 
+\subsection{Soldabilidad de los materiales por el método IIW.}
 
-\subsection{Soldabilidad de los materiales metodo IIW:}
-\subsubsection{Material 1}
+\subsubsection{Material 1.}
+
 \begin{equation*}
     CE = 0,455 + \frac{0,745}{6} + \frac{0,041 + 0,007}{5} + \frac{0,037}{15}
 \end{equation*}
+
 \begin{equation*}
     CE = 0,59
 \end{equation*}
 
-\subsubsection{Material 2}
+\subsubsection{Material 2.}
+
 \begin{equation*}
     CE = 0,2 + \frac{0,45}{6} 
 \end{equation*}
+
 \begin{equation*}
     CE = 0,275
 \end{equation*}
 
-\subsubsection{Material 3}
+\subsubsection{Material 3.}
+
 \begin{equation*}
     CE = 0,1 + \frac{1,11}{6} 
 \end{equation*}
+
 \begin{equation*}
     CE = 0,285
 \end{equation*}
 
-\subsection{conclucion}
-Teniendo en cuenta el metodo del AWS el material 1 y 2 tienen una soldabilidad baja y pueden llegar a aparecer grietas y presentar fragilidad en las zonas afectadas por el calor.
-Y para el material 2 la soldabilidad es mejor que los anteriores al tener un carbono equivalente dentro del limite aceptable.
+\subsection{Conclusión.}
 
-Y segun el metodo del IIW el material 1 tiene una soldabilidad muy pobre y los materiales 1 y 3 tienen una muy buena soldabilidad.
+Teniendo en cuenta el método del AWS, el material 1 y 2 tienen una soldabilidad baja y pueden llegar a aparecer grietas y presentar fragilidad en las zonas afectadas por el calor. Para el material 2 la soldabilidad es mejor que los anteriores al tener un \textbf{CE} dentro del límite aceptable.
 
-Segun el reglamento CIRSOC-304, que habla sobre soldadura de aceros en estructuras, y la tabla A.IV-2 que muestra la velocidad de enfriamiento maxima segun para cierta dureza critica, alcanzable en la zona afectada por el calor en la soldadura, segun el porcentaje de \textbf{CE}. la cual nos muestra que el material 2 y el tres no llegan a ninguna de las durezas criticas con las velocidades de la tabla lo que muestra su buena soldabilidad, encabio el material 3 si llega a una dureza critica con una velocidad de enfriamiento de 9$C/s$ por lo que de no tener un precalentamiento a alta temperatura y posible poscalentamiento, la zona afectadas por el calor en el material 1 se volverian muy fragiles.
+Y según el método del IIW el material 1 tiene una soldabilidad muy pobre y los materiales 2 y 3 tienen una muy buena soldabilidad.
+
+Según el reglamento CIRSOC-304, que habla sobre soldadura de aceros en estructuras, y la tabla A.IV-2 que muestra la velocidad de enfriamiento máxima según para cierta dureza critica, alcanzable en la zona afectada por el calor en la soldadura; según el porcentaje de \textbf{CE}, la cual nos muestra que el material 2 y el tres no llegan a ninguna de las durezas criticas con las velocidades de la tabla lo que muestra su buena soldabilidad, encabio el material 3 si llega a una dureza critica con una velocidad de enfriamiento de 9$C/s$ por lo que de no tener un precalentamiento a alta temperatura y posible poscalentamiento, la zona afectadas por el calor en el material 1 se volverian muy fragiles.
 
 y esto se puede observar en la macrografía de la pieza donde las zonas cercanas al cordon de soldadura en el material 1, las zonas afectadas por el calor, se encuentran de un color distinto al resto del material de la pieza, en donde es posible que el material se haya fragilizado al no contar con un precalentamiento.
 
