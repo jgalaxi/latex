@@ -29,6 +29,7 @@
 \pgfplotsset{compat=1.18}
 \usepackage{tikz}
 \usepackage{xcolor}
+\usepackage{hyperref}
 \definecolor{myblue}{RGB}{42, 127, 179}
 
 \pagestyle{fancy}
@@ -103,7 +104,7 @@
         Cuando los datos de dureza actuales se trazan frente a la raíz cuadrada inversa del tamaño de grano del material de la zona de agitación, se observa una gráfica relativamente lineal para cuatro de las condiciones de FSW (Figura 14). Esta relación lineal sugiere la relación Hall-Petch que describe la conexión entre el tamaño del grano y el límite elástico en materiales cristalinos. Por el contrario, la dureza del material base es mucho mayor y no cae en esta línea de regresión lineal. Se reconoce que la dureza es una medida de la resistencia al flujo plástico de un material y, por lo tanto, es una función tanto del límite elástico como del endurecimiento por deformación. Un trabajo reciente de Baker et al. Ha realizado experimentos reales de tracción uniaxial en material extraído de la zona de agitación. El límite elástico a temperatura ambiente del material de la zona de agitación sigue, de hecho, una relación de Hall-Petch. La principal diferencia en el límite elástico a baja temperatura entre el material base y el material de la zona de agitación; por lo tanto, se debe al engrosamiento de las partículas de itrio-óxido de aluminio en el material con la correspondiente pérdida en la fuerza de dispersión. Esta pérdida de fortalecimiento por dispersión es la razón por la que el valor de dureza del material base no cae en la línea Hall-Petch de la Figura 14. Se pueden encontrar más detalles sobre la evolución de estos óxidos y su impacto en el comportamiento a tracción del material de soldadura en otros trabajos recientes. Por Baker.
             \begin{figure}[h]
                 \centering
-                \includegraphics[width=0.5\linewidth]{figuras/imagen 2.png}
+                \includegraphics[width=0.5\linewidth]{Figuras/imagen 2.png}
                 \label{figura2}
             \end{figure}
     \end{itemize}
@@ -132,7 +133,7 @@
         \item Endurecimiento del borde de grano.  Sitio Web: \href{https://es.wikipedia.org/wiki/Endurecimiento_del_borde_de_grano}{wikipedia.org} [Figura 1: El endurecimiento de Hall-Petch está limitado por el tamaño de las luxaciones. Una vez que el tamaño de grano alcanza aproximadamente 10 nanómetros, los bordes del grano comienzan a deslizarse.].
         \begin{figure}[h]
             \centering
-            \includegraphics[width=0.5\linewidth]{figuras/imagen 3.png}
+            \includegraphics[width=0.5\linewidth]{Figuras/imagen 3.png}
             \label{fig:enter-label}
         \end{figure}
     \end{itemize}
@@ -229,6 +230,56 @@ Teniendo $\sigma_0$ y $k$ ya ponemos calcular la fluencia de la pieza analizada.
     \sigma_y = \SI{896,44}{\mega\pascal} 
 \end{equation}
 
+\subsection{Calculo de la dureza con Hall-Petch.}
+
+A la probeta analizada se le realizaron varios ensayos de dureza con el objetivo de evaluar las modificaciones en la microestructura y, en consecuencia, en la dureza, ocasionadas por el efecto térmico del proceso de soldadura.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figuras/mapa_de_durezas.png} 
+    \caption{Mapa de las durezas tomadas en la muestra}
+    \label{fig:durezas}
+\end{figure}
+
+En la \autoref{fig:durezas} podemos ver todos los lugares en donde se hizo un ensayo de dureza Vickers. y las zona en la que se hizo la metalografia es: la zona 8 y la zona con el matel base es la 15 que utilizaremos como referencia.
+
+\begin{itemize}
+    \item  zona 8, HV = 138,9
+    \item  zona 15, HV = 122
+\end{itemize}
+
+Y ahora utililizando la extensión del modelo matemático de Hall-Petch:
+
+\begin{equation}
+    HV = HV_0 + k\cdot d \textsuperscript{-1/2}
+    \label{eq:HV}
+\end{equation}
+
+Donde:
+
+\begin{itemize}
+    \item $HV$ = dureza despues del tratamiento termico.
+    \item $HV_0$ = dureza despues del tratamiento termico.
+    \item $k$ = constante del material.
+    \item $d$ = diametro del grano.
+\end{itemize}
+
+remplazando $HV$ con la dureza de la zona 8 (zona afectada por el calor) y $HV_0$ con la dureza de la zona 15 (material base) y $d$ con el diametro de grano que obtuvimos se puede sacar $k$ y con esos se podria sacar la dureza del material en cualquier punto sabiendo el diametro del grano.
+
+Entonces remplazamos en la \autoref{eq:HV}:
+
+\begin{equation}
+   138,9 = 122 + k\cdot (116,84\: \mu m)\textsuperscript{-1/2}
+\end{equation}
+
+\begin{equation}
+       16.9\cdot (116,84\: \mu m)\textsuperscript{1/2} = k
+\end{equation}
+
+\begin{equation}
+       k = 182.68\: \cdot \mu m\textsuperscript{1/2}
+\end{equation}
+
 \section{Soldabilidad de los materiales.}
 En esta parte veremos la soldabilidad de los distintos materiales de la pieza empleando las expresiones de la American Welding Society
 (AWS) y del Instituto Internacional de Soldadura (IIW).\\
@@ -252,13 +303,13 @@ primero tenemos que saber las composiciones de los distintos materiales.
 Para medir la soldabilidad de un material nos basamos en el contenido de \textbf{carbono equivalente} (\textbf{CE}), que sirve para comprender como los diferentes elementos aleantes aumentan la dureza del material, la cual puede provocar el agrientamiento en frio inducido por hidrogeno.
 Pero no todos los aleantes afectan por igual a la dureza por los cuales se crearon relaciones que igualan el impacto de cada elemento a la dureza segun su concentracion.
 Y ahora utilizamos las expresiones del AWS y el IIW las cuales son:\\
-\subsubsection{AWS:}
+\subsection{AWS:}
 \begin{equation*}
     CE = \text{\%C} + \frac{\text{\%Mn}+\text{\%Si}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
 \end{equation*}
 La AWS establece que para un contenido de carbono equivalente superior al 0,40\% existe la posibilidad de que se produzcan grietas en la zona afectada por el calor 
 
-\subsubsection{IIW:}
+\subsection{IIW:}
 \begin{equation*}
     CE = \text{\%C} + \frac{\text{\%Mn}}{6} + \frac{\text{\%Cr}+\text{\%Mo}+\text{\%V}}{5} + \frac{\text{\%Cu}+\text{\%Ni}}{15}
 \end{equation*}
