@@ -41,6 +41,7 @@
 \include{Portada}
 \newpage
 \tableofcontents
+\newpage
 
 \begin{abstract}
     \underline{\textbf{TEMAS TRATADOS EN EL PROBLEMA.}}
@@ -142,8 +143,11 @@
         \end{figure}
     \end{itemize}
 \end{abstract}
+\section{Calculo de fluencia y dureza con Hall-Petch.}
+En este trabajo se estudia una muestra de una pieza la cual fue soldada sin precalentamiento por lo que se cree que la estructura de los materiales de la misma se vio afectada por el calor de la soldadura por lo que se le hizo una metalografia para analizar la microestructura de la misma. 
+mas especificamente la parte del acero AISI 1020 y ver que cambios hubo en el mismo.
 
-\section{Datos principales.}
+\subsection{Datos principales.}
 
 Primero contamos con las imágenes de la pieza seleccionada, las cuales se observan en la \autoref{fig:metalografia}. En base a esto podemos obetener el diámetro promedio de los granos. Para ello empleamos "ChatGPT 4o" acompañado de un código en Python para saber cuantos granos hay en la imagen, el resultado son 613 granos como se puede ver ejecutando el código adjunto. Luego procedemos a esta herramienta nuevamente para saber cual es el diámetro promiedo de \SI{116,84}{\micro\metre}.
 
@@ -174,67 +178,32 @@ Primero contamos con las imágenes de la pieza seleccionada, las cuales se obser
     \label{fig:metalografia}
 \end{figure}
 
-\section{Resolución}
-Usando la ecuación de Hall-Petch, resultados experimentales y el diámetro que sacamos anteriormente podemos resolver y sacar las constantes $\sigma_0$ y $k$. Los datos experimentales los obtuvimos de un estracto del trabajo de Z.G. Yang, profesor de la Universidad de Tsinghua (\url{https://www.researchgate.net/publication/257685788_Third_generation_high_strength_low_alloy_steels_with_improved_toughness}).
+\subsection{Calculo de la fluencia.}
+Usando la ecuación de Hall-Petch \autoref{eq:hall}, podemos sacar la tension de fluencia de la pieza, pero para ello necesitamos el diametro $d$ del grano, el cual ya tenemos y $k$ y $\sigma_0$ que son constantes del material, las cuales obtenemos del libro \textbf{"Smith, W.F.; Hashemi, J. - Fundamentos de la Ciencia e Ingenierìa de Materiales - 4ta Ediciòn"}. 
+Donde dice que para aceros dulces, como lo seria el 1020, la $k$ es 740 $\text{MPa}\cdot \mu m\textsuperscript{1/2}$ y el $\sigma_0$ es 70 MPa.
 \begin{equation}
     \sigma_y = \sigma_0 +k\cdot d \textsuperscript{-1/2}
+    \label{eq:hall}
 \end{equation}
 
-Los datos que tomamos para sacar las constantes son:
+Donde:
 \begin{itemize}
-    \item$\sigma_1=$ \SI{1 150}{\mega\pascal}
-    \item\(d_1 \textsuperscript{-1/2}=0,75\: \mu m\textsuperscript{-1/2}\)
-    \item$\sigma_2=$ \SI{1 070}{\mega\pascal}
-    \item\(d_2 \textsuperscript{-1/2}=0,55\: \mu m\textsuperscript{-1/2}\)
+    \item $\sigma$ = fluencia después del tratamiento térmico.
+    \item $\sigma_0$ = fluencia antes del tratamiento térmico.
+    \item $k$ = constante del material.
+    \item $d$ = diametro del grano.
 \end{itemize}
 
-con los cuales podemos obtener las constantes al remplazar en la ecuación de Hall-Petch.
-\begin{equation}
-    \sigma_1 = \sigma_0 +k\cdot d_1 \textsuperscript{-1/2}
-\end{equation}
+Teniendo $\sigma_0$ y $k$ ponemos calcular la fluencia de la pieza analizada.
 
 \begin{equation}
-    \sigma_2 = \sigma_0 +k\cdot d_2 \textsuperscript{-1/2}
-\end{equation}
-
-\begin{equation}
-    \sigma_0 = \sigma_1 -k\cdot d_1 \textsuperscript{-1/2}
-\end{equation}
-
-\begin{equation}
-    \sigma_2 = \sigma_1 -k\cdot d_1 \textsuperscript{-1/2} +k\cdot d_2 \textsuperscript{-1/2}
-\end{equation}
-
-\begin{equation}
-    k = \frac{\sigma_2 - \sigma_1}{d_2 \textsuperscript{-1/2} - d_1 \textsuperscript{-1/2}}
-\end{equation}
-
-\begin{equation}
-    k = \frac{\SI{1 070}{\mega\pascal} - \SI{1 150}{\mega\pascal}}{{0,55\: \mu m\textsuperscript{-1/2}} - 0,75\: \mu m\textsuperscript{-1/2}}
-\end{equation}
-
-\begin{equation}
-    k = 380,95\: \text{MPa}\cdot \mu m\textsuperscript{1/2}
-\end{equation}
-
-\begin{equation}
-    \sigma_0 = \SI{1 150}{\mega\pascal} - 380,95\: \text{MPa}\cdot \mu m\textsuperscript{1/2} \cdot 0,75\: \mu m\textsuperscript{-1/2}
-\end{equation}
-
-\begin{equation}
-    \sigma_0 = \SI{861,2}{\mega\pascal} 
-\end{equation}
-
-Teniendo $\sigma_0$ y $k$ ya ponemos calcular la fluencia de la pieza analizada.
-
-\begin{equation}
-    \sigma_y = \SI{861,2}{\mega\pascal} + 380,95\: \text{MPa}\cdot \mu m\textsuperscript{1/2} (116,84\: \mu m)\textsuperscript{-1/2}
+    \sigma_y = \SI{70}{\mega\pascal} + 740\: \text{MPa}\cdot \mu m\textsuperscript{1/2} (116,84\: \mu m)\textsuperscript{-1/2}
 \end{equation}
 \begin{equation}
-    \sigma_y = \SI{896,44}{\mega\pascal} 
+    \sigma_y = \SI{138,46}{\mega\pascal} 
 \end{equation}
 
-\subsection{Calculo de la dureza con Hall-Petch.}
+\subsection{Calculo de la dureza.}
 
 A la probeta analizada se le realizaron varios ensayos de dureza con el objetivo de evaluar las modificaciones en la microestructura y, en consecuencia, en la dureza, ocasionadas por el efecto térmico del proceso de soldadura.
 
@@ -282,6 +251,10 @@ Entonces remplazamos en la \autoref{eq:HV}:
 \begin{equation}
        k = 182.68\: \cdot \mu m\textsuperscript{1/2}
 \end{equation}
+
+\subsection{Conclusión.}
+Como podemos ver en el tamaño de grano de la pieza y en el calculo de la fluencia y la dureza, el material apenas se vio afectado por el calor de la soldadura quedando un tamaño de grano bastante grande y teneiendo pequeñas variaciones en su dureza.
+
 
 \section{Soldabilidad de los materiales.}
 En esta parte veremos la soldabilidad de los distintos materiales de la pieza empleando las expresiones de la American Welding Society
@@ -469,6 +442,7 @@ Por ultimo pasamos el resultado a MPa
 \begin{equation}
     \sigma_t = 466 \text{MPa}
 \end{equation}
+
 \section{Deslizamiento de bordes de grano y de dislocaciones: }
 
 El endurecimiento por Hall-Petch se presenta debido a que al hacerse mas pequeños los granos de un material metalico, aumenta la densidad de bordes de grano y por ende aumenta la cantidad de dislocaciones retenidas en los mismos y se detiene el principal mecanismo de deformación de los metales provocando un aumento de su resistencia a la fluencia y a la traccion (sobretodo el primero al volverse menos ductil el material), pero llegados a un diámetro de grano de 10 nanómetros, los bordes de granos se desplazan, perdiendo parte de la resistencia obtenida la restringir a los desplazamientos de dislocaciones.
