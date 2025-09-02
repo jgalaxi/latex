@@ -7,6 +7,7 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{siunitx}
+\usepackage{csquotes}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -41,7 +42,6 @@
 \include{Portada}
 \newpage
 \tableofcontents
-\newpage
 
 \begin{abstract}
     \underline{\textbf{TEMAS TRATADOS EN EL PROBLEMA.}}
@@ -74,7 +74,7 @@
     \begin{itemize}
         \item Cada equipo debe seleccionar un punto e informar su decisión por correo, no pueden existir dos equipos con el mismo punto A, B, C, D.
         \item Imagen:
-        \begin{figure}[h]
+        \begin{figure}[h!]
             \centering
             \includegraphics[width=0.5\linewidth]{Figuras/imagen 1.png}
             \label{figura1}
@@ -143,13 +143,14 @@
         \end{figure}
     \end{itemize}
 \end{abstract}
-\section{Calculo de fluencia y dureza con Hall-Petch.}
-En este trabajo se estudia una muestra de una pieza la cual fue soldada sin precalentamiento por lo que se cree que la estructura de los materiales de la misma se vio afectada por el calor de la soldadura por lo que se le hizo una metalografia para analizar la microestructura de la misma. 
-mas especificamente la parte del acero AISI 1020 y ver que cambios hubo en el mismo.
+
+\section{Cálculo de fluencia y dureza con ecuación de Hall-Petch.}
+
+En este trabajo se estudia una muestra de una pieza la cual fue soldada sin precalentamiento por lo que se cree que la estructura de los materiales de la misma se vió afectada por el calor de la soldadura por lo que se le hizo una metalografia para analizar la microestructura de la misma, más especificamente la parte del acero IRAM 1020 y ver que cambios hubo en el mismo.
 
 \subsection{Datos principales.}
 
-Primero contamos con las imágenes de la pieza seleccionada, las cuales se observan en la \autoref{fig:metalografia}. En base a esto podemos obetener el diámetro promedio de los granos. Para ello empleamos "ChatGPT 4o" acompañado de un código en Python para saber cuantos granos hay en la imagen, el resultado son 613 granos como se puede ver ejecutando el código adjunto. Luego procedemos a esta herramienta nuevamente para saber cual es el diámetro promiedo de \SI{116,84}{\micro\metre}.
+Primero contamos con las imágenes de la pieza seleccionada, las cuales se observan en la \autoref{fig:metalografia}. En base a esto podemos obetener el diámetro promedio de los granos. Para ello empleamos \enquote{ChatGPT 4o} acompañado de un código en Python para saber cuántos granos hay en la imagen, el resultado son 613 granos como se puede ver ejecutando el código adjunto. Luego procedemos a esta herramienta nuevamente para saber cual es el diámetro promiedo de \SI{116,84}{\micro\metre}.
 
 \begin{figure}[h!]
     \centering
@@ -178,9 +179,10 @@ Primero contamos con las imágenes de la pieza seleccionada, las cuales se obser
     \label{fig:metalografia}
 \end{figure}
 
-\subsection{Calculo de la fluencia.}
-Usando la ecuación de Hall-Petch \autoref{eq:hall}, podemos sacar la tension de fluencia de la pieza, pero para ello necesitamos el diametro $d$ del grano, el cual ya tenemos y $k$ y $\sigma_0$ que son constantes del material, las cuales obtenemos del libro \textbf{"Smith, W.F.; Hashemi, J. - Fundamentos de la Ciencia e Ingenierìa de Materiales - 4ta Ediciòn"}. 
-Donde dice que para aceros dulces, como lo seria el 1020, la $k$ es 740 $\text{MPa}\cdot \mu m\textsuperscript{1/2}$ y el $\sigma_0$ es 70 MPa.
+\subsection{Cálculo de la fluencia.}
+
+Usando la ecuación de Hall-Petch (\autoref{eq:hall}) podemos sacar la tensión de fluencia de la pieza, pero para ello necesitamos el diámetro promedio $d$ del grano, el cuál ya tenemos; y $k$ y $\sigma_0$ que son constantes del material, las cuales obtenemos del libro \enquote{\textbf{Smith, W.F.; Hashemi, J. - Fundamentos de la Ciencia e Ingeniería de Materiales - 4ta Edición}}. Donde dice que para aceros dulces, como lo sería el IRAM 1020, la $k$ es 740 $\text{MPa}\cdot \mu m\textsuperscript{1/2}$ y el $\sigma_0$ es \SI{70}{\mega\pascal}.
+
 \begin{equation}
     \sigma_y = \sigma_0 +k\cdot d \textsuperscript{-1/2}
     \label{eq:hall}
@@ -199,15 +201,16 @@ Teniendo $\sigma_0$ y $k$ ponemos calcular la fluencia de la pieza analizada.
 \begin{equation}
     \sigma_y = \SI{70}{\mega\pascal} + 740\: \text{MPa}\cdot \mu m\textsuperscript{1/2} (116,84\: \mu m)\textsuperscript{-1/2}
 \end{equation}
+
 \begin{equation}
     \sigma_y = \SI{138,46}{\mega\pascal} 
 \end{equation}
 
-\subsection{Calculo de la dureza.}
+\subsection{Cálculo de la dureza.}
 
-A la probeta analizada se le realizaron varios ensayos de dureza con el objetivo de evaluar las modificaciones en la microestructura y, en consecuencia, en la dureza, ocasionadas por el efecto térmico del proceso de soldadura.
+A la probeta analizada se le realizaron varios ensayos de dureza Vickers con el objetivo de evaluar las modificaciones en la microestructura y, en consecuencia, en la dureza ocasionadas por el efecto térmico del proceso de soldadura.
 
-\begin{figure}[h] 
+\begin{figure}[h!] 
     \centering
     \includegraphics[width=0.6\textwidth]{Figuras/mapa_de_durezas.png} 
     \caption{Mapa de las durezas tomadas en la muestra}
@@ -217,8 +220,8 @@ A la probeta analizada se le realizaron varios ensayos de dureza con el objetivo
 En la \autoref{fig:durezas} podemos ver todos los lugares en donde se hizo un ensayo de dureza Vickers y las zona en la que se hizo la metalografia es: la zona 8 y la zona con el metal base es la 15 que utilizaremos como referencia.
 
 \begin{itemize}
-    \item zona 8, HV = 138,9
-    \item zona 15, HV = 122
+    \item zona 8, HV = 138,9.
+    \item zona 15, HV = 122.
 \end{itemize}
 
 Y ahora utililizando la extensión del modelo matemático de Hall-Petch:
@@ -387,33 +390,34 @@ Teniendo en cuenta el método del AWS, el material 1 y 2 tienen una soldabilidad
 
 Y según el método del IIW el material 1 tiene una soldabilidad muy pobre y los materiales 2 y 3 tienen una muy buena soldabilidad.
 
-Según el reglamento CIRSOC-304, que habla sobre soldadura de aceros en estructuras, y la tabla A.IV-2 que muestra la velocidad de enfriamiento máxima según para cierta dureza critica, alcanzable en la zona afectada por el calor en la soldadura; según el porcentaje de \textbf{CE}, la cual nos muestra que el material 2 y el tres no llegan a ninguna de las durezas criticas con las velocidades de la tabla lo que muestra su buena soldabilidad, encabio el material 3 si llega a una dureza critica con una velocidad de enfriamiento de 9$C/s$ por lo que de no tener un precalentamiento a alta temperatura y posible poscalentamiento, la zona afectadas por el calor en el material 1 se volverian muy fragiles.
+Según el reglamento CIRSOC-304, que habla sobre soldadura de aceros en estructuras, y la tabla A.IV-2 que muestra la velocidad de enfriamiento máxima según para cierta dureza crítica, alcanzable en la zona afectada por el calor en la soldadura; según el porcentaje de \textbf{CE}, la cual nos muestra que el material 2 y el tres no llegan a ninguna de las durezas criticas con las velocidades de la tabla lo que muestra su buena soldabilidad, en cambio el material 3 sí llega a una dureza crítica con una velocidad de enfriamiento de $9C/s$, por lo que de no tener un precalentamiento a alta temperatura y posible poscalentamiento, la zona afectadas por el calor en el material 1 se volverian muy fragiles.
 
-y esto se puede observar en la macrografía de la pieza donde las zonas cercanas al cordon de soldadura en el material 1, las zonas afectadas por el calor, se encuentran de un color distinto al resto del material de la pieza, en donde es posible que el material se haya fragilizado al no contar con un precalentamiento.
+Esto se puede observar en la macrografía de la pieza donde las zonas cercanas al cordón de soldadura en el material 1 (las zonas afectadas por el calor) se encuentran de un color distinto al resto del material de la pieza, en dónde es posible que el material se haya fragilizado al no contar con un precalentamiento.
 
-\subsection{Parametro critico del metal (Pcm)}
-El Pcm es al igual que las ecuaciones del IIW y la AWS sirve para calcular el carbono equivalente, pero se usa especificamente para aceros donde el porcentaje de carbono no excede el 0,11\% y usualmente se usa en la fabricacion de tuberias
+\subsection{Parametro critico del metal (Pcm).}
 
-Su ecuacion es:
+El Pcm, al igual que las ecuaciones del IIW y la AWS, sirve para calcular el carbono equivalente, pero se usa especificamente para aceros donde el porcentaje de carbono no excede el 0,11\% y usualmente se usa en la fabricacion de tuberias.
+
+Su ecuación es:
 \begin{equation}
     P_{cm} = \text{\%C} + \frac{\text{\%Si}}{30} + \frac{\text{\%Mn}+\text{\%Cu}+\text{\%Cr}}{20} + \frac{\text{\%Ni}}{60} + \frac{\text{\%Mo}}{15} + \frac{\text{\%V}}{10} + \text{5B\%}
 \end{equation}
 
-\section{Calculo de dureza Brinell}
+\section{Cálculo de dureza Brinell.}
 
-A la hora de trabajar con aceros tener el dato de la dureza Brinell (HB) es muy util debido a que con el se puede obtener de forma aproximada la resistencia a la traccion del material con en el que estamos trabajando, 
-lo cual es muy util ya que hacer un ensayo de dureza es mas sencillo y rapido que hacer un ensayo de traccion.
+A la hora de trabajar con aceros, tener el dato de la dureza Brinell (HB) es muy útil debido a que con él se puede obtener de forma aproximada la resistencia a la tracción del material con en el que estamos trabajando, 
+lo cual es muy útil ya que hacer un ensayo de dureza es más sencillo y rápido que hacer un ensayo de tracción.
 
 \subsection{Modelos empíricos:}
 
 \begin{equation}
     \sigma_t = X \cdot \text{HB}
 \end{equation}
-Estando $\sigma_t$  es kilopondio sobre milimetro cuadrado.
-Siendo $X$ la constante de conversion que en este caso para un acero al carbono es 0,36. 
-Y teniendo la dureza Vickers del material se puede hacer una conversion a la dureza brinell y de esta manera conseguir la resistencia a la traccion del acero 1020 afectado por el calor.
 
-Eso se calcula con la siguiente ecuacion:
+Estando $\sigma_t$ es $kp/mm^2$. Siendo $X$ la constante de conversión que en este caso para un acero al carbono es 0,36. Y teniendo la dureza Vickers del material se puede hacer una conversión a la HB y de ésta manera conseguir la resistencia a la tracción del IRAM 1020 afectado por el calor.
+
+Eso se calcula con la siguiente ecuación:
+
 \begin{equation}
     HB = HV \cdot 0,95
 \end{equation}
@@ -429,6 +433,7 @@ Entonces podemos sacar la dureza Brinell.
 \end{equation}
 
 Y ahora sacamos la tension de tracción del material.
+
 \begin{equation}
     \sigma_t = 132 \cdot 0,36
 \end{equation}
@@ -437,20 +442,18 @@ Y ahora sacamos la tension de tracción del material.
     \sigma_t = 47,52 \frac{\text{Kp}}{\text{mm}^2}
 \end{equation}
 
-Por ultimo pasamos el resultado a MPa
+Por último pasamos el resultado a \si{\mega\pascal}:
 
 \begin{equation}
-    \sigma_t = 466 \text{MPa}
+    \sigma_t = \SI{466}{\mega\pascal}
 \end{equation}
 
-\section{Deslizamiento de bordes de grano y de dislocaciones: }
+\section{Deslizamiento de bordes de grano y de dislocaciones.}
 
-El endurecimiento por Hall-Petch se presenta debido a que al hacerse mas pequeños los granos de un material metalico, aumenta la densidad de bordes de grano y por ende aumenta la cantidad de dislocaciones retenidas en los mismos y se detiene el principal mecanismo de deformación de los metales provocando un aumento de su resistencia a la fluencia y a la traccion (sobretodo el primero al volverse menos ductil el material), pero llegados a un diámetro de grano de 10 nanómetros, los bordes de granos se desplazan, perdiendo parte de la resistencia obtenida la restringir a los desplazamientos de dislocaciones.
+El endurecimiento por Hall-Petch se presenta debido a que al hacerse más pequeños los granos de un material metálico, aumenta la densidad de bordes de grano y por ende aumenta la cantidad de dislocaciones retenidas en los mismos y se detiene el principal mecanismo de deformación de los metales provocando un aumento de su resistencia a la fluencia y a la tracción (sobre todo el primero, al volverse menos dúctil el material), pero llegado a un diámetro de grano de 10 nanómetros, los bordes de granos se desplazan, perdiendo parte de la resistencia obtenida la restringir a los desplazamientos de dislocaciones.
 
-En nuestra muestra no se observa el fenome de deslizamiento de borde de grano debido a que nos encontramos con un diametro promedio de grano de \SI{116,84}{\micro\metre} por lo que nos encontramos bastante lejos del tamaño necesario para poder que se de este fenomeno, aparte de que de haber, se necesitaria de un microscopio electronico para poder observarlo con exactitud.
+En nuestra muestra no se observa el fenómeno de deslizamiento de borde de grano debido a que nos encontramos con un diámetro promedio de grano de \SI{116,84}{\micro\metre}, por lo que nos encontramos bastante lejos del tamaño necesario para poder que se dé este fenómeno aparte de que, de haber dicho deslizamiento, se necesitaría de un microscopio electrónico de barrido (MEB) para poder observarlo con exactitud.
 
-En cambio con las dislocaciones pasa algo distintos y es que defitivamente deben de haber dislocaiones en nuestra muestra, y se podrian ver de haber aplicado el agente corrosivo correcto y se hubiese utilizado un microscopio electronico, debido a que las dislocaciones al igual que los bordes de grano son lugares con mucha energia libre lo cual facilita su corrosion y permite visualizarlo, pero no es caso en este trabajo.
-pero se puede asegurar de que hay dislocaciones en la muestra sobretodo al tratarse de una soldadora donde el calor y enfriamiento repentino haya provocado el desplazamiento de las misma.
-
+En cambio con las dislocaciones pasa algo distinto, y es que defitivamente deben de haber dislocaiones en nuestra muestra y se podrían ver de haber aplicado el agente corrosivo correcto y se hubiese utilizado un MEB, debido a que las dislocaciones al igual que los bordes de grano son lugares con mucha energía libre lo cuál facilita su corrosión y permite visualizarlo, pero no es caso en este trabajo. Pero se puede asegurar de que hay dislocaciones en la muestra sobretodo al tratarse de una soldadora donde el calor y enfriamiento repentino haya provocado el desplazamiento de las misma.
 
 \end{document}
