@@ -53,20 +53,48 @@
 
 \section{Introduccion.}
 
-En el presente trabajo se realizaron ensayos sobre hilo y alambre de acero 1045 y sobre alambre de aluminio, para poder medir, graficar y comparar las propiedades mecanicas de los diferentes materiales y la diferencias que existen entre materiales ferrosos y no ferrosos.
+En el presente trabajo se realizaron ensayos sobre hilo de acero 1045 de 0,6mm de diametro, para el ensayo de termofluencia y 0,9mm para el ensayo de traccion y sobre alambre de aluminio AA 1305 h19 de 1,8mm de diametro (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
+Para poder medir, graficar y comparar las propiedades mecanicas de los diferentes materiales y la diferencias que existen entre materiales ferrosos y no ferrosos.
 
 
 \section{Metodo y herramientas/maquinas.}
 
 \subsection{ensayo de termofluencia:}
-Para poder realizar el ensayo de termofluenciase utilizo una pistola de calor capaz de alcanzar temperaturas entre \SI{450}{\celsius} y \SI{500}{\celsius}, unas pesas de entre \SI{5}{\kilogram} y \SI{10}{\kilogram}, unidas entre si para poder alcanzar los \SI{30}{\kilogram}, un soporte y unas agarraderas para poder mantener fijo el alambre en el momento del ensayo junto con una barra con marcas de longuitud al lado de la probeta para poder medir la deformacion.
+\subsubsection{Herramientas y aparatos.}
+Para poder realizar el ensayo de termofluenciase utilizo:
+\begin{itemize}
+    \item una pistola de calor capaz de alcanzar temperaturas entre \SI{450}{\celsius} y \SI{500}{\celsius}.
+    \item Unas pesas de entre \SI{5}{\kilogram} y \SI{10}{\kilogram}, unidas entre si para poder alcanzar los \SI{30}{\kilogram}.
+    \item Un soporte y unas agarraderas para poder mantener fijo el alambre en el momento del ensayo.
+    \item Una regla sujeta al soporte para poder medir la deformacion.
+    \item Una termocupla en un tester para poder medir la temperatura de la probeta.
+    \item Un marcador para dejar dos marcas bien medidas en la probeta.
+    \item Un celular para grabar la deformacion de la probeta a tiempo real y otro que tome el tiempo.
+\end{itemize}
+
+\subsubsection{Procedimiento}
+Lo primero que se hace es colgar, marcar y medir la probeta, luego se precalienta la probeta durante 2 minutos, despues de que pase el tiempo se empieza a grabar la probeta y se cuelgan las pesas a las agarraderas lentamente para no ejercer fuerza mas rapido de lo necesario, mientras tanto la pistola sigue calentando entra las marcas de la probeta hasta que la misma se rompa. 
+Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurarse de que todo se este realizando correctamente.
 
 \subsection{ensayo de traccion:}
-Para este ensayo se utilizo un dinamometro de \SI{50}{\kilogram} de fuerza maxima, y originalmente se iba a utilizar una maquina de traccion armada por un grupo de alumnos en años pasados, pero al utilizarla no lograbamos romper el alambre con la fuerza de \SI{40}{\kilogram} (No mas peso que eso para asegurarnos de no romper el dinamometro), por lo que se decidio construir una maquina nueva que funciona con un brazo de palanca, asi la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamometro.
+\subsubsection{Herramientas y maquinas.}
+Para este ensayo se utilizo.
+\begin{itemize}
+    \item Un dinamometro de \SI{50}{\kilogram} de fuerza maxima.
+    \item Una regla para poder medir la deformacion de la probeta.
+    \item Un celular para grabar la deformacion y carga aplicada sobre la probeta.
+    \item Una amarraderas para sujetar la probeta y el dinamometro.
+    \item Y una maquina de traccion por palanca contruida especialmente para este ensayo.
+\end{itemize}
+ 
+Originalmente se iba a utilizar una maquina de traccion armada por un grupo de alumnos de años pasados, pero al utilizarla no lograbamos romper el alambre con la fuerza de \SI{40}{\kilogram} (No mas peso que eso para asegurarnos de no romper el dinamometro).
 
-Y esto se ve en la 
+Por lo que se decidio construir una maquina nueva que funciona con un brazo de palanca, asi la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamometro.
+
+Y esto se ve en la \autopageref{eq:palanca}
 \begin{equation}
     F_1\cdot d_1 = F_2\cdot d_2
+    \label{eq:palanca}
 \end{equation}
 Donde:
 \begin{itemize}
@@ -84,7 +112,28 @@ Y podemos obtener la fuerza que se le hace a la probeta despejando $F_2$.
 
 Y asi mientras sepamos las dos dintancias al punto de apoyo y la fuerza que nos marca el dinamometro podemos sacar la fuerza ejercida a la probeta.
 
+Siendo $d_1 = 900$mm y $d_2 = 350$mm por lo que nos quedaria una relacion de:
+\begin{equation}
+    F_1 \cdot 2,57 = F_2
+\end{equation}
+\subsubsection{Procedimiento.}
+Primero se mide marca la probeta y se coloca en sus respectivo lugar, se pone el celular a grabar el dinamometro y la deformacion de la probeta y se empieza a aplicar fuerza lentamente a la probeta a travez del brazo, asegurandose de que sea de forma constante.
+\section{resultados.}
 
-\section{resultados}
+\section{Comparando resultados.}
+Las propiedades mecanicas del acero AISI 1045 son:
+\begin{itemize}
+    \item $\sigma_y$  = 360-420 MPa
+    \item $\sigma_R$ = 600-700 MPa
+    \item $\epsilon$ = 45\%-60\%
+    \item E = 206 GPa
+\end{itemize}
 
+Las propiedades mecanicas del aluminio AA 1305 H19 son:
+\begin{itemize}
+    \item $\sigma_y$  = 165 MPa
+    \item $\sigma_R$ = 186 MPa
+    \item $\epsilon$ = 1,4\%
+    \item E = 68,9 GPa
+\end{itemize}
 \end{document}
