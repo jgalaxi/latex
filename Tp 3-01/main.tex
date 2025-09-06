@@ -4,8 +4,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=3cm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{siunitx}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -53,7 +54,7 @@
 \end{abstract}
 
 \section{Análisis Aceros Böhler.}
-Son aceros producidos por Böhler, uno de los líderes internacionales de aceros para herramientas, aceros rápidos y aceros especiales. También se los suele clasificar por su ruta de fundición en aceros convencionales, refundidos por electroescoria (ESR/ESU), pulvimetalúrgicos de tercera generación y aceros atomizados en polvo para fabricación aditiva.
+Son aceros producidos por Böhler, uno de los líderes internacionales de aceros para herramientas, aceros rápidos y aceros especiales. También se los suele clasificar por otros métodos, pero no es el objetivo de la actividad. 
 
 Se solicita una descripción del catálogo, que se realiza a continuación:
 
@@ -61,42 +62,22 @@ Se solicita una descripción del catálogo, que se realiza a continuación:
 Estos productos están catalogados como \textbf{Böhler Xxxx} donde la “X” es una letra que da una cierta clasificación, seguida por tres dígitos “xxx”. Algunas de las designaciones más importantes son:
 
 \begin{itemize}
-    \item \textbf{S}: Aceros rápidos, que pueden ser:
-    \begin{itemize}
-        \item Aceros rápidos convencionales.
-        \item Aceros rápidos refundidos por electroescoria (ESR).
-        \item Aceros rápidos pulvimetalúrgicos.
-    \end{itemize}
+    \item \textbf{S}: aceros rápidos, que pueden ser de aceros rápidos convencionales, entre otros.
         \begin{figure}[H]    
         \centering         
         \includegraphics[width=0.85\linewidth]{Inagenes para latex/1.png}
     \end{figure}
-    \item \textbf{K}: Aceros para trabajo en frío, que pueden ser:
-    \begin{itemize}
-        \item Aceros para trabajo en frío convencionales.
-        \item Aceros para trabajo en frío refundidos por electroescoria (ESR).
-        \item Aceros para trabajo en frío pulvimetalúrgicos.
-    \end{itemize}
+    \item \textbf{K}: aceros para trabajo en frío, que pueden ser de aceros para trabajo en frío convencionales, etc.
     \begin{figure}[H]    
         \centering         
         \includegraphics[width=0.85\textwidth]{Inagenes para latex/2.png}
     \end{figure}
-    \item \textbf{N}: Aceros para cuchillas.
+    \item \textbf{W}: aceros para trabajo en caliente, que se clasifican en aceros para trabajo en caliente convencionales con tratamiento térmico especial, etc.
     \begin{figure}[H]    
         \centering         
-        \includegraphics[width=0.9\textwidth]{Inagenes para latex/3.png}
+        \includegraphics[width=0.75\textwidth]{Inagenes para latex/4.png}
     \end{figure}
-    \item \textbf{W}: Aceros para trabajo en caliente, que se clasifican en:
-    \begin{itemize}
-        \item Aceros para trabajo en caliente convencionales con tratamiento térmico especial.
-        \item Aceros para trabajo en caliente refundidos por electroescoria (ESR).
-        \item Aceros para trabajo en caliente fundidos en vacío (VAR).
-    \end{itemize}
-    \begin{figure}[H]    
-        \centering         
-        \includegraphics[width=0.6\textwidth]{Inagenes para latex/4.png}
-    \end{figure}
-    \item \textbf{M}: Aceros para moldes de plástico:
+    \item \textbf{M}: aceros para moldes de plástico:
     \begin{itemize}
         \item Aceros para moldes de plástico convencionales.
         \item Aceros para moldes de plástico con características especiales.
@@ -109,12 +90,7 @@ Estos productos están catalogados como \textbf{Böhler Xxxx} donde la “X” e
         \centering         
         \includegraphics[width=0.8\textwidth]{Inagenes para latex/5.png}
     \end{figure}
-    \item \textbf{L}: Aceros para fabricación aditiva (atomizados en polvo).
 \end{itemize}
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=0.8\textwidth]{Inagenes para latex/6.png}
-\end{figure}
 
 Además, se nombran las aplicaciones y sectores para los cuales se emplean estos aceros: \textit{automoción, aeronáutica, aeroespacial, bienes de consumo, herramientas de corte, oil y gas, y sector energético}, entre otros.
 
@@ -185,14 +161,20 @@ Por último, en el catálogo se aprecia la equivalencia del acero Böhler con ot
 
 \begin{table}[h!]
     \centering
-    \begin{tabular}{llll}
+    \begin{tabular}{lll}
         \hline
-        \textbf{BÖHLER} & \textbf{EN} & \textbf{JIS} & \textbf{AISI} \\ \hline
-        S601 & HS6-5-2 & SKH51 & M2 \\ \hline
+        \textbf{BÖHLER} & \textbf{EN} & \textbf{AISI} \\ \hline
+        S690 & HS6-5-4 & M4 \\ \hline
     \end{tabular}
     \caption{Ejemplo de equivalencias extraído del catálogo.}
     \label{tab:equivalencias-bohler}
 \end{table}
+Esto quiere decir que:
+
+\begin{itemize}
+    \item Para el equivalente en la norma EN (europea), HS por las palabras \textit{High Speed Steel} en inglés y los dígitos son por el contenido de tungsteno, molibdeno y vanadio, en ese orden.
+    \item Para el equivalente en la norma AISI (americana), M4 por ser un acero rápido al W-Mo.
+\end{itemize}
 
 \section{Análisis ArcelorMittal.}
 Es una compañía siderúrgica productora de aceros largos que abastece a los sectores de la construcción civil, agro e industria en general.
@@ -201,13 +183,13 @@ Es una compañía siderúrgica productora de aceros largos que abastece a los se
 En este sector se fabrican postes, alambres, esquineros y varillas que reemplazan totalmente otros materiales, como la madera.
 
 \paragraph{Alambres.}
-Alambres ovalados galvanizados; Alambres redondos galvanizados; Trenza galvanizada; Alambre de púas; Alambre para riendas y maneas; Tejidos galvanizados; entre otros.
+Alambres ovalados galvanizados; alambres redondos galvanizados; trenza galvanizada; alambre de púas; alambre para riendas y maneas; tejidos galvanizados; entre otros.
 
 \paragraph{Postes.}
-Poste esquinero de acero; Poste intermedio facón.
+Poste esquinero de acero; poste intermedio facón.
 
 \paragraph{Varillas.}
-Varillas de alambre galvanizado; Varillas T.
+Varillas de alambre galvanizado; varillas T.
 
 Cada producto cuenta con su respectiva tabla de especificaciones técnicas. algunos ejemplos a continuación.
 \begin{figure}[H]    
@@ -215,33 +197,19 @@ Cada producto cuenta con su respectiva tabla de especificaciones técnicas. algu
     \includegraphics[width=1\textwidth]{Inagenes para latex/10.png}
     \caption*{*Alambres ovalados galvanizados}
 \end{figure}
- \begin{figure}[H]    
-    \centering         
-    \includegraphics[width=1\textwidth]{Inagenes para latex/11.png}
-    \caption*{*Tabla de Postes}
-\end{figure}
- \begin{figure}[H]    
-    \centering         
-    \includegraphics[width=1\textwidth]{Inagenes para latex/12.png}
-    \caption*{*Tabla de Varillas}
-\end{figure}
-
 
 \subsection{Construcciones Civiles.}
 Los productos que se ofrecen para este sector son:
 
 \begin{itemize}
-    \item DN A 420\textsuperscript{\textregistered} Barras de acero de dureza natural para hormigón armado.
-    \item AL 220\textsuperscript{\textregistered} Barras de acero lisas para hormigón armado.
-    \item Soluciones Acindar: Acero cortado y doblado.
-    \item Sima\textsuperscript{\textregistered} Mallas soldadas estándar.
-    \item Sima\textsuperscript{\textregistered} Mallas soldadas según especificación.
-    \item Soluciones Acindar: Estructuras prearmadas de acero.
-    \item Trilogic\textsuperscript{\textregistered} Vigas reticuladas electrosoldadas de acero.
-    \item Clavos.
-    \item Job-Shop: Mallas electrosoldadas para uso no estructural.
-    \item Tejimet\textsuperscript{\textregistered}: Alambres tejidos galvanizados.
-    \item Perfiles laminados en caliente (ángulo de alas iguales, perfil normal U, perfil normal doble T, perfil IPB, IPBL, IPE, U y T chicos).
+    \item DN A 420\textsuperscript{\textregistered}: barras de acero corrugadas de dureza natural para hormigón armado. El nombre viene porque $\sigma_y$ es de \SI{420}{\mega\pascal}.
+    \item AL 220\textsuperscript{\textregistered}: barras de acero lisas para hormigón armado. El mismo materiales y procesos que la anterior.
+    \item Sima\textsuperscript{\textregistered}: mallas soldadas estándar. Conformados por alambre T-500\textsuperscript{\textregistered}, laminado y conformado en frío. Su nombre viene por $\sigma_y$ es de \SI{500}{\mega\pascal}.
+    \item Sima\textsuperscript{\textregistered}: mallas soldadas según especificación. El mismo material y procesos que el anterior.
+    \item Clavos. No se presentaron especificaciones del material y procesos sobre este producto.
+    \item Job-Shop: mallas electrosoldadas para uso no estructural de alambres finos, ya sea galvanizados o no.
+    \item Tejimet\textsuperscript{\textregistered}: alambres tejidos galvanizados. No se detalló el material usado.
+    \item Perfiles laminados en caliente (ángulo de alas iguales, perfil normal U, perfil normal doble T, perfil IPB, IPBL, IPE, U y T chicos). No se detallaron los materiales usados.
     \item Barras laminadas en caliente.
     \item Planchuelas laminadas.
     \item Alambre recocido.
@@ -254,31 +222,19 @@ Cada producto consta de su respectiva hoja técnica, a continuación pondremos a
 
  \begin{figure}[H]    
     \centering         
-    \includegraphics[width=1\textwidth]{Inagenes para latex/13.png}
+    \includegraphics[width=0.8\textwidth]{Inagenes para latex/13.png}
     \caption*{*Tabla Con Especificsciones de las Barras  DN A 420\textsuperscript{\textregistered}}
-\end{figure}
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=1\textwidth]{Inagenes para latex/14.png}
-    \caption*{*Tabla Con Especificaciones de Malla}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Inagenes para latex/15 izq.png}
-    \end{minipage}
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Inagenes para latex/15 der.png}
-    \end{minipage}
-    \caption*{*Algunas tablas de especificaciones sobre Clavos}
+    \includegraphics[width=0.8\textwidth]{Inagenes para latex/14.png}
+    \caption*{Tabla con especificaciones de las barras AL 220\textsuperscript{\textregistered}}
 \end{figure}
 
 \subsection{Productos para la Industria.}
 Los productos del catálogo para este sector son:
 \begin{itemize}
-    \item Palanquillas de colada continua.
+    \item Palanquillas de colada continua. Son destinadas a laminación en caliente.
     \item Barras laminadas uso mecánico.
     \item Barras laminadas apto forja.
     \item Barras trefiladas.

@@ -17,6 +17,8 @@
 \usepackage{float}
 \usepackage{xurl}
 \usepackage{siunitx}
+\usepackage{wasysym} % importante, acá viene el símbolo correcto
+\DeclareSIUnit{\diameter}{\ensuremath{\mathbin{\diameter}}}
 \usepackage[colorlinks=true,
             linkcolor=black,
             urlcolor=myblue,
@@ -51,89 +53,104 @@
     \end{itemize}
 \end{abstract}
 
-\section{Introduccion.}
+\section{Introducción.}
 
-En el presente trabajo se realizaron ensayos sobre hilo de acero 1045 de 0,6mm de diametro, para el ensayo de termofluencia y 0,9mm para el ensayo de traccion y sobre alambre de aluminio AA 1305 h19 de 1,8mm de diametro (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
-Para poder medir, graficar y comparar las propiedades mecanicas de los diferentes materiales y la diferencias que existen entre materiales ferrosos y no ferrosos.
+En el presente trabajo se realizaron ensayos sobre hilo de acero SAE/AISI 1045 de \SI{0,9}{\milli\metre} de diámetro para el ensayo de termofluencia; y \SI{0,6}{\milli\metre} para el ensayo de tracción y sobre alambre de aluminio AA 1305 h19 de \SI{1,8}{\milli\metre\diameter} (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
 
+Para poder medir, graficar y comparar las propiedades mecánicas de los diferentes materiales y la diferencias que existen entre materiales ferrosos y no ferrosos.
 
-\section{Metodo y herramientas/maquinas.}
+\section{Método y herramientas(máquinas).}
 
-\subsection{ensayo de termofluencia:}
+\subsection{Ensayo de termofluencia.}
+
 \subsubsection{Herramientas y aparatos.}
-Para poder realizar el ensayo de termofluenciase utilizo:
+
+Para poder realizar el ensayo de termofluencia se utilizó:
 \begin{itemize}
-    \item una pistola de calor capaz de alcanzar temperaturas entre \SI{450}{\celsius} y \SI{500}{\celsius}.
-    \item Unas pesas de entre \SI{5}{\kilogram} y \SI{10}{\kilogram}, unidas entre si para poder alcanzar los \SI{30}{\kilogram}.
-    \item Un soporte y unas agarraderas para poder mantener fijo el alambre en el momento del ensayo.
-    \item Una regla sujeta al soporte para poder medir la deformacion.
+    \item Una pistola de calor capaz de alcanzar temperaturas entre \SI{450}{\celsius} y \SI{500}{\celsius}.
+    \item Pesas de \SI{2,5}{\kilogram}, \SI{5}{\kilogram} y \SI{10}{\kilogram}.
+    \item Un soporte y unas agarraderas para poder mantener fijo el alambre en el momento de los ensayos.
+    \item Una regla sujeta al soporte para poder medir la deformación.
     \item Una termocupla en un tester para poder medir la temperatura de la probeta.
     \item Un marcador para dejar dos marcas bien medidas en la probeta.
     \item Un celular para grabar la deformacion de la probeta a tiempo real y otro que tome el tiempo.
 \end{itemize}
 
-\subsubsection{Procedimiento}
-Lo primero que se hace es colgar, marcar y medir la probeta, luego se precalienta la probeta durante 2 minutos, despues de que pase el tiempo se empieza a grabar la probeta y se cuelgan las pesas a las agarraderas lentamente para no ejercer fuerza mas rapido de lo necesario, mientras tanto la pistola sigue calentando entra las marcas de la probeta hasta que la misma se rompa. 
+\subsubsection{Procedimiento.}
+
+Lo primero que se hace es colgar, marcar y medir la probeta, luego se precalienta la probeta durante 2 minutos, después de que pase el tiempo se empieza a grabar la probeta y se cuelgan las pesas a las agarraderas lentamente para no ejercer fuerza más rápido de lo necesario, mientras tanto la pistola sigue calentando entra las marcas de la probeta hasta que la misma se rompa.
+
 Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurarse de que todo se este realizando correctamente.
 
-\subsection{ensayo de traccion:}
-\subsubsection{Herramientas y maquinas.}
-Para este ensayo se utilizo.
+\subsection{Ensayo de tracción.}
+
+\subsubsection{Herramientas y máquinas.}
+
+Para este ensayo se utilizó.
 \begin{itemize}
-    \item Un dinamometro de \SI{50}{\kilogram} de fuerza maxima.
-    \item Una regla para poder medir la deformacion de la probeta.
-    \item Un celular para grabar la deformacion y carga aplicada sobre la probeta.
-    \item Una amarraderas para sujetar la probeta y el dinamometro.
-    \item Y una maquina de traccion por palanca contruida especialmente para este ensayo.
+    \item Un dinamómetro al equivalente de \SI{50}{\kilogram} de fuerza máxima (\SI{490,3325}{\newton}).
+    \item Una regla para poder medir la deformación de la probeta.
+    \item Un celular para grabar la deformación.
+    \item Una amarraderas para sujetar la probeta y el dinamómetro.
+    \item Y una máquina de tracción por palanca contruida especialmente para este ensayo.
 \end{itemize}
  
-Originalmente se iba a utilizar una maquina de traccion armada por un grupo de alumnos de años pasados, pero al utilizarla no lograbamos romper el alambre con la fuerza de \SI{40}{\kilogram} (No mas peso que eso para asegurarnos de no romper el dinamometro).
+Originalmente se iba a utilizar una máquina de tracción armada por un grupo de alumnos de años pasados, pero al utilizarla no lograbamos romper el alambre con la fuerza al equivalente de \SI{40}{\kilogram} (No más peso que eso para asegurarnos de no romper el dinamómetro).
 
-Por lo que se decidio construir una maquina nueva que funciona con un brazo de palanca, asi la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamometro.
+Por lo que se decidió construir una máquina nueva que funciona con un brazo de palanca, así la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamómetro.
 
-Y esto se ve en la \autopageref{eq:palanca}
+Y esto se ve en la \autoref{eq:palanca}
+
 \begin{equation}
     F_1\cdot d_1 = F_2\cdot d_2
     \label{eq:palanca}
 \end{equation}
 Donde:
 \begin{itemize}
-    \item $F_1$ es la fuerza que se le esta haciendo al dinamometro.
-    \item $F_2$ es la fuerza que se le esta haciendo a la probeta.
-    \item $d_1$ es la distancia del dinamometro al punto de apoyo.
-    \item $d_2$ es la distancia de la probeta al punto de apoyo 
+    \item $F_1$ es la fuerza que se le está haciendo al dinamómetro.
+    \item $F_2$ es la fuerza que se le está haciendo a la probeta.
+    \item $d_1$ es la distancia del dinamómetro al punto de apoyo.
+    \item $d_2$ es la distancia de la probeta al punto de apoyo. 
 \end{itemize}
 
-Y podemos obtener la fuerza que se le hace a la probeta despejando $F_2$.
+Y podemos obtener así, la fuerza que se le hace a la probeta despejando $F_2$.
 
 \begin{equation}
     \frac{F_1\cdot d_1}{d_2} = F_2
 \end{equation}
 
-Y asi mientras sepamos las dos dintancias al punto de apoyo y la fuerza que nos marca el dinamometro podemos sacar la fuerza ejercida a la probeta.
+Y así mientras sepamos las dos distancias al punto de apoyo y la fuerza que nos marca el dinamómetro podemos sacar la fuerza ejercida a la probeta.
 
-Siendo $d_1 = 900$mm y $d_2 = 350$mm por lo que nos quedaria una relacion de:
+Siendo $d_1=$ \SI{900}{\milli\metre} y $d_2=$ \SI{350}{\milli\metre} por lo que nos quedaría la siguiente relación:
+
 \begin{equation}
     F_1 \cdot 2,57 = F_2
 \end{equation}
+
 \subsubsection{Procedimiento.}
-Primero se mide marca la probeta y se coloca en sus respectivo lugar, se pone el celular a grabar el dinamometro y la deformacion de la probeta y se empieza a aplicar fuerza lentamente a la probeta a travez del brazo, asegurandose de que sea de forma constante.
+
+Primero se mide marca la probeta y se coloca en sus respectivo lugar, se pone el celular a grabar el dinamómetro y la deformacion de la probeta y se empieza a aplicar fuerza lentamente a la probeta a travez del brazo, asegurandose de que sea de forma constante.
+
 \section{resultados.}
 
+
+
 \section{Comparando resultados.}
-Las propiedades mecanicas del acero AISI 1045 son:
+
+Las propiedades mecanicas del acero SAE/AISI 1045 son:
 \begin{itemize}
-    \item $\sigma_y$  = 360-420 MPa
-    \item $\sigma_R$ = 600-700 MPa
-    \item $\epsilon$ = 45\%-60\%
-    \item E = 206 GPa
+    \item $\sigma_y =$ \SIrange[range-units=single]{360}{420}{\mega\pascal}.
+    \item $\sigma_R =$ \SIrange[range-units=single]{600}{700}{\mega\pascal}.
+    \item $\varepsilon =$ \SIrange{45}{60}{\percent}.
+    \item $E =$ \SI{200}{\giga\pascal}.
 \end{itemize}
 
-Las propiedades mecanicas del aluminio AA 1305 H19 son:
+Las propiedades mecánicas del aluminio AA 1305 H19 son:
+
 \begin{itemize}
-    \item $\sigma_y$  = 165 MPa
-    \item $\sigma_R$ = 186 MPa
-    \item $\epsilon$ = 1,4\%
-    \item E = 68,9 GPa
+    \item $\sigma_y =$ \SI{165}{\mega\pascal}.
+    \item $\sigma_R =$ \SI{186}{\mega\pascal}.
+    \item $\varepsilon =$ \SI{1,4}{\percent}.
+    \item $E =$ \SI{68,9}{\giga\pascal}.
 \end{itemize}
 \end{document}
