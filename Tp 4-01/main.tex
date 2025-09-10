@@ -2,13 +2,16 @@
 
 % Paquetes de configuración del documento
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, mexico]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[margin=3cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{siunitx}
+\sisetup{per-mode=symbol}
 \usepackage{csquotes}
 \usepackage[version=4]{mhchem}
+\usepackage{rotating}
+\usepackage{multirow}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -97,12 +100,96 @@ Sanmetal se dedica a la comercialización y distribución de componentes industr
 
 \subsection{Aleaciones de bronce.}
 
-Dentro de la bibliografía citada se encuentran distintos catálogos sobre los materiales dichos anteriormente. Donde encontramos la denominación comercial de la empresa; la composición química; las equivalencias (más próximas) a las distintas normas; características mecánicas, propiedades físicas, formas de suministro y los distintos tipos de aplicaciones que tiene cada aleacion.  
+Dentro de la bibliografía citada se encuentran distintos catálogos sobre los materiales dichos anteriormente. Donde encontramos la denominación comercial de la empresa; la composición química; las equivalencias (más próximas) a las distintas normas; características mecánicas, propiedades físicas, formas de suministro y los distintos tipos de aplicaciones que tiene cada aleacion. Entre los distintos tipos encontramos aleaciones de bronces rojos, bronces al plomo, latones, etc. En el anexo se mostrarán a modo de ejemplo algunas tablas de ellos.
 
-\subsection{tablas de diametro y peso.}
+\subsection{Tablas de especificaciones.}
 
-En bibliografia tambien se haya varias tablas con los kilogramos por cada metro de barra o macizo rectangular y cuadrado para bronces y para latones y bronces al aluminio, multiplicando el valor por 0.9 debido a la diferencia de densidad.
+En la bibliografía citada se encuentran varias tablas con los kilogramos por metro de macizo o de tubo redondo, rectangular o cuadrado, para bronces y latones, así como para bronces al aluminio, donde se debe multiplicar el valor por 0,9 debido a la diferencia de densidad.
 
 \subsection{Cobres.}
+
+En esta parte encontramos una tabla donde muestra las equivalencias del SAN-99, SAN-97 y SAN-95 a las distintas normas, como se aprecia en la \autoref{fig:cobres}. También contamos con la respectiva tabla de pesos (\si{\kilogram\per\metre}) de cada uno, y con un cuadro donde están las propiedades de la aleación SAN-97 y SAN-95, que se ve en la \autoref{fig:comparacion}.
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=1\textwidth]{Figuras/image.png}
+   \caption{Distintas equivalencias de los cobres.}
+   \label{fig:cobres}
+\end{figure}
+
+\begin{figure}[t]
+   \centering
+   \includegraphics[width=\textwidth]{Figuras/image copy.png}
+   \caption{Comparación entre las distintas aleaciones.}
+   \label{fig:comparacion}
+\end{figure}
+
+\section{Cembrass.}
+
+Es una empresa metalúrgica argentina dedicada a la fabricación y comercialización de productos de latón, amarillo y azul. En la siguiente tabla se ve la diferencia en la composición química de ellos:
+
+\begin{table}[H]
+   \centering
+   \renewcommand{\arraystretch}{1.2} % Espaciado vertical
+   \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+      \hline
+      \multirow{2}{*}{\textbf{TIPO (TYPE)}} & \multicolumn{9}{|c|}{\textbf{ALEACIÓN EN PORCENTAJES (ALLOYS \%)}} \\ \cline{2-10}
+       & E & Cu. & Pb. & Sn. & Fe. & Ni. & Al. & Zn. & Others \\ \hline
+      \multicolumn{10}{|c|}{\textbf{Amarillo (Yellow)}} \\ \hline
+      \begin{tabular}[c]{@{}l@{}}Aleación p/ Mecanizado \\ (Free Cutting Alloy) CW614N\end{tabular} 
+      & Min. & 57 & 2,5 & 0 & 0 & 0 & 0 & rest & 0 \\ \cline{2-10}
+      & Máx. & 59 & 3,5 & 0,3 & 0,3 & 0,3 & 0,05 & rest & 0,2 \\ \hline
+      \multicolumn{10}{|c|}{\textbf{Azul (Blue)}} \\ \hline
+      \begin{tabular}[c]{@{}l@{}}Aleación p/ Forja \\ (Forging Alloy) CW612N\end{tabular} 
+      & Min. & 59 & 1,6 & 0 & 0 & 0 & 0 & rest & 0 \\ \cline{2-10}
+      & Máx. & 60 & 2,5 & 0,3 & 0,3 & 0,3 & 0,05 & rest & 0,2 \\ \hline
+   \end{tabular}
+   \caption{Composición química de aleaciones de latón.}
+   \label{tab:tipos}
+\end{table}
+
+\subsection{Latones.}
+
+Cembrass produce barras redondas (trefiladas y de prensa), hexagonales, cuadradas, tochos, planchuelas y distintos perfiles. Cada uno cuenta con su tabla de dimensiones y pesos (\si{\kilogram\per\metre}).
+
+\subsubsection{Tolerancias.}
+
+La última información que da la empresa son las tolerancias de cada barra, que se aprecia en las \autoref{tab:tolerancias1} y \autoref{tab:tolerancias2}.
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+      \hline
+      \multicolumn{3}{|p{3.4cm}|}{\textbf{DIMENSIÓN (SIZES)}} & \multicolumn{6}{|c|}{\textbf{TOLERANCIA \textsubscript{(\si{\milli\metre})} (TOLERANCES)}} \\ \hline
+      \multicolumn{3}{|c|}{Nominal (\si{\milli\metre})} & \multicolumn{2}{|c|}{Redondo/Round} & \multicolumn{2}{|c|}{Hexagonal/Hexagon} & \multicolumn{2}{|c|}{Cuadrado/Square} \\ \hline
+      0,5 & a & 3 & -0,04 & +0 & -0,06 & +0 & -0,06 & +0 \\ \hline
+      3 & a & 6 & -0,05 & +0 & -0,08 & +0 & -0,08 & +0 \\ \hline
+      6 & a & 10 & -0,06 & +0 & -0,09 & +0 & -0,09 & +0 \\ \hline 
+      10 & a & 18 & -0,07 & +0 & -0,11 & +0 & -0,11 & +0 \\ \hline
+      18 & a & 30 & -0,08 & +0 & -0,13 & +0 & -0,13 & +0 \\ \hline
+      30 & a & 50 & -0,10 & +0 & -0,16 & +0 & -0,16 & +0 \\ \hline
+      50 & a & 80 & -0,12 & +0 & -0,19 & +0 & -0,19 & +0 \\ \hline
+   \end{tabular}
+   \caption{Tolerancias de barras redondas, hexagonales y cuadradas.}
+   \label{tab:tolerancias1}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|c|c|}
+      \hline
+      \multicolumn{3}{|c|}{\textbf{DIMENSIÓN (SIZES)}} & {\textbf{TOLERANCIA (TOLERANCES)}} \\ \hline
+      \multicolumn{3}{|c|}{Nominal (\si{\milli\metre})} & Clase A (\si{\milli\metre}) \\ \hline
+      6 & a & 10 & +/- 0,20 \\ \hline
+      10 & a & 18 & +/- 0,25 \\ \hline
+      18 & a & 30 & +/- 0,30 \\ \hline
+      30 & a & 50 & +/- 0,60 \\ \hline
+      50 & a & 80 & +/- 0,70 \\ \hline
+   \end{tabular}
+   \caption{Tolerancias de barras de prensa.}
+   \label{tab:tolerancias2}
+\end{table}
+
+
 
 \end{document}
