@@ -15,6 +15,7 @@
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{longtable}
@@ -179,7 +180,12 @@ La última información que da la empresa son las tolerancias de cada barra, que
    \begin{tabular}{|c|c|c|c|}
       \hline
       \multicolumn{3}{|c|}{\textbf{DIMENSIÓN (SIZES)}} & {\textbf{TOLERANCIA (TOLERANCES)}} \\ \hline
-      \multicolumn{3}{|c|}{Nominal (\si{\milli\metre})} & Clase A (\si{\milli\metre}) \\ \hline
+      \multicolumn{3}{|c|}{Nominal (\si{\milli\metre})} &\begin{figure}[t]
+   \centering
+   \includegraphics[width=\textwidth]{Figuras/image copy.png}
+   \caption{Comparación entre las distintas aleaciones.}
+   \label{fig:comparacion}
+\end{figure} Clase A (\si{\milli\metre}) \\ \hline
       6 & a & 10 & +/- 0,20 \\ \hline
       10 & a & 18 & +/- 0,25 \\ \hline
       18 & a & 30 & +/- 0,30 \\ \hline
@@ -190,6 +196,30 @@ La última información que da la empresa son las tolerancias de cada barra, que
    \label{tab:tolerancias2}
 \end{table}
 
+\section{Knight group}
+Es un provedor de materiales en Europa y en la bibliografía del trabajo lo que se haya es uno de sus catalogos sobre el cobre y sus aleaciones.
 
+\subsection{Formato de venta.}
+Se muestra en la \autopageref{fig:bobinas} la forma y las dimensiones en la que se venden estos metales.
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=1\textwidth]{Figuras/bobinas.png}
+   \caption{Formato en el que entregan de los metales}
+   \label{fig:bobinas}
+\end{figure}
+\subsection{Tipos de aleaciones y sus usos.}
+
+El catalogo explica los tipos de cobres, sus aleaciones y las propiedades/diferencias de cada uno.
+
+\begin{itemize}
+   \item \textbf{Cobres de alta conductividad:} Los cobres de este grupo presentan diferentes grados de pureza y por ende caracteristicas. Para la alta conductividad se requiere cobres libres de oxigeno, aumentando tambien su ductibilidad.
+   \item \textbf{Latones:} es una aleacion de cobre con zinc, que es mas barata que el cobre solo y tiene mayor resistencia en trabajo en frio superior, pero con una conductividad reducida.
+   \item \textbf{Bronces de fosforo:} aleaciones cobre-estaño que contienen hasta un 7\% de estaño y una pequeña cantidad de Fósforo, se endurecen significativamente mediante trabajo en frio.
+   \item \textbf{Platas de niquel:} son aleaciones niquel-cobre-zinc que no contienen plata, pero deben su nobre a su apariencia plateada, sus propiedades mecánicas son ligeramente superiores a la de los latones, pero inferior a los bronces de fosforo.
+   \item \textbf{Cuproníquel:} son las aleaciones comerciales mas importantes, son de cobre-niquel a un 90/10. Tiene buena capacidad de conformado y una excelente resistencia a la corrosión del agua de mar. 
+   \item \textbf{Aleaciones con alto contenido en cobre:} siendo, la aleación 194, una muy importante, tiene un 2,3\% de Hierro con pequeñas adiciones de Fósforo y Zinc. se usa para marcos de conexión, y tiene una excelente resistencia al ablandamiento, siendo capaz de soportar más de 300 ° C durante unos minutos.
+   \item \textbf{Aleaciones de cobre y berilio:} son aleaciones on una resistenciaincreíble, gran elasticidad y resistencia a la fatiga, ideales para las aplicaciones de muelles.
+\end{itemize}
 
 \end{document}
