@@ -12,10 +12,10 @@
 \usepackage[version=4]{mhchem}
 \usepackage{rotating}
 \usepackage{multirow}
+\usepackage{wasysym}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{longtable}
@@ -118,7 +118,7 @@ En esta parte encontramos una tabla donde muestra las equivalencias del SAN-99, 
    \label{fig:cobres}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[H]
    \centering
    \includegraphics[width=\textwidth]{Figuras/image copy.png}
    \caption{Comparación entre las distintas aleaciones.}
@@ -131,17 +131,17 @@ Es una empresa metalúrgica argentina dedicada a la fabricación y comercializac
 
 \begin{table}[H]
    \centering
-   \renewcommand{\arraystretch}{1.2} % Espaciado vertical
+   \renewcommand{\arraystretch}{2} 
    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
       \hline
       \multirow{2}{*}{\textbf{TIPO (TYPE)}} & \multicolumn{9}{|c|}{\textbf{ALEACIÓN EN PORCENTAJES (ALLOYS \%)}} \\ \cline{2-10}
        & E & Cu. & Pb. & Sn. & Fe. & Ni. & Al. & Zn. & Others \\ \hline
       \multicolumn{10}{|c|}{\textbf{Amarillo (Yellow)}} \\ \hline
-      \begin{tabular}[c]{@{}l@{}}Aleación p/ Mecanizado \\ (Free Cutting Alloy) CW614N\end{tabular} 
+      \multirow{2}{4cm}{Aleación p/ Mecanizado (Free Cutting Alloy) CW614N}
       & Min. & 57 & 2,5 & 0 & 0 & 0 & 0 & rest & 0 \\ \cline{2-10}
       & Máx. & 59 & 3,5 & 0,3 & 0,3 & 0,3 & 0,05 & rest & 0,2 \\ \hline
       \multicolumn{10}{|c|}{\textbf{Azul (Blue)}} \\ \hline
-      \begin{tabular}[c]{@{}l@{}}Aleación p/ Forja \\ (Forging Alloy) CW612N\end{tabular} 
+      \multirow{2}{4cm}{Aleación p/ Forja (Forging Alloy) CW612N}
       & Min. & 59 & 1,6 & 0 & 0 & 0 & 0 & rest & 0 \\ \cline{2-10}
       & Máx. & 60 & 2,5 & 0,3 & 0,3 & 0,3 & 0,05 & rest & 0,2 \\ \hline
    \end{tabular}
@@ -159,9 +159,10 @@ La última información que da la empresa son las tolerancias de cada barra, que
 
 \begin{table}[H]
    \centering
+   \renewcommand{\arraystretch}{1.2}
    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
       \hline
-      \multicolumn{3}{|p{3.4cm}|}{\textbf{DIMENSIÓN (SIZES)}} & \multicolumn{6}{|c|}{\textbf{TOLERANCIA \textsubscript{(\si{\milli\metre})} (TOLERANCES)}} \\ \hline
+      \multicolumn{3}{|p{3cm}|}{\textbf{DIMENSIÓN (SIZES)}} & \multicolumn{6}{|c|}{\textbf{TOLERANCIA \textsubscript{(\si{\milli\metre})} (TOLERANCES)}} \\ \hline
       \multicolumn{3}{|c|}{Nominal (\si{\milli\metre})} & \multicolumn{2}{|c|}{Redondo/Round} & \multicolumn{2}{|c|}{Hexagonal/Hexagon} & \multicolumn{2}{|c|}{Cuadrado/Square} \\ \hline
       0,5 & a & 3 & -0,04 & +0 & -0,06 & +0 & -0,06 & +0 \\ \hline
       3 & a & 6 & -0,05 & +0 & -0,08 & +0 & -0,08 & +0 \\ \hline
@@ -180,12 +181,7 @@ La última información que da la empresa son las tolerancias de cada barra, que
    \begin{tabular}{|c|c|c|c|}
       \hline
       \multicolumn{3}{|c|}{\textbf{DIMENSIÓN (SIZES)}} & {\textbf{TOLERANCIA (TOLERANCES)}} \\ \hline
-      \multicolumn{3}{|c|}{Nominal (\si{\milli\metre})} &\begin{figure}[t]
-   \centering
-   \includegraphics[width=\textwidth]{Figuras/image copy.png}
-   \caption{Comparación entre las distintas aleaciones.}
-   \label{fig:comparacion}
-\end{figure} Clase A (\si{\milli\metre}) \\ \hline
+      \multicolumn{3}{|c|}{Nominal (\si{\milli\metre})} & Clase A (\si{\milli\metre}) \\ \hline
       6 & a & 10 & +/- 0,20 \\ \hline
       10 & a & 18 & +/- 0,25 \\ \hline
       18 & a & 30 & +/- 0,30 \\ \hline
@@ -196,21 +192,39 @@ La última información que da la empresa son las tolerancias de cada barra, que
    \label{tab:tolerancias2}
 \end{table}
 
-\section{Knight group}
+\section{Knight group.}
 Es un provedor de materiales en Europa y en la bibliografía del trabajo lo que se haya es uno de sus catalogos sobre el cobre y sus aleaciones.
 
 \subsection{Formato de venta.}
-Se muestra en la \autopageref{fig:bobinas} la forma y las dimensiones en la que se venden estos metales.
+Se muestra en la \autopageref{tab:bobinas} la forma y las dimensiones en la que se venden estos metales.
 
-\begin{figure}[H]
+\begin{table} [H]
    \centering
-   \includegraphics[width=1\textwidth]{Figuras/bobinas.png}
-   \caption{Formato en el que entregan de los metales}
-   \label{fig:bobinas}
-\end{figure}
+   \begin{tabular}{|c|c|c|c|}
+      \hline
+      \multicolumn{4}{|c|}{\textbf{ALEACIONES DE COBRE}} \\ \hline
+      \multicolumn{2}{|c|}{Bobinas} & \multicolumn{2}{|c|}{Alambre} \\ \hline
+      Grosor (\si{\milli\metre}) & Anchura (\si{\milli\metre}) & Redondo (\si{\milli\metre}) & Perfilado \\ \hline
+      \multicolumn{4}{|c|}{\textbf{COBRES DE ALTA CONDUCTIVIDAD}} \\ \hline
+      0,01 a 3 & 3 a 1220 & 0,08 a 10 \diameter & Arriba de 0,45 \si{mm^2} \\ \hline
+      \multicolumn{4}{|c|}{\textbf{LATONES}} \\ \hline
+      0,01 a 3 & 3 a 1220 & 0,08 a 10 \diameter & Arriba de 0,45 \si{mm^2} \\ \hline
+      \multicolumn{4}{|c|}{\textbf{BRONCES AL FÓSFORO}} \\ \hline
+      0,01 a 3 & 3 a 1220 & 0,08 a 10 \diameter & Arriba de 0,45 \si{mm^2} \\ \hline
+      \multicolumn{4}{|c|}{\textbf{PLATAS AL NÍQUEL}} \\ \hline
+      0,01 a 3 & 3 a 1220 & 0,08 a 10 \diameter & Arriba de 0,45 \si{mm^2} \\ \hline
+      \multicolumn{4}{|c|}{\textbf{CUPRONÍQUEL Y ALEACIONES CON ALTO CONTENIDO DE Cu}} \\ \hline
+      0,01 a 3 & 3 a 1220 & 0,08 a 10 \diameter & Arriba de 0,45 \si{mm^2} \\ \hline
+      \multicolumn{4}{|c|}{\textbf{ALEACIONES DE COBRE Y BERILIO}} \\ \hline
+      0,01 a 3 & 3 a 1220 & 0,08 a 10 \diameter & Arriba de 0,45 \si{mm^2} \\ \hline
+   \end{tabular}
+   \caption{Dimensiones de las distintas aleaciones.}
+   \label{tab:bobinas}
+\end{table}
+
 \subsection{Tipos de aleaciones.}
 
-El catalogo explica los tipos de cobres, sus aleaciones y las propiedades/diferencias de cada uno.
+El cátalogo explica los tipos de cobres, sus aleaciones, y las propiedades y diferencias de cada uno.
 
 \begin{itemize}
    \item \textbf{Cobres de alta conductividad:} Los cobres de este grupo presentan diferentes grados de pureza y por ende caracteristicas. Para la alta conductividad se requiere cobres libres de oxigeno, aumentando tambien su ductibilidad.
