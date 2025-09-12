@@ -5,6 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{fancyhdr}
+\usepackage[version=4]{mhchem}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -50,41 +51,34 @@
 \end{abstract}
 
 \section{introducción}
-El obejetivo de este trabajo es investigar los procesos de obtención de estos seis metales, identificando los principios metalúrgicos que los sustentan y, de manera particular, el tipo y uso de los hornos asociados a cada técnica. De esta forma, se busca comprender no solo la secuencia de las operaciones necesarias para transformar el mineral en un metal utilizable, sino también el papel crítico de la tecnología de hornos en la eficiencia energética, la calidad del producto y el impacto ambiental de los procesos extractivos.
+Se busca comprender no solo la secuencia de las operaciones necesarias para transformar el mineral en un metal utilizable, sino también el papel crítico de la tecnología de hornos en la eficiencia energética, la calidad del producto y el impacto ambiental de los procesos extractivos.
 
 \subsection{aluminio}
 
 Es uno de los metales mas utilizados a nivel global, y es un pilar de la Ingeniería de materiales moderna, por la versatilidad que ofrece en aplicaciones estructurales, electricas y de consumo.
 
-\begin{itemize}
-    \item \textbf{Minerales del aluminio}
-\end{itemize}
+\subsection{Minerales del aluminio}
 
-\textbf{Bohemita:}
+\subsubsection{Bohemita:}
 
 \begin{itemize}
-    \item \textbf{Formula}
-\end{itemize} 
-Al2O3*H2O
-\begin{itemize}
-    \item \textbf{Estructura}
+    \item \textbf{Fórmula química:} 
+    \ce{Al2O3*H2O}.
+    \item \textbf{Estructura molecular:} óxido de aluminio hidratado, donde el agua está presente como grupo oxhidrilo (OH-)
+    \item \textbf{Propiedades:} al calentarse, se transforma en otra fase de alúmina ($\gamma$\ce{Al2O3}).
 \end{itemize}
-Oxido de aluminio hidratado, donde el agua está presente como grupo Oxhidrilo (OH-)
+
 \begin{itemize}
-    \item \textbf{Propiedades}
-\end{itemize}
-Es un polimorfo del oxhidrilo, tiene una estructura cristalina ortorrombica, es estable a temperaturas medias, y al calentarse, se transforma en otras fases de alúmina (Y-Al2O3)
-\begin{itemize}
-    \item \textbf{Contenido Al2O3 = 85,1}
+    \item \textbf{Contenido \ce{Al2O3} $\approx$ 85,1\%}
 \end{itemize}
 Es una de las fases principales de la bauxita, materia prima fundamental para obtener aluminio mediante al proceso bayer.
 
-\textbf{Diáspora:}
+\subsection{Diáspora}
 
 \begin{itemize}
-    \item \textbf{Formula}
+    \item \textbf{Formula química:}
 \end{itemize} 
-Al2O3*H2O (es igual que la bohemita, pero con distinta estructura cristalina)
+(\ce{Al2O3*H2O}) (es igual que la bohemita, pero con distinta estructura cristalina)
 \begin{itemize}
     \item \textbf{Estructura}
 \end{itemize}
@@ -94,26 +88,137 @@ Tiene una red cristalina monoclínica, distinta a la bohemita.
 \end{itemize}
 Mas estable que la bohemita a altas temperaturas.
 \begin{itemize}
-    \item \textbf{Contenido Al2O3 = 85,1}
+    \item \textbf{Contenido \ce{Al2O3} $\approx$ 85,1\%}
 \end{itemize}
 
-\textbf{Gibbssita:}
+\subsection{Gibbssita:}
 
 \begin{itemize}
     \item \textbf{Formula}
 \end{itemize} 
-Al2O3*3H2O 
+\ce{Al2O3*3H2O} 
 \begin{itemize}
     \item \textbf{Estructura}
 \end{itemize}
-Hidroxido de aluminio con estructura cristalina monoclínica
+Hidroxido de aluminio con estructura cristalina monoclínica.
 \begin{itemize}
     \item \textbf{Propiedades}
 \end{itemize}
-Tiene mayor contenido de agua que bohemita y diáspora. Es menos densa en términos de alúmina, por eso su porcentaje de Al2O3 es menor (65,4).
-Al calentarla, primero pierde agua y luego se trasnforma en otras fases de alúmina (y, d, o, hasta a a-Al2O3)
+Tiene mayor contenido de agua que bohemita y diáspora. Es menos densa en términos de alúmina, por eso su porcentaje de \ce{Al2O3} es menor (65,4\%).
+Al calentarla, primero pierde agua y luego se trasnforma en otras fases de alúmina ($\gamma$ , $\delta$ , $\theta$ , hasta a $\alpha$ -\ce{Al2O3})
 
 \begin{itemize}
-    \item \textbf{Contenido Al2O3 = 85,1}
+    \item \textbf{Contenido \ce{Al2O2} $\approx$ 65,4\%}
 \end{itemize}
+\begin{figure}[H]    
+    \centering         
+    \includegraphics[width=0.7\textwidth]{imagenes/1.png}
+    \caption{El aluminio es obtiene principalmente de Bauxita, rica en Gibbssita, Bohemita y Diáspora }
+\end{figure}
+
+\begin{figure}[H]    
+    \centering         
+    \includegraphics[width=0.7\textwidth]{imagenes/2.png}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Excavadora y volquetes de mina:}
+     La bauxita se obtiene mediante minería a cielo abierto porque los yacimientos están cerca de la superficie.
+     \item\textbf{Triturador:}
+     La bauxita extraída pasa por trituradores mecánicos que reducen el tamaño de las rocas
+     \item\textbf{Lavado:}
+     El mineral triturado se mezcla con agua para separar impurezas ligeras como arcillas y sílice. Estos reciduos no contienen aluminio aprovechable y son eliminados. Se busca enriquecer la bauxita en óxidos de aluminio (gibbsita, bohemita, diáspora).
+     \item \textbf{Horno rotativo de secado + chimenea:}
+     El material lavado se introduce en un horno rotativo, donde se eliminia la humedad, la combustión genera una llama que calienta el mineral. El vapor de agua y gases de combustión salen por la chimenea.
+     \item \textbf{Trasnporte y almacenamiento:}
+     El mineral seco y concentrado se transporta en vagones especiales, evitando la contaminación y pérdida de material.
+     \item \textbf{El material concentrado se envía a la instalación de afino, donde continua el Proceso Bayer:}
+     Se disuelve la bauxita en soda cáustica (\ce{NaOH}).
+
+     Se precipita el hidróxido de aluminio (\ce{Al(OH)3}).
+
+     Luego se calcina para obtener alúmina (\ce{Al2O3}), que es el insumo para la electrólisis Hall-Héroult y producir aluminio metálico.
+\end{itemize}
+\begin{figure}[H]    
+    \centering         
+    \includegraphics[width=0.7\textwidth]{imagenes/3.png}
+\end{figure}
+\begin{itemize}
+    \item \textbf{preparación de la mezcla:}
+Bauxita triturada + cal + cenizas sódicas (\ce{NaOH}) se mezclan en un mezclador con agua caliente.
+\item \textbf{Digestión:}
+En el tanque de digestión, la mezcla se somete a alta presión y temperatura con vapor del proceso.
+
+La reacción principal es: \ce{Al(OH)3 + NaOH $\rightarrow$ Na[Al(OH)4]}
+
+La alúmina queda disuelta en la solución sódica, mientras que las impurezas (\ce{Fe, Si, Ti}) forman un residuo insoluble llamado lodo rojo, que se extrae hacia la escombrera.
+
+\item \textbf{Clarificación y separación de impurezas:}
+El licor resultante pasa por espesadores, donde se decantan solidos
+
+Luego atraviesa un filtro prensa de tamices, uqe elimina las particulas restantes.
+
+Resultado: Una solución clara de aluminato de sodio (\ce{Na[Al(OH)4]})
+
+\item \textbf{Precipitación:}
+En la cuba de precipitación, se enfría la solución y se inyecta aire comprimido.
+
+El aluminato de sodio se descompone y precipita como hidróxido de aluminio: \ce{Na[Al(OH)4] $\rightarrow$ Al(OH)3 + NaOH}
+
+El \ce{NaOH} liberado se recicla para volver al proceso
+
+\item \textbf{Calcinación:}
+El hidróxido de aluminio se lleva a un horno rotatorio de calcinación, con quemador de gas.
+
+Allí, a temperaturas de $\backsim$ 1200°C, se deshidrata: \ce{2Al(OH)3 $\rightarrow$ Al2O3 + 3H2O}
+
+Resultado: alúmina calcinada (polvo blanco).
+
+\item \textbf{Producto final}
+La alúmina obtenida se transporta en vagones tolva cubiertos hsata la instalación de fusión, donde se utilizará en el proceso Hall-Héroult para producir aluminio metálico mediante electrólisis.
+\end{itemize}
+
+\begin{figure}[H]    
+    \centering         
+    \includegraphics[width=0.7\textwidth]{imagenes/4.png}
+\end{figure}
+\begin{itemize}
+   
+    \item \textbf{Hall-Héroult:}
+    Este proceso convierte alúmina $\rightarrow$ aluminio metálico mediante electrólisis en criolita fundida, usando ánodos y cátodos de carbono. Es intesivo en energía, pero indispensable, porque no existe otra ruta industrial viable para reducir la alúmina.
+    \item \textbf{Estructura de la celda electrolítica:}
+ 
+    Revestimiento de carbono: El interior de la cuba está recubierto fe carbono, que funciona como cátodo (polo negativo).
+
+    Ánodos de carbono: Barras de carbono que se introducen desde arriba. Funcionan como ánodos (polo positivo)
+
+    Aislante térmico: Mantiene la temperatura interna y reduce pérdidas de calor.
+
+    \item \textbf{Electrolito fundido:}
+    
+    La alúmina \ce{(Al2O3)} se disuelve en criolita fundida \ce{(Na3AlF6)}, que baja el punto de fusión de la alúmina de $\sim$ 2050°C a unos 950-1000°C.
+
+    Esto permite que el proceso sea viable energéticamente.
+
+    \item \textbf{Reacciones químicas}
+    
+    Dentro de la celda ocurre la electrólisis:
+
+    En el cátodo (polo negativo, revestimiento de carbono en el fondo de la cuba):
+    \[Al^{3+} + 3e^- \;\rightarrow\; Al(l)\]
+
+    Se deposita aluminio líquido en el fondo de la celda.
+
+    En el ánodo (polo positivo, carbono:)
+\[2O^{2-} \;\rightarrow\; \ce{O2(g) + 4e^-}\]
+
+El oxígeno reacciona con el carbona del ánodo, produciendo \ce{CO} y \ce{CO2}
+
+\ce{C + O2 $\rightarrow$ CO2}
+
+
+
+
+\end{itemize}
+
+
 \end{document}

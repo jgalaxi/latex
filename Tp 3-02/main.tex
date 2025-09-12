@@ -15,6 +15,7 @@
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{longtable}
+\usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
@@ -33,7 +34,8 @@
 \usepackage{tikz}
 \usepackage{xcolor}
 \definecolor{myblue}{RGB}{42, 127, 179}
-
+\usepackage{multirow}
+\usepackage{tabularx}
 
 % Encabezado
 \pagestyle{fancy}
@@ -191,7 +193,7 @@ Una planta de coque produce coque metalúrgico desde una mezcla de carbones. Se 
 
 \section{Obtención del Arrabio.}
 
-Una vez que la mena es seleccionada y mediante un proceso es preparada, se da inicio al proceso de reducción para obtener el primer producto metálico: el arrabio. Este se fabrica en el alto horno, cuyo funcionamiento es continuo, lo que significa que puede operar durante años sin interrupciones, recibiendo constantemente mineral de hierro, coque y caliza por la parte superior. El coque actúa simultáneamente como combustible y reductor químico, ya que al reaccionar con el aire caliente inyectado por las toberas en la base del horno genera CO (esto se aprecia en la \autoref{fig:alto_horno}). Este gas asciende por la columna de carga y reduce progresivamente los óxidos de hierro presentes en el mineral. Mientras tanto, el fundente (caliza) se descompone en óxido de calcio, que se combina con impurezas como la sílice para formar escoria. De este modo, en la parte baja del horno se acumula una capa de hierro fundido, llamada arrabio, cubierta por la escoria flotante que lo protege de la oxidación. Periódicamente, tanto el hierro como la escoria se extraen a través de orificios llamados piqueras. 
+Una vez que la mena es seleccionada y mediante un proceso es preparada, se da inicio al proceso de reducción para obtener el primer producto metálico: el arrabio. Este se fabrica en el alto horno, cuyo funcionamiento es continuo, lo que significa que puede operar durante años sin interrupciones, recibiendo constantemente mineral de hierro, coque y caliza por la parte superior. El coque actúa simultáneamente como combustible y reductor químico, ya que al reaccionar con el aire caliente inyectado por las toberas en la base del horno genera \ce{CO} (esto se aprecia en la \autoref{fig:alto_horno}). Este gas asciende por la columna de carga y reduce progresivamente los óxidos de hierro presentes en el mineral. Mientras tanto, el fundente (caliza) se descompone en óxido de calcio, que se combina con impurezas como la sílice para formar escoria. De este modo, en la parte baja del horno se acumula una capa de hierro fundido, llamada arrabio, cubierta por la escoria flotante que lo protege de la oxidación. Periódicamente, tanto el hierro como la escoria se extraen a través de orificios llamados piqueras. 
 
 El arrabio resultante contiene entre \SIrange[range-units=single]{3}{4,5}{\percent} de carbono, además de fósforo, azufre, manganeso y silicio, lo que lo convierte en un material frágil y de uso limitado en su forma directa.
 
@@ -334,44 +336,27 @@ Un convertidor es un gran recipiente en forma de pera, revestido interiormente d
 
 \subsection{Hornos Asociados.}
 
+\textbf{Tipo: Hornos de Oxígeno (LD).}
+
+\begin{itemize}
+    \item \textbf{Características:} 
+    Sobre el arrabio fundido se hace incidir un chorro de oxígeno puro insuflado en sentido vertical y a presión. Es un proceso muy rápido que requiere un control automatizado de las cargas de arrabio y de fundente que se utilizan, y de la presión y el caudal del oxígeno. Al insuflar oxígeno sobre el arrabio se genera óxido ferroso (\ce{FeO}), el cual reacciona con las impurezas y forma óxidos, con los que se eliminan estas impurezas. Luego, se añade rápidamente fundente y se sigue insuflando oxígeno que forma monóxido de carbono (\ce{CO}) y dióxido de carbono (\ce{CO2}), de manera que se reduce el contenido de C, hasta llegar al grado de composición deseado. Este procedimiento es uno de los más modernos y el más utilizado en la actualidad porque permite obtener aceros de muy buena calidad, es relativamente sencillo y de bajo costo.
+\end{itemize}
+
 \textbf{Tipo:  Convertidores Bessemer.}
 
 \begin{itemize}
     \item \textbf{Características:} 
-    El proceso es similar al del LD, con la diferencia de que se introduce una mezcla de oxígeno y nitrógeno (aire); el nitrógeno produce nitruros de hierro que, a pesar de estar presentes en pequeñas cantidades, proporcionan dureza y fragilidad al acero. Es un método antiguo que prácticamente ya no se utiliza. El convertidor Bessemer o de pared ácida, que se usa cuando no existen impurezas de azufre o fósforo.
+    El proceso es similar al del LD, con la diferencia de que se introduce una mezcla de oxígeno y nitrógeno (aire); el nitrógeno produce nitruros de hierro que, a pesar de estar presentes en pequeñas cantidades, proporcionan dureza y fragilidad al acero. Es un método antiguo que prácticamente ya no se utiliza. El convertidor Bessemer o de pared ácida se usa cuando no existen impurezas de azufre o fósforo.
 \end{itemize}
 
 \textbf{Tipo: Convertidores Thomas.}
 
 \begin{itemize}
-    \item \textbf{Características:} es una modificación del convertidor Bessemer. Se caracteriza porque la cubata está revestida con una mezcla  de materiales de PH básico y alquitrán, que permitía eliminar del acero el fósforo presente en el mineral de hierro. El fósforo contenido en el arrabio, se conbinaba con la caliza presente en el  mineral de hierro.
+    \item \textbf{Características:} es una modificación del convertidor Bessemer. Se diferencia porque la cubata está revestida con una mezcla  de materiales de PH básico (al contrario que los Bessemer) y alquitrán, que permitía eliminar del acero el fósforo presente en el mineral de hierro. El fósforo contenido en el arrabio se combina con la caliza presente en el mineral de hierro.
 \end{itemize}
 
-\textbf{Tipo: Hornos de Oxígeno (LD).}
-
-\begin{itemize}
-    \item \textbf{Características:} 
-    Sobre el arrabio fundido se hace incidir un chorro de oxígeno puro insuflado en sentido vertical y a presión. Es un proceso muy rápido que requiere un control automatizado de las cargas de arrabio y de fundente que se utilizan, y de la presión y el caudal del oxígeno. Al insuflar oxígeno sobre el arrabio se genera óxido ferroso (\ce{FeO}),el cual reacciona con las impurezas y forma óxidos, con los que se eliminan estas impurezas. Luego, se añade rápidamente fundente y se sigue insuflando oxígeno que forma monóxido de carbono (\ce{CO}) y dióxido de carbono (\ce{CO2}), de manera que se reduce el contenido de C, hasta llegar al grado de composición deseado.
-    Este procedimiento es uno de los más modernos y el más utilizado en la actualidad porque permite obtener aceros de muy buena calidad, es relativamente sencillo y de bajo costo.
-\end{itemize}
-
-\textbf{Tipo: Hornos Siemens-Martin.}
-
-\begin{itemize}
-    \item \textbf{Características:} 
-    Son hornos de reverbero revestidos interiormente de material refractario ácido o básico, según la naturaleza del material de afino. Utilizan como combustible aceite combustible o gas de coque. El ciclo de fabricación del acero se inicia dejando mineral de hierro y fundente y/o chatarra en los hornos. Al comenzar la fusión, se agrega arrabio líquido o en lingotes. Cuando funde toda la carga se realizan sucesivos controles químicos y de temperatura, a fin de efectuar los ajustes necesarios que den al acero las especificaciones previstas. Al cabo de varias horas se destapa el orificio de colada y el acero fluye a través de un canal, llenando un recipiente llamado cuchara de colada. Eventualmente, a este recipiente se le agregan materiales de aleación para obtener aceros especiales. En la cuchara de colada la escoria excedente sobrenada el acero, se la elimina dejándola fluir a través de un canal de desborde hacia un recipiente llamado pote de escoria. 
-    Desde la cuchara de colada y a través de un orificio ubicado en su fondo, llamado buza, el acero es vaciado en lingoteras de formas y tamaños apropiados.
-\end{itemize}
-
-\textbf{Tipo: Hornos de Inducción.}
-
-\begin{itemize}
-    \item \textbf{Características:} 
-    un horno eléctrico que funciona gracias al principio de la inducción electromagnética. En lugar de calentar el metal con un arco eléctrico o con la combustión de un combustible, el horno utiliza corrientes inducidas dentro del propio metal para fundirlo.
-    El equipo está formado por un crisol refractario rodeado por una bobina de cobre refrigerada por agua. Al hacer pasar una corriente alterna de alta frecuencia por la bobina, se genera un campo electromagnético variable que induce corrientes parásitas (corrientes de Foucault) en la carga metálica. Estas corrientes circulan dentro del metal y lo calientan hasta fundirlo.
-\end{itemize}
-
- \begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -394,12 +379,88 @@ Un convertidor es un gran recipiente en forma de pera, revestido interiormente d
         \subcaption{Horno de Inducción}
         \label{induccion}
     \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Inagenes para latex/simer-martin.png}
+        \subcaption{Horno Siemens-Marin}
+        \label{Siemens2}
+    \end{subfigure}
     \caption{Otros tipos de hornos.}
     \label{fig:otros_hornos}
- \end{figure}
+\end{figure}
 
-\section{Conclusión}
-La comparación de estos hornos y procesos muestra cómo la siderurgia evolucionó desde sistemas rudimentarios hasta complejos altamente eficientes. El alto horno es esencial para obtener arrabio a gran escala; los hornos de cubilote, crisol y arco eléctrico diversifican la producción de fundiciones; y los convertidores Bessemer, Thomas, Siemens-Martin, LD y hornos de arco eléctrico marcan la historia y la actualidad de la producción de acero. Cada horno tiene un papel particular dentro de la cadena de producción: el alto horno para la reducción de minerales, el cubilote para fundiciones económicas, el crisol para aleaciones especiales, el arco eléctrico para fundiciones y aceros de alta precisión, y los convertidores para el afino masivo del arrabio en acero.
+\textbf{Tipo: Hornos Siemens-Martin.}
+
+\begin{itemize}
+    \item \textbf{Características:} 
+    Son hornos de reverbero revestidos interiormente de material refractario ácido o básico, según la naturaleza del material de afino. Utilizan como combustible aceite combustible o gas de coque. El ciclo de fabricación del acero se inicia dejando mineral de hierro, y fundente y/o chatarra en los hornos. Al comenzar la fusión, se agrega arrabio líquido o en lingotes. Cuando funde toda la carga se realizan sucesivos controles químicos y de temperatura a fin de efectuar los ajustes necesarios que den al acero las especificaciones previstas. Al cabo de varias horas se destapa el orificio de colada y el acero fluye a través de un canal, llenando un recipiente llamado cuchara de colada. Eventualmente, a este recipiente se le agregan materiales de aleación para obtener aceros especiales. En la cuchara de colada la escoria excedente sobrenada el acero, se la elimina dejándola fluir a través de un canal de desborde hacia un recipiente llamado pote de escoria. 
+    Desde la cuchara de colada y a través de un orificio ubicado en su fondo, llamado buza, el acero es vaciado en lingoteras de formas y tamaños apropiados.
+\end{itemize}
+
+\textbf{Tipo: Hornos de Inducción.}
+
+\begin{itemize}
+    \item \textbf{Características:} 
+    un horno eléctrico que funciona gracias al principio de la inducción electromagnética. En lugar de calentar el metal con un arco eléctrico o con la combustión de un combustible, el horno utiliza corrientes inducidas dentro del propio metal para fundirlo.
+    El equipo está formado por un crisol refractario rodeado por una bobina de cobre refrigerada por agua. Al hacer pasar una corriente alterna de alta frecuencia por la bobina, se genera un campo electromagnético variable que induce corrientes parásitas (corrientes de Foucault) en la carga metálica. Estas corrientes circulan dentro del metal y lo calientan hasta fundirlo.
+\end{itemize}
+
+\subsection{Diferencias entre los tipos de hornos.}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cccccccc}
+    \toprule
+    \textbf{Clase} & \textbf{C \%} & \textbf{Mn \%} & \textbf{Si \%} & \textbf{P \%} & \textbf{S \%} & \textbf{R (Kg/mm$^2$)} & \textbf{A \%} \\
+    \midrule
+    B-1 & 0,1 $\pm$ 0,05 & 0,35 $\pm$ 0,10 & $<$ 0,10 &               &               & 41 & 28 \\
+    B-2 & 0,2 $\pm$ 0,05 & 0,45 $\pm$ 0,15 & $<$ 0,20 &               &               & 49 & 23 \\
+    B-3 & 0,3 $\pm$ 0,05 & 0,55 $\pm$ 0,15 &           &               &               & 57 & 20 \\
+    B-4 & 0,4 $\pm$ 0,05 & 0,65 $\pm$ 0,15 & $<$ 0,30 & $<$ 0,07      &               & 66 & 17 \\
+    B-5 & 0,5 $\pm$ 0,05 & 0,70 $\pm$ 0,15 &           &               &               & 75 & 14 \\
+    B-6 & 0,6 $\pm$ 0,05 & 0,75 $\pm$ 0,15 &           &               &               & 84 &  9 \\
+    B-7 & 0,7 $\pm$ 0,05 & 0,80 $\pm$ 0,15 &           &               &               & 92 &  7 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Aceros al carbono fabricados en convertidor Bessemer (\%P + S < 0,12\%)}
+\end{table}
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\toprule
+\textbf{Clase} & \textbf{C \%} & \textbf{Mn \%} & \textbf{Si \%} & \textbf{P \%} & \textbf{S \%} & \textbf{Estado} & \textbf{R (Kg/mm$^2$)} & \textbf{A \%} \\
+\midrule
+\multirow{2}{*}{S-1} & \multirow{2}{*}{0,1 $\pm$ 0,05} & \multirow{2}{*}{0,35 $\pm$ 0,05} & \multirow{2}{*}{$<$ 0,10} & & & Normalizado & 41 & 29 \\
+                     &                                 &                                 &                          & & & Recocido   & 39 & 30 \\
+\midrule
+\multirow{2}{*}{S-2} & \multirow{2}{*}{0,2 $\pm$ 0,05} & \multirow{2}{*}{0,40 $\pm$ 0,10} & \multirow{2}{*}{$<$ 0,20} & & & Normalizado & 49 & 25 \\
+                     &                                 &                                 &                          & & & Recocido   & 43 & 28 \\
+\midrule
+\multirow{2}{*}{S-3} & \multirow{2}{*}{0,3 $\pm$ 0,05} & \multirow{2}{*}{0,45 $\pm$ 0,10} &                          & & & Normalizado & 57 & 20 \\
+                     &                                 &                                 &                          & & & Recocido   & 50 & 25 \\
+\midrule
+\multirow{2}{*}{S-4} & \multirow{2}{*}{0,4 $\pm$ 0,05} & \multirow{2}{*}{0,50 $\pm$ 0,15} & \multirow{2}{*}{$<$ 0,30} & \multirow{2}{*}{$<$ 0,04} & \multirow{2}{*}{$<$ 0,06} & Normalizado & 65 & 17 \\
+                     &                                 &                                 &                          &                          &                          & Recocido   & 55 & 23 \\
+\midrule
+\multirow{2}{*}{S-5} & \multirow{2}{*}{0,5 $\pm$ 0,05} & \multirow{2}{*}{0,55 $\pm$ 0,20} &                          & & & Normalizado & 73 & 12 \\
+                     &                                 &                                 &                          & & & Recocido   & 60 & 20 \\
+\midrule
+\multirow{2}{*}{S-6} & \multirow{2}{*}{0,6 $\pm$ 0,05} & \multirow{2}{*}{0,70 $\pm$ 0,20} &                          & & & Normalizado & 82 & 15 \\
+                     &                                 &                                 &                          & & & Recocido   & 65 & 18 \\
+\midrule
+\multirow{2}{*}{S-7} & \multirow{2}{*}{0,7 $\pm$ 0,05} & \multirow{2}{*}{0,75 $\pm$ 0,25} &                          & & & Normalizado & 89 & 13 \\
+                     &                                 &                                 &                          & & & Recocido   & 70 & 17 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Aceros al carbono fabricados en hornos Siemens (\%P + S < 0,09\%)}
+\end{table}
+
+\section{Conclusión.}
+La comparación de estos hornos y procesos muestra cómo la siderurgia evolucionó desde sistemas rudimentarios hasta complejos y altamente eficientes hornos. El alto horno es esencial para obtener arrabio a gran escala; los hornos de cubilote, crisol y arco eléctrico diversifican la producción de fundiciones; y los convertidores Bessemer, Thomas, Siemens-Martin, LD y hornos de arco eléctrico marcan la historia y la actualidad de la producción de acero. Cada horno tiene un papel particular dentro de la cadena de producción: el alto horno para la reducción de minerales, el cubilote para fundiciones económicas, el crisol para aleaciones especiales, el arco eléctrico para fundiciones y aceros de alta precisión, y los convertidores para el afino masivo del arrabio en acero.
 
 La obtención de arrabio, fundición y acero constituye una cadena productiva compleja que comienza con la extracción de la mena y su separación de la ganga, continúa con la reducción en el alto horno y se diversifica en fundiciones o aceros según el tipo de horno utilizado. El conocimiento detallado de los hornos industriales es esencial, ya que cada uno aporta ventajas y limitaciones específicas. Mientras que el alto horno es el corazón de la producción primaria, hornos como el cubilote o el LD representan la especialización y modernización de la industria siderúrgica.
 
