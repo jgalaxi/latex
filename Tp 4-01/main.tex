@@ -32,6 +32,7 @@
 \Urlmuskip=0mu plus 1mu          % Mejora el espaciado para permitir cortes
 \usepackage{subcaption}  % en el preámbulo
 \usepackage{pgfplots}
+\usepackage{pdfpages}
 \pgfplotsset{compat=1.18}
 \usepackage{tikz}
 \usepackage{xcolor}
@@ -125,6 +126,32 @@ Los perfiles T vienen con un ancho máximo de \SI{104}{\milli\metre} y de alto \
 
 Para los perfiles H se vende en 6063, 6082 y 6005; para los T los mismos que el anterior sumando la aleación 6060; para los perfiles U hasta \SIrange[range-phrase = { y }, range-units=single]{100}{50}{\milli\metre} se vende en 6063, 6060 y 6082, y para el resto únicamente en 6063 y 6082.
 
+\subsection{Ángulos.}
+
+\subsubsection{Presentación.}
+
+La empresa presenta estas piezas de lados desiguales y iguales, donde el máximo es de \SIrange[range-phrase = { y }, range-units=single]{200}{100}{\milli\metre}, y \SI{120}{\milli\metre} respectivamente. También detallan el espesor y el peso.
+
+\subsubsection{De lo que están hechos.}
+
+Ambos tipos de ángulos vienen en aleaciones 6063, 6060 y 6082 según AA.
+
+\subsection{Chapas laminadas en frío y caliente.}
+
+\subsubsection{Presentación.}
+
+Las chapas pasadas por ambos procesos vienen hechas con las mismas aleaciones y mismas dimensiones, siendo estas para el espesor de \SIrange[range-phrase = { a }, range-units=single]{0,5}{200}{\milli\metre}; luego encontramos las aleaciones con las que están hechas.
+
+\subsubsection{De lo que están hechos.}
+
+Hasta un espesor de \SI{8}{\milli\metre} vienen hechas con aleaciones 1050: H24, H18, H11 y F; 2017 T4; 2024 T3; 5005 H24 y anodizado; 5083 H111; 5086 H111; 5754 H111, H12, H22 y H32; 6061 T6; 6082 T6; y 7075 T6. Y las que siguen son de: 1050 F y H111; 2017 T451; 2024 T351 y T451; 5754 H111; 6061 T651; 6082 T651; y 7075 T651. Todas según AA.
+
+\subsection{Aleaciones.}
+
+Por último, Alacer Mas provee un catálogo de distintas aleaciones del aluminio; a modo de ejemplo elegimos el AW-5052 en designación EN o el equivalente AlMg2.5 en designación ISO.
+
+En el \hyperref[anexo]{anexo} se ve la hoja característica de esta aleación.
+
 \section{Sanmetal.}
 
 Sanmetal se dedica a la comercialización y distribución de componentes industriales operando en cinco divisiones principales: metales (bronce, cobre, aluminio, acero cromado y lapeado, fundición\dots), termoplásticos (nylon, teflón, polietileno - apm, pvc\dots), elementos de estanqueidad (tóricas, juntas, collarines, guías, rascadores\dots), hidráulica y neumática. Para este trabajo nos centramos exclusivamente en la primera, dentro de ella vamos a explicar sobre aleaciones de bronce y cobre.
@@ -155,7 +182,9 @@ En esta parte encontramos una tabla donde muestra las equivalencias del SAN-99, 
    \label{fig:comparacion}
 \end{figure}
 
-\section{Cembrass.}
+En la \autoref{fig:tabla} se pueden apreciar algunas tablas de especificaciones brindada por Sanmetal.
+
+\section{CEMBRASS.}
 
 Es una empresa metalúrgica argentina dedicada a la fabricación y comercialización de productos de latón, amarillo y azul. En la siguiente tabla se ve la diferencia en la composición química de ellos:
 
@@ -178,6 +207,29 @@ Es una empresa metalúrgica argentina dedicada a la fabricación y comercializac
    \caption{Composición química de aleaciones de latón.}
    \label{tab:tipos}
 \end{table}
+
+\begin{sidewaysfigure}
+   \centering
+   \begin{subfigure}{\textheight}
+      \includegraphics[width=\textheight]{Figuras/imagenes_unidas.png}
+      \subcaption{Aleaciones de bronces rojos y bronces al estaño.}
+      \label{fig:bronces_rojos}
+   \end{subfigure}
+   \hfill
+   \begin{subfigure}{\textheight}
+      \includegraphics[width=\textheight]{Figuras/imagenes_unidas_1.png}
+      \subcaption{Latones de alta resistencia.}
+      \label{fig:latones}
+   \end{subfigure}
+   \hfill
+   \begin{subfigure}{\textheight}
+      \includegraphics[width=\textheight]{Figuras/imagenes_unidas_2.png}
+      \subcaption{Bronces al aluminio.}
+      \label{fig:aluminio}
+   \end{subfigure}
+   \caption{}
+   \label{fig:tabla}
+\end{sidewaysfigure}
 
 \subsection{Latones.}
 
@@ -222,7 +274,9 @@ La última información que da la empresa son las tolerancias de cada barra, que
    \label{tab:tolerancias2}
 \end{table}
 
-\section{Knight group.}
+\section{OMAMET.}
+
+\section{Knight Group.}
 Es un provedor de materiales en Europa y en la bibliografía del trabajo lo que se haya es uno de sus catálogos sobre el cobre y sus aleaciones.
 
 \subsection{Formato de venta.}
@@ -257,16 +311,21 @@ En la \autoref{tab:bobinas} se encuentra la forma y las dimensiones en la que se
 El cátalogo explica los tipos de cobres, sus aleaciones, y las propiedades y diferencias de cada uno.
 
 \begin{itemize}
-   \item \textbf{Cobres de alta conductividad:} los cobres de este grupo presentan diferentes grados de pureza y por ende caracteristicas. Para la alta conductividad se requiere cobres libres de oxigeno, aumentando también su ductilidad.
-   \item \textbf{Latones:} es una aleación de cobre y zinc, que es más barata que el cobre solo y tiene mayor resistencia en trabajo en frío superior, pero con una conductividad reducida.
-   \item \textbf{Bronces de fosforo:} aleaciones cobre-estaño que contienen hasta un \SI{7}{\percent} de estaño y una pequeña cantidad de fósforo, se endurecen significativamente mediante trabajo en frio.
+   \item \textbf{Cobres de alta conductividad:} los cobres de este grupo presentan diferentes grados de pureza y por ende caracteristicas. Para la alta conductividad se requiere cobres libres de oxigeno, aumentando también su ductilidad. Los grados para este tipo son: C101, C102, C103 y C106
+   \item \textbf{Latones:} es una aleación de cobre y zinc, que es más barata que el cobre solo y tiene mayor resistencia en trabajo en frío superior, pero con una conductividad reducida. Los grados para este tipo son: CZ106, CZ107 y CZ108.
+   \item \textbf{Bronces de fosforo:} aleaciones cobre-estaño que contienen hasta un \SI{7}{\percent} de estaño y una pequeña cantidad de fósforo, se endurecen significativamente mediante trabajo en frio. Los grados para este tipo son: C51000 y C51900.
    \item \textbf{Platas de niquel:} son aleaciones niquel-cobre-zinc que no contienen plata, pero deben su nombre a su apariencia plateada, sus propiedades mecánicas son ligeramente superiores a la de los latones, pero inferior a los bronces al fosforo.
-   \item \textbf{Cuproníquel:} son las aleaciones comerciales más importantes, son de cobre-niquel a un 90/10. Tiene buena capacidad de conformado y una excelente resistencia a la corrosión del agua de mar. 
-   \item \textbf{Aleaciones con alto contenido en cobre:} siendo, la aleación 194, una muy importante, tiene un \SI{2,3}{\percent} de hierro con pequeñas adiciones de fósforo y zinc. Se usa para marcos de conexión, y tiene una excelente resistencia al ablandamiento, siendo capaz de soportar más de \SI{300}{\celsius} durante unos minutos.
-   \item \textbf{Aleaciones de cobre y berilio:} son aleaciones con una resistencia increíble, gran elasticidad y resistencia a la fatiga, ideales para las aplicaciones de muelles.
+   \item \textbf{Cuproníquel:} son las aleaciones comerciales más importantes, son de cobre-niquel a un 90/10. Tiene buena capacidad de conformado y una excelente resistencia a la corrosión del agua de mar.
+   \item \textbf{Aleaciones con alto contenido en cobre:} siendo, la aleación 194, una muy importante, tiene un \SI{2,3}{\percent} de hierro con pequeñas adiciones de fósforo y zinc. Se usa para marcos de conexión, y tiene una excelente resistencia al ablandamiento, siendo capaz de soportar más de \SI{300}{\celsius} durante unos minutos. Los grados para estos 3 últimos tipos son: C74500, C75700, C76400, C77000 y C72500.
+   \item \textbf{Aleaciones de cobre y berilio:} son aleaciones con una resistencia increíble, gran elasticidad y resistencia a la fatiga, ideales para las aplicaciones de muelles. Los grados para este tipo son: C17410 y C17200.
 \end{itemize}
 
 \vfill
 \textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo.}}
+
+\appendix
+\section{Anexo.}\label{anexo}
+
+\includepdf[pages=-]{aw-5052aimg25.pdf}
 
 \end{document}
