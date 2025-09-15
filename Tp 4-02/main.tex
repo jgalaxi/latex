@@ -6,6 +6,7 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage[version=4]{mhchem}
+\usepackage{siunitx}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -54,7 +55,7 @@
 \section{Introducción.}
 Se busca comprender no solo la secuencia de las operaciones necesarias para transformar el mineral en un metal utilizable, sino también el papel crítico de la tecnología de hornos en la eficiencia energética, la calidad del producto y el impacto ambiental de los procesos extractivos.
 
-\subsection{Aluminio.}
+\section{Aluminio.}
 
 Es uno de los metales más utilizados a nivel global, y es un pilar de la ingeniería de materiales, por la versatilidad que ofrece en aplicaciones estructurales, electricas y de consumo.
 
@@ -67,11 +68,9 @@ Es uno de los metales más utilizados a nivel global, y es un pilar de la ingeni
     \ce{Al2O3*H2O}.
     \item \textbf{Estructura molecular:} óxido de aluminio hidratado, donde el agua está presente como grupo oxhidrilo (OH-)
     \item \textbf{Propiedades:} al calentarse, se transforma en otra fase de alúmina ($\gamma$\ce{Al2O3}).
+    \item \textbf{Contenido:} \ce{Al2O3} $\approx$ 85,1\%
 \end{itemize}
 
-\begin{itemize}
-    \item \textbf{Contenido \ce{Al2O3} $\approx$ 85,1\%}
-\end{itemize}
 Es una de las fases principales de la bauxita, materia prima fundamental para obtener aluminio mediante al proceso bayer.
 
 \subsubsection{Diáspora:}
@@ -79,267 +78,198 @@ Es una de las fases principales de la bauxita, materia prima fundamental para ob
 \begin{itemize}
     \item \textbf{Formula química:} \ce{Al2O3*H2O} (es igual que la bohemita, pero con distinta estructura cristalina)
     \item \textbf{Estructura cristalina:} Tiene una red cristalina monoclínica, distinta a la bohemita.
+    \item \textbf{Propiedades:} más estable que la bohemita a altas temperaturas.
+    \item \textbf{Contenido:} \ce{Al2O3} $\approx$ 85,1\%
 \end{itemize}
 
-\begin{itemize}
-    \item \textbf{Propiedades}
-\end{itemize}
-Mas estable que la bohemita a altas temperaturas.
-\begin{itemize}
-    \item \textbf{Contenido \ce{Al2O3} $\approx$ 85,1\%}
-\end{itemize}
-
-\subsection{Gibbssita:}
+\subsubsection{Gibbssita:}
 
 \begin{itemize}
-    \item \textbf{Formula}
-\end{itemize} 
-\ce{Al2O3*3H2O} 
-\begin{itemize}
-    \item \textbf{Estructura}
-\end{itemize}
-Hidroxido de aluminio con estructura cristalina monoclínica.
-\begin{itemize}
-    \item \textbf{Propiedades}
-\end{itemize}
-Tiene mayor contenido de agua que bohemita y diáspora. Es menos densa en términos de alúmina, por eso su porcentaje de \ce{Al2O3} es menor (65,4\%).
-Al calentarla, primero pierde agua y luego se trasnforma en otras fases de alúmina ($\gamma$ , $\delta$ , $\theta$ , hasta a $\alpha$ -\ce{Al2O3})
-
-\begin{itemize}
-    \item \textbf{Contenido \ce{Al2O2} $\approx$ 65,4\%}
-\end{itemize}
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/1.png}
-    \caption{El aluminio es obtiene principalmente de Bauxita, rica en Gibbssita, Bohemita y Diáspora }
-\end{figure}
-
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/2.png}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Excavadora y volquetes de mina:}
-     La bauxita se obtiene mediante minería a cielo abierto porque los yacimientos están cerca de la superficie.
-     \item\textbf{Triturador:}
-     La bauxita extraída pasa por trituradores mecánicos que reducen el tamaño de las rocas
-     \item\textbf{Lavado:}
-     El mineral triturado se mezcla con agua para separar impurezas ligeras como arcillas y sílice. Estos reciduos no contienen aluminio aprovechable y son eliminados. Se busca enriquecer la bauxita en óxidos de aluminio (gibbsita, bohemita, diáspora).
-     \item \textbf{Horno rotativo de secado + chimenea:}
-     El material lavado se introduce en un horno rotativo, donde se eliminia la humedad, la combustión genera una llama que calienta el mineral. El vapor de agua y gases de combustión salen por la chimenea.
-     \item \textbf{Trasnporte y almacenamiento:}
-     El mineral seco y concentrado se transporta en vagones especiales, evitando la contaminación y pérdida de material.
-     \item \textbf{El material concentrado se envía a la instalación de afino, donde continua el Proceso Bayer:}
-     Se disuelve la bauxita en soda cáustica (\ce{NaOH}).
-
-     Se precipita el hidróxido de aluminio (\ce{Al(OH)3}).
-
-     Luego se calcina para obtener alúmina (\ce{Al2O3}), que es el insumo para la electrólisis Hall-Héroult y producir aluminio metálico.
-\end{itemize}
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/3.png}
-\end{figure}
-\begin{itemize}
-    \item \textbf{preparación de la mezcla:}
-Bauxita triturada + cal + cenizas sódicas (\ce{NaOH}) se mezclan en un mezclador con agua caliente.
-\item \textbf{Digestión:}
-En el tanque de digestión, la mezcla se somete a alta presión y temperatura con vapor del proceso.
-
-La reacción principal es: \ce{Al(OH)3 + NaOH $\rightarrow$ Na[Al(OH)4]}
-
-La alúmina queda disuelta en la solución sódica, mientras que las impurezas (\ce{Fe, Si, Ti}) forman un residuo insoluble llamado lodo rojo, que se extrae hacia la escombrera.
-
-\item \textbf{Clarificación y separación de impurezas:}
-El licor resultante pasa por espesadores, donde se decantan solidos
-
-Luego atraviesa un filtro prensa de tamices, uqe elimina las particulas restantes.
-
-Resultado: Una solución clara de aluminato de sodio (\ce{Na[Al(OH)4]})
-
-\item \textbf{Precipitación:}
-En la cuba de precipitación, se enfría la solución y se inyecta aire comprimido.
-
-El aluminato de sodio se descompone y precipita como hidróxido de aluminio: \ce{Na[Al(OH)4] $\rightarrow$ Al(OH)3 + NaOH}
-
-El \ce{NaOH} liberado se recicla para volver al proceso
-
-\item \textbf{Calcinación:}
-El hidróxido de aluminio se lleva a un horno rotatorio de calcinación, con quemador de gas.
-
-Allí, a temperaturas de $\backsim$ 1200°C, se deshidrata: \ce{2Al(OH)3 $\rightarrow$ Al2O3 + 3H2O}
-
-Resultado: alúmina calcinada (polvo blanco).
-
-\item \textbf{Producto final}
-La alúmina obtenida se transporta en vagones tolva cubiertos hsata la instalación de fusión, donde se utilizará en el proceso Hall-Héroult para producir aluminio metálico mediante electrólisis.
+    \item \textbf{Formula química:} \ce{Al2O3*3H2O}.
+    \item \textbf{Estructura cristaliha:} \ce{Al(OH)3} con estructura cristalina monoclínica.
+    \item \textbf{Propiedades:} tiene mayor contenido de agua que bohemita y diáspora; contiene menos alúmina (65,4\%). Al calentarla, primero pierde agua y luego se trasnforma en otras fases de alúmina ($\gamma$, $\delta$, $\theta$, hasta a $\alpha$ -\ce{Al2O3})
 \end{itemize}
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/4.png}
+    \includegraphics[width=0.8\textwidth]{Figuras/1.png}
+    \caption{}
 \end{figure}
-\begin{itemize}
-   
-    \item \textbf{Hall-Héroult:}
-    Este proceso convierte alúmina $\rightarrow$ aluminio metálico mediante electrólisis en criolita fundida, usando ánodos y cátodos de carbono. Es intesivo en energía, pero indispensable, porque no existe otra ruta industrial viable para reducir la alúmina.
-    \item \textbf{Estructura de la celda electrolítica:}
- 
-    Revestimiento de carbono: El interior de la cuba está recubierto fe carbono, que funciona como cátodo (polo negativo).
 
-    Ánodos de carbono: Barras de carbono que se introducen desde arriba. Funcionan como ánodos (polo positivo)
+\begin{figure}[H]    
+    \centering         
+    \includegraphics[width=0.7\textwidth]{Figuras/2.png}
+    \caption{}
+    \label{fig:extraccion}
+\end{figure}
+
+\subsection{Método de extracción de los minerales de aluminio.}
+
+Tal como se ve en la \autoref{fig:extraccion}, el orden es el siguiente:
+
+\begin{enumerate}
+    \item \textbf{Excavadora y volquetes de mina:} la bauxita se obtiene mediante minería a cielo abierto ya que los yacimientos están cerca de la superficie.
+    \item\textbf{Triturador:} la bauxita extraída pasa por trituradores mecánicos que reducen el tamaño de las rocas.
+    \item\textbf{Lavado:} el mineral triturado se mezcla con agua para separar impurezas ligeras como arcillas y sílice. Estos residuos no contienen aluminio aprovechable y son eliminados. Se busca enriquecer la bauxita en óxidos de aluminio (gibbsita, bohemita, diáspora).
+    \item \textbf{Horno rotativo de secado + chimenea:} el material lavado se introduce en un horno rotativo, donde se elimina la humedad; la combustión genera una llama que calienta el mineral. El vapor de agua y gases de combustión salen por la chimenea.
+    \item \textbf{Trasnporte y almacenamiento:} el mineral seco y concentrado se transporta en vagones especiales, evitando la contaminación y pérdida de material.
+    \item \textbf{El material concentrado se envía a la instalación de afino, donde continua el Proceso Bayer:} se disuelve la bauxita en soda cáustica (\ce{NaOH}). Se precipita el hidróxido de aluminio (\ce{Al(OH)3}). Luego se calcina para obtener alúmina (\ce{Al2O3}), que es el insumo para la electrólisis Hall-Héroult (\autoref{hall}) y producir aluminio metálico.
+    \item \textbf{Preparación de la mezcla:} Bauxita triturada + cal + cenizas sódicas (\ce{NaOH}) se mezclan en un mezclador con agua caliente.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{Figuras/3.png}
+        \caption{}
+        \label{fig:alumina}
+    \end{figure}
+    \item \textbf{Digestión:} en el tanque de digestión, la mezcla se somete a alta presión y temperatura con vapor del proceso. La reacción principal es: \ce{Al(OH)3 + NaOH $\rightarrow$ Na[Al(OH)4]}. La alúmina queda disuelta en la solución sódica, mientras que las impurezas (Fe, Si, Ti) forman un residuo insoluble llamado lodo rojo, que se extrae hacia la escombrera.
+    \item \textbf{Clarificación y separación de impurezas:} el licor resultante pasa por espesadores, donde decantan los sólidos. Luego atraviesa un filtro prensa de tamices, que elimina las partículas restantes. Resultado: una solución clara de aluminato de sodio (\ce{Na[Al(OH)4]}).
+    \item \textbf{Precipitación:} en la cuba de precipitación, se enfría la solución y se inyecta aire comprimido. El aluminato de sodio se descompone y precipita como hidróxido de aluminio: \ce{Na[Al(OH)4] $\rightarrow$ Al(OH)3 + NaOH}. El \ce{NaOH} liberado se recicla para volver al proceso.
+    \item \textbf{Calcinación:} el hidróxido de aluminio se lleva a un horno rotatorio de calcinación, con quemador de gas. Allí, a temperaturas $\approx$ \SI{1200}{\celsius}, se deshidrata: \[\ce{2Al(OH)3 $\rightarrow$ Al2O3 + 3H2O}\] Resultado: alúmina calcinada (polvo blanco).
+    \item \textbf{Producto final} la alúmina obtenida se transporta en vagones tolva cubiertos hasta la instalación de fusión, donde se utilizará en el proceso Hall-Héroult para producir aluminio metálico mediante electrólisis.
+\end{enumerate}
+
+\begin{figure}[H]    
+    \centering         
+    \includegraphics[width=0.7\textwidth]{Figuras/4.png}
+\end{figure}
+
+\subsection{Proceso Hall-Héroult.}\label{hall}
+
+Este proceso convierte alúmina en aluminio metálico mediante electrólisis en criolita fundida, usando ánodos y cátodos de carbono. Es intesivo en energía, pero indispensable, porque no existe otra ruta industrial viable para reducir la alúmina.
+
+\begin{itemize}
+    \item \textbf{Estructura de la celda electrolítica:} revestimiento de carbono; el interior de la cuba está recubierto de C, que funciona como cátodo (polo negativo).
+Ánodos de carbono: Barras de carbono que se introducen desde arriba. Funcionan como ánodos (polo positivo)
 
     Aislante térmico: Mantiene la temperatura interna y reduce pérdidas de calor.
 
-    \item \textbf{Electrolito fundido:}
-    
-    La alúmina \ce{(Al2O3)} se disuelve en criolita fundida \ce{(Na3AlF6)}, que baja el punto de fusión de la alúmina de $\sim$ 2050°C a unos 950-1000°C.
-
-    Esto permite que el proceso sea viable energéticamente.
-
-    \item \textbf{Reacciones químicas}
-    
-    Dentro de la celda ocurre la electrólisis:
-
-    En el cátodo (polo negativo, revestimiento de carbono en el fondo de la cuba):
-    \[Al^{3+} + 3e^- \;\rightarrow\; Al(l)\]
-
-    Se deposita aluminio líquido en el fondo de la celda.
-
-    En el ánodo (polo positivo, carbono:)
-\[2O^{2-} \;\rightarrow\; \ce{O2(g) + 4e^-}\]
-
-El oxígeno reacciona con el carbona del ánodo, produciendo \ce{CO} y \ce{CO2}.
-
-\ce{C + O2 $\rightarrow$ CO2}
-
-\item \textbf{Productos del proceso}
-
-Aluminio líquido: se acumula en el fondo de la cuba y se extrae periódicamente hacia los recipientes de colada.
-
-Gases (\ce{CO2} y \ce{CO}): salen por la parte superior, lo que implica un consumo continuo de los ánodos de carbono (hay que reemplazarlos periódicamente)
-
-\item \textbf{Balance global de la reacción}
-\ce{2Al2O3 + 3C $\rightarrow$ 4Al + 3CO2 }
-
+    \item \textbf{Electrolito fundido:} la alúmina (\ce{Al2O3}) se disuelve en criolita fundida \ce{(Na3AlF6)}, que baja el punto de fusión de la alúmina de $\approx$ \SI{2050}{\celsius} a unos \SIrange[range-phrase = { - }, range-units=single]{950}{1000}{\celsius}. Esto permite que el proceso sea viable energéticamente.
+    \item \textbf{Reacciones químicas:} dentro de la celda ocurre la electrólisis:
+    \begin{itemize}
+        \item En el cátodo (polo negativo, revestimiento de carbono en el fondo de la cuba):\[\ce{Al^{3+} + 3e- \rightarrow Al(l)}\]Se deposita aluminio líquido en el fondo de la celda.
+        \item En el ánodo (polo positivo, carbono):\[\ce{2O^{2-} \rightarrow O2(g) + 4e-}\]
+        \item El oxígeno reacciona con el carbona del ánodo, produciendo \ce{CO} y \ce{CO2}.\ce{C + O2 $\rightarrow$ CO2}
+    \end{itemize}
+    \item \textbf{Productos del proceso} 
+    \begin{itemize}
+        \item Aluminio líquido: se acumula en el fondo de la cuba y se extrae periódicamente hacia los recipientes de colada.
+        \item Gases (\ce{CO2} y \ce{CO}): salen por la parte superior, lo que implica un consumo continuo de los ánodos de carbono (hay que reemplazarlos periódicamente).
+    \end{itemize}
+    \item \textbf{Balance global de la reacción:} \ce{2Al2O3 + 3C $\rightarrow$ 4Al + 3CO2}.
 \end{itemize}
+
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/5.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/5.png}
 \end{figure}
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/6.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/6.png}
 \end{figure}
+\subsection{Tecnología Söderburg:}
+
+Es un tipo de celda electrolítica para el proceso Hall-Héroult. Se diferencia por el uso de ánodos continuos llamados ánodos Söderburg, que se auto consumen durante el proceso. Esto evita tener que reemplazar los ánodos de manera periódica (como ocurre en el Hall-Héroult con ánodos prehorneados).
+
+Sigue el mismo principio que el Hall-Héroult:
 
 \begin{itemize}
-    \item \textbf{ tecnología Söderburg:}
-    
-    Es un tipo de celda electrolítica para el proceso Hall-Héroult.
+    \item En cátodo(base carbono):\[\ce{Al{3+} + 3e- \rightarrow Al(l)}\]
+    \item En el ánodo (Söderburg):\[\ce{2O{2-} \rightarrow O2(g) + 4e-}\]
+    \item Y el oxígeno reacciona con el carbono $\rightarrow$ \ce{CO2} y \ce{CO}.
+    \item Reacción global: \ce{2Al2O3 + 3C $\rightarrow$ 4Al + 3CO2}.
+\end{itemize}
 
-    Se diferencia por el uso de ánodos continuos llamados ánodos Söderburg, que se auto consumen durante el proceso.
-    Esto evita tener que reemplazar los ánodos de manera periódica (como ocurre en el Hall-Héroult con ánodos prehorneados).
+\subsubsection{Ventajas del sistema Söderburg.}
 
-    Es el mismo principio que en Hall-Héroult:
+\begin{itemize}
+    \item Autonomía: el ánodo se regenera continuamente.
+    \item Menor Interrupción del proceso.
+    \item Costo inicial más bajo en comparación con celdas de ánodo prehorneados.
+\end{itemize}
 
-    En cátodo(base carbono):
-    \[Al^{3+} + 3e^- \;\rightarrow\; Al(l)\]
-    
-    En el ánodo (Söderburg):
-    \[2O^{2-} \;\rightarrow\; \ce{O2(g) + 4e^-}\]
+\subsubsection{Desventajas del sistema Söderburg.}
 
-    Y el oxígeno reacciona con el carbono $\rightarrow$ \ce{CO2} y \ce{CO}
+\begin{itemize}
+    \item Menor eficiencia energética.
+    \item Mayor generación de emisiones de efecto invernadero (\ce{CO, CO2}, hidrocarburos).
+    \item Control de la calidad del ánodo más complejo (ya que se hornea en el lugar).
+\end{itemize}
 
-    Reacción global:
-    \ce{2Al2O3 + 3C $\rightarrow$ 4Al + 3CO2}
-    
+\section{Los hornos utilizados en la producción de aluminio.}
 
-    \item \textbf{ventajas del sistema Söderburg}
-    
-    Autonomía: el ánodo se regenera continuamente.
+\subsection{Horno electrolítico Hall-Héroult.}
 
-    Menor Interrupción del proceso.
+Es el horno principal en la producción primaria de aluminio a partir de la alúmina, revestido de carbono (cátodo). Ánodos de carbono (prehorneados o Söderburg). Funciona alrededor de \SI{950}{\celsius} con alúmina disuelta en criolita.
 
-Costo inicial más bajo en comparación con celdas de ánodo prehorneados.
+\subsection{Horno Crisol y Crisol Basculante.}
 
-\item \textbf{desventajas del sistema Söderburg}
+Recipiente refractario donde el aluminio se funde por acción de un quemador externo.
 
-Menor eficiencia energética
+\subsection{Horno de Reverbero.}
 
-Mayor generación de emisiones (\ce{CO, CO2}, hidrocarburos)
+El calor se trasnmite por la llama y los gases de combustión que rebotan (reverberan) sobre la carga, sin contacto directo con el combustible.
 
-Control de la calidad del ánodo más complejo, porque se hornea en el lugar
+\subsection{Horno de inducción (alta y baja frecuencia).}
 
-\item \textbf{ Los hornos utilizados en la producción de aluminio son:}
+Corrientes inducidas por un campo electromagnético calientan el metal directamente, generando agitación electromagnética.
 
-Horno electrolítico Hall-Héroult es el horno principal en la producción primaria de aluminio a partir de la alúmina, revestido de carbono(cátodo). Ánodos de carbono (prehorneados o Söderburg).
-funciona a $\thicksim$ 950°C con alúmina disuelta en criolita
-
-\item \textbf{ Y de forma secundaria (reciclaje, colada, homogenización de aleaciones de aluminio, etc.):}
-
-Horno Crisol y Crisol Basculante: recipiente refractario donde el aluminio se funde por acción de un quemador externo.
-
-Horno de Reverbero: el calor se trasnmite por la llama y los gases de combustión que rebotan (reverberan) sobre la carga, sin contacto directo con el combustible.
-
-Horno de inducción (alta y baja frecuencia): corrientes inducidas por un campo electromagnético calientan el metal directamente, generando agitación electromagnética.
-
-\subsection{Cobre.}
+\section{Cobre.}
 
 Se caracteriza por su alta conductividad eléctrica y térmica, ademas de ser maleable y dúctil. Se usa principalmente en cables eléctricos, aleaciones (bronce, latón), cañerías y componentes industriales.
 
 \subsection{Minerales del cobre}
+
 \subsubsection{Calcopirita:}
-\textbf{Fórmula química} \ce{(CuFeS2)}
-Mineral de cobre más abundante en el mundo, aunque su contenido de este no sea tan alto.
 
-\textbf{Composición} Sulfuro doble de cobre y hierro
-
-\textbf{Contenido de cobre 34.5\% \ce{Cu}}
+\begin{itemize}
+    \item \textbf{Fórmula química:} (\ce{CuFeS2}). Mineral de cobre más abundante en el mundo, aunque su contenido de este no sea tan alto.
+    \item \textbf{Contenido de cobre:} 34,5\% \ce{Cu}.
+\end{itemize}
 
 \subsubsection{Calcosina:}
-\textbf{Fórmula química} \ce{(Cu2S)}
-Sulfuro de cobre con alto contenido metálico
 
-\textbf{Contenido de cobre 79.8\% \ce{Cu}}
+\begin{itemize}
+    \item \textbf{Fórmula química:} (\ce{Cu2S}) Sulfuro de cobre con alto contenido metálico.
+    \item \textbf{Contenido de cobre:} 79,8\% \ce{Cu}.
+\end{itemize}
 
 \subsubsection{Bornita:}
-\textbf{Fórmula química} \ce{(Cu5FeS4)} 
-Sulfuro de cobre y hierro
 
-Menos abundate que la calcoprita, pero de mayor riqueza en cobre.
-
-\textbf{Contenido de cobre 55.5\% \ce{Cu}}
+\begin{itemize}
+    \item \textbf{Fórmula química:} (\ce{Cu5FeS4}) Sulfuro de cobre y hierro. Menos abundate que la calcoprita, pero de mayor riqueza en cobre.
+    \item \textbf{Contenido de cobre:} 55,5\% \ce{Cu}.
+\end{itemize}
 
 \subsubsection{Malaquita:}
-\textbf{Fórmula química} \ce{(CuCo3*Cu(OH)2)}
-Carbonato básico de cobre
 
-Primero minerales usados para extraer cobre en la antigüedad
-\textbf{Contenido de cobre 57.3\% \ce{Cu}}
+\begin{itemize}
+    \item \textbf{Fórmula química:} (\ce{CuCo3*Cu(OH)2}) Carbonato básico de cobre. Primer mineral usado para extraer cobre en la antigüedad.
+    \item \textbf{Contenido de cobre:} 57,3\% \ce{Cu}.
+\end{itemize}
 
 \subsubsection{Azurita:}
-\textbf{Fórmula química} \ce{(2CuCO3*Cu(OH)2)}
-Carbonato básico de cobre, similar a la malaquita
 
-\textbf{Contenido de cobre 55.1\% \ce{Cu}}
+\begin{itemize}
+    \item \textbf{Fórmula química} (\ce{2CuCO3*Cu(OH)2}) Carbonato básico de cobre, similar a la malaquita.
+    \item \textbf{Contenido de cobre:} 55,1\% \ce{Cu}.
+\end{itemize}
 
 \subsubsection{Cuprita:}
-\textbf{Fórmula química} \ce{(Cu2O)}
-óxido de cobre
 
-Es uno de los minerales más ricos en cobre (casi 90\%)
-
-\textbf{Contenido de cobre 88.8\% \ce{Cu}}
+\begin{itemize}
+    \item \textbf{Fórmula química} (\ce{Cu2O}) Óxido de cobre. Es uno de los minerales más ricos en cobre (casi 90\%).
+    \item \textbf{Contenido de cobre:} 88,8\% \ce{Cu}.
+\end{itemize}
 
 \subsubsection{Crisocola:}
-\textbf{Fórmula química} \ce{(CuSiO3*2H2O)}
-Silicato hidratado de cobre
 
-Mineral secundario de cobre, se forma en zonas de alteración superficial.
+\begin{itemize}
+    \item \textbf{Fórmula química} (\ce{CuSiO3*2H2O}) Silicato hidratado de cobre. Mineral secundario de cobre, se forma en zonas de alteración superficial.
+    \item \textbf{Contenido de cobre:} 37,9\% \ce{Cu}.
+\end{itemize}
 
-\textbf{Contenido de cobre 37.9\% \ce{Cu}}
-
+%COMO QUE ALGO NO CUADRA
 
 \textbf{Sulfuros principales:}Calcopirirta, Calcosina, Bornita.
 
@@ -351,28 +281,28 @@ Mineral secundario de cobre, se forma en zonas de alteración superficial.
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/7.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/7.png}
 \end{figure}
 \textbf{Trituración:}
 Reducir considerablemente el tamaño de las rocas extraídas de las minas, previo a la molienda. Al finalizar el proceso de trituración las rocas son inspeccionadas y las que no cumplan con el tamaño deseado son reintroducidas al proceso y las que si pasan al proceso de molienda.
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/8.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/8.png}
 \end{figure}
 \textbf{Molienda:}
 El objetivo principal de la molienda es el de reducir el tamaño del mineral a un tamaño de 10\% a 60\%, aproximadamente 200 mallas, con esto se asegura una liberación de los elementos de valor económico en la MENA.
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/9.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/9.png}
 \end{figure}
 \textbf{Concentración o flotación:}
 Aquí se separa la ganga del mineral. En el proceso se utilizan depresores, activantes y espumantes. Los depresores son reactivos químicos iónicos que recubren las partículas y las llevan al fondo del tanque. Los espumantes son un tipo de jabón que forma espuma. Los activantes cubren solo al mineral que se quiere separar e impide que este se moje, por lo que flota hasta la espuma en la parte superior del tanque. Esta espuma es sacada del tanque, para luego ser filtrada.
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/10.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/10.png}
 \end{figure}
 \textbf{Filtrado:}
 En este proceso el mineral extraído de la espuma en el proceso de concentración es separado de la misma. Existen varios tipos de filtros, de disco, de Dor Oliver, etc.
@@ -380,6 +310,7 @@ En este proceso el mineral extraído de la espuma en el proceso de concentració
 \textbf{Tostación:}
 Se oxidan los sulfuros parcialmente para eliminar azufre y formar oxidos.
 
+<<<<<<< HEAD
 \uline{Hornos usados:}
 
 Horno de Tostación de hogares múltiples: oxida sulfuros a óxidos y \ce{SO2}.   
@@ -477,4 +408,6 @@ Rotary Kiln: horno rotatorio cilíndrico invlinado, recubierto con refractarios,
 Los depositos de laterita de níquel típicos son depósitos de bajo grado y gran tamaño localizados cerca de la superficie
 \end{itemize}
 
+=======
+>>>>>>> 61cff7845ddcc8e89055f0c576ffd92388a472af
 \end{document}
