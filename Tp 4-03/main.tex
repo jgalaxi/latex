@@ -12,6 +12,8 @@
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
@@ -57,7 +59,9 @@ Las herramientas fabricadas con polvos de carburo de wolframio, sinterizados con
 \subsection{Composición y Propiedades}
 Las primeras calidades contenían entre 5 \% y 15 \% de cobalto, que actúa como aglomerante, mejorando la tenacidad aunque reduciendo ligeramente la dureza. Las calidades G-1, G-2 y G-3 contienen 5 \%, 10 \% y 15 \% de cobalto, respectivamente, con durezas que varían de 85 a 90 Rockwell-A.
 
-Un aspecto clave es la capacidad de estas herramientas para mantener su dureza a temperaturas elevadas, superando a aceros rápidos, stellitas y aceros al carbono.
+Un aspecto clave es la capacidad de estas herramientas para mantener su dureza a temperaturas elevadas, superando a aceros rápidos, stellitas y aceros al carbono, como se puede ver en la \autoref{fig:dureza-temp}.
+
+Tambien se desarrollaria otra familia de herramientas de carburo de wolframio con porcentajes de cobalto y carburo de walframio parecidos y mayor dureza, pero menor tenacidad, debido a que tenian un grano mas fino, las mas utilizadas se denominaban H-1 y H-2 (90-92 Rockwell-A).
 
 \begin{figure}[h!]
     \centering
@@ -70,6 +74,34 @@ Un aspecto clave es la capacidad de estas herramientas para mantener su dureza a
 Inicialmente, las herramientas de solo carburo de wolframio y cobalto no eran adecuadas para mecanizar aceros. La viruta de acero, al desprenderse, causaba la formación de cráteres y soldadura incipiente en la herramienta. La firma Deutsch Edel Stahl Werke resolvió este problema al incorporar carburo de titanio, creando las herramientas "Titanic".
 
 Estas nuevas herramientas, con las marcas S-1, S-2 y S-3, son ligeramente más duras (90-93 Rockwell-A) y contienen entre 5-10 \% de cobalto, 5-40 \% de carburo de titanio y el resto de carburo de wolframio. Para trabajos de acabado en aceros, se crearon las calidades F-1 y F-2, con grano más fino y mayor dureza.
+
+\subsection{Ventajes de las herramientas de carburo de Wolframio.}
+
+La mayor ventaja que tienen este tipo de herramientas frente a los aceros rapidos y las stellitas es su mayor eficiencia a la hora de mecanizar fundiciones, materiales no metalicos como las baquelitas (polimero termoestable), las Aleaciones de aluminio.
+
+\begin{table}[h]
+    \centering    
+    \caption{Composiciones, propiedades y aplicaciones de las herrramientas de carburo de wolframio.}
+    \scriptsize
+    \begin{tabularx}{\textwidth}{cccccccXX}
+    \toprule
+    \textbf{Clase} & \textbf{C} & \textbf{Co} & \textbf{CW} & \textbf{CTi} & \textbf{CVA} & \textbf{Nb} & \textbf{Dureza RockwellA} & \textbf{Se utiliza para mecanizar} \\
+    \midrule
+    G1 & 6   & 6   &   & 94  &    &   & 90   & Fundición gris $<$ 250 Brinell. Bronce, latón, aluminio, etc. \\ \midrule
+    G2 & 5.5 & 11  &   & 89  &    &   & 88   & Fundición gris $<$ 225 Brinell. Madera, baquelita. \\ \midrule
+    G3 & 5   & 15  &   & 85  &    &   & 87   & Fundición gris $<$ 200 Brinell. Hileras, herramentales de choque. Brocas para minería. \\ \midrule
+    H1 & 6   & 6   &   & 94  &    &   & 91   & Fundición blanca. Bronce, latón. \\ \midrule
+    H2 & 6   & 7   &   & 91.5&    &   & 91.5 & Fundición blanca. Papel prensado. \\ \midrule
+    S1 & 7.5 & 6   &   & 78  &    &   & 91.5 & Acero de 80 a 150 kg/mm$^2$. Con grandes velocidades de corte $>$ 200 m/min. Pasadas ligeras y finas de acabado. \\ \midrule
+    S2 & 7.5 & 7   &   & 78  & 14 &   & 90.5 & Acero de 80 a 150 kg/mm$^2$. Con velocidades medias y avance y profundidades medias. \\ \midrule
+    S3 & 8   & 5   &   & 78  & 5  &   & 90   & Acero de 80 a 150 kg/mm$^2$. Con bajas velocidades de corte $<$ 70 m/min y gran avance. \\ \midrule
+    F1 & 8   & 6   & 23 & 78  &    & N$_2$ 0.5 & 91.5 & Acero de 80 a 150 kg/mm$^2$. Grandes velocidades y pasadas finas. \\ \midrule
+    F2 & 13.5& 5.5 & 34.5 & 60 & 1.2 &   & 92.5 & Acero de 80 a 150 kg/mm$^2$. \\
+    \bottomrule
+    \label{tab:composiciones}
+    \end{tabularx}
+\end{table}
+
 
 \subsection{Comparación de Dureza y Pesos Específicos}
 Las herramientas de carburo de wolframio son superiores a los aceros rápidos en términos de dureza, aunque estos últimos tienen ventajas como menor precio y mayor tenacidad, lo que justifica su uso en muchos casos. La dureza de otros carburos y óxidos también es notable:
