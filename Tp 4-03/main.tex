@@ -4,8 +4,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, mexico]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=3cm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -13,8 +15,8 @@
 \usepackage{physics}
 \usepackage{longtable}
 \usepackage{booktabs}
-\usepackage{siunitx}
 \usepackage{tabularx}
+\usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
@@ -80,27 +82,26 @@ Estas nuevas herramientas, con las marcas S-1, S-2 y S-3, son ligeramente más d
 
 La mayor ventaja que tienen este tipo de herramientas frente a los aceros rapidos y las stellitas es su mayor eficiencia a la hora de mecanizar fundiciones, materiales no metalicos como las baquelitas (polimero termoestable), las Aleaciones de aluminio, y aceros de \SI{100}{\kilo\gram\per\milli\meter\squared}. otro aspecto positivo es que al no perder sus propiedades a altas temperaturas, pueden trabajar a mas velocidad que los otros materiales de mecanizado, 
 
-\begin{table}[h]
-    \centering    
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|p{5.3cm}|}
+        \hline
+        \multirow{2}{*}{} & \multicolumn{5}{|c|}{\textbf{Composición en \%}} & \multirow{2}{2.2cm}{\textbf{Dureza rockwell A}} & \multirow{2}{*}{\textbf{Se utiliza para mecanizar}} \\ \cline{1-6}
+        & \textbf{C} & \textbf{Co} & \textbf{CW} & \multicolumn{2}{|c|}{\textbf{CTi}} & & \\ \hline
+        G1 & 6 & 6 & 94 & \multicolumn{2}{|c|}{} & 90 & Fundición gris $<$ 250 Brinell. Bronce, latón, aluminio, etc. \\ \hline
+        G2 & 5,5 & 11 & 89 & \multicolumn{2}{|c|}{} & 88 & Fundición gris $<$ 225 Brinell. Madera, baquelita. \\ \hline
+        G3 & 5 & 15 & 85 & \multicolumn{2}{|c|}{} & 87 & Fundición gris $<$ 200 Brinell. Hileras, herramentales de choque. Brocas para minería. \\ \hline
+        H1 & 6 & 6 & 94 & \multicolumn{2}{|c|}{} & 91 & Fundición blanca. Bronce, latón. \\ \hline
+        \multirow{2}{*}{H2} & \multirow{2}{*}{6} & \multirow{2}{*}{7} & \multirow{2}{*}{91,5} & \textbf{CVa} & \textbf{Nb} & \multirow{2}{*}{91,5} & Fundición blanca. Papel prensado. \\ \cline{5-6} 
+        & & & & 0,5 & 1 & & \\ \hline
+        S1 & 7,5 & 6 & 78 & \multicolumn{2}{|c|}{16} & 91,5 & Acero de 80 a 150 kg/mm$^2$. Con grandes velocidades de corte $>$ 200 m/min. Pasadas ligeras y finas de acabado. \\ \hline
+        S2 & 7,5 & 8 & 78 & \multicolumn{2}{|c|}{14} & 90,5 & Acero de 80 a 150 kg/mm$^2$. Con velocidades medias y avance y profundidades medias. \\ \hline
+        S3 & 6 & 7 & 88 & \multicolumn{2}{|c|}{5} & 90 & Acero de 80 a 150 kg/mm$^2$. Con bajas velocidades de corte $<$ 70 m/min y gran avance. \\ \hline
+        \multirow{2}{*}{F1} & \multirow{2}{*}{8} & \multirow{2}{*}{6} & \multirow{2}{*}{69} & \multirow{2}{*}{23} & \textbf{\ce{N2}} & \multirow{2}{*}{91,5} & Acero de 80 a 150 kg/mm$^2$. Grandes velocidades y pasadas finas. \\ \cline{6-6}
+        & & & & & 0,5 & & \\ \hline
+        F2 & 13 & 5,5 & 34,5 & 60 & 1,2 & 92,5 & Acero de 80 a 150 kg/mm$^2$. \\ \hline
+    \end{tabular} 
     \caption{Composiciones, propiedades y aplicaciones de las herrramientas de carburo de wolframio.}
-    \scriptsize
-    \begin{tabularx}{\textwidth}{cccccccXX}
-    \toprule
-    \textbf{Clase} & \textbf{C} & \textbf{Co} & \textbf{CW} & \textbf{CTi} & \textbf{CVA} & \textbf{Nb} & \textbf{Dureza RockwellA} & \textbf{Se utiliza para mecanizar} \\
-    \midrule
-    G1 & 6   & 6   &   & 94  &    &   & 90   & Fundición gris $<$ 250 Brinell. Bronce, latón, aluminio, etc. \\ \midrule
-    G2 & 5.5 & 11  &   & 89  &    &   & 88   & Fundición gris $<$ 225 Brinell. Madera, baquelita. \\ \midrule
-    G3 & 5   & 15  &   & 85  &    &   & 87   & Fundición gris $<$ 200 Brinell. Hileras, herramentales de choque. Brocas para minería. \\ \midrule
-    H1 & 6   & 6   &   & 94  &    &   & 91   & Fundición blanca. Bronce, latón. \\ \midrule
-    H2 & 6   & 7   &   & 91.5&    &   & 91.5 & Fundición blanca. Papel prensado. \\ \midrule
-    S1 & 7.5 & 6   &   & 78  &    &   & 91.5 & Acero de 80 a 150 kg/mm$^2$. Con grandes velocidades de corte $>$ 200 m/min. Pasadas ligeras y finas de acabado. \\ \midrule
-    S2 & 7.5 & 7   &   & 78  & 14 &   & 90.5 & Acero de 80 a 150 kg/mm$^2$. Con velocidades medias y avance y profundidades medias. \\ \midrule
-    S3 & 8   & 5   &   & 78  & 5  &   & 90   & Acero de 80 a 150 kg/mm$^2$. Con bajas velocidades de corte $<$ 70 m/min y gran avance. \\ \midrule
-    F1 & 8   & 6   & 23 & 78  &    & N$_2$ 0.5 & 91.5 & Acero de 80 a 150 kg/mm$^2$. Grandes velocidades y pasadas finas. \\ \midrule
-    F2 & 13.5& 5.5 & 34.5 & 60 & 1.2 &   & 92.5 & Acero de 80 a 150 kg/mm$^2$. \\
-    \bottomrule
-    \label{tab:composiciones}
-    \end{tabularx}
 \end{table}
 
 
