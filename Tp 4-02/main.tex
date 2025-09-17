@@ -7,6 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
+\usepackage{csquotes}
 %Paquetes para simbologia%
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -96,13 +97,6 @@ Es una de las fases principales de la bauxita, materia prima fundamental para ob
     \caption{}
 \end{figure}
 
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/2.png}
-    \caption{}
-    \label{fig:extraccion}
-\end{figure}
-
 \subsection{Método de extracción de los minerales de aluminio.}
 
 Tal como se ve en la \autoref{fig:extraccion}, el orden es el siguiente:
@@ -115,6 +109,12 @@ Tal como se ve en la \autoref{fig:extraccion}, el orden es el siguiente:
     \item \textbf{Trasnporte y almacenamiento:} el mineral seco y concentrado se transporta en vagones especiales, evitando la contaminación y pérdida de material.
     \item \textbf{El material concentrado se envía a la instalación de afino, donde continua el Proceso Bayer:} se disuelve la bauxita en soda cáustica (\ce{NaOH}). Se precipita el hidróxido de aluminio (\ce{Al(OH)3}). Luego se calcina para obtener alúmina (\ce{Al2O3}), que es el insumo para la electrólisis Hall-Héroult (\autoref{hall}) y producir aluminio metálico.
     \item \textbf{Preparación de la mezcla:} Bauxita triturada + cal + cenizas sódicas (\ce{NaOH}) se mezclan en un mezclador con agua caliente.
+    \begin{figure}[H]    
+        \centering         
+        \includegraphics[width=0.7\textwidth]{Figuras/2.png}
+        \caption{}
+        \label{fig:extraccion}
+    \end{figure}
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{Figuras/3.png}
@@ -174,7 +174,7 @@ Es un tipo de celda electrolítica para el proceso Hall-Héroult. Se diferencia 
 Sigue el mismo principio que el Hall-Héroult:
 
 \begin{itemize}
-    \item En cátodo(base carbono):\[\ce{Al{3+} + 3e- \rightarrow Al(l)}\]
+    \item En cátodo (base carbono):\[\ce{Al{3+} + 3e- \rightarrow Al(l)}\]
     \item En el ánodo (Söderburg):\[\ce{2O{2-} \rightarrow O2(g) + 4e-}\]
     \item Y el oxígeno reacciona con el carbono $\rightarrow$ \ce{CO2} y \ce{CO}.
     \item Reacción global: \ce{2Al2O3 + 3C $\rightarrow$ 4Al + 3CO2}.
@@ -184,7 +184,7 @@ Sigue el mismo principio que el Hall-Héroult:
 
 \begin{itemize}
     \item Autonomía: el ánodo se regenera continuamente.
-    \item Menor Interrupción del proceso.
+    \item Menor interrupción del proceso.
     \item Costo inicial más bajo en comparación con celdas de ánodo prehorneados.
 \end{itemize}
 
@@ -192,7 +192,7 @@ Sigue el mismo principio que el Hall-Héroult:
 
 \begin{itemize}
     \item Menor eficiencia energética.
-    \item Mayor generación de emisiones de efecto invernadero (\ce{CO, CO2}, hidrocarburos).
+    \item Mayor generación de emisiones de efecto invernadero (\ce{CO}, \ce{CO2}, hidrocarburos, etc.).
     \item Control de la calidad del ánodo más complejo (ya que se hornea en el lugar).
 \end{itemize}
 
@@ -283,120 +283,122 @@ Se caracteriza por su alta conductividad eléctrica y térmica, ademas de ser ma
     \centering         
     \includegraphics[width=0.7\textwidth]{Figuras/7.png}
 \end{figure}
-\textbf{Trituración:}
-Reducir considerablemente el tamaño de las rocas extraídas de las minas, previo a la molienda. Al finalizar el proceso de trituración las rocas son inspeccionadas y las que no cumplan con el tamaño deseado son reintroducidas al proceso y las que si pasan al proceso de molienda.
+
+\subsection{Proceso de extracción de los minerales de cobre.}
+
+\paragraph{Trituración:} reducir considerablemente el tamaño de las rocas extraídas de las minas, previo a la molienda. Al finalizar el proceso de trituración las rocas son inspeccionadas y las que no cumplan con el tamaño deseado son reintroducidas al proceso y las que si pasan al proceso de molienda.
 
 \begin{figure}[H]    
     \centering         
     \includegraphics[width=0.7\textwidth]{Figuras/8.png}
 \end{figure}
-\textbf{Molienda:}
-El objetivo principal de la molienda es el de reducir el tamaño del mineral a un tamaño de 10\% a 60\%, aproximadamente 200 mallas, con esto se asegura una liberación de los elementos de valor económico en la MENA.
+
+\paragraph{Molienda:} el objetivo principal de la molienda es el de reducir el tamaño del mineral a un tamaño de 10\% a 60\%, aproximadamente 200 mallas, con esto se asegura una liberación de los elementos de valor económico en la MENA.
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/9.png}
+    \includegraphics[width=0.5\textwidth]{Figuras/9.png}
 \end{figure}
-\textbf{Concentración o flotación:}
-Aquí se separa la ganga del mineral. En el proceso se utilizan depresores, activantes y espumantes. Los depresores son reactivos químicos iónicos que recubren las partículas y las llevan al fondo del tanque. Los espumantes son un tipo de jabón que forma espuma. Los activantes cubren solo al mineral que se quiere separar e impide que este se moje, por lo que flota hasta la espuma en la parte superior del tanque. Esta espuma es sacada del tanque, para luego ser filtrada.
 
-\begin{figure}[H]    
+\paragraph{Concentración o flotación:} aquí se separa la ganga del mineral. En el proceso se utilizan depresores, activantes y espumantes. Los depresores son reactivos químicos iónicos que recubren las partículas y las llevan al fondo del tanque. Los espumantes son un tipo de jabón que forma espuma. Los activantes cubren solo al mineral que se quiere separar e impide que este se moje, por lo que flota hasta la espuma en la parte superior del tanque. Esta espuma es sacada del tanque, para luego ser filtrada.
+
+\begin{figure}[t]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/10.png}
+    \includegraphics[width=0.5\textwidth]{Figuras/10.png}
 \end{figure}
-\textbf{Filtrado:}
-En este proceso el mineral extraído de la espuma en el proceso de concentración es separado de la misma. Existen varios tipos de filtros, de disco, de Dor Oliver, etc.
 
-\textbf{Tostación:}
-Se oxidan los sulfuros parcialmente para eliminar azufre y formar oxidos.
+\paragraph{Filtrado:} en este proceso el mineral extraído de la espuma en el proceso de concentración es separado de la misma. Existen varios tipos de filtros, de disco, de Dor Oliver, etc.
 
-\uline{Hornos usados:}
+\paragraph{Tostación:} Se oxidan los sulfuros parcialmente para eliminar azufre y formar oxidos.
 
-Horno de Tostación de hogares múltiples: oxida sulfuros a óxidos y \ce{SO2}.   
+\subsection{Hornos usados.}
 
-Descripción: Es un reactor vertical con pisos escalonados, diseñado para la oxidación controlada de sulfuros metálicos a altas temperaturas.
+\subsubsection{Horno de Tostación de hogares múltiples} 
+Oxida sulfuros a óxidos y \ce{SO2}.  
 
-\textbf{fusión para obtener "mata"} (\ce{Cu2S + FeS},$\sim$ 60-70\% \ce{Cu})
+\paragraph{Descripción.} Es un reactor vertical con pisos escalonados, diseñado para la oxidación controlada de sulfuros metálicos a altas temperaturas. 
 
-Se funde el concentrado con fundentes (sílice) que eliminan hierro como escoria.
+\paragraph{Fusión para obtener \enquote{mata}} (\ce{Cu2S + FeS}, $\sim$ 60-70\% \ce{Cu}). Se funde el concentrado con fundentes (sílice) que eliminan hierro como escoria.
 
-\uline{Hornos usados:}
+\subsubsection{Horno de reverbero.}
 
-Horno de reverbero: clásico, se usa combustible fósiles.
+Clásico, se usa combustible fósiles.
 
-Descripción: horno de fusión indirecta, donde ele calor se refleja desde la bóveda hacia la carga.
+\paragraph{Descripción.} Horno de fusión indirecta, donde el calor se refleja desde la bóveda hacia la carga.
 
-Horno flash: alta eficiencia, menor tiempo de residencia
+\subsubsection{Horno flash.} 
 
-Descripción: es un horno de fusión  en suspensión que utiliza la oxidación instantánea de concentrados pulverizados para producir mata(producto fundido intermedio).
+Alta eficiencia, menor tiempo de residencia
 
-\textbf{Conversión de la mata $\longrightarrow$  Cobre blister (98-99\% Cu)}
+\paragraph{Descripción.} Es un horno de fusión en suspensión que utiliza la oxidación instantánea de concentrados pulverizados para producir mata (producto fundido intermedio).
 
-Se oxidan los sulfuros restantes y se libera \ce{SO2}
+\paragraph{Conversión de la mata $\longrightarrow$ cobre blister (98-99\% Cu).} Se oxidan los sulfuros restantes y se libera \ce{SO2}
 
-\uline{Convertidores usados:}
+\subsection{Convertidores usados.}
 
-Convertidor Peirce-Smith: El más difundido
+\subsubsection{Convertidor Peirce-Smith (El más difundido).} 
 
-Descripción: es un gran cilindro horizontal refractario, donde se insufla aire por toberas para oxidar la mata sulfurada, eliminando el \ce{FeS} como escoria y transfromando el \ce{Cu2S} en cobre blister.
+\paragraph{Descripción.} Es un gran cilindro horizontal refractario, donde se insufla aire por toberas para oxidar la mata sulfurada, eliminando el \ce{FeS} como escoria y transfromando el \ce{Cu2S} en cobre blister.
 
-\textbf{Refinación:}
+%ESTO NO SE ENTIENDE UN CARAJO
 
-Pirorrefinación: En hornos de reverbero o anódicos se eliminan impurezas.
+\paragraph{Refinación.} Pirorrefinación: En hornos de reverbero o anódicos se eliminan impurezas.
 
-Descripción: proceso de purificación  térmica y química del cobre blister: primero oxidando impurezas, luego reduciondo el exceso de oxígeno, para producir cobre anódico adecuado para Refinación electrolítica.
+\paragraph{Descripción.} Proceso de purificación  térmica y química del cobre blister: primero oxidando impurezas, luego reduciendo el exceso de oxígeno, para producir cobre anódico adecuado para refinación electrolítica.
 
 Electrorefinación: Celdas electrolíticas producen cobre catódico de 99,99\%
 
 Descripción: se refina en celdas electrolíticas para producir cobre catódico de alta pureza (99,99\%).
 
-\textbf{Hidrometalurgia del cobre:}
+%--HASTA ACÁ-- 
+
+\subsection{Hidrometalurgia del cobre:}
 
 Se aplica a minerales oxidados como la cuprita (\ce{Cu2O}), la malaquita (\ce{CuCO3*Cu(OH)2}) y crisola (\ce{CuSiO3*2H2O})
 
-\uline{Etapas principales:}
+\subsubsection{Etapas principales.}
 
-Lixiviación: Se irriga la mena con soluciones ácidas (\ce{H2SO4})
-
-Descripción: extraer el metal en forma de ion soluble, dejando la ganga insoluble.
-
-Extracción por solventes (SX): Se separa el cobre de la solución acuosa mediante un disolvente orgánico selectivo.
-
-Descripción: Concentra y purifica los iones de cobre en solucion, pasándolos a un solvente orgánico selectivo y luego devolviendolos a una fase acuosa concentrada para su recuperación final.
-
-Electrodeposición(EW): Se deposita cobre metálico en cátodos de alta pureza (99,99\%).
+\begin{itemize}
+    \item Lixiviación: Se irriga la mena con soluciones ácidas (\ce{H2SO4}). Descripción: extraer el metal en forma de ion soluble, dejando la ganga insoluble.
+    \item Extracción por solventes (SX): Se separa el cobre de la solución acuosa mediante un disolvente orgánico selectivo. Descripción: Concentra y purifica los iones de cobre en solucion, pasándolos a un solvente orgánico selectivo y luego devolviendolos a una fase acuosa concentrada para su recuperación final.
+    \item Electrodeposición(EW): Se deposita cobre metálico en cátodos de alta pureza \\ (\SI{99,99}{\percent}).
+\end{itemize}
 
 Esto no requiere hornos, solo tanques electrolíticos.
 
-\subsection{Níquel}
+\section{Níquel}
 
-Material resistente y versátil, obtenido de minerales sulfurados y lateritas medinate procesos pirometalúrgicos e hidrometalurgicos. Su principal uso es en acero inox. y superaleaciones, pero también en baterías modrnas, lo que lo hace clave para la trasición energética.
+Material resistente y versátil, obtenido de minerales sulfurados y lateritas medinate procesos pirometalúrgicos e hidrometalurgicos. Su principal uso es en acero inoxidables y superaleaciones, pero también en baterías modernas, lo que lo hace clave para la transición energética.
 
-\begin{figure}[H]    
+\begin{figure}[t]    
     \centering         
     \includegraphics[width=0.7\textwidth]{imagenes/11.png}
 \end{figure}
-\textbf{Leterita}
+
+\subsection{Obtención de los minerales de níquel.}
+
+\subsubsection{Laterita}
+
 Constituye $\sim $ 70\% de las reservas mundiales de níquel.
 
-Se explota generalmente a cielo abierto por estar cerca de la superficie. Dependiendo de la capa que se explote, se elige el método de obtención:
+Se explota generalmente a cielo abierto por estar cerca de la superficie (al igual que la Bauxita). 
+Dependiendo de en qué capa se desea explotar, se elige el mineral a extraer y por ende el método de obtención:
 
-\subsection{Limonita $\rightarrow$ hidrometalurgia (HPAL y PAL)}
+\subsubsection{Limonita $\rightarrow$ hidrometalurgia (HPAL y PAL)}
 
-\uline{HPAL:} Lixiviación a alta presión 
+\begin{itemize}
+    \item HPAL: lixiviación a alta presión.
+    \item Se usa ácido sulfúrico (\ce{H2SO4}) en codiciones severas de presión(40-45 bar) y temperatura (240-270°C).
+    \item Preparación de la "pulpa" ($\backsim$40\% sólido), lixiviación en autoclave, separación sólido-líquido, purificación de solución SX( extracción por solventes) IX(Intercambio Iónico), recuperación por (EW).
+    \item PAL: lixiviación ácida a presión(no necesariamente alta) presión (10-20 bar).
+    \item Es un proceso muy parecido al anterior mencionado, pero con condiciones menos severas. Se usa en yacimientos donde la minerología es menos refractaria.
+\end{itemize}
 
-Se usa ácido sulfúrico (\ce{H2SO4}) en codiciones severas de presión(40-45 bar) y temperatura(240-270°C).
+\subsubsection{Saprolita $\rightarrow$ pirometalurgia (fundición a ferroníquel)}
 
-Preparación de la "pulpa" ($\backsim$40\% sólido), lixiviación en autoclave, separación sólido-líquido, purificación de solución SX( extracción por solventes) IX(Intercambio Iónico), recuperación por (EW).
-
-\uline{PAL:} Lixiviación ácida a presión(no necesariamente alta)
-presión (10-20 bar). 
-Es un proceso muy parecido al anterior mencionado, pero con condiciones menos severas. Se usa en yacimientos donde la minerología es menos refractaria.
-
-
-\subsection{Saprolita $\rightarrow$ pirometalurgia (fundición a ferroníquel)}
-
-\uline{fundición convencional (pirometalurgia)}: concentración y reducción térmica para obtener ferroníquel o mata de níquel.
+\begin{itemize}
+    \item fundición convencional (pirometalurgia): concentración y reducción térmica para obtener ferroníquel o mata de níquel.
+\end{itemize}
 
 Hornos asociados:
 
@@ -411,6 +413,7 @@ Los depositos de laterita de níquel típicos son depósitos de bajo grado y gra
     \includegraphics[width=0.7\textwidth]{Figuras/12.png}
 \end{figure}
 
+<<<<<<< HEAD
 \textbf{Extracción:}
 
 Excavadora y volquetes: La mena laterítica (limonita y saprolita) se obtiene por minería a cielo abierto, son menas superficiales, blandas y extensas.
@@ -451,4 +454,6 @@ Cilindro metálico horizontal e inclinado que gira levemente utiliza gases calie
 
 
 
+=======
+>>>>>>> 1779714036232f51007eff6bae51a1fdd3057173
 \end{document}
