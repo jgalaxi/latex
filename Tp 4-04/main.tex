@@ -1,19 +1,23 @@
 \documentclass[12pt,a4paper]{article}
 
-% Paquetes de configuración del documento
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, mexico]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=3cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{siunitx}
+\sisetup{per-mode=symbol}
+\usepackage[version=4]{mhchem}
 %Paquetes para simbologia%
+\usepackage{csquotes}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{physics}
-\usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
@@ -41,7 +45,7 @@
 \include{Portada}
 \newpage
 \tableofcontents
-\newpage
+
 
 \begin{abstract}
     A partir de la fuente de información listada a continuación, analice e investigue la Descripción, Propiedades, Características y del Tungsteno (W), el Tantalio (Ta), el Molibdeno (Mo) y la Matriz Metálica de Tungsteno (W-MMC) a fin de adquirir la capacidad de explicar el significado de la información que allí se detalla:
@@ -78,27 +82,28 @@ Partiendo de la informacion obtenida de la empresa Plansee se ha realizado el si
 
 \section{Tungsteno (W)}
 \subsection{Descripción}
-El tungsteno (W; 74), conocido también como wolframio, es un metal refractario. Se caracteriza por su excepcional resistencia al calor y a la corrosión, ideal para entornos de alta temperatura y exigencia. Segn Plansee, ellos procesan el tungsteno con una integración vertical completa, desde la extracción hasta productos semiacabados and componentes personalizados.
+El tungsteno (W; 74), conocido también como wolframio, es un metal refractario. Se caracteriza por su excepcional resistencia al calor y a la corrosión, ideal para entornos de alta temperatura y exigencia. Segun Plansee, ellos procesan el tungsteno con una integración vertical completa, desde la extracción hasta productos semiacabados and componentes personalizados.
 
 \subsection{Propiedades Físicas y Químicas}
 \begin{table}[h!]
-\centering
-\caption{Propiedades del tungsteno a \SI{20}{\celsius}}
-\begin{tabular}{l l}
-\toprule
-Propiedad & Valor \\
-\midrule
-Punto de fusión & \SI{3420}{\celsius} \\
-Punto de ebullición & \SI{5555}{\celsius} \\
-Densidad & \SI{19.25}{\gram\per\cubic\cm} \\
-Estructura cristalina & Cúbica centrada en el cuerpo \\
-Conductividad térmica & \SI{164}{\watt\per\meter\per\kelvin} \\
-Conductividad eléctrica & \SI{18.2e6}{\siemens\per\meter} \\
-Coeficiente de expansión térmica & \SI{4.4e-6}{\meter\per\meter\per\kelvin} \\
-Calor específico & \SI{0.13}{\joule\per\gram\per\kelvin} \\
-Resistencia eléctrica específica & \SI{0.055}{\ohm\mm\squared\per\meter} \\
-\bottomrule
-\end{tabular}
+    \centering
+    \begin{tabular}{l l}
+    \toprule
+    Propiedad & Valor \\
+    \midrule
+    Punto de fusión & \SI{3420}{\celsius} \\
+    Punto de ebullición & \SI{5555}{\celsius} \\
+    Densidad & \SI{19.25}{\gram\per\cubic\cm} \\
+    Estructura cristalina & Cúbica centrada en el cuerpo \\
+    Conductividad térmica & \SI{164}{\watt\per\meter\per\kelvin} \\
+    Conductividad eléctrica & \SI{18.2e6}{\siemens\per\meter} \\
+    Coeficiente de expansión térmica & \SI{4.4e-6}{\meter\per\meter\per\kelvin} \\
+    Calor específico & \SI{0.13}{\joule\per\gram\per\kelvin} \\
+    Resistencia eléctrica específica & \SI{0.055}{\ohm\mm\squared\per\meter} \\
+    \bottomrule
+    \end{tabular}
+    \caption{Propiedades del tungsteno a \SI{20}{\celsius}}
+    \label{tab:tabla1}
 \end{table}
 
 \subsection{Características y Ventajas}
