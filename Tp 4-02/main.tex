@@ -1,9 +1,9 @@
 \documentclass[12pt,a4paper]{article}
 % Paquetes de configuración del documento
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, mexico]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=3cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
@@ -12,7 +12,6 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{physics}
 \usepackage{longtable}
 \usepackage{ulem}
 \usepackage{graphicx}
@@ -372,7 +371,7 @@ Material resistente y versátil, obtenido de minerales sulfurados y lateritas me
 
 \begin{figure}[t]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/11.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/11.png}
 \end{figure}
 
 \subsection{Obtención de los minerales de níquel.}
@@ -381,16 +380,16 @@ Material resistente y versátil, obtenido de minerales sulfurados y lateritas me
 
 Constituye $\sim $ 70\% de las reservas mundiales de níquel.
 
-Se explota generalmente a cielo abierto por estar cerca de la superficie (al igual que la Bauxita). 
+Se explota generalmente a cielo abierto (\autoref{laterita}) por estar cerca de la superficie (al igual que la Bauxita). 
 Dependiendo de en qué capa se desea explotar, se elige el mineral a extraer y por ende el método de obtención:
 
 \subsubsection{Limonita $\rightarrow$ hidrometalurgia (HPAL y PAL)}
 
 \begin{itemize}
     \item HPAL: lixiviación a alta presión.
-    \item Se usa ácido sulfúrico (\ce{H2SO4}) en codiciones severas de presión(40-45 bar) y temperatura (240-270°C).
-    \item Preparación de la "pulpa" ($\backsim$40\% sólido), lixiviación en autoclave, separación sólido-líquido, purificación de solución SX( extracción por solventes) IX(Intercambio Iónico), recuperación por (EW).
-    \item PAL: lixiviación ácida a presión(no necesariamente alta) presión (10-20 bar).
+    \item Se usa ácido sulfúrico (\ce{H2SO4}) en codiciones severas de presión(40-45 bar) y temperatura (\SIrange[range-units=single, range-phrase={ - }]{240}{270}{\celsius}).
+    \item Preparación de la "pulpa" ($\backsim$40\% sólido), lixiviación en autoclave, separación sólido-líquido, purificación de solución SX (extracción por solventes) IX (Intercambio Iónico), recuperación por (EW).
+    \item PAL: lixiviación ácida a presión (no necesariamente alta, 10-20 bar).
     \item Es un proceso muy parecido al anterior mencionado, pero con condiciones menos severas. Se usa en yacimientos donde la minerología es menos refractaria.
 \end{itemize}
 
@@ -400,19 +399,24 @@ Dependiendo de en qué capa se desea explotar, se elige el mineral a extraer y p
     \item fundición convencional (pirometalurgia): concentración y reducción térmica para obtener ferroníquel o mata de níquel.
 \end{itemize}
 
-Hornos asociados:
+\subsection{Hornos asociados.}
 
-Horno eléctrico de arco cerrado: reactor  pirometalúrgico donde minerales lateríticos (saprolitas) se reducen y se funden. Se obtiene ferroníquel(20-40\% \ce{Ni})
+\subsubsection{Horno eléctrico de arco cerrado.} 
+(ver la \autoref{fig:horno}) Reactor pirometalúrgico donde minerales lateríticos (saprolitas) se reducen y se funden. Se obtiene ferroníquel (20-40\% \ce{Ni}).
 
-Rotary Kiln: horno rotatorio cilíndrico invlinado, recubierto con refractarios, que gira lentamente sobre su eje. Se usa en la etapa de calcinación y reducción parcial de las saprolitas antes de uqe entren al horno electrico cerrado. 
+\subsubsection{Rotary Kiln.} 
+(ver la \autoref{fig:convertidor}) Horno rotatorio cilíndrico inclinado, recubierto con materiales refractarios, que gira lentamente sobre su eje. Se usa en la etapa de calcinación y reducción parcial de las saprolitas antes de que entren al horno eléctrico cerrado.
 
-Los depositos de laterita de níquel típicos son depósitos de bajo grado y gran tamaño localizados cerca de la superficie.
+\subsection{Explicación de la extracción de laterita.}\label{laterita}
+
+Los depósitos de laterita de níquel típicos son depósitos de bajo grado y gran tamaño localizados cerca de la superficie.
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/12.png}
+    \includegraphics[width=\textwidth]{Figuras/12.png}
 \end{figure}
 
+%EXPLICAR ESTO
 \textbf{Extracción:}
 
 Excavadora y volquetes: La mena laterítica (limonita y saprolita) se obtiene por minería a cielo abierto, son menas superficiales, blandas y extensas.
@@ -427,137 +431,85 @@ La mena húmeda contiene agua de hidratación. En el horno rotatorio de secado s
 
 \textbf{Tostado reductor y sulfidación:}
 
-Los óxidos metálicos obtenidos se mezclan con azufre y se calientan, y se froman los sulfuros metálicos (mata) que son la base para separar posterior mente el níquel.
+Los óxidos metálicos obtenidos se mezclan con azufre y se calientan, y se forman los sulfuros metálicos (mata) que son la base para separar posteriormente el níquel.
 
 \textbf{Transporte y afino:}
 
-El material pasa en vagones tolva cubiertos hacia la instalación de afino. En esta etapa posterior, se usan convertidores o hornos de arco eléctrico para oxidar y eliminar el exceso de hierro y azufre, quedando níquel metálico o ferroníquel.
+El material pasa en vagones tolva cubiertos hacia la instalación de afino. En esta etapa posterior, se usan convertidores u hornos de arco eléctrico para oxidar y eliminar el exceso de hierro y azufre, quedando níquel metálico o ferroníquel.
 
-Descripción de hornos y convertidor:
+%================HASTA ACÁ========================
 
-Convertidor (tipo bessemer modificado): 
-Recipiente cilíndrico , revestido con material refractario (resistente a la escoria rica en hierro y temperaturas elevadas), que inyecta aire/oxigeno por las toberas.
+\subsection{Expandimos la descripción de los hornos y convertidores usados en la obtención de níquel.}
 
-Horno de arco eléctrico:
-
-El calor se genera apartir de un arco eléctrico entre electrodos de grafito y carga metálica.
-
-Horno rotativo de secado:
-
-Cilindro metálico horizontal e inclinado que gira levemente utiliza gases calientes generados en un quemador.
+\subsubsection{Horno eléctrico cerrado de arco.}
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/13.png}
+    \includegraphics[width=0.9\textwidth]{Figuras/13.png}
+    \caption{Esquema de un horno de inducción cerrado de arco.}
+    \label{fig:horno}
 \end{figure}
 
-\textbf{Charging pipes} $\rightarrow$ Entrada de concentrado seco (menas trituradas y secadas).
+\begin{itemize}
+    \item \textbf{Charging pipes(tuberías de carga).} $\rightarrow$ Entrada de concentrado seco (menas trituradas y secadas).
+    \item \textbf{Electrodes (electrodos).}$\rightarrow$ Barras de grafito que introducen corriente eléctrica.
+    \item \textbf{Mata.}$\rightarrow$ Fase líquida de sulfuros.
+    \item \textbf{Escoria.}$\rightarrow$ Subproducto fundido de sílicce y óxidos, se separa por diferencia de densidad.
+    \item \textbf{Tap hole (orificio de vaciado).}$\rightarrow$ Salida de la mata fundida.
+    \item \textbf{Slag hole (orificio de escoria).}$\rightarrow$ Salida de la escoria.
+    \item \textbf{Converter slag launder.}$\rightarrow$ Canal que evacua escorias al convertidor.
+    \item \textbf{Gas outlet (salida de gases).}$\rightarrow$ Gases de escape que se tratan para recuperar energía o azufre.
+\end{itemize}
 
-\textbf{Electrodes}$\rightarrow$ Barras de grafito que introducen corriente eléctrica.
-
-\textbf{Mata}$\rightarrow$ Fase líquida de sulfuros
-
-\textbf{Escoria}$\rightarrow$ Subproducto fundido de sílicce y óxidos, se separa por diferencia de densidad.
-
-\textbf{Converter slag launder}$\rightarrow$ Canal que evacua escorias al convertidor.
-
-\textbf{Off-gas}$\rightarrow$ Gases de escape que se tratan para recuperar energía o azufre.
+\subsubsection{Convertidor Peirce-Smith.}
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/14.png}
+    \includegraphics[width=0.75\textwidth]{Figuras/14.png}
+    \caption{Esquema de un convertidor Peirce-Smith.}
+    \label{fig:convertidor}
 \end{figure}
 
-\textbf{Carga de mata:}
+\begin{itemize}
+    \item \textbf{Tuyeres (toberas).}$\rightarrow$ Inyectan aire enriquecido en oxígeno para oxidar impurezas.
+    \item \textbf{Ladle (cuchara).}$\rightarrow$ Recipiente refractario que contiene la mata fundida donde en la parte superior se encuentra la escoria flotante que se retira del convertidor. El metal queda en el fondo como fase líquida refinada.
+    \item \textbf{Slag hole (orificio de escoria).}$\rightarrow$ Salida de la escoria.
+    \item \textbf{Tap hole (orificio de vaciado).}$\rightarrow$ Salida del metal refinado.
+    \item \textbf{Gas outlet (salida de gases).}$\rightarrow$ Gases de escape que se tratan para recuperar energía o azufre; el porceso es autógeno (no necesita combustible externo). Los gases se conduce para tratamiento, a menudo usados en la producción de ácido sulfurico.
+\end{itemize}
 
-Se introduce la mata fundida procedente del horno eléctrico cerrado de arco. Esta mata contiene todavía mucho hierro y azufre que deben eliminarse.
+\subsection{Descripción del proceso pirometalúrgico para níquel.}
 
-\textbf{Se insufla aire enriquecido en oxígeno:}
-
-Reacciones Principales:
-
-Oxidación del azufre $\rightarrow$ \ce{SO2}(gas)
-
-Oxidación del hierro $\rightarrow$ FeO, que luego reacciona con sílice $\rightarrow$ \ce{FeO*SiO2} (escoria).
-
-Se libera gran cantidad de calor $\rightarrow$ el porceso es autógeno (no necesita combustible externo).
-
-La escoria flotante se retira de la parte superior.
-
-El metal queda en el fondo como fase líquida refinada.
-
-Los gases se conduce para tratamiento, a menudo usados en la producción de ácido sulfurico.
+\subsubsection{Proceso para níquel a partir de sulfuros.}
 
 \begin{figure}[H]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/15.png}
+    \includegraphics[width=\textwidth]{Figuras/15.png}
+    \caption{Esquema de un proceso pirometalúrgico para níquel (paso previo al convertidor).}
 \end{figure}
 
-El mineral de níquel se tritura en un jaw crusher (trituradora de mandibulas).
+\begin{itemize}
+    \item El mineral de níquel se tritura en un jaw crusher (trituradora de mandibulas).
+    \item Luego pasa a una máquina de sinterizado, donde se mezcla con coque y se anglomera en \textacutedbl{}pellets\textacutedbl{}. El sinterizado asegura que el mineral tenga buena permeabilidad y composición homogénea para el horno.
+    \item El sinterizado se envía a un alto horno (Blast furnace), donde se reduce y funde el mineral para obtener mata de níquel y hierro (Ni-Fe) y escoria. Eesto ocurre ya que el mineral aglomerado coque, caliza y otros fundentes, ingresan en el alto horno.
+    \item En el alto horno, el coque reacciona con el oxígeno del aire inyectado para formar monóxido de carbono (\ce{CO}), que reduce los óxidos metálicos a metales. La caliza reacciona con la sílice y otras impurezas para formar escoria fundida.
+    \item La escoria y la mata de Ni-Fe se separan por diferencia de densidad, y se extraen por orificios separados en la base del horno.
+    \item Los gases generados (principalmente \ce{CO}, \ce{CO2}, \ce{SO2}) se capturan y tratan para recuperar energía o azufre.
+    \item La escoria se enfría y se maneja para su disposición o reciclaje.
+    \item La mata de Ni-Fe se transporta al convertidor para su posterior refinación.
+    \item En el convertidor, se inyecta aire enriquecido en oxígeno a través de toberas para oxidar el hierro y el azufre presentes en la mata.
+    \item El hierro se oxida a óxido de hierro (\ce{FeO}), que reacciona con la sílice para formar escoria de silicato de hierro (\ce{FeO*SiO2}).
+    \item El azufre se elimina como dióxido de azufre (\ce{SO2}) en los gases de escape.
+    \item El níquel y el cobalto quedan concentrados en la mata final (nickel matte), que se extrae del convertidor.
+\end{itemize}
 
-Luego pasa a una máquina de sinterizado, donde se mezcla con coque y se anglomera en "pellets"
+\section{Zinc.}
 
-El sinterizado asegura que el mineral tenga buena permeabilidad y composición homogénea para el horno.
+\subsection{Minerales Principales.}
 
-Alto horno (Blast furnace)
+\subsubsection{Blenda o esfalerita.}
 
-El mineral aglomerado coque, caliza y otros fundentes ingresan en el alto horno.
-
-Se inyecta aire precalentado.
-
-El coque actúa como reductor. 
-
-Se forman sulfuros de hierro y níquel.
-
-Impurezas $\rightarrow$ forman escoria con los fundentes
-
-\uline{Productos:}
-
-Escoria $\rightarrow$ se desecha o recicla.
-
-Mata de Ni-Fe $\rightarrow$ pasa al convertidor
-
-Gases $\rightarrow$ enviados a limpieza o aprovechamiento energético.
-
-Convertidor
-
-La mata de Ni-Fe se introduce en el convertidor junto con sílice y aire.
-
-Reacciones:
-
-El hierro \ce{(FeS)} se oxida $\rightarrow$ FeO, que reacciona con la sílice $\rightarrow$ escoria \ce{FeO·SiO₂}.
-
-El azufre se elimina como \ce{SO2} en los gases.
-
-El níquel y cobalto quedan concentrados en la mata final (nickel matte).
-
-\uline{Productos:}
-Nickel Matte $\rightarrow$ fundido y colado (cast nickel matte).
-
-Escoria granulada $\rightarrow$ reciclada al horno o descartada.
-
-Gases sulfurosos \ce{(SO2)} $\rightarrow$ se capturan para fabricar ácido sulfúrico.
-
-\begin{figure}[H]    
-    \centering         
-    \includegraphics[width=0.7\textwidth]{Figuras/16.png}
-\end{figure}
-
-Horno rotatorio de precalentamiento $\rightarrow$ seca y calienta el mineral.
-
-Horno eléctrico cerrado de arco $\rightarrow$ funde y produce ferroníquel crudo.
-
-Convertidor $\rightarrow$ afina, eliminando hierro y azufre.
-
-Cuchara de desulfurización $\rightarrow$ ajuste final del contenido de S.
-
-Máquina de colada $\rightarrow$ solidifica el ferroníquel en lingotes.
-
-\subsection{Zinc}
-
-Minerales Principales:
-
-\subsubsection{Blenda o esfalerita }(\ce{ZnS})$\rightarrow$ mineral más importante.
+(\ce{ZnS})$\rightarrow$ mineral más importante.
 
 Smithsonita
 
@@ -663,7 +615,7 @@ Concentración gravimétrica (estaño es denso: 7 g/cm³). Se usa mesa Wilfley, 
 
 Separación magnética y flotación para eliminar sulfuros y wolframita.
 
-Se obtiene un concentrado de SnO₂ de 60-70 \% Sn.
+Se obtiene un concentrado de \ce{SnO2} de 60-70 \% Sn.
 
 Procesamiento pirometalúrgico
 2.1 Tostación oxidante (pretratamiento)
@@ -674,7 +626,7 @@ Horno empleado: horno de reverbero o lecho fluidizado.
 Producto: casiterita purificada + óxidos de impurezas.
 Reducción carbotérmica
 
-Mineral tostado + coque + fundentes \ce{CaCO3, SiO2}.
+Mineral tostado + coque + fundentes \ce{CaCO3}, \ce{SiO2}.
 
 Horno principal:
 
@@ -720,7 +672,7 @@ Hornos y equipos clave en estaño
 
 Horno de tostación (reverbero / lecho fluidizado): elimina S, As, Sb.
 
-Horno de reverbero: reducción carbotérmica de SnO₂.
+Horno de reverbero: reducción carbotérmica de \ce{SnO2}.
 
 Horno eléctrico: alternativa moderna para fundición más limpia.
 
@@ -738,7 +690,7 @@ Escorias: contienen algo de Sn $\rightarrow$ se reciclan (re-tratamiento por flo
 
 \subsection{Magnesio}
 
- Minerales y materias primas
+Minerales y materias primas
 
 Dolomita \ce{(CaCO3*MgCO3)} $\rightarrow$ ruta pirometalúrgica.
 
@@ -755,7 +707,6 @@ Dolomita en hornos rotatorios a 1000-1100 °C
 Etapa 2: Reducción al vacío
 
 El óxido mixto (CaO*MgO) se mezcla con ferrosilicio como reductor y se introduce en retortas de acero refractario al vacío (1200-1250 °C, 0.1-1 Pa).
-​
 
 Etapa 3: Condensación
 
