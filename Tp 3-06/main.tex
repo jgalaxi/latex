@@ -58,19 +58,28 @@ Este caso práctico tiene como finalidad comprender cómo los fenómenos metalú
 
 Se estudiará la rotura de un tubo de caldera de acero al carbono sometido a presión interna y temperaturas elevadas (como se ve en la \autoref{fig:caldera}), con el fin de relacionar la microestructura obtenida, las propiedades mecánicas y el mecanismo del fallo observado.
 
-\begin{figure} [h!]
+\begin{figure}[H]
     \centering
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\textwidth]{Figuras/Caldera.png}
-        \subcaption{Esquema de la caldera.}
+    % Subfigura a
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.7]{Figuras/Caldera.png}
+        \caption{Esquema de la caldera}
         \label{fig:caldera}
     \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\textwidth]{Figuras/caño.png}
-        \subcaption{Esquema de la tubería dañada.}
-        \label{fig:tubo}
+    \hfill
+    % Subfigura b
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.7]{Figuras/caño.png}
+        \caption{Esquema del caño}
+        \label{fig:caño}
     \end{subfigure}
+    % Caption general
+    \caption{Esquemas de la caldera y del caño estudiado}
+    \label{fig:esquemas}
 \end{figure}
+
 
 \section{Análisis Metalúrgico del Caso.}
 La tubería estudiada estaba fabricada en un acero de bajo carbono (Fe-0,18\% C, 0,45\% Mn, 0,20\% Si). Bajo condiciones normales debería presentar microestructura de ferrita $+$ perlita (dureza $\approx$ \SI{1,5}{\giga\pascal}).
@@ -121,30 +130,12 @@ donde $p$ es la presión interna, $r$ el radio del tubo y $t$ el espesor de pare
 \section{Resultados de Simulación}
 Se realizaron simulaciones en \textbf{Python} y \textbf{MATLAB} utilizando los scripts \texttt{codigoPython.py} y \texttt{codigoMATLAB.m}.
 
-Se generaron las siguientes gráficas:
+Se generó la siguiente gráfica:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{Figuras/tr_vs_T.png}
-    \caption{Tiempo a rotura en función de la temperatura para distintas tensiones.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\linewidth]{Figuras/tr_vs_sigma.png}
-    \caption{Tiempo a rotura en función de la tensión circunferencial a distintas temperaturas.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\linewidth]{Figuras/sens_espesor.png}
-    \caption{Sensibilidad del tiempo a rotura con respecto al espesor de pared.}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\linewidth]{Figuras/sens_presion.png}
-    \caption{Sensibilidad del tiempo a rotura con respecto a la presión interna.}
+    \includegraphics[width=0.7\linewidth]{Figuras/Figure_1.png}
+    \caption{Tiempo a rotura en función de la temperatura para presiones, radios y espesores variables.}
 \end{figure}
 
 \section{Conclusiones.}
