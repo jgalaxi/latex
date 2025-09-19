@@ -1,17 +1,23 @@
 \documentclass[12pt,a4paper]{article}
 
-% Paquetes de configuración del documento
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish,mexico]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=3cm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}}
+\sisetup{per-mode=symbol}
+\usepackage{csquotes}
 %Paquetes para simbologia%
+\usepackage{csquotes}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
@@ -66,6 +72,234 @@
     \end{itemize}
 \end{abstract}
 
+\section{Introducción.}
+Partiendo de la informacion obtenida de la empresa Plansee se ha realizado el siguiente informe detallando las propiedades, características y aplicaciones de los metales: tungsteno (W), tántalo (Ta), molibdeno (Mo) y Compuestos de matriz metálica de tungsteno (W-MMC).
 
+\section{Tungsteno (W)}
+
+\subsection{Descripción}
+
+El tungsteno (W; número atómico: 74), conocido también como wolframio, es un metal refractario. Se caracteriza por su excepcional resistencia al calor y a la corrosión, ideal para entornos de alta temperatura y exigencia.
+
+\subsection{Propiedades físicas y químicas}
+
+El tungsteno tiene el punto de fusión más alto de todos los metales. Sus principales propiedades físicas y químicas se detallan en la siguiente tabla:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ll}
+    \toprule
+    Propiedad & Valor \\
+    \midrule
+    Punto de fusión & \SI{3420}{\celsius} \\
+    Punto de ebullición & \SI{5555}{\celsius} \\
+    Densidad & \SI{19,25}{\gram\per\cubic\cm} \\
+    Estructura cristalina & Cúbica centrada en el cuerpo \\
+    Conductividad térmica & \SI{164}{\watt\per\meter\per\kelvin} \\
+    Conductividad eléctrica & \SI{18,2e6}{\siemens\per\meter} \\
+    Coeficiente de expansión térmica & \SI{4,4e-6}{\meter\per\meter\per\kelvin} \\
+    Calor específico & \SI{0,13}{\joule\per\gram\per\kelvin} \\
+    Resistencia eléctrica específica & \SI{0,055}{\ohm\mm\squared\per\meter} \\
+    \bottomrule
+    \end{tabular}
+    \caption{Propiedades del tungsteno a \SI{20}{\celsius}}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figuras/W-conductividad_termica.png}
+        \subcaption{Conductividad térmica del wolframio y el molibdeno según la temperatura.}
+        \label{WCondTerm}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figuras/W-expansion_termica.png}
+        \subcaption{Expansión térmica del wolframio y el molibdeno según la temperatura.}
+        \label{WExpTerm}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figuras/W-resistencia_electrica.png}
+        \subcaption{Resistividad eléctrica del wolframio y el molibdeno según la temperatura.}
+        \label{WResTerm}
+    \end{subfigure}
+    \caption{Variacion de propiedades físicas según la temperatura.}
+    \label{fig:WPropiedades_fisicas}
+\end{figure}
+
+\subsection{Propiedades mecánicas.}
+
+El tungsteno tiene propiedades mecánicas similares a las del molibdeno. Éstas propiedades dependen de la temperatura de ensayo y posee un módulo de elasticidad elevado, así como una alta estabilidad térmica y resistencia a la fluencia.
+
+\subsection{Características y ventajas.}
+
+\begin{enumerate}
+    \item \textbf{Alta resistencia y módulo de elasticidad:} el tungsteno combina alta resistencia, rigidez y biocompatibilidad.
+    \item \textbf{Baja presión de vapor y buena conductividad eléctrica:} en entornos de alto vacío, el tungsteno es útil para elementos de calentamiento y pantallas protectoras gracias a la casi nula emisión de vapor y capacidad para soportar altas corrientes sin denotar expansión por temperatura.
+    \item \textbf{Resistencia a la corrosión y baja tasa de pulverización:} en implantación de iones, resiste el bombardeo continuo, manteniendo su integridad y reduciendo costes de mantenimiento.
+\end{enumerate}
+
+\subsection{Aplicaciones.}
+
+\begin{itemize}
+    \item \textbf{Industria aeroespacial:} por su alta densidad y resistencia térmica.
+    \item \textbf{Tecnología médica:} en alambres para instrumentos quirúrgicos.
+    \item \textbf{Electrónica:} en filamentos y componentes de alto vacío.
+    \item \textbf{Fabricación:} en herramientas y moldes resistentes al desgaste.
+\end{itemize}
+
+\section{Tántalo (o tantalio; Ta).}
+
+\subsection{Descripción.}
+
+El tántalo (Ta; número atómico: 73) es un metal refractario, de alta resistencia a la corrosión, especialmente frente a ácidos, y su biocompatibilidad. 
+
+\subsection{Propiedades físicas y químicas}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l l}
+    \toprule
+    Propiedad & Valor \\
+    \midrule
+    Punto de fusión & \SI{3017}{\celsius} \\
+    Punto de ebullición & \SI{5458}{\celsius} \\
+    Densidad & \SI{16,65}{\gram\per\cubic\cm} \\
+    Estructura cristalina & Cúbica centrada en el cuerpo \\
+    Conductividad térmica & \SI{57,5}{\watt\per\meter\per\kelvin} \\
+    Conductividad eléctrica & \SI{7,7e6}{\siemens\per\meter} \\
+    Coeficiente de expansión térmica & \SI{6,3e-6}  {\meter\per\meter\per\kelvin} \\
+    \bottomrule
+    \end{tabular}
+    \caption{Propiedades del tántalo a \SI{20}{\celsius}}
+\end{table}
+
+\subsection{Características y ventajas.}
+
+\begin{enumerate}
+    \item \textbf{Resistencia a la corrosión:} el tantalio es valorado por ser inerte frente a la mayoría de los ácidos. En medios básicos se comporta inerte por debajo de los \SI{75}{\celsius}, dependiendo de la concentración de la solución.
+    \item \textbf{Alta ductilidad:} trabajados en frío para formar láminas delgadas o alambres para componentes electrónicos como condensadores.
+    \item \textbf{Estabilidad térmica:} se emplean en aplicaciones de alta temperatura hasta \SI{2400}{\celsius}.
+\end{enumerate}
+
+\subsection{Aplicaciones}
+\begin{itemize}
+    \item \textbf{Electrónica:} en condensadores electrolíticos de alta capacidad.
+    \item \textbf{Industria química:} en equipos resistentes a la corrosión.
+    \item \textbf{Médica:} en implantes y dispositivos quirúrgicos.
+    \item \textbf{Aeroespacial:} en componentes con resistencia térmica y a la corrosión.
+\end{itemize}
+
+\section{Molibdeno (Mo).}
+
+\subsection{Descripción.}
+
+El molibdeno (Mo; número atómico: 42), es un metal refractario de alta resistencia mecánica, buena conductividad térmica y eléctrica, y resistencia a la corrosión en entornos no oxidantes.
+
+\subsection{Propiedades físicas y químicas}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l l}
+   \toprule
+    Propiedad & Valor \\
+    \midrule
+    Punto de fusión & \SI{2623}{\celsius} \\
+    Punto de ebullición & \SI{4639}{\celsius} \\
+    Densidad & \SI{10.22}{\gram\per\cubic\cm} \\
+    Estructura cristalina & Cúbica centrada en el cuerpo \\
+    Conductividad térmica & \SI{138}{\watt\per\meter\per\kelvin} \\
+    Conductividad eléctrica & \SI{18.7e6}{\siemens\per\meter} \\
+    Coeficiente de expansión térmica & \SI{5.2e-6}{\meter\per\meter\per\kelvin} \\
+    \bottomrule
+    \end{tabular}
+    \caption{Propiedades del molibdeno a \SI{20}{\celsius}}
+\end{table}
+
+\subsection{Características y ventajas.}
+
+\begin{enumerate}
+    \item \textbf{Alta resistencia mecánica a temperaturas elevadas:} usado para hornos y aplicaciones térmicas con baja expansión térmica .
+    \item \textbf{Buena conductividad térmica y eléctrica:} componentes electrónicos y elementos de calentamiento.
+    \item \textbf{Menor densidad:} destaca por su ligereza frente al tungsteno y tántalo; estando un \SI{93}{\percent} por debajo.  
+    \item \textbf{Resistencia al desgaste:} los productores lo utilizan en herramientas y recubrimientos.
+\end{enumerate}
+
+\subsection{Aplicaciones.}
+
+\begin{itemize}
+    \item \textbf{Industria metalúrgica:} en aleaciones de acero para aumentar resistencia.
+    \item \textbf{Electrónica:} en electrodos y componentes de semiconductores.
+    \item \textbf{Hornos de alta temperatura:} en elementos de calentamiento.
+    \item \textbf{Aeroespacial:} en componentes ligeros y resistentes.
+\end{itemize}
+
+\section{Matriz Metálica de Tungsteno (W-MMC).}
+
+\subsection{Descripción.}
+
+La matriz metálica de tungsteno (W-MMC) es un material compuesto que combina tungsteno con metales como cobre o níquel para mejorar conductividad térmica o ductilidad, manteniendo la resistencia del tungsteno puro. 
+
+\subsection{Propiedades físicas y químicas.}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lp{7cm}}
+    \toprule
+    Propiedad & Valor \\
+    \midrule
+    Composición & Matriz de tungsteno con fases (ej., W-Cu, W-Ni-Fe) \\
+    Densidad & de \SIrange[range-units=single, range-phrase={ a }]{15}{18}{\gram\per\cubic\cm} \\
+    Punto de fusión & \SI{\approx3420}{\celsius} (variable) \\
+    Conductividad térmica & de \SIrange[range-units=single, range-phrase={ a }]{200}{400}{\watt\per\meter\per\kelvin} \\
+    Coeficiente de expansión térmica & de \SIrange[range-units=single, range-phrase={ a }]{5}{10e-6}{\meter\per\meter\per\kelvin} \\
+    \bottomrule
+    \end{tabular}
+    \caption{Propiedades de W-MMC (valores típicos)}
+\end{table}
+
+\subsection{Características y ventajas.}
+
+\begin{enumerate}
+    \item \textbf{Conductividad térmica mejorada:} por la adición de cobre mejora la disipación de calor en electrónica.
+    \item \textbf{Propiedades ajustables:} combinando la composición química dada por el dopaje junto con la pulvimetalurgica permite adaptar la densidad y resistencia según la aplicación.
+    \item \textbf{Alta resistencia al desgaste:} empleados para componentes complejos con mayor ductilidad como punzones en frío.
+    \item \textbf{Estabilidad en entornos extremos:} combinan resistencia térmica con versatilidad.
+\end{enumerate}
+
+\subsection{Aplicaciones.}
+
+\begin{itemize}
+    \item \textbf{Electrónica:} en disipadores de calor para semiconductores.
+    \item \textbf{Aeroespacial:} en contrapesos y componentes estructurales.
+    \item \textbf{Defensa:} en proyectiles perforantes (AP).
+    \item \textbf{Industria nuclear:} en blindajes resistentes a radiaciones.
+\end{itemize}
+
+\section{Comparación Resumida.}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{3.8cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+    \toprule
+    Propiedad & Tungsteno & Tántalo & Molibdeno & W-MMC \\
+    \midrule
+    Punto de fusión (\si{\celsius}) & \si{3420} & \si{3017} & \si{2623} & \si{\approx3420} \\
+    Densidad (\si{\gram\per\cubic\cm}) & \si{19,25} & \si{16,65} & \si{10,22} & de \SIrange[range-phrase={ a }]{15}{18}{} \\
+    Conductividad térmica (\si{\watt\per\meter\per\kelvin}) & \si{164} & \si{57,5} & \si{138} & de \SIrange[range-phrase={ a }]{200}{400}{} \\
+    Resistencia a la corrosión & Excelente & Excepcional & Buena & Buena \\
+    Aplicaciones principales & Electrónica, médica, aeroespacial & Electrónica, química, médica & Metalurgia, electrónica, hornos & Electrónica, aeroespacial, defensa \\
+    \bottomrule
+    \end{tabular}
+    \caption{Comparación de propiedades de los metales refractarios.}
+\end{table}
+
+\section{Un ejemplo práctico.}
+
+Un dicho común que se le dice a la gente que es molesta es que \enquote{Sos más pesado que el plomo} cuando en realidad \textacutedbl{}no se acerca\textacutedbl{} a la densidad el wolframio. Un ejemplo que resulta interesante es que si llenáramos una botella de un litro con aluminio pesaría \SI{2,7}{\kilogram}, si fuera con acero entre \SIrange[range-units=single, range-phrase={ a }]{7}{8}{\kilogram}, pero si fuera de wolframio pesaría \SI{19,6}{\kilogram} y \textacutedbl{}sólo\textacutedbl{} \SI{11,3}{\kilogram} si fuera llenado con Pb.
 
 \end{document}
