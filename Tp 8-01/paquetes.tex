@@ -1,0 +1,74 @@
+% Paquetes para estructurar el documento
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[spanish, mexico]{babel} % Idioma del documento
+\usepackage[T1]{fontenc} % Codificación de fuentes
+\usepackage{csquotes} % Comillas inteligentes
+\usepackage{enumitem} % Personalización de listas
+\setlist{nosep} % Elimina espacio extra en listas
+
+
+% Paquetes de matemáticas, símbolos y gráficos
+\usepackage{amssymb} % Símbolos matemáticos
+\usepackage{amsmath} % Entornos matemáticos
+\usepackage{amsthm} % Teoremas y demostraciones
+\usepackage{mathtools} % Extensiones de amsmath
+\usepackage{amsfonts} % Fuentes matemáticas
+\usepackage{mathrsfs} % Fuentes caligráficas
+\usepackage{graphicx} % Inclusión de imágenes
+\graphicspath{{Figuras/}} % Ruta de las imágenes
+\usepackage{tikz} % Dibujos y diagramas
+\usepackage{siunitx} % Unidades y números
+\sisetup{output-decimal-marker = {,}}
+\sisetup{per-mode=symbol}
+\usepackage[version=4]{mhchem} % Fórmulas químicas
+\usepackage{mleftright}
+\mleftright % Ajusta automáticamente el tamaño de los paréntesis
+\usepackage{cancel} % Para tachar términos en ecuaciones
+\usepackage{wasysym} % Símbolos adicionales
+
+
+% Paquetes de referencias y citas
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            urlcolor=myblue,
+            citecolor=black,
+            filecolor=black]{hyperref} % Hipervínculos
+\usepackage{cleveref} % Referencias inteligentes
+\usepackage[backend=biber, style=apa]{biblatex} % Bibliografía
+\addbibresource{bibliografia.bib}
+\usepackage{float} % Control de posición de figuras y tablas
+\usepackage{caption} % Personalización de leyendas
+\usepackage{subcaption} % Subfiguras
+\usepackage{xurl} % Mejor manejo de URLs
+\Urlmuskip=0mu plus 1mu
+
+
+% Paquetes de formato y diseño
+\usepackage{fancyhdr} % Encabezados y pies de página personalizados
+\usepackage[margin=3cm]{geometry} % Márgenes del documento
+
+
+% Paquetes para tablas
+\usepackage{booktabs} % Tablas profesionales
+\usepackage{longtable} % Tablas que pueden dividirse en varias páginas
+\usepackage{array} % Mejoras en tablas
+\usepackage{tabularx} % Tablas con ancho ajustable
+\usepackage{colortbl} % Colores en tablas
+\usepackage{multirow} % Celdas que abarcan varias filas
+\usepackage{makecell} % Mejoras en celdas de tablas
+
+
+% Paquetes varios
+\usepackage{pgfplots} % Gráficas
+\pgfplotsset{compat=1.18}
+\usepackage{rotating} % Texto y tablas giradas
+\usepackage{xcolor} % Colores
+\definecolor{myblue}{RGB}{42, 127, 179}
+\usepackage{pdfpages} % Incluir páginas PDF
+
+
+% Encabezado de página
+\pagestyle{fancy}
+\chead{\textit{Materiales No Metálicos}}
+\rhead{\textit{UTN-FRVM}}
+\lhead{\textit{Ingeniería Mecánica}}
