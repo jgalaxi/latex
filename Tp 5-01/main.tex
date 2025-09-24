@@ -1,6 +1,8 @@
 \documentclass[12pt,a4paper]{article}
 
 \include{paquetes}
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % Bibliografía
+\addbibresource{bibliografia.bib}
 
 \begin{document}
 \include{Portada}
@@ -17,6 +19,127 @@
     \end{itemize}
 \end{abstract}
 
+\section{Introducción.}
 
+El presente trabajo analiza el capítulo \emph{Endurecimiento superficial por temple} de Sturla (Tomo II, pp. 181--226). Se presentan los fundamentos teóricos, métodos de aplicación, variables críticas y efectos mecánicos logrados en aceros templados superficialmente.
+
+El endurecimiento superficial por temple es un tratamiento térmico selectivo que permite aumentar la dureza y la resistencia al desgaste en la capa externa de los aceros, manteniendo un núcleo tenaz y dúctil. 
+Este equilibrio es fundamental para piezas sometidas a esfuerzos combinados de fricción, contacto y fatiga, como engranajes, ejes y árboles de transmisión.
+
+\section{Fundamentos del proceso.}
+
+El procedimiento consiste en calentar rápidamente la superficie de la pieza hasta temperaturas superiores al punto crítico de austenización ($A_{c3}$), seguido de un enfriamiento brusco que transforma dicha capa en martensita.\\
+El resultado es una estructura graduada:
+
+\begin{itemize}
+    \item \textbf{Capa superficial:} martensita de alta dureza ($700$--$800$ HV).
+    \item \textbf{Zona de transición:} troostita o sorbita revenida.
+    \item \textbf{Núcleo:} estructura dúctil (perlítica o martensítica revenida).
+\end{itemize}
+
+Como se observa en la \cref{fig:transicion}, la profundidad de la capa endurecida (las zonas que mencionamos anteriormente) depende de la temperatura de calentamiento, el tiempo de exposición y la velocidad de enfriamiento.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig5.png}
+    \caption{Modificación en la zona de transición durante el temple superficial \cite{sturla}.}
+    \label{fig:transicion}
+\end{figure}
+
+\section{Variables críticas del temple superficial.}
+
+Los principales factores que condicionan el proceso son:
+
+\begin{itemize}
+    \item Composición química del acero (contenido de C y aleantes).
+    \item Temperatura y duración del calentamiento.
+    \item Velocidad de enfriamiento.
+    \item Estado previo del material (recocido, normalizado o revenido).
+    \item Espesor a endurecer (típicamente \SIrange[range-units=single, range-phrase={ - }]{1}{5}{\milli\metre}).
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig8.png}
+    \caption{Distribución típica de la dureza en profundidad tras un temple superficial \cite{sturla}.}
+    \label{fig:dureza}
+\end{figure}
+
+\section{Métodos de calentamiento superficial.}
+
+Diversos procedimientos industriales permiten realizar el temple superficial:
+
+\subsection{Baños de sales o metales fundidos.}
+
+Adecuados para piezas de revolución. Generan un calentamiento homogéneo, aunque limitados a geometrías simples.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        Temperatura del baño (\si{\celsius}) & Tiempo de inmersión (\si{\second}) \\
+        \midrule
+        900  & 130 \\
+        950  & 80  \\
+        1000 & 65  \\
+        1100 & 45  \\
+        1200 & 38  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Tiempos de inmersión en función de la temperatura del baño de sales para un redondo de 48 mm de diámetro \cite{sturla}.}
+\end{table}
+
+\subsection{Llama oxiacetilénica.}
+
+Método tradicional y flexible, aplicado en engranajes y bancadas. Su principal limitación es la distorsión por calentamiento irregular.
+
+\subsection{Temple por inducción.}
+
+Método muy difundido actualmente. Permite automatización y control preciso de la profundidad endurecida. Su efectividad depende de la frecuencia, potencia y tiempo de calentamiento.
+
+En la \cref{fig:induccion} se ha representado la influencia de la potencia y tiempo de calentamiento sobre la temperatura superficial de un árbol de \SI{70}{\milli\metre}\diameter, longitud de \SI{30}{\milli\metre}, frecuencia de \SI{2000}{\hertz} y un acoplamiento de \SI{1,5}{\milli\metre} con un inductor formado de una espira, para un acero de \SI{0,5}{\percent} de carbono. A medida que la potencia disminuye, se requiere más tiempo de calentamiento para lograr la misma temperatura.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{fig25.png}
+    \caption{Influencia de la potencia y el tiempo de calentamiento en el temple por inducción \cite{sturla}.}
+    \label{fig:induccion}
+\end{figure}
+
+\subsection{Otros métodos.}
+
+Existen técnicas menos comunes, como el calentamiento por efecto de cátodo, el bombardeo electrónico y el temple con rayo láser. Este último presenta gran precisión y mínima distorsión.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{fig43.png}
+    \caption{Penetración obtenida en temple con láser según tipo de revestimiento superficial \cite{sturla}.}
+    \label{fig:laser}
+\end{figure}
+
+\section{Resultados mecánicos.}
+
+Los beneficios principales del temple superficial son:
+
+\begin{itemize}
+    \item Incremento del límite de fatiga hasta un \SI{50}{\percent}.
+    \item Aumento de la resistencia a la flexión y al desgaste.
+    \item Generación de tensiones residuales compresivas en la superficie.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{fig9.png}
+    \caption{Influencia del espesor endurecido en la resistencia a flexión \cite{sturla}.}
+    \label{fig:flexion}
+\end{figure}
+
+\section{Conclusiones.}
+
+El endurecimiento superficial por temple constituye una estrategia metalúrgica que combina dureza superficial con tenacidad interna. La elección del método de calentamiento depende de la geometría, volumen de producción, composición del acero y requerimientos mecánicos.
+
+Las tecnologías modernas (inducción y láser) ofrecen gran repetibilidad, control y mínima deformación, lo que explica su uso extendido en la industria actual.
+
+\printbibliography[heading=bibnumbered, title={Referencias}]
 
 \end{document}
