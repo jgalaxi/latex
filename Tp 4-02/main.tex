@@ -685,7 +685,7 @@ Estas celdas operan a \SIrange[range-phrase = { - }, range-units=single]{680}{75
 \subsubsection{Proceso Pidgeon.}
 
 Preparamos dolomita para calcinación obteniendo \ce{MgO} y \ce{CaO}, y estos son reducidos con una mezcla ferrosilicioso dando como resultado gas magnesio; así queda la reacción:
-\[ \ce{2CaO + 2MgO + Si \rightarrow 2Mg (g) + Ca2SiO4}\]
+\[ \ce{2CaO + 2MgO + Si -> 2Mg(g) + Ca2SiO4}\]
 Aunque existen otras variantes del proceso, esta es la más común. El magnesio gaseoso se condensa en cámaras refrigeradas formando coronas de magnesio metálico.
 
 \subsection{Hornos y equipos usados en la obtención de magnesio.}
@@ -753,45 +753,31 @@ A continuación se describen los principales hornos y equipos empleados en las r
 
 También conocida como titanoferrita (\ce{FeTiO3}), es el mineral de titanio más abundante. Con un porcentaje de Ti de \SIrange[range-phrase = { - }, range-units=single]{45}{60}{\percent}, el resto \ce{Fe2O3}.
 
-\subsection{Procesos }
+\subsection{Procesos de obtención.}
 
-Proceso Kroll (industrial dominante)
+Existen dos procesos principales para la obtención de titanio metálico a partir de sus minerales, dividos en 2 etapas, la carbo-cloración (etapa 1) y el proceso Kroll (etapa 2).
 
-Etapa 1: Cloración
+\subsubsection{Carbo-cloración.}
 
-Mineral concentrado + coque + \ce{Cl2} $\rightarrow$ \ce{TiCl4} (tetracloruro de titanio, volátil).
+La carbo-cloración es un proceso pirometalúrgico para obtener tetracloruro de titanio (\ce{TiCl4}) a partir de minerales de titanio (rutilo o ilmenita). Este proceso implica la reacción del mineral con cloro (\ce{Cl2}) y carbono (coque) a altas temperaturas, produciendo \ce{TiCl4} volátil y óxidos metálicos como subproductos.
 
-Horno: reactor de lecho fluidizado a \SIrange[range-phrase = { - }, range-units=single]{900}{1000}{\celsius}.
+\[ \ce{TiO2 + 2Cl2 + C \rightarrow TiCl4(g) + CO2}\]
+Para partir de la ilmenita, esta debe ser enriquecida en \ce{TiO2} (\SI{>90}{\percent}).
 
-Reacción:
+Este proceso se lleva a cabo en un horno de lecho fluidizado a temperaturas entre \SIrange[range-phrase = { - }, range-units=single]{850}{1000}{\celsius}. El \ce{TiCl4} producido es volátil y se separa del resto de los productos sólidos.
 
-Etapa 2: Purificación de \ce{TiCl4}
+\subsubsection{Proceso Kroll.}
 
-Destilación fraccionada para eliminar \ce{FeCl, VCl4}, etc.
+Es un proceso pirometalúrgico para la producción de titanio metálico a partir de tetracloruro de titanio (\ce{TiCl4}). El proceso implica la reducción de \ce{TiCl4} con magnesio (Mg) en un ambiente controlado para obtener titanio esponjoso (sponge Ti) y cloruro de magnesio (\ce{MgCl2}) como subproducto.
 
-Etapa 3: Reducción con Mg
+\[ \ce{TiCl4 + 2Mg ->[\text{\SI{825}{\celsius}}] Ti + 2MgCl2}\]
 
-En reactores cerrados de acero, a \SIrange[range-phrase = { - }, range-units=single]{800}{900}{\celsius} bajo atmósfera inerte:
+El proceso Kroll se lleva a cabo en reactores cerrados de acero inoxidable a temperaturas entre \SIrange[range-phrase = { - }, range-units=single]{800}{850}{\celsius} bajo una atmósfera inerte (generalmente argón) para evitar la oxidación del titanio. El titanio esponjoso resultante se separa del \ce{MgCl2} y se somete a procesos adicionales de purificación y fusión para obtener lingotes de titanio metálico de alta pureza en los que no vamos a entrar porque creemos que no merece la pena.
 
-Se obtiene titanio esponjoso (sponge Ti) + \ce{MgCl2}.
-
-Etapa 4: Purificación
-
-El \ce{MgCl2} se separa por fusión y electrólisis (regenera Mg y \ce{Cl2}).
-
-El Ti esponjoso se compacta y se funde.
-
-Afinado y fusión
-
-El Ti esponjoso se funde en hornos de arco eléctrico al vacío (VAR) o fusión por haz de electrones (EBM).
-
-Objetivo: remover gases \ce{(O2, N2, H2)} y lograr lingotes homogéneos.
-
-Producto final
-
-Titanio metálico (grado comercial 99,5 \%).
+El titanio metálico obtenido es de alta pureza ($\approx$ \SIrange[range-phrase = { - }, range-units=single]{99,5}{99,7}{\percent}) y se utiliza en diversas aplicaciones industriales, incluyendo la fabricación de aleaciones ligeras y resistentes a la corrosión.
 
 \section{Referencias.}
+
 \begin{itemize}
     \item \url{https://www.uotechnology.edu.iq/dep-materials/english/lecture/thirdclass/Extractivemetallurgy2.pdf?utm_source=chatgpt.com}.
     \item \url{https://www.britannica.com/technology/zinc-processing/Ores}.
@@ -799,6 +785,7 @@ Titanio metálico (grado comercial 99,5 \%).
     \item \url{https://www.britannica.com/technology/magnesium-processing?utm_source=chatgpt.com}.
     \item \url{https://cmscontent.nrs.gov.bc.ca/geoscience/publicationcatalogue/External/EXT096.pdf?utm_source=chatgpt.com}.
     \item \url{https://www.mdpi.com/2075-163X/11/12/1425?utm_source=chatgpt.com}.
+    \item \url{https://en.wikipedia.org/wiki/Kroll_process?utm_source=chatgpt.com}.
 \end{itemize}
 
 \vfill
