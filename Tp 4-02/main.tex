@@ -38,8 +38,6 @@
 \chead{\textit{Materiales Metálicos}}
 \rhead{\textit{UTN-FRVM}}
 \lhead{\textit{Ingeniería Mecánica}}
-\usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % Bibliografía
-\addbibresource{bibliografia.bib}
 
 \begin{document}
 \include{Portada}
@@ -358,8 +356,6 @@ Alta eficiencia, menor tiempo de residencia
 
 \paragraph{Descripción.} Es un gran cilindro horizontal refractario, donde se insufla aire por toberas para oxidar la mata sulfurada, eliminando el \ce{FeS} como escoria y transfromando el \ce{Cu2S} en cobre blister.
 
-%ESTO NO SE ENTIENDE UN CARAJO
-
 \paragraph{Refinación.} Pirorrefinación: En hornos de reverbero o anódicos se eliminan impurezas.
 
 \paragraph{Descripción.} Proceso de purificación  térmica y química del cobre blister: primero oxidando impurezas, luego reduciendo el exceso de oxígeno, para producir cobre anódico adecuado para refinación electrolítica.
@@ -368,16 +364,13 @@ Electrorefinación: Celdas electrolíticas producen cobre catódico de 99,99\%
 
 Descripción: se refina en celdas electrolíticas para producir cobre catódico de alta pureza (99,99\%).
 
-%--HASTA ACÁ-- 
-
-
 \section{Níquel}
 
 Material resistente y versátil, obtenido de minerales sulfurados y lateritas medinate procesos pirometalúrgicos e hidrometalurgicos. Su principal uso es en acero inoxidables y superaleaciones, pero también en baterías modernas, lo que lo hace clave para la transición energética.
 
 \begin{figure}[t]    
     \centering         
-    \includegraphics[width=0.7\textwidth]{imagenes/11.png}
+    \includegraphics[width=0.7\textwidth]{Figuras/11.png}
     \caption{}
 \end{figure}
 
@@ -506,296 +499,294 @@ El material pasa en vagones tolva cubiertos hacia la instalación de afino. En e
 
 \section{Zinc.}
 
+El zinc es un metal versátil con aplicaciones en galvanización, aleaciones (latón), baterías y productos químicos. Se obtiene principalmente de minerales sulfurados mediante procesos pirometalúrgicos e hidrometalúrgicos. También cabe recalcar que la extracción de este metal fue históricamente difícil debido a su punto de ebullición relativamente bajo, lo que complicaba su recuperación en hornos tradicionales.
+
 \subsection{Minerales Principales.}
 
 \subsubsection{Blenda o esfalerita.}
 
-\subsection{Zinc}
+También conocido como zinc sulfurado, es el mineral más importante. (\ce{ZnS})
 
-Minerales Principales:
+\subsubsection{Marmatita.}
 
-\subsubsection{Blenda o esfalerita }(\ce{ZnS})$\rightarrow$ mineral más importante.
+Es derivado de la esfalerita (una forma ferrosa de este). [\ce{(ZnFe)S}]
 
-Smithsonita
+\subsubsection{Smithsonita.}
 
-Hemimorfita
+Mineral de zinc carbonatado. [\ce{ZnCO3}]
 
-\uline{Rutas industriales:} RLE (Roast-Leach-Electrowin) o pirometalurgia ISP; una tercera familia es lixiviación directa/oxidativa del concentrado.
+\subsection{Rutas industriales.}
 
-Ruta RLE: 
+Existen dos familias principales de procesos para obtener zinc metálico a partir de sus minerales:
 
-Equipo/"Horno": tostador de lecho fluidizado, este se usa para que cada partícula de mineral esté en contacto con el oxígeno, logrando una oxidación rápida y uniforme.
+\subsubsection{Pirometalurgia.}
 
-Lixiviación:
+La esfalerita se rostea (se calienta en presencia de oxígeno) para convertir el \ce{ZnS} en \ce{ZnO} y \ce{SO2} (\ce{ZnS + 3/2 O2 \rightarrow ZnO + SO2}), luego se reduce el \ce{ZnO} con coque en un horno a temperaturas elevadas para obtener zinc metálico (\ce{ZnO + CO \rightarrow Zn + CO2}). en forma de vapor, que se condensa para obtener zinc sólido.
 
-Se hace en dos etapas para maximizar disolución y controlar Fe:
+\subsubsection{Hidrometalurgia + electroobtención.}
 
-Lixiviación neutra (50-70°C; pH $\approx$ 3-4) con electrolito gastado.
-precipitan sílice/hidróxidos; solidos no disueltos pasan a la siguiente etapa.
+Este proceso consta de 4 etapas: lixiviación, púrificación, electroobtención y fundición/colada final.
 
-Lixiviación ácida caliente (\SIrange[range-phrase = { - }, range-units=single]{80}{90}{\celsius}; pH < 2) con ácido fresco para disolver el resto de ZnO.
+La lixiviación disuelve el \ce{ZnO} en ácido sulfúrico para formar sulfato de zinc (\ce{ZnSO4}). Luego, el licor se purifica para eliminar impurezas como hierro, cadmio y cobre mediante cementación y otros métodos. En la electroobtención, el zinc se deposita en cátodos mediante electrólisis del licor purificado. Finalmente, el zinc metálico se funde y se moldea en lingotes o productos finales.
 
-Clarificación y purificación del licor 
+\[ \ce{ZnO + H2SO4 \rightarrow ZnSO4 + H2O} \]
 
-Espesadores y filtros $\rightarrow$ licor claro \ce{ZnSO4}
+El Zinc refinado mediante electroobtención es de alta pureza (\SI{99,995}{\percent}).
 
-Cementación con polvo de Zn a \SIrange[range-phrase = { - }, range-units=single]{40}{60}{\celsius} para mover impurezas.
+El \enquote{roasting} ocurre a unos \SIrange[range-phrase = { - }, range-units=single]{700}{800}{\celsius}, lo que ocurre es que la reacción es exotérmica y la temperatura suele llegar a los \SI{1000}{\celsius}.
 
-Control fino ; a veces extracción por solventes (SX) como pulido final.
+\subsection{Horno asociado.}
 
-Electroobtención (EW):
+\subsubsection{Alto horno.}
 
-Celdas con anodos de Al "Starter Sheets" y ánodos de aleación Pb.
+EL funcionamiento es el mismo que el de un alto horno convencional, pero adaptado para zinc. Con la diferencia de que el producto de éste son fases líquidas y sólidas que contienen zinc, que se separan dentro del horno (estas fases están tocándose permanentemente). 
 
-Electrolito típico: \SIrange{50}{60}{\gram\per\liter} \ce{Zn}, \SIrange{150}{200}{\gram\per\liter} \ce{H2SO4},\SIrange[range-phrase = { - }, range-units=single]{30}{40}{\celsius}
+La fase gaseosa contiene alrededor de \SI{8}{\percent} de zinc, \SI{10}{\percent} de \ce{CO2} y \SI{20}{\percent} de \ce{CO}. 
 
-Hornos/equipos clave en RLE:
-
-Tostador de lecho fluidizado, planta de ácido sulfúrico, (no hornos en lixiviación/ purificación), hornos de fusión/inducción para colada final.
-
-Lixiviación directa del concentrado (sin tostar)
-
-Buscada para eliminar emisiones de \ce{SO2} del tostador.
-
-Lixiviación oxidativa a presión (autoclave)
-
-Alimentación: concentrado ZnS finamente molido.
-
-Condiciones típicas: \SIrange[range-phrase = { - }, range-units=single]{150}{160}{\celsius}; presión total \SIrange{1.5}{2}{\mega\pascal};\ce{PO2} \SIrange{0.7}{1}{\mega\pascal}.
-
-Se separa azufre elemental (fundido o flotado), y el licor \ce{ZnSO4} entra a purificación + EW como en RLE.
-
-Hierro se maneja por goethita/hematita; sílice controlada por lavado caliente
-
-Lixiviación biológica:
-
-Oxidación bacteriana de ZnS $\rightarrow$ \ce{Zn^{2+}}; cinéticas más lentas; útil para colas marginales.
-
-pirometalurgia
-
-Ruta Térmica que co-trata Zn-Pb y concentra impurezas en subproductos.
-
-Sinterización
-
-"Horno" sinter Dwight-LLoyd (cama móvil): aglomerar finos con retorno y coque fino; se forma algo de ZnO
-
-Reducción-Volatilización en horno de cuba ISP
-
-Cuba vertical: carga de sinter + coque + fundentes
-
-Condensador de plomo fundido: el vapor de Zn se disuelve en \ce{Pb(l)}, luego se separa como Zn metálico (“zinc metal from lead condenser”) o ZnO (si se oxida controladamente). Se obtiene bullion de plomo aparte.
-
-Subproductos: escoria silicatada, cadmio (recuperable), gases $\rightarrow$ planta de ácido.
-
-Hornos/equipos clave en ISP: sinter, horno de cuba ISP, condensador, planta de ácido. (No hay EW).
-
-Procesos especiales (residuos / reciclaje)
-
-Horno Waelz (rotatorio) para polvos de acería con \ce{ZnO}/\ce{ZnFe2O4}: \SIrange[range-phrase = { - }, range-units=single]{1000}{1200}{\celsius} con coque $\rightarrow$ volatiliza Zn como \ce{Zn(g)} y se recolecta ZnO en filtros. Ese ZnO va luego a RLE o ISP.
-
-control ambiental y subproductos
-
-\ce{SO2} del tostador/sinter $\rightarrow$ \ce{H2SO4} (insumo de lixiviación o venta).
-
-Hierro $\rightarrow$ residuos jarosita/goethita/hematita (estabilizados).
-
-Cadmio se recupera en purificación (cementación $\rightarrow$ destilación). Indio/Germanio pueden recuperarse de polvos/coladas.
-
-Purga de electrolito para controlar Cl-/F-/Mn (tratamientos de neutralización/ oxidación).
-
-
-Cloración-destilación (retortas) y carbotermia al vacío: históricos o nicho
+\begin{figure}[h]
+    \centering         
+    \includegraphics[width=0.85\textwidth]{Figuras/image.png}
+    \caption{Esquema de un alto horno para zinc.}
+\end{figure}
 
 \section{Estaño.}
 
-Mineral principal: Casiterita \ce{SnO2}, con 70-78\% Sn
+\subsection{Minerales.}
 
-Minerales Secundarios: estannita (\ce{Cu2FeSnS4}), teallita (\ce{PbSnS2})
+\subsubsection{Casiterita.}
 
-Ganga común: cuarzo, silicato, arsénico, sulfuros de hierro y cobre.
+Es el mineral más importante de estaño (\ce{SnO2}).
 
-Trituración-molienda.
+\subsubsection{Estannita.}
 
-Concentración gravimétrica (estaño es denso: \SI{7}{\gram\per\cubic\centi\meter}). Se usa mesa Wilfley, jigs.
+Es un combinado de hierro, cobre y estaño sulfurados (\ce{Cu2FeSnS4}).
 
-Separación magnética y flotación para eliminar sulfuros y wolframita.
+\subsection{Proceso de extracción del estaño.}
 
-Se obtiene un concentrado de \ce{SnO2} de 60-70 \% Sn.
+El estaño es denso (\SI{7}{\gram\per\cubic\centi\meter}). Para ello se emplean técnicas (que mencionaremos más adelante) de separación física para eliminar impurezas y concentrar el mineral. Se obtiene un concentrado de \SIrange[range-phrase = { - }, range-units=single]{60}{70}{\percent} Sn.
 
-Procesamiento pirometalúrgico
-2.1 Tostación oxidante (pretratamiento)
+\subsubsection{Separación magnética.} Utiliza la diferencia en las propiedades magnéticas para separar minerales. La casiterita no es magnética, mientras que algunos minerales de hierro sí lo son. Un campo magnético atrae y remueve las impurezas magnéticas.
 
-Objetivo: eliminar impurezas sulfuradas, arsénico y antimonio.
+\subsubsection{Flotación.} Se basa en las diferencias de hidrofobicidad (repelencia al agua) entre minerales. Se agregan reactivos químicos que hacen que la casiterita se adhiera a burbujas de aire y flote, mientras que la ganga se hunde. El concentrado flotante se recupera.
 
-Horno empleado: horno de reverbero o lecho fluidizado.
-Producto: casiterita purificada + óxidos de impurezas.
-Reducción carbotérmica
+\subsection{Procesamiento pirometalúrgico.}
 
-Mineral tostado + coque + fundentes \ce{CaCO3, SiO2}.
+\subsubsection{Tostación oxidante (pretratamiento).}
 
-Horno principal:
+\paragraph{Proceso.} El concentrado se calienta en presencia de aire a \SIrange[range-phrase = { - }, range-units=single]{600}{800}{\celsius} para:
 
-Horno de reverbero (clásico).
+\begin{itemize}
+    \item Oxidar sulfuros a óxidos.
+    \item Volatilizar arsénico y antimonio como óxidos.
+    \item Mejorar la pureza del mineral para la reducción.
+\end{itemize}
 
-Horno eléctrico de arco (alta pureza).
-Escoria $\Rightarrow$ sílice + óxidos de Fe y Ca.
+\paragraph{Equipamiento.} Horno de reverbero o lecho fluidizado donde los gases calientes pasan sobre el mineral o a través de él.
 
-Se obtiene estaño crudo, con impurezas metálicas (Fe, Cu, As, Pb).
-Afinado (refining)
+\paragraph{Producto.} Casiterita purificada + óxidos de impurezas que se eliminan como gases o polvos.
 
-El Sn crudo se purifica por varias etapas:
+\subsubsection{Reducción carbotérmica.}
 
-Licuación
+\paragraph{Proceso.} El mineral tostado se mezcla con:
 
-Basada en diferencias de punto de fusión.
+\begin{itemize}
+    \item Coque (agente reductor).
+    \item Fundentes (\ce{CaCO3, SiO2}) para formar escoria fluida.
+    \item Se calienta a \SIrange[range-phrase = { - }, range-units=single]{1200}{1300}{\celsius}.
+\end{itemize}
 
-Impurezas como Fe, Cu y As se solidifican primero y se separan.
+\paragraph{Reacciones principales:}
 
-Oxidación selectiva
+\begin{itemize}
+    \item \ce{SnO2 + 2C \rightarrow Sn + 2CO}.
+    \item Las impurezas forman escoria con los fundentes.
+\end{itemize}
 
-Aire insuflado en el baño $\rightarrow$ oxida impurezas antes que el Sn.
+\paragraph{Equipamiento.}
 
-óxido $\rightarrow$ escoria
+\begin{itemize}
+    \item Horno de reverbero (método clásico).
+    \item Horno eléctrico de arco (para mayor pureza).
+\end{itemize}
 
-Electrorrefinación:
+\paragraph{Productos.}
 
-Anodo: Sn crudo
+\begin{itemize}
+    \item Estaño crudo líquido (\SIrange[range-phrase = { - }, range-units=single]{95}{98}{\percent} Sn).
+    \item Escoria (sílice + óxidos de \ce{Fe} y \ce{Ca}).
+\end{itemize}
 
-Catodo: Sn puro
+\subsection{Afinado (Refining).}
 
-Electrolito: \ce{H2SO4 + SnSO4}
+El estaño crudo obtenido tras la fusión se somete a varias etapas de afinado destinadas a elevar su pureza, separar impurezas (Fe, Cu, Pb, As, Sb) y recuperar subproductos valiosos.
 
-Se obtiene estaño refinado $\eqslantgtr$ 99.9\%
+\subsubsection{Licuación.}
 
-Procesos alternativos (hidrometalurgia)
+Consiste en calentar el estaño hasta poco por encima de su punto de fusión (\SI{231.9}{\celsius}) para aprovechar las diferencias de punto de fusión entre el Sn y ciertas impurezas. El estaño se funde mientras que impurezas más refractarias (o inclusiones sólidas) permanecen como fases sólidas o forman una capa de óxidos e impurezas (escoria superficial) que puede separarse mecánicamente. La licuación reduce contenido de elementos de alta temperatura de fusión y prepara el metal para etapas posteriores.
 
-Se aplican cuando la mena contiene mucha ganga compleja:
+\subsubsection{Oxidación selectiva y decantación de escorias.}
 
-Cloruración: \ce{SnO2 + C + Cl2 $\rightarrow$ SnCl4} (volátil). Luego reducción: \ce{SnCl4 + H2 $\rightarrow$ Sn + HCl}.
+Mediante insuflado de aire u oxígeno y la adición de fundentes (por ej. \ce{SiO2}, \ce{CaO}) se oxidarán preferentemente las impurezas (por ejemplo, As y Sb que tienden a formar \ce{As2O3}, \ce{Sb2O3}) y el hierro. Las óxidos formados pasan a la escoria, que se separa por diferencia de densidad. Es esencial controlar la temperatura y la actividad del oxígeno para minimizar la oxidación del propio estaño y evitar pérdidas por volatilización.
 
-Lixiviación con HCl + posterior cementación.
-(No son comunes a gran escala; predominan procesos pirometalúrgicos).
+\subsubsection{Electrorrefinación.}
 
-Hornos y equipos clave en estaño
+Para obtener estaño de alta pureza se emplean celdas electrolíticas donde:
+\begin{itemize}
+  \item Ánodo: estaño crudo (se oxida y pasa a la solución).
+  \item Cátodo: placa de estaño puro donde se deposita el metal refinado.
+  \item Electrolito: solución ácida que contiene sulfato de estaño, por ejemplo \ce{H2SO4 + SnSO4}.
+\end{itemize}
 
-Horno de tostación (reverbero / lecho fluidizado): elimina S, As, Sb.
+\subsubsection{Hornos y equipos clave.}
+\begin{itemize}
+  \item Hornos de tostación (reverbero o lecho fluidizado): eliminación de S, As y Sb por oxidación.
+  \item Hornos de fusión (reverbero, horno eléctrico de arco, crisoles): reducción carbotérmica y obtención de estaño crudo líquido.
+  \item Convertidores (ocasionales) para ajustes rápidos de Fe y S.
+  \item Celdas electrolíticas para el afinado final.
+  \item Sistemas de captura y tratamiento de gases (scrubbers, plantas de ácido sulfúrico) y de captura de polvos/escorias.
+\end{itemize}
 
-Horno de reverbero: reducción carbotérmica de \ce{SnO2}.
-
-Horno eléctrico: alternativa moderna para fundición más limpia.
-
-Convertidor (ocasional): para ajustar Fe y S en menas complejas.
-
-Celdas electrolíticas: afinado final para estaño de grado electrónico.
-
-Subproductos y consideraciones ambientales
-
-\ce{SO2} de tostación $\rightarrow$ planta de ácido sulfúrico o emisiones (requieren tratamiento).
-
-\ce{As2O3 y Sb2O3}: polvos tóxicos que deben recuperarse y manejarse con cuidado.
-
-Escorias: contienen algo de Sn $\rightarrow$ se reciclan (re-tratamiento por flotación o fundición).
+\subsubsection{Subproductos y consideraciones ambientales.}
+La tostación y la fusión generan \ce{SO2} y óxidos volátiles de As y Sb (\ce{As2O3}, \ce{Sb2O3}). Es práctica industrial:
+\begin{itemize}
+  \item Capturar \ce{SO2} y convertirlo en ácido sulfúrico cuando sea viable.
+  \item Recuperar y tratar los óxidos de arsénico/antimonio mediante sistemas de filtrado y recuperación (para evitar emisión de polvo tóxico).
+  \item Gestionar escorias y lodos anodicos: muchas contienen estaño residual y metales preciosos, por lo que suelen re-tratarse.
+\end{itemize}
 
 \section{Magnesio.}
 
- Minerales y materias primas
+\subsection{Minerales.}
 
-Dolomita \ce{(CaCO3*MgCO3)} $\rightarrow$ ruta pirometalúrgica.
+Se pueden dividir en varios grupos; donde principalmente tenemos a los carbonatados (los más importantes), y menos comunes, al mineral de hidróxido brucita [\ce{Mg(OH)2}] y a la carnalita. Otro método de obtención es el agua de mar ($\approx$ \SI{1,1}{\percent} en peso de \ce{Mg}), aunque por el poco contenido no es tan viable.
 
-Agua de mar / salmueras $\rightarrow$ ruta electrolítica.
+\subsubsection{Magnesita.}
 
-También carnallita \ce{(KMgCl3*6H2O)}, magnesita \ce{(MgCO3)}.
+Junto con la dolomita , son la principal fuente de magnesio. (\ce{MgCO3}).
 
-Ruta pirometalúrgica $\rightarrow$ Proceso Pidgeon
+\subsubsection{Dolomita.}
 
-Etapa 1: Calcinación
+\ce{MgCO3*CaCO3}.
 
-Dolomita en hornos rotatorios a \SIrange[range-phrase = { - }, range-units=single]{1000}{1100}{\celsius}
+\subsubsection{Carnalita.}
 
-Etapa 2: Reducción al vacío
+Es un mineral de haluro (\ce{KMgCl3*6H2O}).
 
-El óxido mixto (CaO*MgO) se mezcla con ferrosilicio como reductor y se introduce en retortas de acero refractario al vacío (\SIrange[range-phrase = { - }, range-units=single]{1200}{1250}{\celsius}, \SIrange{0.1}{1}{\pascal}).
+\subsection{Métodos de obtención.}
 
-Etapa 3: Condensación
+Aquí encontramos 2 rutas principales: mediante electrólisis y mediante el proceso Pidgeon. Cabe recalcar que la obtención por electrólisis es más costosa (pero también de mayor eficiencia), pero produce un magnesio de mayor pureza. Otra gran diferencia que creemos que hace falta mencionar, es que la electrólisis necesita de un mayor capital y energía para su funcionamiento, mientras que el proceso Pidgeon es más simple y económico aunque robusto.
 
-El Mg se sublima y condensa en cámaras refrigeradas formando coronas de Mg metálico.
+\subsubsection{Electrólisis.}
 
-Hornos/equipos usados:
+Para llevar a cabo el proceso, se parte de \ce{MgCl2} disociando el magnesio del gas cloruro en celdas electrolíticas.
+\[ \ce{MgCl2 \rightarrow Mg(l) + Cl2(g)}\]
+Estas celdas operan a \SIrange[range-phrase = { - }, range-units=single]{680}{750}{\celsius}, con ánodos de grafito y cátodos de acero.
 
-Horno rotatorio para calcinación.
+\subsubsection{Proceso Pidgeon.}
 
-Retortas al vacío (cilíndricas, horizontales) para reducción.
+Preparamos dolomita para calcinación obteniendo \ce{MgO} y \ce{CaO}, y estos son reducidos con una mezcla ferrosilicioso dando como resultado gas magnesio; así queda la reacción:
+\[ \ce{2CaO + 2MgO + Si -> 2Mg(g) + Ca2SiO4}\]
+Aunque existen otras variantes del proceso, esta es la más común. El magnesio gaseoso se condensa en cámaras refrigeradas formando coronas de magnesio metálico.
 
-Cámara de condensación para recolectar el metal.
-Ruta electrolítica
+\subsection{Hornos y equipos usados en la obtención de magnesio.}
+A continuación se describen los principales hornos y equipos empleados en las rutas pirometalúrgica (Pidgeon) y electrolítica para la obtención de magnesio, indicando su función, condiciones operativas típicas y consideraciones de seguridad.
 
-Etapa 1: Obtención de \ce{MgCl2}
+\subsubsection{Horno rotatorio de calcinación.}
 
-Agua de mar + cal $\rightarrow$ precipita \ce{Mg(OH)2}.
+\begin{itemize}
+  \item Función: descomposición térmica de carbonatos (dolomita, magnesita) para producir \ce{MgO} y eliminar CO\textsubscript{2}.
+  \item Condiciones típicas: \SIrange{1000}{1100}{\celsius}, atmósfera oxidante/neutra, residencia continua.
+\end{itemize}
 
-Se calcina con HCl $\rightarrow$ \ce{MgCl2} anhidro.
+\subsubsection{Retortas de reducción (horno Pidgeon).}
 
-Etapa 2: Electrólisis de \ce{MgCl2} fundido
+\begin{itemize}
+  \item Función: reducción del óxido de magnesio con ferrosilicio (o Si) bajo vacío o baja presión para producir \ce{Mg(g)} que luego se condensa.
+  \item Configuración: retortas de acero refractario (horizontales o verticales) agrupadas en un horno de bloqueo que permite calentamiento por combustión o resistencia.
+  \item Condiciones típicas: \SIrange{1200}{1250}{\celsius}, presiones de \SIrange[range-units=single]{0.1}{1}{\pascal} o vacío parcial; tiempos de residencia por batch de varias horas.
+\end{itemize}
 
-Celdas electrolíticas a \SIrange[range-phrase = { - }, range-units=single]{700}{750}{\celsius}, con ánodos de grafito y cátodos de acero
+\subsubsection{Cámaras de condensación (enfriamiento).}
 
-Equipos usados:
+\begin{itemize}
+  \item Función: condensar y recolectar el magnesio metálico que se genera en fase gaseosa desde las retortas.
+  \item Condiciones típicas: paredes refrigeradas por agua o sistemas criogénicos locales; diseño para minimizar reoxidación.
+\end{itemize}
 
-Cristalizadores, hornos de deshidratación para \ce{MgCl}.
+\subsubsection{Hornos de deshidratación y evaporadores para \ce{MgCl2}.}
 
-Celdas electrolíticas refractarias.
+\begin{itemize}
+  \item Función: secado/deshidratación de sales hidratadas (por ej. carnallita) hacia \ce{MgCl2} anhidro, etapa previa a la electrólisis.
+  \item Tipos: hornos rotatorios, lechos fluidizados o evaporadores a temperatura controlada.
+  \item Condiciones típicas: \SIrange[range-phrase = { - }, range-units=single]{200}{400}{\celsius} (dependiendo del método), atmósfera seca o con gas inerte para evitar hidrólisis.
+\end{itemize}
 
-Producto final
+\subsubsection{Celdas de electrólisis (hornos-celda) para \ce{MgCl2} fundido.}
 
-Magnesio metálico (pureza 99,8-99,95 \%).
+\begin{itemize}
+  \item Función: reducción electrolítica de \ce{Mg^{2+}} a Mg metálico en sales fundidas (ruta electrolítica).
+  \item Condiciones típicas: \SIrange[range-phrase = { - }, range-units=single]{680}{750}{\celsius}; ánodos de grafito, cátodos de acero; electrólito con \ce{MgCl2} y fundentes (\ce{NaCl}, \ce{KCl}).
+\end{itemize}
 
-Subproductos: \ce{Cl2} (usado para volver a producir \ce{MgCl2})
+\subsubsection{Hornos de fusión y crisoles (inductivos o resistivos).}
+
+\begin{itemize}
+  \item Función: fusión, refinado y colada del magnesio obtenido (remelting, ajustes de aleación).
+  \item Condiciones típicas: temperaturas ligeramente superiores al punto de fusión del Mg (\SI{\approx650}{\celsius}); atmósferas inertes o protección con mezclas \ce{SF6}/\ce{CO2} en pequeñas cantidades para evitar oxidación e incendios.
+\end{itemize}
+
+\subsubsection{Consideraciones generales de diseño.}
+\begin{itemize}
+  \item Control de atmósfera: uso de vacío o gases inertes para evitar reacciones indeseadas y reoxidación del Mg.
+  \item Gestión térmica: calores latentes y gradientes deben controlarse para evitar fracturas térmicas en retortas y condensadores.
+\end{itemize}
 
 \section{Titanio.}
 
-Minerales principales
+\subsection{Minerales principales.}
 
-Rutilo (\ce{TiO2}, 95-98 \% \ce{TiO2}).
+\subsubsection{Rutilo}
 
-Ilmenita (\ce{FeTiO3}, 45-65 \% \ce{TiO2}).
+\ce{TiO2}.
 
-Proceso Kroll (industrial dominante)
+\subsubsection{Ilmenita} 
 
-Etapa 1: Cloración
+También conocida como titanoferrita (\ce{FeTiO3}), es el mineral de titanio más abundante. Con un porcentaje de Ti de \SIrange[range-phrase = { - }, range-units=single]{45}{60}{\percent}, el resto \ce{Fe2O3}.
 
-Mineral concentrado + coque + \ce{Cl2} $\rightarrow$ \ce{TiCl4} (tetracloruro de titanio, volátil).
+\subsection{Procesos de obtención.}
 
-Horno: reactor de lecho fluidizado a \SIrange[range-phrase = { - }, range-units=single]{900}{1000}{\celsius}.
+Existen dos procesos principales para la obtención de titanio metálico a partir de sus minerales, dividos en 2 etapas, la carbo-cloración (etapa 1) y el proceso Kroll (etapa 2).
 
-Reacción:
+\subsubsection{Carbo-cloración.}
 
-Etapa 2: Purificación de \ce{TiCl4}
+La carbo-cloración es un proceso pirometalúrgico para obtener tetracloruro de titanio (\ce{TiCl4}) a partir de minerales de titanio (rutilo o ilmenita). Este proceso implica la reacción del mineral con cloro (\ce{Cl2}) y carbono (coque) a altas temperaturas, produciendo \ce{TiCl4} volátil y óxidos metálicos como subproductos.
 
-Destilación fraccionada para eliminar \ce{FeCl, VCl4}, etc.
+\[ \ce{TiO2 + 2Cl2 + C \rightarrow TiCl4(g) + CO2}\]
+Para partir de la ilmenita, esta debe ser enriquecida en \ce{TiO2} (\SI{>90}{\percent}).
 
-Etapa 3: Reducción con Mg
+Este proceso se lleva a cabo en un horno de lecho fluidizado a temperaturas entre \SIrange[range-phrase = { - }, range-units=single]{850}{1000}{\celsius}. El \ce{TiCl4} producido es volátil y se separa del resto de los productos sólidos.
 
-En reactores cerrados de acero, a \SIrange[range-phrase = { - }, range-units=single]{800}{900}{\celsius} bajo atmósfera inerte:
+\subsubsection{Proceso Kroll.}
 
-Se obtiene titanio esponjoso (sponge Ti) + \ce{MgCl2}.
+Es un proceso pirometalúrgico para la producción de titanio metálico a partir de tetracloruro de titanio (\ce{TiCl4}). El proceso implica la reducción de \ce{TiCl4} con magnesio (Mg) en un ambiente controlado para obtener titanio esponjoso (sponge Ti) y cloruro de magnesio (\ce{MgCl2}) como subproducto.
 
-Etapa 4: Purificación
+\[ \ce{TiCl4 + 2Mg ->[\text{\SI{825}{\celsius}}] Ti + 2MgCl2}\]
 
-El \ce{MgCl2} se separa por fusión y electrólisis (regenera Mg y \ce{Cl2}).
+El proceso Kroll se lleva a cabo en reactores cerrados de acero inoxidable a temperaturas entre \SIrange[range-phrase = { - }, range-units=single]{800}{850}{\celsius} bajo una atmósfera inerte (generalmente argón) para evitar la oxidación del titanio. El titanio esponjoso resultante se separa del \ce{MgCl2} y se somete a procesos adicionales de purificación y fusión para obtener lingotes de titanio metálico de alta pureza en los que no vamos a entrar porque creemos que no merece la pena.
 
-El Ti esponjoso se compacta y se funde.
+El titanio metálico obtenido es de alta pureza ($\approx$ \SIrange[range-phrase = { - }, range-units=single]{99,5}{99,7}{\percent}) y se utiliza en diversas aplicaciones industriales, incluyendo la fabricación de aleaciones ligeras y resistentes a la corrosión.
 
-Afinado y fusión
+\section{Referencias.}
 
-El Ti esponjoso se funde en hornos de arco eléctrico al vacío (VAR) o fusión por haz de electrones (EBM).
-
-Objetivo: remover gases \ce{(O2, N2, H2)} y lograr lingotes homogéneos.
-
-Producto final
-
-Titanio metálico (grado comercial 99,5 \%).
-
-
+\begin{itemize}
+    \item \url{https://www.uotechnology.edu.iq/dep-materials/english/lecture/thirdclass/Extractivemetallurgy2.pdf?utm_source=chatgpt.com}.
+    \item \url{https://www.britannica.com/technology/zinc-processing/Ores}.
+    \item \url{https://byjus.com/chemistry/zinc-extraction-metallurgy/?utm_source=chatgpt.com}.
+    \item \url{https://www.britannica.com/technology/magnesium-processing?utm_source=chatgpt.com}.
+    \item \url{https://cmscontent.nrs.gov.bc.ca/geoscience/publicationcatalogue/External/EXT096.pdf?utm_source=chatgpt.com}.
+    \item \url{https://www.mdpi.com/2075-163X/11/12/1425?utm_source=chatgpt.com}.
+    \item \url{https://en.wikipedia.org/wiki/Kroll_process?utm_source=chatgpt.com}.
+\end{itemize}
 
 \vfill
 \textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo.}}
