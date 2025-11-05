@@ -9,37 +9,91 @@
 \tableofcontents
 
 \begin{abstract}
-\underline{PASO 1:} Efectúe la búsqueda de las palabras clave (Tabla 5) en la bibliografía detallada en la Tabla 6. [NOTA: En la Tabla 7 se muestra un ejemplo con algunas palabras y algunas fuentes de información. ¡Solo un ejemplo! ¡Usted debe construir la propia!].
+
+\underline{PASO 1:} Efectúe la búsqueda de las palabras clave (\autoref{tab:traducciones}) en la bibliografía detallada en la \autoref{tab:libro}. [NOTA: En la Tabla 7 se muestra un ejemplo con algunas palabras y algunas fuentes de información. ¡Solo un ejemplo! ¡Usted debe construir la propia!].
 
 \underline{PASO 2:} Analice, investigue y reflexione sobre la relación de cada párrafo -en el que aparece la palabra clave- con el fenómeno de Falla de Material.
 
 \underline{REQUERIMIENTO:} Estar en capacidad de explicar la causa y el efecto de la Falla de Material desarrollada en dicho párrafo.
 
-\begin{table}
+\begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|}
-        \textbf{Español} & \textbf{Inglés}\footnote{Verifique la correcta traducción.} \\ \hline
-        falla/fallar & fail/failure \\ 
-        fallo & fail/failure \\
-        rompe/romper/romperse & break \\
-        rotura & rip \\
-        roto & broken \\
-        fractura & fracture \\
-        defecto & defect \\
-        imperfección & imperfection \\
-        deficiencia & deficiency \\
-        fatiga & fatigue \\
-        desgaste & wear \\
-        corrosión & corrosion \\
-        grieta & crack \\
-        agrietamiento & cracking \\
-        pierde & misses \\
-        perder & to lose \\
-        ...\footnote{\label{note:unica}Incorpore otras palabras que sean de su interés.}... & ...... \\
+    % El ancho de 5cm permite que el texto se ajuste.
+    \begin{tabular}{|p{5cm}|p{5cm}|} 
+        \hline
+        % Insertamos la primera nota de pie al final del encabezado "Inglés"
+        \textbf{Español} & \textbf{Inglés}\textsuperscript{1} \\ 
+        \hline
+        
+        % Columna Español (con saltos de línea)
+        falla / fallar \par fallo \par rompe / romper / romperse \par rotura \par
+        roto \par
+        fractura \par
+        defecto \par
+        imperfección \par
+        deficiencia \par
+        fatiga \par
+        desgaste \par
+        corrosión \par
+        grieta \par
+        agrietamiento \par
+        pierde \par
+        perder \par
+        ...\textsuperscript{2}...
+        & 
+        % Columna Inglés (con saltos de línea, alineada)
+        fail / failure \par
+        failure \par
+        break \par
+        rip \par
+        broken \par
+        fracture \par
+        defect \par
+        imperfection \par
+        deficiency \par
+        fatigue \par
+        wear \par
+        corrosion \par
+        crack \par
+        cracking \par
+        misses \par
+        to lose \par
+        ...\textsuperscript{2}...
+        \\ 
+        \hline
+        
+        % Fila para la segunda nota: Usamos \multicolumn para hacer que la nota ocupe ambas celdas
+        \multicolumn{2}{|p{10cm}|}{\textbf{Nota:} \par \textsuperscript{1} Verifique la correcta traducción. \par \textsuperscript{2} Incorpore otras palabras que sean de su interés.} \\
+        \hline
     \end{tabular}
+    \caption{Palabras Clave.}
+    \label{tab:traducciones}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|} 
+        \hline
+        Callister, D. W. - Introducción a la Ciencia e Ingeniería de los Materiales - 1995 [Caso 2025] \\
+        \hline
+    \end{tabular}
+    \caption{Bibliografía para búsqueda \{MM-CAD-0.0.0\}.}
+    \label{tab:libro}
 \end{table}
 
 \end{abstract}
+
+\section{Introducción.}
+
+Como se pudo ver en el resumen, a nosotros nos tocó el libro de Callister (1995). Donde ahí tuvimos que buscar las palabras claves dadas por la cátedra.
+
+\section{Desarrollo.}
+
+Para ello, hemos usado la ayuda de ChatGPT para hacer un código en \textit{Python} que nos ayudara a buscar las palabras claves.
+
+El código consta de usar la librería \textit{pdf2image} y el motor \textit{pytesseract} con la ayuda de OCR (\textit{Optical Character Recognition} por sus siglas en inglés) para convertir las páginas del libro en imágenes y luego extraer el texto de esas imágenes. Luego pasamos todo eso a un archivo .txt donde buscamos las palabras claves.
+
+Y a continuación, mostramos los resultados obtenidos.
 
 
 
