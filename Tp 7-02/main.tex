@@ -1,81 +1,36 @@
 \documentclass[12pt,a4paper]{article}
 
-% Paquetes de configuración del documento
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[margin=3cm]{geometry}
-\usepackage{fancyhdr}
-\usepackage{siunitx}
-\sisetup{per-mode=symbol}
-\usepackage[version=4]{mhchem}
-%Paquetes para simbologia%
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{textgreek}
-\usepackage{physics}
-\usepackage{longtable}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{float}
-\usepackage{xurl}
-\usepackage[colorlinks=true,
-            linkcolor=black,
-            urlcolor=myblue,
-            citecolor=black,
-            filecolor=black]{hyperref}
- % Opción estándar para enlaces
-\Urlmuskip=0mu plus 1mu          % Mejora el espaciado para permitir cortes
-\usepackage{subcaption}  % en el preámbulo
-\usepackage{pgfplots}
-\usepackage{pdfpages}
-\pgfplotsset{compat=1.18}
-\usepackage{tikz}
-\usepackage{xcolor}
-\definecolor{myblue}{RGB}{42, 127, 179}
-\usepackage{multirow}
-\usepackage{tabularx}
-
-% Encabezado
-\pagestyle{fancy}
-\lhead{\textit{Ingeniería Mecánica}}
-\chead{\textit{Materiales Metálicos}}
-\rhead{\textit{UTN-FRVM}}
+\include{paquetes}
 
 \begin{document}
+
 \include{Portada}
+\newpage
 \tableofcontents
 
 \begin{abstract}
     \underline{\textbf{Requerimiento del Trabajo:}} Analice, investigue e interprete el contenido relacionado con los Casos Prácticos de las fuentes de información que se indican a continuación a fin de adquirir y efectuar una explicación detallada de los mismos. [NOTA: Anualmente, la Cátedra asignará los Casos de Estudio a cada equipo de trabajo].\\
     
     \begin{itemize}
-        \item Ashby, M.F. y Jones, D.R.H. Materiales para Ingeniería 1.
-        \item Cap. 7 Casos prácticos de diseño limitado por
-el módulo (pp. 85-95).
-        \item Cap. 12 Casos prácticos de diseño
-según el límite elástico (pp. 153-165).
-        \item Cap. 15 Casos prácticos
-de fractura rápida (pp. 191-207).
-        \item Cap 19 Casos prácticos de
-diseño a fatiga (pp. 251-270).
-        \item Cap. 29 Casos prácticos de
-fricción y desgaste (pp. 395-390).
-        \item Cap. 30 Caso práctico final: materiales y energía en el diseño de coches (pp. 400-410).
-
+        \item Ashby, M.F. y Jones, D.R.H. Materiales para Ingeniería 1. 1ra Edición. 2009. Cap. 7 Casos prácticos de diseño limitado por el módulo (pp. 85-95), Cap. 12 Casos prácticos de diseño según el límite elástico (pp. 153-165), Cap. 15 Casos prácticos de fractura rápida (pp. 191-207), Cap 19 Casos prácticos de diseño a fatiga (pp. 251-270), Cap. 29 Casos prácticos de fricción y desgaste (pp. 395-390) y Cap. 30 Caso práctico final: materiales y energía en el diseño de coches (pp. 400-410) \{MM-CAD-0.0.0\}.
+        \begin{itemize}
+                \item 15.5 Caso práctico 4: colapso de la barandilla de madera de una terraza [Caso 2025].
+        \end{itemize}
     \end{itemize}
 \end{abstract}
 
 \section{Introducción.}
-En muchas estructuras se requiere que una viga soporte una cierta carga F sin que
-deflecte más de una cierta cantidad, δ. Si además la viga forma parte de un sistema de transporte –un aeroplano, un cohete, un tren– o cualquier cosa que se mueva o transporte –como por ejemplo una mochila–, entonces también es deseable minimizar su peso.\\
-A continuación vamos a considerar el caso de una viga en voladizo simple, de sección cuadrada, y analizaremos los requisitos que debe cumplir el material para minimizar su peso dada una cierta rigidez. Los resultados son generalizables a cualquier tipo de viga de sección cuadrada y pueden adaptarse fácilmente a otras formas: tubos, cajas, vigas en I, etc.
-\section{Modelo matemático}
-    Para el desarrollo del caso debemos tener algunas cosas en cuenta; las variables independientes son el peso que se le aplica a la viga y el material. Estas variables hacen de base para el modelo que se utiliza para analizar en el MatWeb.\\
 
-    FALTA TERMINAR
+En muchas estructuras se requiere que una viga soporte una cierta carga F sin que deflecte más de una cierta cantidad, $\delta$. Si además la viga forma parte de un sistema de transporte -un aeroplano, un cohete, un tren- o cualquier cosa que se mueva o transporte -como por ejemplo una mochila-, entonces también es deseable minimizar su peso.
+
+A continuación vamos a considerar el caso de una viga en voladizo simple, de sección cuadrada, y analizaremos los requisitos que debe cumplir el material para minimizar su peso dada una cierta rigidez. Los resultados son generalizables a cualquier tipo de viga de sección cuadrada y pueden adaptarse fácilmente a otras formas: tubos, cajas, vigas en I, etc.
+
+\section{Modelo matemático.}
+
+Para el desarrollo del caso debemos tener algunas cosas en cuenta; las variables independientes son el peso que se le aplica a la viga y el material. Estas variables hacen de base para el modelo que se utiliza para analizar en el MatWeb.
+
+%---ACÁ FALTA DE TERMINAR---
+
 \newpage
 \vfill
 \textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo; y la búsqueda de información para complementar la dada por la cátedra.}}
