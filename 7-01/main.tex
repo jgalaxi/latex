@@ -156,6 +156,25 @@ Resultados de dureza obtenidos a lo largo de la probeta:
     \caption{Resultados de la dureza en el ensayo Jominy.}
 \end{table}
 
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={x}
+        ylabel={y}
+        title={Ensayo Jominy},
+        only marks
+    ]
+    \addplot[
+        only marks,
+        mark=*,
+        blue
+    ] table[
+        col sep=comma,
+        x=1,
+        y=2
+    ] {latex/7-01/tablita.csv};
+    \end{axis}
+\end{tikzpicture}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Imagenes/Jominy.png}
