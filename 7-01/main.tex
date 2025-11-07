@@ -31,6 +31,39 @@ Las piezas ensayadas fueron 12 probetas obtenidas de 3 macizos de seccion redond
 
 
 \subsection{Tratamientos termicos.}
+Antes de describir lo que se hizo en los ensayos es necesario ver unas definiciones:
+
+\subsubsection{Definiciones:}
+
+\begin{itemize}
+    \item \textbf{Recocido (Annealing):}
+\end{itemize}
+
+El recocido es un proceso térmico que generalmente consiste en calentar un producto siderúrgico durante cierto tiempo a una temperatura que suele ser mayor que la del punto crítico superior (A3 o Acm), para luego dejarlo enfriar según una ley de enfriamiento impuesta seleccionada, casi siempre dentro del horno.
+
+Alternativamente, un calentamiento seguido de un enfriamiento lo suficientemente lento para permitir que las reacciones de transformación completa conduzcan a un equilibrio metaestable.
+
+\begin{itemize}
+    \item \textbf{Normalizado (Normalizing):}
+\end{itemize}
+
+El normalizado es un tratamiento térmico que consiste en calentar un producto siderúrgico durante cierto tiempo a una temperatura superior al punto crítico superior (A3 o Acm) para luego enfriarlo al aire tranquilo. La velocidad de enfriamiento en el normalizado es más lenta que en el templado, pero más rápida que en el recocido.
+
+\begin{itemize}
+    \item \textbf{Templado (Quenching):}
+\end{itemize}
+
+El temple es un tratamiento térmico cuyo objeto principal es endurecer y aumentar la resistencia de los aceros.
+
+El proceso consiste en calentar el acero a una temperatura generalmente más elevada que la crítica superior (temperatura de austenización), mantenerlo durante un tiempo conveniente y luego enfriarlo bruscamente. Este enfriamiento rápido se realiza en un medio conveniente (como agua, aceite o un fluido refrigerante) para impedir la transformación inversa.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imagenes/tratamientoster.png}
+    \caption{Como la velocidad de enfriamiento afecta al tratamiento termico.}
+    \label{fig:tratamientos}
+\end{figure}
+\subsubsection{Procedimiento:}
 A todas las piezas se les realizo un tratamiento termico en siendo calentadas en un horno a \SI{850}{\degreeCelsius} durante 3 horas, la probeta del jominy se retiro al estar lista para hacer su ensayo.
 
 Para el resto de probetas lo que se hizo fue separandolas en 4 grupos de tres con los 3 distintos materiales en cada grupo se les aplico distintos tipos de enfriamiento.
@@ -43,6 +76,13 @@ Para el resto de probetas lo que se hizo fue separandolas en 4 grupos de tres co
 
 \subsection{Jominy.}
 El ensayo Jominy, nos permite conocer con mucha aproximacion, la dureza maxima y minima que la pieza adquirira en el temple y que tanta va a ser la penetracion del mismo (templabilidad).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imagenes/jominyjoestar.png}
+    \caption{esquema de montaje y probeta para el ensayo Jominy.}
+    \label{fig:EsqJominy.}
+\end{figure}
 
 Al sacar la probeta usada para este ensayo, del horno, se le coloco en un soporte en donde recibe un chorro de agua por la parte de debajo durante 20 minutos, generando un tratamiento termico asimetrico.
 
@@ -116,6 +156,25 @@ Resultados de dureza obtenidos a lo largo de la probeta:
     \caption{Resultados de la dureza en el ensayo Jominy.}
 \end{table}
 
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={x}
+        ylabel={y}
+        title={Ensayo Jominy},
+        only marks
+    ]
+    \addplot[
+        only marks,
+        mark=*,
+        blue
+    ] table[
+        col sep=space,
+        x=mm,
+        y=hrc
+    ] {7-01/tablita.csv};
+    \end{axis}
+\end{tikzpicture}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Imagenes/Jominy.png}
@@ -134,5 +193,15 @@ A partir de este razonamiento lo proximo que se hizo fue comparar los resultados
 
 Se utilizaron las hojas IRAM para aceros de construccion para poder comparar valores y se utilizo una tabla de conversion de durezas HRB a HB (la dureza que aparece en las hojas), para poder comparar los valores. 
 
-El material 3 tiene valores de dureza para el normalizado que entran en el rango del acero 1008, siendo el unico acero al carbono que coincide con este valor normalizado (para acero de bajo carbono no hay valores de templado y por debajo del 1020 no hay valores de dureza en recocido), en cualquier caso es un valor con sentido debido sus valores de dureza parecen aumentar con los diferentes tratamientos termicos no por un cambio de estructura a martensita, sino por un cambio en el tamaño del grano debido a la velocidad de enfriamiento.
+El material 3 tiene valores de dureza para el normalizado que entran en el rango del acero IRAM 1008 y el IRAM 1010, siendo los unicos acero al carbono que coincide con este valor normalizado (para acero de bajo carbono no hay valores de templado y por debajo del 1020 no hay valores de dureza en recocido), en cualquier caso es un valor con sentido debido sus valores de dureza parecen aumentar con los diferentes tratamientos termicos no por un cambio de estructura a martensita, sino por un cambio en el tamaño del grano debido a la velocidad de enfriamiento.
+
+En cambio tanto el material 1 y el 2 caen entre los valores de los aceros IRAM 1045 al IRAM 1035, siendo probable que si fuesen aceros distintos el material 2 seria el de mas bajo carbono debido a que en casi todos los ensayos muestra una dureza media menor que el material 1, y esto tiene sentido debido a la gran dureza adquirida por las dos probetas al sufrir un enfriamiento muy brusco al ser sumergidas en agua, como se ve en el anexo 1, la velocidad de enfriamiento en los aceros de bajo carbono tiene que ser alta para alcanzar estructuras martensiticas.
+
+\subsection{Jominy.}
+
+La misma logica aplicada para las probetas de los tratamientos termicos se aplico a la probeta del ensayo Jominy, por lo que se parte desde la premisa de que es un acero al carbono, pero hubo un problema y es que en las hojas IRAM, no tienen las curvas de los ensayos Jominy para aceros al carbono de menos de 0,5\% de carbono, pero igualmente con la curva de templabilidad del acero 1050 (anexo 2) se puede observar su similitud con los resultados de la probeta ensayada en el hecho de empezar con una durezas altas para luego tener una caida rapida de las durezas, pero como tambien se observa la maxima dureza que adquiere el 1050 es de 61 HRC en cambio en nuestra probeta es 53 HRC, por lo que la probeta tiene que tener un menor contenido de carbono, ahora al observar las probetas de los tratamientos termicos que fueron templadas en agua, vemos que la dureza promedio que adquirieron ronda los 53 HRC, pero la probeta del jominy, fue templada en la base con agua agitada, a diferencia de las otras probetas, que fueron templadas en agua quieta. Esto es importante porque el agua agitada tiene mayor "capacidad de enfriamiento" que el agua en reposo, por lo que la probeta del Jominy en su base podria haber sido capaz que atrapar estructuras mas duras que las otras probetas, pero no parece ser el caso, por lo que debe de ser un acero con menor contenido de carbono que las otras probetas, estando posiblemente entre un acero IRAM 1040 Y 1020.
+
+\section{Anexos.}
+\includepdf[pages=5]{pdf/1045.pdf}
+\includepdf[pages=6]{pdf/1050.pdf}
 \end{document}

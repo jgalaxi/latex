@@ -127,12 +127,31 @@ Los beneficios principales del temple superficial son:
     \item Generación de tensiones residuales compresivas en la superficie.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{fig9.png}
+    \includegraphics[width=0.75\textwidth]{fig9.png}
     \caption{Influencia del espesor endurecido en la resistencia a flexión \cite{sturla}.}
     \label{fig:flexion}
 \end{figure}
+
+\subsection{Fallas asociadas al temple superficial.}
+
+El proceso de temple superficial, aunque es efectivo, puede presentar defectos si no se controlan adecuadamente las variables de calentamiento, enfriamiento y composición del acero.
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \begin{tabular}{|C{3cm}|C{3.3cm}|C{2.4cm}|C{4.5cm}|}
+        \hline
+        \textbf{Falla} & \textbf{Causa principal} & \textbf{Consecuencia} & \textbf{Prevención/solución} \\ \hline
+        \textbf{Grietas del temple} & Enfriamiento brusco que genera tensiones internas elevadas (> \SI{1000}{\mega\pascal}). & Fractura prematura bajo carga o impacto. & Revenido inmediato (\SIrange[range-units=single, range-phrase={ - }]{200}{300}{\celsius}) para relajar tensiones. Control de velocidad de enfriamiento. \\ \hline
+        \textbf{Distorsión o alabeo} & Calentamiento irregular (especialmente en llama oxiacetilénica). & Pérdida de tolerancias dimensionales. & Usar métodos de alta precisión (inducción o láser). Diseño de soporte durante el enfriamiento. \\ \hline
+        \textbf{Manchas suaves  (soft spots)} & Enfriamiento insuficiente en zonas localizadas (obstrucción del chorro de agua). & Zonas de baja dureza $\rightarrow$ desgaste localizado. & Asegurar flujo uniforme del medio de enfriamiento (agua/polímero). Limpieza previa de la superficie. \\ \hline
+        \textbf{Sobrecalentamiento} & Temperatura > \SI{950}{\celsius} o tiempo de calentamiento excesivo. & Crecimiento de grano austenítico $\rightarrow$ martensita frágil. & Control estricto de potencia y tiempo (inducción: frecuencia alta, potencia baja). \\ \hline
+        \textbf{Oxidación / Descarburación} & Exposición prolongada al aire a alta temperatura. & Capa superficial débil, menor dureza y resistencia a corrosión. & Usar atmósfera controlada o recubrimientos protectores. Reducir el tiempo de calentamiento. \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \section{Conclusiones.}
 
