@@ -27,10 +27,31 @@ A continuación vamos a considerar el caso de una viga en voladizo simple, de se
 
 \section{Modelo matemático.}
 
-Para el desarrollo del caso debemos tener algunas cosas en cuenta; las variables independientes son el peso que se le aplica a la viga y el material. Estas variables hacen de base para el modelo que se utiliza para analizar en el MatWeb.
-
-%---ACÁ FALTA DE TERMINAR---
-
+Para los calculos y la seleccion de materiales se tiene el seiguiente modelo matemático donde la masa M de la viga, depende de la densidad $\rho$ y el modulo de elasticidad E del material según la siguiente ecuación:
+\begin{equation}
+     M = ({\frac{\rho{^2}}{E}})^{1/2}
+\end{equation}
+El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro de selección de materiales, para esto utilzaremos el diagrama de Ashby de densidad vs modulo de elasticidad para diferentes materiales (Figura 1).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/Ashby_E_vs_rho.png}
+    \caption{Diagrama de Ashby de densidad vs modulo de elasticidad para diferentes materiales.}
+    \label{fig:ashby}
+    \end{figure}
+\subsection{Modelado del problema}
+Para modelar el problema, se debe calcular el valor del parametro de selección de materiales M para cada material del diagrama de Ashby, y luego seleccionar aquellos materiales que tengan el valor más bajo de M, ya que esto indicará que tienen la menor masa para una rigidez dada.\\
+Para esto realizamos un codigo de matlab que nos ayuda a simular el problema con siertos materiales patrones, los resultados mostrados de la simulacion nos permiten identificar los materiales que cumplen con el objetivo de minimizar la masa M y los inconvenientes que pueden presentar (Figura 2).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/IndMatlab.png}
+    \caption{Efficiencia Rigidez / Peso de materiales.}
+    \label{fig:ashby}
+    \end{figure}
+\subsection{Resultados y análisis.}
+Segun el grafico resultado de la simulacion, los materiales que presentan un mejor resdimiento en cuanto a rigidez/peso son las maderas y las aleaciones de aluminio, estos dos materiales se puede considerar mejores que el acero para este caso particular, pero los mismos presentan ciertos inconvenientes, como la resistencia a la humedad en el caso de la madera y el costo en el caso del aluminio.\\
+\subsubsection{Problemas dimecionales}
+Si bien el acero es peor en rendimiento rigidez/peso que los nombrados anteriormente, este material en la construccion significa un mayor aprovechamiento del espacio, ya que al ser mas resistente permite reducir las dimensiones de la viga, lo que puede ser un factor importante en ciertos diseños.\\
+    
 \newpage
 \vfill
 \textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo; y la búsqueda de información para complementar la dada por la cátedra.}}
