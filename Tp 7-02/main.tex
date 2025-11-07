@@ -3,13 +3,13 @@
 \include{paquetes}
 
 \begin{document}
-
 \include{Portada}
+
 \newpage
 \tableofcontents
 
 \begin{abstract}
-    \underline{\textbf{Requerimiento del Trabajo:}} Analice, investigue e interprete el contenido relacionado con los Casos Prácticos de las fuentes de información que se indican a continuación a fin de adquirir y efectuar una explicación detallada de los mismos. [NOTA: Anualmente, la Cátedra asignará los Casos de Estudio a cada equipo de trabajo].\\
+    \underline{\textbf{Requerimiento del Trabajo:}} Analice, investigue e interprete el contenido relacionado con los Casos Prácticos de las fuentes de información que se indican a continuación a fin de adquirir y efectuar una explicación detallada de los mismos. [NOTA: Anualmente, la Cátedra asignará los Casos de Estudio a cada equipo de trabajo].
     
     \begin{itemize}
         \item Ashby, M.F. y Jones, D.R.H. Materiales para Ingeniería 1. 1ra Edición. 2009. Cap. 7 Casos prácticos de diseño limitado por el módulo (pp. 85-95), Cap. 12 Casos prácticos de diseño según el límite elástico (pp. 153-165), Cap. 15 Casos prácticos de fractura rápida (pp. 191-207), Cap 19 Casos prácticos de diseño a fatiga (pp. 251-270), Cap. 29 Casos prácticos de fricción y desgaste (pp. 395-390) y Cap. 30 Caso práctico final: materiales y energía en el diseño de coches (pp. 400-410) \{MM-CAD-0.0.0\}.
@@ -36,21 +36,23 @@ El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro
     \centering
     \includegraphics[width=1\textwidth]{imagenes/Ashby_E_vs_rho.png}
     \caption{Diagrama de Ashby de densidad vs modulo de elasticidad para diferentes materiales.}
-    \label{fig:ashby}
+    \label{fig:ashby1}
     \end{figure}
 \subsection{Modelado del problema}
-Para modelar el problema, se debe calcular el valor del parametro de selección de materiales M para cada material del diagrama de Ashby, y luego seleccionar aquellos materiales que tengan el valor más bajo de M, ya que esto indicará que tienen la menor masa para una rigidez dada.\\
+Para modelar el problema, se debe calcular el valor del parametro de selección de materiales M para cada material del diagrama de Ashby, y luego seleccionar aquellos materiales que tengan el valor más bajo de M, ya que esto indicará que tienen la menor masa para una rigidez dada.
+
+
 Para esto realizamos un codigo de matlab que nos ayuda a simular el problema con siertos materiales patrones, los resultados mostrados de la simulacion nos permiten identificar los materiales que cumplen con el objetivo de minimizar la masa M y los inconvenientes que pueden presentar (Figura 2).
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{imagenes/IndMatlab.png}
     \caption{Efficiencia Rigidez / Peso de materiales.}
-    \label{fig:ashby}
+    \label{fig:matlab}
     \end{figure}
 \subsection{Resultados y análisis.}
-Segun el grafico resultado de la simulacion, los materiales que presentan un mejor resdimiento en cuanto a rigidez/peso son las maderas y las aleaciones de aluminio, estos dos materiales se puede considerar mejores que el acero para este caso particular, pero los mismos presentan ciertos inconvenientes, como la resistencia a la humedad en el caso de la madera y el costo en el caso del aluminio.\\
+Segun el grafico resultado de la simulacion, los materiales que presentan un mejor rendimiento en cuanto a rigidez/peso son las maderas y las aleaciones de aluminio. Estos dos materiales se pueden considerar mejores que el acero para este caso particular. Sin embargo, presentan ciertos inconvenientes: la madera tiene problemas de resistencia a la humedad y el aluminio puede ser más costoso.
 \subsubsection{Problemas dimecionales}
-Si bien el acero es peor en rendimiento rigidez/peso que los nombrados anteriormente, este material en la construccion significa un mayor aprovechamiento del espacio, ya que al ser mas resistente permite reducir las dimensiones de la viga, lo que puede ser un factor importante en ciertos diseños.\\
+Si bien el acero es peor en rendimiento rigidez/peso que los nombrados anteriormente, este material en la construccion significa un mayor aprovechamiento del espacio, ya que al ser mas resistente permite reducir las dimensiones de la viga, lo que puede ser un factor importante en ciertos diseños.
     
 \newpage
 \vfill
