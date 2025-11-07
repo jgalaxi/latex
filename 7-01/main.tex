@@ -1,8 +1,8 @@
 \documentclass[12pt,a4paper]{article}
 
 \include{paquetes}
-\usepackage[backend=biber, style=numeric, sorting=none]{biblatex} % Bibliografía
-\addbibresource{bibliografia.bib}
+\usepackage{pgfplots} % Gráficas
+\pgfplotsset{compat=1.18}
 
 \begin{document}
 \include{Portada}
@@ -156,24 +156,33 @@ Resultados de dureza obtenidos a lo largo de la probeta:
     \caption{Resultados de la dureza en el ensayo Jominy.}
 \end{table}
 
-\begin{tikzpicture}
-    \begin{axis}[
-        xlabel={x}
-        ylabel={y}
-        title={Ensayo Jominy},
-        only marks
-    ]
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+        width=11cm,
+        height=11cm,
+        axis lines = left,
+        xmin=0,xmax=70,
+        ymin=0,ymax=60,
+        ytick={0,5,10,15,20,25,30,35,40,45,50,55,60},
+        xlabel=\si{\milli\metre} (desde la base),
+        ylabel={Dureza Rockwell C(HRC)},
+        grid=both,
+        grid style=dashed
+        ]
     \addplot[
-        only marks,
-        mark=*,
-        blue
-    ] table[
-        col sep=space,
-        x=mm,
-        y=hrc
-    ] {7-01/tablita.csv};
-    \end{axis}
-\end{tikzpicture}
+      color=red,
+      mark=square*
+    ]
+    table[
+      col sep=comma,
+      x=mm,
+      y=hrc
+    ] {tablita.csv};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
 
 \begin{figure}[H]
     \centering
