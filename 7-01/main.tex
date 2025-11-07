@@ -22,16 +22,93 @@ ENSAYOS A REALIZAR:
     \item Chispa
 \end{itemize}
 \end{abstract}
+\newpage
 
 \section{Introducción.}
-En el presente trabajo se expondran los resultados obtenidos de los ensayos de dureza Rockwell, tratamiento termico y Jominy realizados en el laboratorio y con esos datos se analizara que materiles podrian ser los trabajados durante los ensayos del laboratorio.
+En el presente trabajo se expondrán los resultados obtenidos de los ensayos de dureza Rockwell, tratamiento térmico y Jominy realizados en el laboratorio. A partir de estos datos experimentales, se realizará un análisis detallado para identificar los posibles materiales empleados durante los ensayos, considerando las propiedades mecánicas obtenidas y su comportamiento frente a los diferentes tratamientos térmicos aplicados.
+
+La caracterización de materiales mediante ensayos mecánicos y térmicos es fundamental en la industria metalúrgica, ya que permite:
+\begin{itemize}
+    \item Verificar el cumplimiento de especificaciones técnicas
+    \item Predecir el comportamiento en servicio
+    \item Optimizar procesos de manufactura
+    \item Investigar fallas y realizar control de calidad
+    \item Desarrollar nuevos materiales y tratamientos
+\end{itemize}
 
 \section{Ensayos.}
+
 Las piezas ensayadas fueron 12 probetas obtenidas de 3 macizos de seccion redonda (4 piezas cada redondo) de materiales distintos y una probeta mecanizada para el ensayo jominy.
 
-
 \subsection{Tratamientos termicos.}
-Antes de describir lo que se hizo en los ensayos es necesario ver unas definiciones:
+
+Antes de describir lo que se hizo en los ensayos es necesario ver unas definiciones fundamentales relacionadas con los tratamientos térmicos en aceros. Los tratamientos térmicos son procesos controlados de calentamiento y enfriamiento que se aplican a los materiales metálicos para modificar su microestructura y, por ende, sus propiedades mecánicas.
+
+Los principales objetivos de los tratamientos térmicos son:
+
+\begin{itemize}
+    \item Aumentar o disminuir la dureza.
+    \item Mejorar las propiedades mecánicas.
+    \item Modificar la microestructura.
+    \item Eliminar tensiones residuales.
+    \item Mejorar la maquinabilidad.
+\end{itemize}
+
+Las variables más importantes que afectan a los tratamientos térmicos son:
+
+\begin{itemize}
+    \item Temperatura máxima alcanzada.
+    \item Tiempo de permanencia a dicha temperatura.
+    \item Velocidad de calentamiento.
+    \item Velocidad de enfriamiento.
+    \item Medio de enfriamiento utilizado.
+    \item Composición química del material.
+\end{itemize}
+
+\subsubsection{Fundamentos metalúrgicos:}
+
+Para comprender los tratamientos térmicos es necesario entender algunos conceptos básicos:
+
+\begin{itemize}
+    \item \textbf{Austenita:} Fase del acero con estructura cristalina FCC (cúbica centrada en las caras) que se forma a alta temperatura. Es capaz de disolver gran cantidad de carbono.
+    \item \textbf{Ferrita:} Fase del acero con estructura BCC (cúbica centrada en el cuerpo) presente a temperatura ambiente. Tiene baja solubilidad de carbono.
+    \item \textbf{Cementita:} Carburo de hierro (\ce{Fe3C}) duro y frágil que se forma cuando el carbono excede el límite de solubilidad.
+    \item \textbf{Perlita:} Estructura laminar compuesta por ferrita y cementita que se forma durante un enfriamiento lento.
+    \item \textbf{Martensita:} Fase metaestable muy dura que se forma por enfriamiento rápido de la austenita.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Imagenes/micrografias.png}
+    \caption{Microestructuras metalúrgicas comunes en aceros.}
+    \label{fig:estructuras}
+\end{figure}
+
+La transformación de estas fases depende de varios factores:
+
+\begin{itemize}
+    \item \textbf{Composición química:} El contenido de carbono y elementos aleantes afecta las temperaturas de transformación y la templabilidad.
+    \item \textbf{Temperatura de austenización:} Determina la cantidad de carbono que puede disolverse en la austenita.
+    \item \textbf{Tiempo de permanencia:} Influye en la homogeneización de la austenita y el tamaño de grano.
+    \item \textbf{Velocidad de enfriamiento:} Define las estructuras finales que se formarán (perlita, bainita o martensita).
+\end{itemize}
+
+\subsubsection{Diagrama Fe-C:}
+
+El diagrama hierro-carbono es fundamental para entender los tratamientos térmicos. Los puntos críticos más importantes son:
+
+\begin{itemize}
+    \item \textbf{A\textsubscript{1} (\SI{727}{\celsius}):} Temperatura eutectoide donde la perlita se transforma en austenita durante el calentamiento.
+    \item \textbf{A\textsubscript{3}:} Temperatura donde comienza la transformación de ferrita en austenita (varía según el contenido de carbono).
+    \item \textbf{A\textsubscript{cm}:} Línea que marca el límite de solubilidad del carbono en la austenita.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imagenes/diagrama_de_fase.png}
+    \caption{Diagrama de fases hierro-carbono (Nótese las temperaturas anteriormente mencionadas).}
+    \label{fig:Fe-C}
+\end{figure}
 
 \subsubsection{Definiciones:}
 
@@ -39,7 +116,7 @@ Antes de describir lo que se hizo en los ensayos es necesario ver unas definicio
     \item \textbf{Recocido (Annealing):}
 \end{itemize}
 
-El recocido es un proceso térmico que generalmente consiste en calentar un producto siderúrgico durante cierto tiempo a una temperatura que suele ser mayor que la del punto crítico superior (A3 o Acm), para luego dejarlo enfriar según una ley de enfriamiento impuesta seleccionada, casi siempre dentro del horno.
+El recocido es un proceso térmico que generalmente consiste en calentar un producto siderúrgico durante cierto tiempo a una temperatura que suele ser mayor que la del punto crítico superior (A\textsubscript{3} o A\textsubscript{cm}), para luego dejarlo enfriar según una ley de enfriamiento impuesta seleccionada, casi siempre dentro del horno.
 
 Alternativamente, un calentamiento seguido de un enfriamiento lo suficientemente lento para permitir que las reacciones de transformación completa conduzcan a un equilibrio metaestable.
 
@@ -47,7 +124,7 @@ Alternativamente, un calentamiento seguido de un enfriamiento lo suficientemente
     \item \textbf{Normalizado (Normalizing):}
 \end{itemize}
 
-El normalizado es un tratamiento térmico que consiste en calentar un producto siderúrgico durante cierto tiempo a una temperatura superior al punto crítico superior (A3 o Acm) para luego enfriarlo al aire tranquilo. La velocidad de enfriamiento en el normalizado es más lenta que en el templado, pero más rápida que en el recocido.
+El normalizado es un tratamiento térmico que consiste en calentar un producto siderúrgico durante cierto tiempo a una temperatura superior al punto crítico superior (A\textsubscript{3} o A\textsubscript{cm}) para luego enfriarlo al aire tranquilo. La velocidad de enfriamiento en el normalizado es más lenta que en el templado, pero más rápida que en el recocido.
 
 \begin{itemize}
     \item \textbf{Templado (Quenching):}
@@ -67,14 +144,16 @@ El proceso consiste en calentar el acero a una temperatura generalmente más ele
 A todas las piezas se les realizo un tratamiento termico en siendo calentadas en un horno a \SI{850}{\degreeCelsius} durante 3 horas, la probeta del jominy se retiro al estar lista para hacer su ensayo.
 
 Para el resto de probetas lo que se hizo fue separandolas en 4 grupos de tres con los 3 distintos materiales en cada grupo se les aplico distintos tipos de enfriamiento.
+
 \begin{itemize}
-    \item Al primer grupo se les enfrio en agua (temple en agua),
-    \item al segundo grupo se les enfrio en aceite (temple en aceite),
-    \item al tercer grupo se les enfrio al aire (normalizado) y por ultimo
-    \item al cuarto grupo se le dejo enfriando dentro del horno apagado durante 24 horas (recocido).
+    \item Al primer grupo se les enfrio en agua (temple en agua);
+    \item Al segundo grupo se les enfrio en aceite (temple en aceite);
+    \item Al tercer grupo se les enfrio al aire (normalizado) y por último;
+    \item Al cuarto grupo se le dejo enfriando dentro del horno apagado durante 24 horas (recocido).
 \end{itemize}
 
 \subsection{Jominy.}
+
 El ensayo Jominy, nos permite conocer con mucha aproximacion, la dureza maxima y minima que la pieza adquirira en el temple y que tanta va a ser la penetracion del mismo (templabilidad).
 
 \begin{figure}
@@ -83,6 +162,24 @@ El ensayo Jominy, nos permite conocer con mucha aproximacion, la dureza maxima y
     \caption{esquema de montaje y probeta para el ensayo Jominy.}
     \label{fig:EsqJominy.}
 \end{figure}
+
+El ensayo Jominy es particularmente útil porque:
+\begin{itemize}
+    \item Permite obtener múltiples velocidades de enfriamiento en una única probeta
+    \item Proporciona una curva característica de templabilidad para cada acero
+    \item Facilita la comparación entre diferentes aceros
+    \item Ayuda a predecir la distribución de durezas en piezas reales
+    \item Es un ensayo normalizado internacionalmente (ASTM A255)
+\end{itemize}
+
+Los factores que afectan los resultados del ensayo incluyen:
+\begin{itemize}
+    \item Temperatura de austenización
+    \item Tiempo de transferencia de la probeta
+    \item Presión y temperatura del agua
+    \item Alineación del chorro
+    \item Preparación superficial para medición de durezas
+\end{itemize}
 
 Al sacar la probeta usada para este ensayo, del horno, se le coloco en un soporte en donde recibe un chorro de agua por la parte de debajo durante 20 minutos, generando un tratamiento termico asimetrico.
 
@@ -101,28 +198,23 @@ los resultados obtenidos en las 12 probetas para los 4 tratamientos termicos dis
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{lccc}
-        \toprule
-        \multirow{2}{*}{\textbf{Tratamiento}} & \multicolumn{3}{c}{\textbf{Dureza de los materiales}}\\
-        \cmidrule(lr){2-4}\\
-         & Material 1 & Material 2 & Material 3\\
-        \midrule\\
+    \begin{tabular}{l|ccc}
+        \hline
+        \multirow{2}{*}{\textbf{Tratamiento}} & \multicolumn{3}{c}{\textbf{Dureza de los materiales}}\\ \cline{2-4}
+         & Material 1 & Material 2 & Material 3\\ \hline
         \multirow{3}{*}{\textbf{Recocido}} & 80 HRB & 77 HRB & 48 HRB \\
          & 78 HRB & 79 HRB & 48 HRB \\
-         & 80 HRB & 81 HRB & 48 HRB \\
-        \midrule\\
+         & 80 HRB & 81 HRB & 48 HRB \\ \hline
         \multirow{3}{*}{\textbf{Normalizado}} & 91 HRB & 87 HRB & 50 HRB \\
          & 91 HRB & 89 HRB & 53 HRB \\
-         & 91 HRB & 87 HRB & 54 HRB \\
-        \midrule\\
+         & 91 HRB & 87 HRB & 54 HRB \\ \hline
         \multirow{3}{*}{\textbf{Temple en aceite}} & 88 HRB & 91 HRB & 61 HRB \\
          & 97 HRB & 83 HRB & 63 HRB \\
-         & 93 HRB & 93 HRB & 65 HRB \\
-        \midrule\\
+         & 93 HRB & 93 HRB & 65 HRB \\ \hline
         \multirow{3}{*}{\textbf{Temple en agua}} & 46 HRC & 50 HRC & 4 HRC \\
          & 59 HRC & 55 HRC & 3 HRC \\
          & 56 HRC & 56 HRC & 5 HRC \\
-        \bottomrule\\
+        \hline
     \end{tabular}
     \caption{Durezas Rockwell de las probetas segun material y tratamiento termico.}
 \end{table}
@@ -133,9 +225,9 @@ Resultados de dureza obtenidos a lo largo de la probeta:
 \begin{table}[H]
     \centering
     \begin{tabular}{cc}
-        \toprule\\
+        \toprule
         \textbf{Distacia desde la base (mm)} & \textbf{Dureza Rockwell C}\\
-        \midrule\\
+        \midrule
         0 & 53\\
         2 & 53\\
         4 & 28\\
@@ -182,15 +274,9 @@ Resultados de dureza obtenidos a lo largo de la probeta:
     ] {tablita.csv};
         \end{axis}
     \end{tikzpicture}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Imagenes/Jominy.png}
     \caption{Evolucion de la dureza segun la distancia.}
     \label{fig:Jominy}
 \end{figure}
-
 
 \section{Analisis.}
 
