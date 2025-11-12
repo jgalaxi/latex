@@ -1,18 +1,18 @@
 %% Análisis de viga en voladizo - Selección de material por masa mínima
 clear; clc; close all;
 
-% Parámetros de diseño
+% Parámetros iniciales
 F = 1000;           % Fuerza aplicada [Kg]
-L = 3;           % Longitud [m]
-delta_max = 1e-2;  % Deflexión máxima permitida [m]
+L = 10;           % Longitud [m]
+deflexion = 1e-2;  % Deflexión máxima permitida [m]
 
 % Lista de materiales (nombre, E [Pa], densidad [kg/m^3])
 materiales = {
-    'Acero',       210e9,    7850;
-    'Aluminio',     70e9,    2700;
-    'Titanio',     115e9,    4500;
-    'Madera',       11e9,     600;
-    'Polimero',      2e9,    1200
+    'Acero F24',        210e9,    7850;
+    'Aluminio 6063',    69e9,    2700;
+    'Titanio AlyV',     114e9,    4430;
+    'Madera de roble',  11e9,     770;
+    'Teflón',           2e9,    2200
 };
 
 n = size(materiales,1);
@@ -20,7 +20,7 @@ n = size(materiales,1);
 % Inicialización
 t = zeros(n,1);   % espesor requerido
 m = zeros(n,1);   % masa resultante
-M = zeros(n,1);   % índice de Ashby (E^(1/2)/rho)
+M = zeros(n,1);   % índice de Ashby
 
 % Cálculos
 for i = 1:n
@@ -28,13 +28,13 @@ for i = 1:n
     rho = materiales{i,3};
     
     % Espesor necesario para cumplir deflexión
-    t(i) = (4*F*10*L^3/(E*delta_max))^(1/4);
+    t(i) = (4*F*10*L^3/(E*deflexion))^(1/4);
     
     % Masa correspondiente
     m(i) = rho * L * t(i)^2;
     
     % Índice de Ashby
-    M(i) = rho/sqrt(E);
+    M(i) = sqrt((rho*rho)/E);
 end
 
 % Crear tabla de resultados
@@ -48,13 +48,10 @@ T = sortrows(T, 'Masa_kg', 'ascend');
 disp('=== Resultados ordenados por masa mínima ===');
 disp(T);
 
-% Mostrar el mejor material
-mejor = T.Material(1);
-fprintf('\nEl material más eficiente en peso (menor masa) es: %s\n', mejor);
 
 % --- Gráfico de índice de Ashby ---
 figure;
 bar(categorical(T.Material), T.Indice_Ashby);
-ylabel('Índice de Ashby');
+ylabel('Índice de Ashby  ρ^{2} / E');
 title('Eficiencia de materiales en rigidez-peso (viga en flexión)');
 grid on;
