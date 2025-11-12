@@ -31,7 +31,7 @@ Para los calculos y la seleccion de materiales se tiene el seiguiente modelo mat
 \begin{equation}
      M = ({\frac{\rho{^2}}{E}})^{1/2}
 \end{equation}
-El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro de selección de materiales, para esto utilzaremos el diagrama de Ashby de densidad vs modulo de elasticidad para diferentes materiales (Figura 1).
+El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro de selección de materiales, para hacer esto se podria utilizar el metodo grafico de los diagramas de ashby, donde se grafican diferentes materiales en función de su densidad y modulo de elasticidad, y se pueden identificar aquellos que cumplen con el objetivo de minimizar la masa (Figura 1).
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{imagenes/Ashby_E_vs_rho.png}
@@ -42,15 +42,15 @@ El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro
 Para modelar el problema, se debe calcular el valor del parametro de selección de materiales M para cada material del diagrama de Ashby, y luego seleccionar aquellos materiales que tengan el valor más bajo de M, ya que esto indicará que tienen la menor masa para una rigidez dada.
 
 
-Para esto realizamos un codigo de matlab que nos ayuda a simular el problema con siertos materiales patrones, los resultados mostrados de la simulacion nos permiten identificar los materiales que cumplen con el objetivo de minimizar la masa M y los inconvenientes que pueden presentar (Figura 2).
+Para esto realizamos un codigo de matlab y python que nos ayuda a simular el problema com ciertos parametros iniciales, este programa tiene cargado 5 materiales posibles para la fabricación de la viga y nos permite calcular que tan bueno es para este objetivo y que inconvenientes puede presentar (Figura 2).
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{imagenes/IndMatlab.png}
+    \includegraphics[width=1\textwidth]{imagenes/IndPy.png}
     \caption{Efficiencia Rigidez / Peso de materiales.}
     \label{fig:matlab}
     \end{figure}
 \subsection{Resultados y análisis.}
-Segun el grafico resultado de la simulacion, los materiales que presentan un mejor rendimiento en cuanto a rigidez/peso son las maderas y las aleaciones de aluminio. Estos dos materiales se pueden considerar mejores que el acero para este caso particular. Sin embargo, presentan ciertos inconvenientes: la madera tiene problemas de resistencia a la humedad y el aluminio puede ser más costoso.
+Segun el grafico resultado de la simulacion, los materiales que presentan un mejor rendimiento en cuanto a rigidez/peso son la medera de roble y el teflón. Estos dos materiales se pueden considerar mejores que el acero para este caso particular. Sin embargo, pueden presentan ciertos inconvenientes como la humedad en la madera o limitaciones mecánicas del teflón.
 \subsubsection{Problemas dimecionales}
 Si bien el acero es peor en rendimiento rigidez/peso que los nombrados anteriormente, este material en la construccion significa un mayor aprovechamiento del espacio, ya que al ser mas resistente permite reducir las dimensiones de la viga, lo que puede ser un factor importante en ciertos diseños.
     
