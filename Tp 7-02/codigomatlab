@@ -12,7 +12,7 @@ materiales = {
     'Aluminio 6063',    69e9,    2700;
     'Titanio AlyV',     114e9,    4430;
     'Madera de roble',  11e9,     770;
-    'Teflón',           150e9,    160
+    'CBRP',             150e9,    160
 };
 
 n = size(materiales,1);
@@ -34,7 +34,7 @@ for i = 1:n
     m(i) = rho * L * t(i)^2;
     
     % Índice de Ashby
-    M(i) = sqrt((rho*rho)/E);
+    M(i) = sqrt((rho*^(2))/E);
 end
 
 % Crear tabla de resultados

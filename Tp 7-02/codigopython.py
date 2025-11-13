@@ -13,7 +13,7 @@ from matplotlib.widgets import Slider
 # --- Parámetros iniciales ---
 F = 1000          # Fuerza inicial [Kg]
 L = 3             # Longitud inicial [m]
-flecha = 1e-2   # flecha máxima permitida [m]
+flecha = 0.01   # flecha máxima permitida [m]
 
 # Lista de materiales Genéricos
 materiales = [
