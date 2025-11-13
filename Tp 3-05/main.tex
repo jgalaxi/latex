@@ -63,7 +63,7 @@
 
 \section{Introducción.}
 
-En el presente trabajo se realizaron ensayos sobre hilo de acero SAE/AISI 1045 de \SI{0,9}{\milli\metre} de diámetro para el ensayo de termofluencia; y \SI{0,6}{\milli\metre} para el ensayo de tracción y sobre alambre de aluminio AA 1305 h19 de \SI{1,8}{\milli\metre\diameter} (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
+En el presente trabajo se realizaron ensayos sobre hilo de acero SAE/AISI 1045 de \SI{0,9}{\milli\metre} de diámetro para el ensayo de termofluencia; y \SI{0,6}{\milli\metre} para el ensayo de tracción y el de termofluencia se uso un alambre de aluminio ER 4043 de \SI{1,6}{\milli\metre\diameter} (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
 
 Para poder medir, graficar y comparar las propiedades mecánicas de los diferentes materiales y la diferencias que existen entre materiales ferrosos y no ferrosos.
 
@@ -94,37 +94,37 @@ Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurar
 
 \subsubsection{Herramientas y máquinas.}
 
-Para este ensayo se utilizó(.
+Para este ensayo se utilizó.
 \begin{itemize}
     \item Un dinamómetro al equivalente de \SI{250}{\kilogram} de fuerza máxima (\SI{2450}{\newton}).
-
     \item Una amarraderas para sujetar la probeta y el dinamómetro.
-    \item Y una máquina de tracción por tornillo
+    \item Una máquina de tracción por tornillo
+    \item Y una computadora para registrar los datos
 \end{itemize}
  
 Originalmente se iba a utilizar una máquina de tracción armada por un grupo de alumnos de años pasados, pero al utilizarla no lograbamos romper el alambre con la fuerza al equivalente de \SI{40}{\kilogram} (No más peso que eso para asegurarnos de no romper el dinamómetro).
 
-Por lo que se decidió construir una máquina nueva que funciona con un brazo de palanca, así la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamómetro.
+Por lo que se decidió construir una máquina nueva que funciona con un brazo de palanca, así la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamómetro, pero al construir la maquina no se tomaron en cuenta algunos conceptos fisicos por lo que lo medido en el dinamometro estaba mal. 
 
-Pero al construir la maquina no se tomaron en cuenta algunos conceptos fisicos por lo que lo medido en el dinamometro estaba mal, asi que se rescato una antigua maquina de traccion construida hace varios año, la cual habia quedado en desuso, el a cual habia el espacio suficiente, y se consiguo un nuevo dinamometro con una capacidad bastante mayor el cual pasaba directamente los datos a una computadora con Arduino.
+Asi que se rescato una antigua maquina de traccion construida hace varios año, la cual habia quedado en desuso, en donde habia espacio suficiente para colocar las agarraderas, y se consiguo un nuevo dinamometro con una capacidad bastante mayor el cual pasaba directamente los datos a una computadora con Arduino.
 
 \subsubsection{Procedimiento.}
 
-Primero se mide la probeta y se coloca en sus respectivo lugar, se empezaba a dar vueltas el tornillo con el brazo de palanca, haciendo primero 1/8 de vuelta y esperando \SI{15}{\second}, y la deformacion se saca sabiendo que el avance de la tuerca es \SI{2.54}{\milli\meter}.
+Primero se mide la probeta y se coloca sujetadola con las agarraderas, se empieza a dar vueltas el tornillo con el brazo de palanca, haciendo primero 1/8 de vuelta y esperando \SI{15}{\second}, y haciendo el siguiente 1/8 y la deformacion se saca sabiendo que el avance de la tuerca es \SI{2.54}{\milli\meter}, por vuelta.
 
 \section{Resultados.}
 
 \subsection{Ensayo de tracción.}
 
-Para el ensayo de tracción se realizaron 3 ensayos con alambre de aluminio y 3 con hilo de acero, pero en el caso del alambre de aluminio no se logró romper la probeta, por lo que no se pudo obtener todos los datos necesarios para graficar la curva tensión-deformación.
+Para el ensayo de tracción se realizaron 2 ensayos con alambre de aluminio.
 
-A continuación se muestran las gráficas obtenidas de los ensayos realizados.
+A continuación se muestran las tablas con los resultados y las graficas obtenidas a partir de los ensayos con el alambre de aluminio.
 
 \begin{table}[H]
     \centering
     \begin{tabular}{cc}
         \toprule
-        \textbf{$\sigma_y$ (MPa)} & \textbf{$\epsilon$ ($\%$)}\\
+        \textbf{$\sigma_y$ (MPa)} & \textbf{$\varepsilon$ ($\%$)}\\
         \midrule
         9,75 & 2,19\\
         17,06 & 3,29\\
@@ -146,7 +146,7 @@ A continuación se muestran las gráficas obtenidas de los ensayos realizados.
     \centering
     \begin{tabular}{cc}
         \toprule
-        \textbf{$\sigma_y$ (MPa)} & \textbf{$\epsilon$ ($\%$)}\\
+        \textbf{$\sigma_y$ (MPa)} & \textbf{$\varepsilon$ ($\%$)}\\
         \midrule
         32,67 & 0,54\\
         63,38 & 1,10\\
@@ -170,14 +170,14 @@ A continuación se muestran las gráficas obtenidas de los ensayos realizados.
     \centering
     \begin{subfigure}{0.6\textwidth}
         \includegraphics[width=\textwidth]{Figuras/Ensayo 1.png}
-        \subcaption{Gráfica del ensayo de tracción de la barilla del aluminio ER4043 ensayo 1.}
+        \subcaption{Gráfica del ensayo de tracción del aluminio ER4043 ensayo 1.}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.6\textwidth}
         \includegraphics[width=\textwidth]{Figuras/Ensayo 2.png}
-        \subcaption{Gráfica del ensayo de tracción de la barilla del aluminio ER4043 ensayo 2.}
+        \subcaption{Gráfica del ensayo de tracción del aluminio ER4043 ensayo 2.}
     \end{subfigure}
-    \caption{Gráficas obtenidas del ensayo de tracción del aluminio.}
+    \caption{Gráficas de los dos ensayos de traccion del aluminio}
 \end{figure}
 
 \subsection{Ensayo de termofluencia.}
@@ -194,5 +194,15 @@ Las propiedades mecánicas del aluminio ER 4043 son:
     \item $\varepsilon =$ \SI{22}{\percent}.
 \end{itemize}
 
+Los valores de esas propiedades obtenidos por los ensayos haciendo un promedio de los 2 son:
+
+\begin{itemize}
+    \item $\sigma_y =$ \SI{87,76}{\mega\pascal}.
+    \item $\sigma_R =$ \SI{143,83}{\mega\pascal}.
+    \item $\varepsilon =$ \SI{10,19}{\percent}.
+    \item $E =$ \SI{4.23}{\giga\pascal}
+\end{itemize}
+
+Como se puede observar todos los valores salvo los de la deformacion unitaria dan bastante parecidos, por lo cual se podria intuir que el material o puede tener impurezas que le quiten ductilidad, sufrio alguna deformacion a la hora de preparar el ensayo, o tenia un tratamiento termico previo.
 
 \end{document}
