@@ -12,6 +12,12 @@
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{longtable}
+\usepackage{booktabs} % Tablas profesionales
+\usepackage{array} % Mejoras en tablas
+\usepackage{tabularx} % Tablas con ancho ajustable
+\usepackage{colortbl} % Colores en tablas
+\usepackage{multirow} % Celdas que abarcan varias filas
+\usepackage{makecell} % Mejoras en celdas de tablas
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
@@ -88,7 +94,7 @@ Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurar
 
 \subsubsection{Herramientas y máquinas.}
 
-Para este ensayo se utilizó.
+Para este ensayo se utilizó(.
 \begin{itemize}
     \item Un dinamómetro al equivalente de \SI{250}{\kilogram} de fuerza máxima (\SI{2450}{\newton}).
 
@@ -114,6 +120,52 @@ Para el ensayo de tracción se realizaron 3 ensayos con alambre de aluminio y 3 
 
 A continuación se muestran las gráficas obtenidas de los ensayos realizados.
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{$\sigma_y$ (MPa)} & \textbf{$\epsilon$ ($\%$)}\\
+        \midrule
+        9,75 & 2,19\\
+        17,06 & 3,29\\
+        43,88 & 4,39\\
+        87,76 & 5,48\\
+        102,39 & 6,58\\
+        121,89 & 7,68\\
+        126,77 & 8,77\\
+        141,39 & 9,87\\
+        146,27 & 10,97\\
+        151,14 & 12,06\\
+        141,39 & 13,16\\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultados del primer ensayo de traccion del aluminio.}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{$\sigma_y$ (MPa)} & \textbf{$\epsilon$ ($\%$)}\\
+        \midrule
+        32,67 & 0,54\\
+        63,38 & 1,10\\
+        87,76 & 1,65\\
+        97,51 & 2,21\\
+        107,26 & 2,77\\
+        112,14 & 3,33\\
+        121,89 & 3,38\\
+        121,89 & 4,44\\
+        131,64 & 5,00\\
+        136,52 & 5,55\\
+        136,52 & 6,11\\
+        112,14 & 6,67\\
+        97,51 & 7,22\\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultados del segundo ensayo de traccion del aluminio.}
+\end{table}
+
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.6\textwidth}
@@ -134,20 +186,13 @@ No fue posible realizar el ensayo de termofluencia con el alambre de aluminio, y
 
 \section{Comparando resultados.}
 
-Las propiedades mecanicas del acero SAE/AISI 1045 son:
-\begin{itemize}
-    \item $\sigma_y =$ \SIrange[range-units=single]{360}{420}{\mega\pascal}.
-    \item $\sigma_R =$ \SIrange[range-units=single]{600}{700}{\mega\pascal}.
-    \item $\varepsilon =$ \SIrange{45}{60}{\percent}.
-    \item $E =$ \SI{200}{\giga\pascal}.
-\end{itemize}
-
-Las propiedades mecánicas del aluminio AA 1305 H19 son:
+Las propiedades mecánicas del aluminio ER 4043 son:
 
 \begin{itemize}
-    \item $\sigma_y =$ \SI{165}{\mega\pascal}.
-    \item $\sigma_R =$ \SI{186}{\mega\pascal}.
-    \item $\varepsilon =$ \SI{1,4}{\percent}.
-    \item $E =$ \SI{68,9}{\giga\pascal}.
+    \item $\sigma_y =$ \SI{70}{\mega\pascal}.
+    \item $\sigma_R =$ \SI{145}{\mega\pascal}.
+    \item $\varepsilon =$ \SI{22}{\percent}.
 \end{itemize}
+
+
 \end{document}
