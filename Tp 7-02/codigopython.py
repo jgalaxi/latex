@@ -21,7 +21,7 @@ materiales = [
     ('Aluminio 6063',      69e9, 2700),
     ('Titanio AlyV',       114e9, 4430),
     ('Madera de roble',    11e9,  770),
-    ('Teflón',             2e9, 2200)
+    ('Fibra de carbono',   150e9, 160)
 ]
 # --- Función de cálculo ---
 def calcular_resultados(F, L):
