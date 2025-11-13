@@ -90,48 +90,21 @@ Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurar
 
 Para este ensayo se utilizó.
 \begin{itemize}
-    \item Un dinamómetro al equivalente de \SI{50}{\kilogram} de fuerza máxima (\SI{490,3325}{\newton}).
-    \item Una regla para poder medir la deformación de la probeta.
-    \item Un celular para grabar la deformación.
+    \item Un dinamómetro al equivalente de \SI{250}{\kilogram} de fuerza máxima (\SI{2450}{\newton}).
+
     \item Una amarraderas para sujetar la probeta y el dinamómetro.
-    \item Y una máquina de tracción por palanca contruida especialmente para este ensayo.
+    \item Y una máquina de tracción por tornillo
 \end{itemize}
  
 Originalmente se iba a utilizar una máquina de tracción armada por un grupo de alumnos de años pasados, pero al utilizarla no lograbamos romper el alambre con la fuerza al equivalente de \SI{40}{\kilogram} (No más peso que eso para asegurarnos de no romper el dinamómetro).
 
 Por lo que se decidió construir una máquina nueva que funciona con un brazo de palanca, así la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamómetro.
 
-Y esto se ve en la \autoref{eq:palanca}
-
-\begin{equation}
-    F_1\cdot d_1 = F_2\cdot d_2
-    \label{eq:palanca}
-\end{equation}
-Donde:
-\begin{itemize}
-    \item $F_1$ es la fuerza que se le está haciendo al dinamómetro.
-    \item $F_2$ es la fuerza que se le está haciendo a la probeta.
-    \item $d_1$ es la distancia del dinamómetro al punto de apoyo.
-    \item $d_2$ es la distancia de la probeta al punto de apoyo. 
-\end{itemize}
-
-Y podemos obtener así, la fuerza que se le hace a la probeta despejando $F_2$.
-
-\begin{equation}
-    \frac{F_1\cdot d_1}{d_2} = F_2
-\end{equation}
-
-Y así mientras sepamos las dos distancias al punto de apoyo y la fuerza que nos marca el dinamómetro podemos sacar la fuerza ejercida a la probeta.
-
-Siendo $d_1=$ \SI{900}{\milli\metre} y $d_2=$ \SI{350}{\milli\metre} por lo que nos quedaría la siguiente relación:
-
-\begin{equation}
-    F_1 \cdot 2,57 = F_2
-\end{equation}
+Pero al construir la maquina no se tomaron en cuenta algunos conceptos fisicos por lo que lo medido en el dinamometro estaba mal, asi que se rescato una antigua maquina de traccion construida hace varios año, la cual habia quedado en desuso, el a cual habia el espacio suficiente, y se consiguo un nuevo dinamometro con una capacidad bastante mayor el cual pasaba directamente los datos a una computadora con Arduino.
 
 \subsubsection{Procedimiento.}
 
-Primero se mide marca la probeta y se coloca en sus respectivo lugar, se pone el celular a grabar el dinamómetro y la deformacion de la probeta y se empieza a aplicar fuerza lentamente a la probeta a travez del brazo, asegurandose de que sea de forma constante.
+Primero se mide la probeta y se coloca en sus respectivo lugar, se empezaba a dar vueltas el tornillo con el brazo de palanca, haciendo primero 1/8 de vuleta y esperando \SI{15}{\second}.
 
 \section{Resultados.}
 
