@@ -1,99 +1,428 @@
 \documentclass[12pt,a4paper]{article}
 
-\include{paquetes}
+\hbadness=10000
+
+% Paquetes
+
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage[spanish]{babel}
+%Paquetes para simbologia%
+\usepackage{enumitem}  
+\usepackage{cellspace} % para espaciado automático en celdas
+\setlength\cellspacetoplimit{12pt}
+\setlength\cellspacebottomlimit{12pt} 
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{amsfonts}
+\usepackage{relsize}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{xurl}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            urlcolor=myblue,
+            citecolor=black,
+            filecolor=black]{hyperref}
+ % Opción estándar para enlaces
+\Urlmuskip=0mu plus 1mu          % Mejora el espaciado para permitir cortes
+\usepackage{subcaption}  % en el preámbulo
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{42, 127, 179}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Ingeniería Mecánica}
+\fancyhead[C]{Materiales Metálicos} 
+\fancyhead[R]{UTN-FRVM}
+\fancyfoot[C]{\thepage}
+
+%---------------------------------------
+\setlength{\headheight}{15pt}
 
 \begin{document}
 
-\include{Portada}
+% Portada
+
+\begin{titlepage}
+    \centering
+    {\Large \textbf{UNIVERSIDAD TECNOLÓGICA NACIONAL}}\\
+    {\Large \textbf{FACULTAD REGIONAL VILLA MARÍA}}\\[2cm]
+    {\LARGE \textbf{Ingeniería Mecánica - Materiales Metálicos}}\\[2cm]
+    {\huge \textbf{Trabajo Práctico 6-01}}\\[1.5cm]
+
+\raggedright
+Grupo DEL RIO:
+\begin{itemize}
+    \item Antico, Rodrigo.
+    \item Cabral, Franco.
+    \item Cardozo, Martín.
+    \item Córdoba, Nathan.
+    \item Cucco, Ramiro.
+    \item del Río, Juan.
+    \item Guerini, Nazareno.
+    \item Medina, Ivo.
+    \item Ortiz, Gastón.
+    \item Picos, Elías.
+    \item Quinteros, Lautaro
+\end{itemize}
+ Docentes:
+ \begin{itemize}
+     \item Dr. Lucioni, Eldo José.
+     \item  Ing. Victorio Vallaro, Juan Manuel.\\[1cm]
+ \end{itemize}
+ 
+\begin{center}
+18 de agosto de 2025
+\end{center}
+ 
+    \vfill
+\end{titlepage}
+
 \newpage
-\tableofcontents
 
-\begin{abstract}
+{\Large{\textbf{TP 6-01: Fallas de Material}}}\\[0.1cm]
 
-\underline{PASO 1:} Efectúe la búsqueda de las palabras clave (\autoref{tab:traducciones}) en la bibliografía detallada en la \autoref{tab:libro}. [NOTA: En la Tabla 7 se muestra un ejemplo con algunas palabras y algunas fuentes de información. ¡Solo un ejemplo! ¡Usted debe construir la propia!].
+{\Large{\uline{Objetivos}}:}
 
-\underline{PASO 2:} Analice, investigue y reflexione sobre la relación de cada párrafo -en el que aparece la palabra clave- con el fenómeno de Falla de Material.
+\begin{itemize}
+  \renewcommand{\labelitemi}{}
+  \item PASO 1: Efectúe la búsqueda de las palabras clave (Tabla 1) en la 
+bibliografía detallada en el listado "Bibliografía para Búsqueda".
+  \item PASO 2: Analice, investigue y reflexione sobre la relación de cada 
+párrafo -en el que aparece la palabra clave- con el fenómeno de Falla 
+de Material.
+  \item REQUERIMIENTO: Estar en capacidad de explicar la causa y el efecto 
+de la Falla de Material desarrollada en dicho párrafo.
+\end{itemize}
 
-\underline{REQUERIMIENTO:} Estar en capacidad de explicar la causa y el efecto de la Falla de Material desarrollada en dicho párrafo.
+\vspace{0.1cm}
 
-\begin{table}[H]
-    \centering
-    % El ancho de 5cm permite que el texto se ajuste.
-    \begin{tabular}{|p{5cm}|p{5cm}|} 
-        \hline
-        % Insertamos la primera nota de pie al final del encabezado "Inglés"
-        \textbf{Español} & \textbf{Inglés}\textsuperscript{1} \\ 
-        \hline
-        
-        % Columna Español (con saltos de línea)
-        falla / fallar \par fallo \par rompe / romper / romperse \par rotura \par
-        roto \par
-        fractura \par
-        defecto \par
-        imperfección \par
-        deficiencia \par
-        fatiga \par
-        desgaste \par
-        corrosión \par
-        grieta \par
-        agrietamiento \par
-        pierde \par
-        perder \par
-        ...\textsuperscript{2}...
-        & 
-        % Columna Inglés (con saltos de línea, alineada)
-        fail / failure \par
-        failure \par
-        break \par
-        rip \par
-        broken \par
-        fracture \par
-        defect \par
-        imperfection \par
-        deficiency \par
-        fatigue \par
-        wear \par
-        corrosion \par
-        crack \par
-        cracking \par
-        misses \par
-        to lose \par
-        ...\textsuperscript{2}...
-        \\ 
-        \hline
-        
-        % Fila para la segunda nota: Usamos \multicolumn para hacer que la nota ocupe ambas celdas
-        \multicolumn{2}{|p{10cm}|}{\textbf{Nota:} \par \textsuperscript{1} Verifique la correcta traducción. \par \textsuperscript{2} Incorpore otras palabras que sean de su interés.} \\
-        \hline
-    \end{tabular}
-    \caption{Palabras Clave.}
-    \label{tab:traducciones}
+\begin{table}[H] % o [htbp]
+\centering
+\setlength{\tabcolsep}{1.5cm}
+\renewcommand{\arraystretch}{1.3}
+
+\begin{tabular}{|c@{\hspace{1cm}}c|}
+\hline
+\textbf{Español} & \textbf{Inglés} \\ \hline
+falla / fallar & fail / failure \\
+fallo & fail / failure \\
+rompe / romper / romperse  & break \\
+rotura  & rip \\
+roto & broken \\
+fractura & fracture \\
+defecto& defect  \\
+imperfección  &imperfection \\
+deficiencia  & deficiency \\
+fatiga & fatigue \\
+desgaste & wear \\
+corrosión  & corrosion \\
+grieta & crack \\
+agrietamiento & cracking  \\
+pierde & misses \\
+perder & to lose  \\
+\hline
+\end{tabular}
+
+\vspace{5pt}
+\textbf{Tabla 1:} Lista de palabras % ← escribís lo que quieras
 \end{table}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|l|} 
-        \hline
-        Callister, D. W. - Introducción a la Ciencia e Ingeniería de los Materiales - 1995 [Caso 2025] \\
-        \hline
-    \end{tabular}
-    \caption{Bibliografía para búsqueda \{MM-CAD-0.0.0\}.}
-    \label{tab:libro}
-\end{table}
+\vspace{0.1cm}
 
-\end{abstract}
+{\Large{\uline{Bibliografía para Búsqueda}}:}
 
-\section{Introducción.}
+\begin{itemize}
+    \item  Libro 1: Apraiz Barreiro, J. - Tratamientos térmicos de los aceros. 1983. 8va Ed 
+    \item  Libro 2: Callister, D. W. - Introducción a la Ciencia e Ingeniería de los Materiales - 1995
+    \item  Libro 3: Shigley, Budyna, Nisbett - Diseño en ingeniería mecánica de Shigley, 9na Edición
+    \item  Libro 4: Sturla, A.E. - Tratamientos Térmicos de los Aceros - Tomo II
+\end{itemize}
 
-Como se pudo ver en el resumen, a nosotros nos tocó el libro de Callister (1995). Donde ahí tuvimos que buscar las palabras claves dadas por la cátedra.
+\newpage
 
-\section{Desarrollo.}
+\section{Tabla 2 de Resultados de Búsqueda }
 
-Para ello, hemos usado la ayuda de ChatGPT para hacer un código en \textit{Python} que nos ayudara a buscar las palabras claves.
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
 
-El código consta de usar la librería \textit{pdf2image} y el motor \textit{pytesseract} con la ayuda de OCR (\textit{Optical Character Recognition} por sus siglas en inglés) para convertir las páginas del libro en imágenes y luego extraer el texto de esas imágenes. Luego pasamos todo eso a un archivo .txt donde buscamos las palabras claves.
+\begin{tabular}{|*{17}{c|}}
+\hline
+\textbf{} 
+& \rotatebox{90}{\textbf{falla / fallar }} 
+& \rotatebox{90}{\textbf{fallo}} 
+& \rotatebox{90}{\textbf{rompe / romper / romperse}} 
+& \rotatebox{90}{\textbf{rotura}} 
+& \rotatebox{90}{\textbf{roto}} 
+& \rotatebox{90}{\textbf{fractura}} 
+& \rotatebox{90}{\textbf{defecto}} 
+& \rotatebox{90}{\textbf{imperfección}} 
+& \rotatebox{90}{\textbf{deficiencia}} 
+& \rotatebox{90}{\textbf{fatiga}} 
+& \rotatebox{90}{\textbf{desgaste}} 
+& \rotatebox{90}{\textbf{corrosión}} 
+& \rotatebox{90}{\textbf{grieta}} 
+& \rotatebox{90}{\textbf{pierde}}
+& \rotatebox{90}{\textbf{perder}} \\ \hline
 
-Y a continuación, mostramos los resultados obtenidos.
+\textbf{Libro 1} & 3 & - & 27/5/4 & 72 & 2 & 28 & 6 & - & - & 45 & 13 & 6 & 20 & 6 & 0 \\ \hline
+\textbf{Libro 2} & -/1 & 8 & 4/6/9 & 27 & - & 49 & 34 & 10 & - & 16 & 8 & 38 & 16 & - & - \\ \hline
+\textbf{Libro 3} & 374/10 & 3 & 1/-/- & 7 & 1 & 105 & 12 & 7 & 2 & 764 & 191 & 51 & 75 & 6 & - \\ \hline
+\textbf{Libro 4} & 2/- & - & 7/2/- & 74 & 1 & 10 & 12 & 1 & - & 19 & 5 & 13 & 8 & - & - \\ \hline
+\end{tabular}
+\end{center}
+
+A continuación citaremos 6 o más ejemplos, aproximadamente, de cada palabra del libro, que se nos asignó como equipo este año, para mostrar en dicha sección el significado o contexto de dicha palabra, para el conteo icluiremos todas las palabras pero para los ejemplos dejaremos de lado aquellas formen parte de un índice, título, subtítulo, pregunta o referencia.
+
+El libro asignado para el caso de este año 2025 es el de  Callister, D. W. - Introducción a la Ciencia e Ingeniería de los Materiales - 1995; hay que aclarar que también extraimos algunas palabras del libro Callister, D. W. - Introducción a la Ciencia e Ingeniería de los Materiales 2da edición (Correspondiente a la 9na edición original).\\[0.1cm]
+
+    
+\section{Libro 2: Callister, D. W. - Introducción a la Ciencia e Ingeniería de los Materiales - 1995}
+
+\textbf{Fallo:} 
+
+subsección 4.5.4; primer párrafo: "[...] son los fallos de apilamiento, [...]"
+    
+Resumen Capítulo 8; tercer párrafo: "[...] y permite diseñar estructuras con una probabilidad de fallo mínima. [...]"
+    
+Resumen Capítulo 8; "[...] Finalmente, la deformación se acelera en la fluencia terciaria, justo antes del fallo [...]"
+    
+subsección 16.9.2; primer párrafo: "Los polímeros pueden experimentar fallos por fatiga [...]"
+    
+subsección 16.9.2; primer párrafo: "[...] el esfuerzo para que se produzca el fallo [...]"
+
+subsección 18.7.8; : "[...], como consecuencia puede aparecer un fallo. La apariencia del fallo es el característico [...]"
+
+Cap 10–Pág 285; cuarto párrafo; "[...]" experimentó una descompresión explosiva y un fallo estructural el 28 de abril de 1988. Una investigación del accidente concluyó
+que la causa fue la fatiga del metal, agravada por corrosión por fisuración "[...]"
+
+Cap 10–Pág 286; primer párrafo; "[...]" El diseño de un componente estructural requiere conocimientos de ingeniería para reducir al mínimo la posibilidad de fallo "[...]"
+
+    
+subsección 18.7.4; primer párrafo: "[...] pérdida de material hasta que ocurre un fallo. [...]"\\[0.1cm]
+    
+\textbf{Rompe:}
+
+sección 7.5; último párrafo: "[...] normalmente se rompe antes de deformarse plásticamente.[...]"
+    
+sección 16.2; segundo párrafo: "[...], ya que se rompe cuando se deforma elásticamente."[...]"
+    
+subsección 17.5.2; segundo párrafo: "[...] donde (TS), y (T5),, representan, respectivamente, la resistencia a la fractura de la fibra y la tensión en la matriz cuando el material compuesto se rompe[...]"
+    
+sección 17.11; tercer párrafo: "El compuesto se rompe al fallar la fase matriz."\\[0.1cm]
+
+
+\textbf{Romper:}
+
+sección 4.7; segundo párrafo: "[...] que logran romper gran número de enlaces atómicos.[...]"
+    
+sección 5.2; primer párrafo: "[...] suficiente energía como para romper los enlaces con los átomos [...]"
+    
+subsección 16.4.1; primer párrafo: "[...] que es capaz de romper gran número de enlaces [....]"
+    
+sección 16.5; primer párrafo: "[...] son tan violentas que pueden romper los enlaces covalentes. [...]"
+    
+subsección 16.11.3; primer párrafo: "[...] y puede romper algunos de ellos [...]"
+    
+sección 17.2: "[...]. De este modo para romper un miembro de hormigón [...]"\\[0.1cm]
+
+\textbf{Romperse:}
+
+sección 8.8; tercer párrafo: "[...] el material es capaz de aguantar antes de romperse. [...]"
+    
+Problema 8.10; primer párrafo: "[...] Un componente de Mg0 no debe romperse cuando se aplica una tensión de 13,5 MPa (1969 psi). [...]"
+    
+sección 12.2; tercer párrafo: "[...] puesto que son moderadamente dúctiles y capaces de experimentar deformación permanente sin romperse. [...]"
+    
+sección 16.8; tercer párrafo: "[...] ,pero se convierten en dúctiles al aumentar la temperatura y aproximarse a la temperatura de transición vítrea y presentan comportamiento plástico antes de romperse. [...]"
+    
+sección 16.16.2; Cuarto párrafo: "[...] Al generarse una buena unión puede romperse antes el material adherido que el adhesivo. [...]"
+
+sección 23.6; primer párrafo: "[...] La articulación puede romperse, lo cual ocurre normalmente en la región estrecha, [...]"
+
+sección 23.3-Ecuacion 23.11; primer párrafo: "[...] para que la viga funcione correctamente, no debe romperse cuando se aplica la tensión. [...]"\\[0.1cm]
+    
+\textbf{Rotura:}
+ 
+Problema 6.2; Segundo párrafo: "[...] la deformación plástica corresponde a la rotura de los enlaces entre los átomos vecinos más próximos [...]"
+    
+sección 6.6.2; cuarto párrafo: "[...] La tensión de fractura o bien de rotura corresponde a la tensión en la fractura. [...]"
+    
+sección 6.6.3; segundo párrfo: "[...] Siempre que una parte significativa de la deformación plástica a la rotura esté confinada en la región dela estricción, [...]"
+    
+sección 6.11; cuarto párrafo: "[...] "¿Cuál es la probabilidad de rotura de esta aleación en determinadas circunstancias?“ [...]"
+    
+sección 6.12; quinto párrafo: "[...] lo más importante: las consecuencias de la rotura en términos de vidas humanas y daños materiales.[...]"
+
+sección 8.2; cuarto párrafo: "[...] La tendencia a la rotura frágil de los materiales normalmente dúctiles se discute en la Sección 8.6.[...]"
+
+sección 8.3-Pagina 22; segundo párrafo: "[...] esta estructura es característica de la fractura que resulta de la rotura a tracción uniaxial.[...]"
+
+sección 8.3-Pagina 22; quinto párrafo: "[...] Esta forma parabólica puede ser indicativa de la rotura por cizalladura.[...]"
+
+sección 8.3-Pagina 24; segundo párrafo: "[...] ,la propagación de la grieta corresponde a la sucesiva y repetida rotura de enlaces atómicos a lo largo deplanos cristalográficos;[...]"
+
+sección 8.5.1-Pagina 27; segundo párrafo: "[...] la rotura ocurrirá cuando la resistencia cohesiva teórica del material sea superada en la punta de uno de los defectos. [...]"
+ 
+sección 8.5.3-Pagina 32; tercer párrafo: "[...] tienen valores pequeños de-K, y son vulnerables a la rotura catastrófica.[...]"
+
+sección 8.6.2-Pagina 38; tercer párrafo: "[...] dúctil-frágil debenutilizarse únicamente a temperaturas por encima de la temperatura de transición para evitar la rotura frágil y catastrófica.[...]"
+
+sección 8.6.2-Pagina 40; primer párrafo: "[...] La fatiga es una forma de rotura que ocurre en estructuras sometidas a tensiones dinámicas y fluctuantes [...]" 
+
+sección 8.6.2-Pagina 40; cuarto párrafo: "[...] La fatiga es importante ya que es la primera causa de rotura de los materiales.[...]"
+
+sección 8.6-Pagina 41; primer párrafo: "[...] La rotura por fatiga tiene aspecto frágil aun en metales que son normalmente dúctiles,[...]"
+
+sección 8.8; tercer párrafo: "[...] S, frente al logaritmo del número N de ciclos hasta la rotura para cada una de lás probetas.[...]"
+
+sección 8.8; tercer párrafo: "[...] ,por debajo del cual la rotura por fatiga no ocurrirá.[...]"
+
+sección 8.9; primer párrafo: "[...] El proceso de rotura por fatiga está caracterizado por tres etapas distintas:[...]" 
+
+sección 8.11.2; tercer párrafo: "[...] El efecto neto es que la probabilidad de nucleación de la grieta,y por tanto de rotura por fatiga se reduce.[...]"
+
+ sección 8.12; primer párrafo: "[...] La rotura que ocurre por la acción simultánea de una tensión cíclica y el ataque químico se denomina fatiga con corrosión [...]"
+ 
+sección 8.15-Problema 8.3; primer párrafo: "[...], predecir el tiempó a la rotura de un componentes que es sometido a una tensión [...]"
+
+sección 8.16-Pagina 4; prime párrafo: "[...]La fatiga es un tipo de fractura que conduce a la rotura catastrófica cuando se aplican cargas fluctuantes con el tiempo.[...]"
+
+Cap 10–Pág.287; octavo párrafo; "[...]" en una fractura dúctil la presencia de deformación plástica es una evidenciade que la rotura es inminente, permitiendo que se tomen medidas preventivas "[...]" 
+
+sección 19.21; segundo párrafo: "[...] la corriente a través del dieléctrico por el movimiento de estos electrones aumenta drásticamente; aveces la fusión localizada,  quemadura o bien la vaporización produce la degradación irreversible y quizás incluso la rotura del material [...]"
+    
+sección 8.16-Pagina 4; prime párrafo: "[...]La fatiga es un tipo de fractura que conduce a la rotura catastrófica cuando se aplican cargas fluctuantes con el tiempo.[...]"\\[0.1cm]
+    
+\textbf{Fractura:}
+
+cap 4-pag 74; ¿POR QUÉ ESTUDIAR Estructura en sólidos cristalinos?; primer párrafo: "[...] que tienen
+una determinada estructura cristalina, son mucho más frágiles (es decir, se fracturan con menores grados de deformación) que oro y plata, puros y no deformados [...]"
+
+Seccion 8.2-pag 210: tercer párrafo: "[...] y también para reducir la probabilidad de fractura en los extremos de la muestra [...]"
+
+Cap 10-285: primer párrafo: "[...] Este fenómeno está relacionado con uno delos principios básicos de la mecánica de la fractura: [...]"
+
+Cap 10-pag 285; ¿POR QUÉ ESTUDIAR Rotura?; primer párrafo: "[...] Por tanto, es importante
+comprender la mecánica de los distintos modos de rotura (fractura, fatiga y fluencia) y, además, conocerlos principios de diseño [...]"
+
+Cap 10-pag 285; Objetivo de aprendizaje; primer pregunta: "[...] Describir el mecanismo de propagación de grietas tanto en modo de fractura dúctil como frágil. [...]"
+
+Sección 10.2-pag 287; primer párrafo: "[...] Una fractura simple es la separación de un cuerpo en dos o más partes en respuesta a una tensión estática impuesta (es decir, constante o que varía lentamente con el tiempo) [...]"\\[0.1cm]
+
+\textbf{Defecto:}
+
+Cap 6-pag 143; primer párrafo: "[...] gracias a los defectos atómicos es posible reducir las emisiones de gases contaminantes [...]"
+
+Sección 6.1-pag 144; primer párrafo: "[...] Sin embargo, el sólido ideal no existe: todos los materiales tienen un gran número de defectos o imperfecciones [...]"
+
+Sección 6.1-pag 144; segundo párrafo: "[...] Un defecto cristalino se refiere a una irregularidad de la red para la que una o más de sus dimensiones son del orden de un diámetro atómico [...]"
+
+Sección 6.2-pag 145; tercer párrafo: "[...] Un defecto autointersticial se forma cuando un átomo del cristal se coloca en un lugar intersticial de la red, que es un pequeño espacio vacío que ordinariamente no está ocupado. [...]"
+
+Sección 7.2-pag 182; primer párrafo: "[...] Naturalmente, este proceso necesita de la presencia de vacantes y las posibilidades de la difusión de las vacantes es función del número de estos defectos. [...]"
+
+Cap 10–Pág.287; octavo párrafo; "[...]" en una fractura dúctil la presencia de deformación plástica es una evidenciade que la rotura es inminente, permitiendo que se tomen medidas preventivas "[...]" 
+
+Sección 9.1-pag 254; segundo párrafo: "[...] la resistencia mecánica se podía explicar por la existencia de un tipo de defecto lineal cristalino que, desde entonces, se ha llamado dislocación [...]"\\[0.1cm]
+
+\textbf{Imperfección:}
+
+Cap 6-pag 143; ¿POR QUÉ ESTUDIAR Imperfecciones en sólidos?; primer párrafo: "[...] Las propiedades de algunos materiales están profundamente influenciadas por la presencia de imperfecciones. [...]"
+
+Sección 6.1-pag 144; primer párrafo: "[...] Sin embargo, el sólido ideal no existe: todos los materiales tienen un gran número de defectos o imperfecciones [...]"
+
+Sección 6.1-pag 144; segundo párrafo: "[...] La clasificación de las imperfecciones cristalinas normalmente se hace según la geometría o las dimensiones del defecto. [...]"\\[0.1cm]
+
+\textbf{Fatiga:}
+
+Cap 7-pag 180; primer párrafo: "[...] Además, dentro de esta región se introducen esfuerzos de compresión residuales, que dan lugar a una mejora en la resistencia a la rotura por fatiga del engranaje cuando está en servicio [...]"
+
+Cap 7-pag 181; ¿POR QUÉ ESTUDIAR Difusión?; primer párrafo: "[...] es decir, su dureza y su resistencia a la rotura por fatiga se han incrementado por difusión de un exceso de carbono o nitrógeno en la capa exterior de la superficie. [...]"
+
+Cap 10-pag 285; tercer párrafo: "[...] Una investigación del accidente concluyó
+que la causa fue la fatiga del metal, agravada por corrosión por fisuración [...]"
+
+Sección 10.1-pag 286; segundo párrafo: "[...] En este capítulo se tratan los siguientes temas: fractura simple (tanto en modo dúctil como frágil), fundamentos de mecánica de la fractura, ensayos de tenacidad de fractura, transición dúctil-frágil, fatiga y termofluencia. [...]"
+
+Cap 10–Pág 285; cuarto párrafo; "[...]" Un programa de mantenimiento, debidamente ejecutado por la compañía aérea habría detectado el daño por fatiga y se hubiera prevenido este accidente "[...]"
+
+Sección 10.2-pag 287; primer párrafo: "[...] La fractura también puede ocurrir por fatiga (cuando se imponen esfuerzos cíclicos) [...]"
+
+Cap 10-pag 286; Objetivos de aprendizaje: "[...]"6. Definir el concepto de fatiga y especificar las
+condiciones en que se produce. [...]"\\[0.1cm]
+
+\textbf{Desgaste:}
+
+Cap 7-pag 180; primer párrafo: "[...] El aumento del contenido de carbono implica un aumento de la dureza de la superficie (como se explica en la Sección 12.7) que, a su vez, conduce a un incremento de la resistencia al desgaste del engranaje [...]"
+
+seccion 12.5.3; segundo párrafo: "[...] Casi siempre se utilizan en la condición templada y revenida, en la cual son especialmente resistentes al desgaste y capaces de adquirir la forma de herramienta de corte. [...]"
+
+seccion 12.6.3; sextimo párrafo: "[...] Su aplicación se limita a componentes de gran dureza y resistencia al desgaste y sin ductilidad, como por ejemplo los cilindros de los trenes de laminación.[...]"
+
+seccion 14.17.1; segundo párrafo: "[...] aumentando así el rendimiento del combustible utilizado; excelentes resistencias al desgaste y a la corrosión; menores pérdidas por fricción; [...]"
+
+seccion 14.17.1-Página 38; segundo párrafo: "[...] La resistencia al desgaste y/o al deterioro 'a temperaturas elevadas de partes metálicas de los motores de combustión que se utilizan actualmente ha sido mejorada significativamente utilizando recubrimientos cerámicos.[...]"
+
+seccion 23.7-Página 42; primer párrafo: "[...] puesto que las superficies articulares de la bola y de la cavidad acetabular rozan una con otra, el desgaste de estas superficies es minimizado empleando materiales muy duros.[...]"
+
+seccion 23.8-Página 43; segundo párrafo: "[...] La cerámica seleccionada es el óxido de aluminio de alta pureza, el cual es más duro y más resistente al desgaste y genera tensiones de fricción inferiores en la articulación. [...]"
+
+Glosario-pag 867; A: "[...] abrasivo. Material duro y resistente al desgaste (generalmente cerámico) que se utiliza para mecanizar, triturar o cortar otros materiales [...]"\\[0.1cm]
+
+\textbf{Corrosión:}
+
+Sección 13.1, Aleaciones Ferrosas-pag 433; primer párrafo: "[...] El principal inconveniente de muchas aleaciones férricas es la susceptibilidad a la corrosión [...]"
+
+Sección 13.2, Resumen-pag 457; primer párrafo: "[...] otros elementos de aleación que los hacen susceptibles a tratamientos térmicos, a una mejora de las propiedades mecánicas y/o más resistentes a la corrosión [...]"
+
+Sección 13.2, Introducción-pag 539; segundo párrafo: "[...] la ingeniería aeronáutica persigue materiales estructurales que tengan bajas densidades pero que sean rígidos y resistentes a la abrasión, a los impactos y a la corrosión [...]"
+
+Cap 10-pag 585; ¿POR QUÉ ESTUDIAR Fabricación y procesado de materiales en ingeniería?; segundo párrafo: "[...]"Asimismo, algunos aceros inoxidables se hacen susceptibles a la corrosión intergranular "[...]"
+
+Cap 17-pag 639; ¿POR QUÉ ESTUDIAR Corrosión y degradación de los materiales?; primer párrafo: "[...]"El conocimiento de los tipos de corrosión y de
+degradación, y la comprensión de sus mecanismos"[...]"
+
+Sección 18.1, Introducción-pag 639; Segundo párrafo: "[...] En losmetales hay pérdida de material por disolución (corrosión) o por formación de una capa o película no metálica (oxidación). [...]"\\[0.1cm]
+
+\textbf{Grieta:}
+
+Cap 10-pag 285; segundo párrafo: "[...] Esta grieta comenzó en algún tipo de pequeña entalla o hendidura aguda [...]"
+
+Sección 10.2-pag 287; tercer párrafo: "[...] Cualquier proceso de fractura está compuesto de dos etapas –formación y propagación de la grieta– en respuesta a una tensión impuesta [...]"
+
+Sección 10.2-pag 287; primer párrafo: "[...] Una grieta de este tipo normalmente se denomina estable; es decir, se resiste a extenderse a menos que haya un aumento de la tensión aplicada [...]"
+
+Sección 10.2-pag 287; primer párrafo: "[...] Las grietas de este tipo se denominan inestables, y la propagación de la grieta, una vez iniciada, continúa espontáneamente sin que se requiera un aumento en la magnitud de la tensión aplicada [...]"
+
+seccion 11.1; tercer párrafo: "[...] Si la velocidad de cambio de temperatura es grande, se genera un gradiente de temperatura que induce tensiones internas que pueden conducir a deformaciones e incluso al agrietamiento.[...]"
+
+seccion 14.17.3-Página 40; cuarto párrafo: "[...] El encogimiento excesivo o demasiado rápido puede provocar agrietamiento y/o distorsión y por tanto una pieza sin	valor.[...]"
+
+Sección 17.2-pag 586; primer párrafo: "[...] La mayoría de los materiales metálicos son especialmente susceptibles al hechurado, puesto que son moderadamente dúctiles y capaces de experimentar deformación permanente sin romperse ni agrietarse [...]"\\[0.1cm]
 
 
 
