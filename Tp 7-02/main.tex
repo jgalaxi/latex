@@ -42,18 +42,38 @@ El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro
 Para modelar el problema, se debe calcular el valor del parametro de selección de materiales M para cada material del diagrama de Ashby, y luego seleccionar aquellos materiales que tengan el valor más bajo de M, ya que esto indicará que tienen la menor masa para una rigidez dada.
 
 
-Para esto realizamos un codigo de matlab y python que nos ayuda a simular el problema com ciertos parametros iniciales, este programa tiene cargado 5 materiales posibles para la fabricación de la viga y nos permite calcular que tan bueno es para este objetivo y que inconvenientes puede presentar (Figura 2).
+Para esto realizamos un codigo de matlab y python que nos ayuda a simular el problema com ciertos parametros iniciales y calcular dicho índice, este programa tiene cargado 5 materiales posibles para la fabricación de la viga y nos permite calcular que tan bueno es para este objetivo y que inconvenientes puede presentar (Figura 2).
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{imagenes/IndPy.png}
+    \includegraphics[width=1\textwidth]{imagenes/IndMatlab.png}
     \caption{Efficiencia Rigidez / Peso de materiales.}
     \label{fig:matlab}
     \end{figure}
 \subsection{Resultados y análisis.}
-Segun el grafico resultado de la simulacion, los materiales que presentan un mejor rendimiento en cuanto a rigidez/peso son la medera de roble y el teflón. Estos dos materiales se pueden considerar mejores que el acero para este caso particular. Sin embargo, pueden presentan ciertos inconvenientes como la humedad en la madera o limitaciones mecánicas del teflón.
+Segun el grafico resultado de la simulacion, los materiales que presentan un mejor rendimiento en cuanto a rigidez/peso son la medera de roble y la fibra de carbono. Estos dos materiales se pueden considerar mejores que el acero para este caso particular. Sin embargo, pueden presentan ciertos inconvenientes como la humedad en la madera o el alto precio de la las aleaciones.
 \subsubsection{Problemas dimecionales}
 Si bien el acero es peor en rendimiento rigidez/peso que los nombrados anteriormente, este material en la construccion significa un mayor aprovechamiento del espacio, ya que al ser mas resistente permite reducir las dimensiones de la viga, lo que puede ser un factor importante en ciertos diseños.
-    
+
+\subsection{Aplicaciones y modelos}
+Adicional a los códigos se nos podió desarrollar una aplicación movil que nos permita realizar los calculos de manera más rapida y sencilla, esta app nos permite ingresar los parámetros necesarios y nos devuelve el indice y sus dimensiones.
+\subsubsection{Aplicación movil}
+Para desarrollar la aplicación utilizamos la plataforma de MIT App Inventor, la aplicación tiene una interfaz sencilla donde se ingresan los parámetros de carga, deflexión, largo y material, y luego se calcula el índice de selección de materiales y las dimensiones de la viga (Figura 3), y permite mostrar con un gráfico la diferencia de masa de cada viga calculada (Figura 4).
+\begin{figure}[H]
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{imagenes/App1.jpg}
+        \subcaption{interaz de calculo de las vigas.}
+        \label{fig:calc}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{imagenes/App2.jpg}
+        \subcaption{Comparacion de las distintas masas de las vigas.}
+        \label{fig:graf}
+    \end{subfigure}
+    \caption{}
+\end{figure}
 \newpage
 \vfill
 \textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo; y la búsqueda de información para complementar la dada por la cátedra.}}
