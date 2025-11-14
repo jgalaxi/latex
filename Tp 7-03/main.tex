@@ -9,61 +9,27 @@
 \tableofcontents
 
 \begin{abstract}
-    \underline{\textbf{Requerimiento del Trabajo:}} Analice, investigue e interprete el contenido relacionado con los Casos Prácticos de las fuentes de información que se indican a continuación a fin de adquirir y efectuar una explicación detallada de los mismos. [NOTA: Anualmente, la Cátedra asignará los Casos de Estudio a cada equipo de trabajo].\\
+    Analice, investigue e interprete el contenido del trabajo final de grado\footnote{Los TFG están disponible para su consulta en la biblioteca de la UTN FRVM.} asignado. [NOTA: Anualmente la Cátedra asignará los Casos de Estudio a cada equipo de trabajo]. Requerimientos:
     
     \begin{itemize}
-        \item Ashby, M.F. y Jones, D.R.H. Materiales para Ingeniería 1. 1ra Edición. 2009. Cap. 7 Casos prácticos de diseño limitado por el módulo (pp. 85-95), Cap. 12 Casos prácticos de diseño según el límite elástico (pp. 153-165), Cap. 15 Casos prácticos de fractura rápida (pp. 191-207), Cap 19 Casos prácticos de diseño a fatiga (pp. 251-270), Cap. 29 Casos prácticos de fricción y desgaste (pp. 395-390) y Cap. 30 Caso práctico final: materiales y energía en el diseño de coches (pp. 400-410) \{MM-CAD-0.0.0\}.
-        \begin{itemize}
-                \item 7.2 Caso práctico 2: selección de materiales para producir una viga de una rigidez dada con el mínimo peso. [Caso 2025].
-        \end{itemize}
+        \item Usando la herramienta on line \url{https://matweb.com/}, \textbf{proponer materiales ferrosos y no ferrosos\footnote{No ferrosos = no metálicos en general (cerámicos, polímeros, compuestos) y/o no ferrosos específicos (metales sin presencia de Fe en su composición).} en reemplazo de} los materiales usados en el desarrollo del trabajo final de grado que cumplan con los mismos requerimientos.
+        \item Verificar la selección de materiales realizada en el punto 1 mediante el empleo de diagramas de Ashby (software CESEDUPACK).
+        \item Entrevistar al autor del trabajo final de grado, efectuar el registro videográfico y subir el video en YouTube. El enlace del video deberá registrarse en el informe.
     \end{itemize}
 \end{abstract}
 
+\newpage
+
 \section{Introducción.}
 
-En muchas estructuras se requiere que una viga soporte una cierta carga F sin que deflecte más de una cierta cantidad, $\delta$. Si además la viga forma parte de un sistema de transporte -un aeroplano, un cohete, un tren- o cualquier cosa que se mueva o transporte -como por ejemplo una mochila-, entonces también es deseable minimizar su peso.
+A nuestro grupo le tocó analizar el trabajo final de grado \enquote{Arado de cinceles} realizado por los Ing. Schmidt Daniel e Ing. Perez Daniel. El mismo consiste en el diseño y construcción de un arado de cinceles para la labranza primaria del suelo, el cual tiene como objetivo mejorar las condiciones del suelo para la siembra, favoreciendo la aireación y el drenaje del agua.
 
-A continuación vamos a considerar el caso de una viga en voladizo simple, de sección cuadrada, y analizaremos los requisitos que debe cumplir el material para minimizar su peso dada una cierta rigidez. Los resultados son generalizables a cualquier tipo de viga de sección cuadrada y pueden adaptarse fácilmente a otras formas: tubos, cajas, vigas en I, etc.
+\section{Abordaje de la tesis.}
 
-\section{Modelo matemático.}
+La tesis cuenta con varias piezas, la mayoría metálicas, donde tuvimos que hacer un registro de cada una de ellas, sus materiales y funciones. Luego, analizamos los requerimientos de cada pieza para poder proponer materiales alternativos que cumplan con las mismas funciones y condiciones de trabajo. Guiandonos por los diagramas de Ashby y matweb, pudimos seleccionar los materiales más adecuados para cada pieza.
 
-Para los calculos y la seleccion de materiales se tiene el seiguiente modelo matemático donde la masa M de la viga, depende de la densidad $\rho$ y el modulo de elasticidad E del material según la siguiente ecuación:
-\begin{equation}
-     M = ({\frac{\rho{^2}}{E}})^{1/2}
-\end{equation}
-El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro de selección de materiales, para esto utilzaremos el diagrama de Ashby de densidad vs modulo de elasticidad para diferentes materiales (Figura 1).
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{imagenes/Ashby_E_vs_rho.png}
-    \caption{Diagrama de Ashby de densidad vs modulo de elasticidad para diferentes materiales.}
-    \label{fig:ashby}
-    \end{figure}
-\subsection{Modelado del problema}
-Para modelar el problema, se debe calcular el valor del parametro de selección de materiales M para cada material del diagrama de Ashby, y luego seleccionar aquellos materiales que tengan el valor más bajo de M, ya que esto indicará que tienen la menor masa para una rigidez dada.\\
-Para esto realizamos un codigo de matlab que nos ayuda a simular el problema con siertos materiales patrones, los resultados mostrados de la simulacion nos permiten identificar los materiales que cumplen con el objetivo de minimizar la masa M y los inconvenientes que pueden presentar (Figura 2).
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{imagenes/IndMatlab.png}
-    \caption{Efficiencia Rigidez / Peso de materiales.}
-    \label{fig:ashby}
-    \end{figure}
-\subsection{Resultados y análisis.}
-Segun el grafico resultado de la simulacion, los materiales que presentan un mejor resdimiento en cuanto a rigidez/peso son las maderas y las aleaciones de aluminio, estos dos materiales se puede considerar mejores que el acero para este caso particular, pero los mismos presentan ciertos inconvenientes, como la resistencia a la humedad en el caso de la madera y el costo en el caso del aluminio.\\
-\subsubsection{Problemas dimecionales}
-Si bien el acero es peor en rendimiento rigidez/peso que los nombrados anteriormente, este material en la construccion significa un mayor aprovechamiento del espacio, ya que al ser mas resistente permite reducir las dimensiones de la viga, lo que puede ser un factor importante en ciertos diseños.\\
-    
-\newpage
-\vfill
-\textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA y otras páginas de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo; y la búsqueda de información para complementar la dada por la cátedra.}}
+A continuación, se detallan las piezas analizadas, sus materiales originales y los materiales propuestos como alternativas.
 
-\newpage
-\section{Bibliografía}
-\begin{itemize}
-    \item \url{https://la.mathworks.com/products/matlab-online.html}
-    \item \url{https://www.youtube.com/c/matlab/featured}
-    \item \url{https://www.youtube.com/playlist?list=PLF-qcfymUY4WFWXEatxhuUJWQoHdHxUj_ }
-    \item \url{https://www.youtube.com/playlist?list=PLE5tTVHyP-X8oA1RG5ncR22ol-MANAeBv}
-    \item Ashby, M.F. y Jones, D.R.H. Materiales para Ingeniería 1
-\end{itemize}
+
 
 \end{document}
