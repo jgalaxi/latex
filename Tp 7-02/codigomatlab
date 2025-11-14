@@ -12,7 +12,7 @@ materiales = {
     'Aluminio 6063',    69e9,    2700;
     'Titanio AlyV',     114e9,    4430;
     'Madera de roble',  11e9,     770;
-    'CBRP',             150e9,    160
+    'CBRP',             150e9,    1750
 };
 
 n = size(materiales,1);
