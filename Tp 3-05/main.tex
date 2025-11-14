@@ -12,6 +12,12 @@
 \usepackage{amssymb}
 \usepackage{physics}
 \usepackage{longtable}
+\usepackage{booktabs} % Tablas profesionales
+\usepackage{array} % Mejoras en tablas
+\usepackage{tabularx} % Tablas con ancho ajustable
+\usepackage{colortbl} % Colores en tablas
+\usepackage{multirow} % Celdas que abarcan varias filas
+\usepackage{makecell} % Mejoras en celdas de tablas
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{float}
@@ -57,7 +63,7 @@
 
 \section{Introducción.}
 
-En el presente trabajo se realizaron ensayos sobre hilo de acero SAE/AISI 1045 de \SI{0,9}{\milli\metre} de diámetro para el ensayo de termofluencia; y \SI{0,6}{\milli\metre} para el ensayo de tracción y sobre alambre de aluminio AA 1305 h19 de \SI{1,8}{\milli\metre\diameter} (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
+En el presente trabajo se realizaron ensayos sobre hilo de acero SAE/AISI 1045 de \SI{0,9}{\milli\metre} de diámetro para el ensayo de termofluencia; y \SI{0,6}{\milli\metre} para el ensayo de tracción y el de termofluencia se uso un alambre de aluminio ER 4043 de \SI{1,6}{\milli\metre\diameter} (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
 
 Para poder medir, graficar y comparar las propiedades mecánicas de los diferentes materiales y la diferencias que existen entre materiales ferrosos y no ferrosos.
 
@@ -90,69 +96,88 @@ Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurar
 
 Para este ensayo se utilizó.
 \begin{itemize}
-    \item Un dinamómetro al equivalente de \SI{50}{\kilogram} de fuerza máxima (\SI{490,3325}{\newton}).
-    \item Una regla para poder medir la deformación de la probeta.
-    \item Un celular para grabar la deformación.
+    \item Un dinamómetro al equivalente de \SI{250}{\kilogram} de fuerza máxima (\SI{2450}{\newton}).
     \item Una amarraderas para sujetar la probeta y el dinamómetro.
-    \item Y una máquina de tracción por palanca contruida especialmente para este ensayo.
+    \item Una máquina de tracción por tornillo
+    \item Y una computadora para registrar los datos
 \end{itemize}
  
 Originalmente se iba a utilizar una máquina de tracción armada por un grupo de alumnos de años pasados, pero al utilizarla no lograbamos romper el alambre con la fuerza al equivalente de \SI{40}{\kilogram} (No más peso que eso para asegurarnos de no romper el dinamómetro).
 
-Por lo que se decidió construir una máquina nueva que funciona con un brazo de palanca, así la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamómetro.
+Por lo que se decidió construir una máquina nueva que funciona con un brazo de palanca, así la fuerza que se le hace a la probeta es mayor, que la que esta recibiendo el dinamómetro, pero al construir la maquina no se tomaron en cuenta algunos conceptos fisicos por lo que lo medido en el dinamometro estaba mal. 
 
-Y esto se ve en la \autoref{eq:palanca}
-
-\begin{equation}
-    F_1\cdot d_1 = F_2\cdot d_2
-    \label{eq:palanca}
-\end{equation}
-Donde:
-\begin{itemize}
-    \item $F_1$ es la fuerza que se le está haciendo al dinamómetro.
-    \item $F_2$ es la fuerza que se le está haciendo a la probeta.
-    \item $d_1$ es la distancia del dinamómetro al punto de apoyo.
-    \item $d_2$ es la distancia de la probeta al punto de apoyo. 
-\end{itemize}
-
-Y podemos obtener así, la fuerza que se le hace a la probeta despejando $F_2$.
-
-\begin{equation}
-    \frac{F_1\cdot d_1}{d_2} = F_2
-\end{equation}
-
-Y así mientras sepamos las dos distancias al punto de apoyo y la fuerza que nos marca el dinamómetro podemos sacar la fuerza ejercida a la probeta.
-
-Siendo $d_1=$ \SI{900}{\milli\metre} y $d_2=$ \SI{350}{\milli\metre} por lo que nos quedaría la siguiente relación:
-
-\begin{equation}
-    F_1 \cdot 2,57 = F_2
-\end{equation}
+Asi que se rescato una antigua maquina de traccion construida hace varios año, la cual habia quedado en desuso, en donde habia espacio suficiente para colocar las agarraderas, y se consiguo un nuevo dinamometro con una capacidad bastante mayor el cual pasaba directamente los datos a una computadora con Arduino.
 
 \subsubsection{Procedimiento.}
 
-Primero se mide marca la probeta y se coloca en sus respectivo lugar, se pone el celular a grabar el dinamómetro y la deformacion de la probeta y se empieza a aplicar fuerza lentamente a la probeta a travez del brazo, asegurandose de que sea de forma constante.
+Primero se mide la probeta y se coloca sujetadola con las agarraderas, se empieza a dar vueltas el tornillo con el brazo de palanca, haciendo primero 1/8 de vuelta y esperando \SI{15}{\second}, y haciendo el siguiente 1/8 y la deformacion se saca sabiendo que el avance de la tuerca es \SI{2.54}{\milli\meter}, por vuelta.
 
 \section{Resultados.}
 
 \subsection{Ensayo de tracción.}
 
-Para el ensayo de tracción se realizaron 3 ensayos con alambre de aluminio y 3 con hilo de acero, pero en el caso del alambre de aluminio no se logró romper la probeta, por lo que no se pudo obtener todos los datos necesarios para graficar la curva tensión-deformación.
+Para el ensayo de tracción se realizaron 2 ensayos con alambre de aluminio.
 
-A continuación se muestran las gráficas obtenidas de los ensayos realizados.
+A continuación se muestran las tablas con los resultados y las graficas obtenidas a partir de los ensayos con el alambre de aluminio.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{$\sigma_y$ (MPa)} & \textbf{$\varepsilon$ ($\%$)}\\
+        \midrule
+        9,75 & 2,19\\
+        17,06 & 3,29\\
+        43,88 & 4,39\\
+        87,76 & 5,48\\
+        102,39 & 6,58\\
+        121,89 & 7,68\\
+        126,77 & 8,77\\
+        141,39 & 9,87\\
+        146,27 & 10,97\\
+        151,14 & 12,06\\
+        141,39 & 13,16\\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultados del primer ensayo de traccion del aluminio.}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{$\sigma_y$ (MPa)} & \textbf{$\varepsilon$ ($\%$)}\\
+        \midrule
+        32,67 & 0,54\\
+        63,38 & 1,10\\
+        87,76 & 1,65\\
+        97,51 & 2,21\\
+        107,26 & 2,77\\
+        112,14 & 3,33\\
+        121,89 & 3,38\\
+        121,89 & 4,44\\
+        131,64 & 5,00\\
+        136,52 & 5,55\\
+        136,52 & 6,11\\
+        112,14 & 6,67\\
+        97,51 & 7,22\\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultados del segundo ensayo de traccion del aluminio.}
+\end{table}
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{0.8\textwidth}
-        \includegraphics[width=\textwidth]{Figuras/1045_traccion.png}
-        \subcaption{Gráfica obtenida del ensayo de tracción del hilo de acero SAE/AISI 1045.}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/Ensayo 1.png}
+        \subcaption{Gráfica del ensayo de tracción del aluminio ER4043 ensayo 1.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.8\textwidth}
-        \includegraphics[width=\textwidth]{Figuras/Aluminio_traccion.png}
-        \subcaption{Gráfica obtenida del ensayo de tracción del alambre de aluminio AA 1305 H19.}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\textwidth]{Figuras/Ensayo 2.png}
+        \subcaption{Gráfica del ensayo de tracción del aluminio ER4043 ensayo 2.}
     \end{subfigure}
-    \caption{Gráficas obtenidas del ensayo de tracción.}
+    \caption{Gráficas de los dos ensayos de traccion del aluminio}
 \end{figure}
 
 \subsection{Ensayo de termofluencia.}
@@ -161,20 +186,23 @@ No fue posible realizar el ensayo de termofluencia con el alambre de aluminio, y
 
 \section{Comparando resultados.}
 
-Las propiedades mecanicas del acero SAE/AISI 1045 son:
-\begin{itemize}
-    \item $\sigma_y =$ \SIrange[range-units=single]{360}{420}{\mega\pascal}.
-    \item $\sigma_R =$ \SIrange[range-units=single]{600}{700}{\mega\pascal}.
-    \item $\varepsilon =$ \SIrange{45}{60}{\percent}.
-    \item $E =$ \SI{200}{\giga\pascal}.
-\end{itemize}
-
-Las propiedades mecánicas del aluminio AA 1305 H19 son:
+Las propiedades mecánicas del aluminio ER 4043 son:
 
 \begin{itemize}
-    \item $\sigma_y =$ \SI{165}{\mega\pascal}.
-    \item $\sigma_R =$ \SI{186}{\mega\pascal}.
-    \item $\varepsilon =$ \SI{1,4}{\percent}.
-    \item $E =$ \SI{68,9}{\giga\pascal}.
+    \item $\sigma_y =$ \SI{70}{\mega\pascal}.
+    \item $\sigma_R =$ \SI{145}{\mega\pascal}.
+    \item $\varepsilon =$ \SI{22}{\percent}.
 \end{itemize}
+
+Los valores de esas propiedades obtenidos por los ensayos haciendo un promedio de los 2 son:
+
+\begin{itemize}
+    \item $\sigma_y =$ \SI{87,76}{\mega\pascal}.
+    \item $\sigma_R =$ \SI{143,83}{\mega\pascal}.
+    \item $\varepsilon =$ \SI{10,19}{\percent}.
+    \item $E =$ \SI{4.23}{\giga\pascal}
+\end{itemize}
+
+Como se puede observar todos los valores salvo los de la deformacion unitaria dan bastante parecidos, por lo cual se podria intuir que el material o puede tener impurezas que le quiten ductilidad, sufrio alguna deformacion a la hora de preparar el ensayo, o tenia un tratamiento termico previo.
+
 \end{document}
