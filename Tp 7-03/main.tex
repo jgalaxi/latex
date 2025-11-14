@@ -30,17 +30,36 @@ La tesis cuenta con varias piezas, la mayoría metálicas, donde tuvimos que hac
 
 A continuación, se detallan las piezas analizadas, sus materiales originales y los materiales propuestos como alternativas.
 
+\subsection{Criterio de los futuros ingenieros.}
+
+Nosotros como futuros ingenieros, hemos decidido tomar en cuenta varios factores que consideramos importantes a la hora de seleccionar un material para una pieza. Estos factores depende de la función y condiciones de trabajo, ya que no podemos tomar en cuenta las mismas propiedades en el cincel que en la estructura del arado, por ejemplo.
+
+Nos limitamos a definir ciertas propiedades que consideramos importantes para cada pieza, como ser: variables dimensionales, propiedades térmicas como el coeficiente de expansión térmica, propiedades mecánicas que no mencionaremos. 
+
+Entendemos que post-análisis y consulta las propiedades relevantes son:
+
 \begin{itemize}
     \item \textbf{Estructura arado:}
     \begin{itemize}
-        \item 
+        \item Módulo de Young. (E)
+        \item Límite de fluencia. ($\sigma_{y}$)
+        \item Coste.
+        \item Densidad.
     \end{itemize}
     \item \textbf{Buloneria:}
     \begin{itemize}
-        \item Material:AISI 1050 Steel, oil quenched \SI{845}{\celsius} (\SI{1550}{\degree\text{F}}), \SI {540}{\celsius} (\SI{1000}{\degree\text{F}}) temper, \SI{50}{\milli\metre} (\SI{2}{\text{in}}) round
-        \item Restricciones: $\sigma_{y} \geqslant \SI{516}{\mega\pascal}, Dureza > 248 HB, Costo < \SI{5}{\text{USD}\per\kilogram}, E \geqslant \SI{200}{\giga\pascal}$
+        \item Módulo de corte. (G)
+        \item Resistencia al corte. ($\tau_{y}$)
+        \item Coste.
+        \item Densidad.
     \end{itemize}
     \item \textbf{Cincel:}
+    \begin{itemize}
+        \item Dureza.
+        \item Tenacidad.
+        \item Coste.
+        \item Densidad.
+    \end{itemize}
 \end{itemize}
 
 \section{Corroboración de los datos con el software.}
@@ -65,7 +84,7 @@ Apoyandonos con Matweb, buscamos las propiedades mecánicas a mano de los aceros
     \end{itemize}
 \end{itemize}
 
-\subsubsection{Acero SAE/AISI 1050}
+\subsubsection{Acero SAE/AISI 1050.}
 
 Acá tenemos que hacer un alto, ya que en CES Edupack no se encuentra el acero SAE/AISI 1045, por lo que hemos decidido usar el SAE/AISI 1050, que es un acero con un contenido de carbono más alto, por lo que sus propiedades mecánicas son mejores.
 
@@ -81,6 +100,18 @@ Acá tenemos que hacer un alto, ya que en CES Edupack no se encuentra el acero S
     \end{itemize}
 \end{itemize}
 
+\subsubsection{Acero aleado SAE 94B30.}
 
+Con este acero pasa lo mismo que con el anterior, no se encuentra en CES Edupack, en el trabajo de grado aparece el SAE 9620; por lo que hemos decidido usar un acero aleado (SAE 94B30) con propiedades similares. Aquí vamos a tomar los datos del CES Edupack.
+
+\begin{itemize}
+    \item Low alloy steel, AISI 94B30, oil quenched and tempered at \SI{650}{\celsius}.
+    \begin{itemize}
+        \item Dureza = 228 - 283 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{11}{27,4}{\kilo\joule\per\meter\squared}.
+        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,83}{0,87}{\text{USD}\per\kilogram}.
+        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
+    \end{itemize}
+\end{itemize}
 
 \end{document}
