@@ -28,31 +28,45 @@ A continuación vamos a considerar el caso de una viga en voladizo simple, de se
 \section{Modelo matemático.}
 
 Para los calculos y la seleccion de materiales se tiene el seiguiente modelo matemático donde la masa M de la viga, depende de la densidad $\rho$ y el modulo de elasticidad E del material según la siguiente ecuación:
+
 \begin{equation}
      M = ({\frac{\rho{^2}}{E}})^{1/2}
 \end{equation}
-El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro de selección de materiales, para hacer esto se podria utilizar el metodo grafico de los diagramas de ashby, donde se grafican diferentes materiales en función de su densidad y modulo de elasticidad, y se pueden identificar aquellos que cumplen con el objetivo de minimizar la masa (Figura 1).
+
+El objetivo es minimizar la masa M, por lo que se debe minimizar este parámetro de selección de materiales, para hacer esto se podria utilizar el metodo grafico de los diagramas de ashby, donde se grafican diferentes materiales en función de su densidad y modulo de elasticidad, y se pueden identificar aquellos que cumplen con el objetivo de minimizar la masa (\autoref{fig:ashby1}).
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{imagenes/Ashby_E_vs_rho.png}
     \caption{Diagrama de Ashby de densidad vs modulo de elasticidad para diferentes materiales.}
     \label{fig:ashby1}
-    \end{figure}
-\subsection{Modelado del problema}
+\end{figure}
+
+\subsection{Modelado del problema.}
+
 Para modelar el problema, se debe calcular el valor del parametro de selección de materiales M para cada material del diagrama de Ashby, y luego seleccionar aquellos materiales que tengan el valor más bajo de M, ya que esto indicará que tienen la menor masa para una rigidez dada.
 
 
-Para esto realizamos un codigo de matlab y python que nos ayuda a simular el problema com ciertos parametros iniciales y calcular dicho índice, este programa tiene cargado 5 materiales posibles para la fabricación de la viga y nos permite calcular que tan bueno es para este objetivo y que inconvenientes puede presentar (Figura 2).
+Para esto realizamos un codigo de matlab y python que nos ayuda a simular el problema com ciertos parametros iniciales y calcular dicho índice, este programa tiene cargado 5 materiales posibles para la fabricación de la viga y nos permite calcular que tan bueno es para este objetivo y que inconvenientes puede presentar (\autoref{fig:mattabble}).
 
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \includegraphics[width=1\textwidth]{imagenes/tablamat.png}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Material & Densidad (\si{\kilogram\per\cubic\metre}) & Módulo de Young (\si{\giga\pascal}) \\ \hline
+        Acero F24 & 7850 & 210 \\ \hline
+        Aleación de aluminio 6063 & 2700 & 69 \\ \hline
+        Aleación de Titanio Ti6Al4V & 4430 & 114 \\ \hline
+        Madera de Roble & 770 & 11 \\ \hline
+        Fibra de Carbono & 1750 & 150 \\
+        \hline
+    \end{tabular}
     \caption{Tabla de propiedades.}
     \label{fig:mattabble}
-\end{figure}
+\end{table}
 
 \subsubsection{Resultados y análisis.}
-Segun el grafico resultado de la simulacion, los materiales que presentan un mejor rendimiento en cuanto a rigidez/peso son la medera de roble y la fibra de carbono. Estos dos materiales se pueden considerar mejores que el acero para este caso particular. Sin embargo, pueden presentan ciertos inconvenientes como la humedad en la madera o el alto precio de las aleaciones (Figura 2).
+Segun el grafico resultado de la simulacion, los materiales que presentan un mejor rendimiento en cuanto a rigidez/peso son la medera de roble y la fibra de carbono. Estos dos materiales se pueden considerar mejores que el acero para este caso particular. Sin embargo, pueden presentan ciertos inconvenientes como la humedad en la madera o el alto precio de las aleaciones (\autoref{fig:mattabble}).
 
 \begin{figure}[H]
     \centering
@@ -61,15 +75,20 @@ Segun el grafico resultado de la simulacion, los materiales que presentan un mej
     \label{fig:matlab}
 \end{figure}
 
-\subsubsection{Problemas dimensionales}
+\subsubsection{Problemas dimensionales.}
+
 Si bien el acero es peor en rendimiento rigidez/peso que los nombrados anteriormente, este material en la construccion significa un mayor aprovechamiento del espacio, ya que al ser mas resistente permite reducir las dimensiones de la viga, lo que puede ser un factor importante en ciertos diseños.
 
-\subsection{Aplicaciones y modelos}
+\subsection{Aplicaciones y modelos.}
+
 Adicional a los códigos se nos podió desarrollar una aplicación movil que nos permita realizar los calculos de manera más rapida y sencilla, esta app nos permite ingresar los parámetros necesarios y nos devuelve el indice y sus dimensiones.
 
-\subsubsection{Aplicación movil}
-Para desarrollar la aplicación utilizamos la plataforma de MIT App Inventor, la aplicación tiene una interfaz sencilla donde se ingresan los parámetros de carga, deflexión, largo y material, y luego se calcula el índice de selección de materiales y las dimensiones de la viga (Figura 4.a), y permite mostrar con un gráfico la diferencia de masa de cada viga calculada (Figura 4.b).
+\subsubsection{Aplicación móvil.}
+
+Para desarrollar la aplicación utilizamos la plataforma de MIT App Inventor, la aplicación tiene una interfaz sencilla donde se ingresan los parámetros de carga, deflexión, largo y material, y luego se calcula el índice de selección de materiales y las dimensiones de la viga (\autoref{fig:calc}), y permite mostrar con un gráfico la diferencia de masa de cada viga calculada (\autoref{fig:graf}).
+
 \begin{figure}[H]
+    \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{imagenes/App1.jpg}
@@ -86,28 +105,30 @@ Para desarrollar la aplicación utilizamos la plataforma de MIT App Inventor, la
     \caption{}
 \end{figure}
 
-\newpage
+\subsubsection{Modelado 3D.}
 
-\subsubsection{Modelado 3D}
-Para complementar el trabajo se realizo un modelado 3D de las vigas utilizando el software Abaqus CAE, donde se ingresó el modulo de young y las dimenciones de la viga para ver y medir la flecha de la misma. Para dichos modelos se utilizaron las dimensiones calculadas para una viga empotrada de 3 metros de longitud con una carga puntual en el extremo de 1000 Kg y una deflexión máxima de 10 mm. (Figura 5 y 6).
+Para complementar el trabajo se realizo un modelado 3D de las vigas utilizando el software Abaqus CAE, donde se ingresó el modulo de young y las dimenciones de la viga para ver y medir la flecha de la misma. Para dichos modelos se utilizaron las dimensiones calculadas para una viga empotrada de \SI{3}{\metre} de longitud con una carga puntual en el extremo de \SI{1000}{\kilogram} y una deflexión máxima de \SI{10}{\milli\metre}. (\autoref{fig:abaq1} y \ref{fig:abaq2}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{imagenes/3DF24.jpg}
     \caption{Viga de acero F24 modelada en Abaqus.}
     \label{fig:abaq1}
-    \end{figure}
+\end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{imagenes/3DTi.jpg}
     \caption{Viga de aleación Ti6Al4V modelada en Abaqus.}
     \label{fig:abaq2}
-    \end{figure}
+\end{figure}
+
 Como podemos ver en las figuras, ambas vigas cumplen con la deflexión requerida, pero la de aleación de titanio es mucho más liviana y de dimensiones un poco mayores que la de acero, lo que confirma los resultados obtenidos con los programas.
-\newpage
+
 \section{Conclusiones.}
-En conclusión, para minimizar la masa de una viga dada una rigidez, es importante seleccionar materiales con un bajo valor del parámetro de selección de materiales M = ($\frac{\rho{^2}}{E}$)$^{1/2}$. A través del análisis de los diagramas de Ashby y la simulación mediante códigos en Matlab y Python, se identificaron materiales como la madera de roble y la fibra de carbono como opciones superiores al acero en términos de rigidez/peso. Sim embargo con la aplicación movil al calcular las distintas vigas se observa como las dimenciones y el peso se ven severamente afectadas por el material seleccionado.
+
+En conclusión, para minimizar la masa de una viga dada una rigidez, es importante seleccionar materiales con un bajo valor del parámetro de selección de materiales \( M=(\frac{\rho{^2}}{E})^{1/2} \). A través del análisis de los diagramas de Ashby y la simulación mediante códigos en Matlab y Python, se identificaron materiales como la madera de roble y la fibra de carbono como opciones superiores al acero en términos de rigidez/peso. Sim embargo con la aplicación movil al calcular las distintas vigas se observa como las dimenciones y el peso se ven severamente afectadas por el material seleccionado.
+
 \vfill
 \textit{\textbf{Este trabajo fue elaborado con la ayuda de la IA, paginas de desarrollo apk y otras de ayuda para facilitar la confección y disposición de los elementos en dicho trabajo; y la búsqueda de información para complementar la dada por la cátedra.}}
 
