@@ -31,13 +31,56 @@ La tesis cuenta con varias piezas, la mayoría metálicas, donde tuvimos que hac
 A continuación, se detallan las piezas analizadas, sus materiales originales y los materiales propuestos como alternativas.
 
 \begin{itemize}
-    \item \textbf{Estructura arado:} 
+    \item \textbf{Estructura arado:}
+    \begin{itemize}
+        \item 
+    \end{itemize}
     \item \textbf{Buloneria:}
     \begin{itemize}
-        \item Material:AISI 1050 Steel, oil quenched \SI{845}{\celsius} (\si{1550}°F), \SI {540}{\celsius} (\si{1000}°F) temper, \SI{50}{\milli\metre} (2 in.) round
-        \item Restricciones: $\sigma_{y} \geqslant 516 MPa, Dureza > 248 HB, Costo < 5 USD/kg, E \geqslant 200 GPa$
+        \item Material:AISI 1050 Steel, oil quenched \SI{845}{\celsius} (\SI{1550}{\degree\text{F}}), \SI {540}{\celsius} (\SI{1000}{\degree\text{F}}) temper, \SI{50}{\milli\metre} (\SI{2}{\text{in}}) round
+        \item Restricciones: $\sigma_{y} \geqslant \SI{516}{\mega\pascal}, Dureza > 248 HB, Costo < \SI{5}{\text{USD}\per\kilogram}, E \geqslant \SI{200}{\giga\pascal}$
     \end{itemize}
     \item \textbf{Cincel:}
 \end{itemize}
+
+\section{Corroboración de los datos con el software.}
+
+Ya que en el trabajo final de grado no se especificaban todos los requerimientos de las piezas ni la composición exacta (o la más cercana), nosotros supusimos el peor de los casos para cada material, ya que la mayoría de las piezas repite materiales.
+
+\subsection{Peor caso para cada material.}
+
+Apoyandonos con Matweb, buscamos las propiedades mecánicas a mano de los aceros usados, ya que según el tratamiento térmico y las dimensiones con las que se los hizo cambian mínimamente dichas propiedades. A continuación, se detallan los peores casos que encontramos para cada material:
+
+\subsubsection{Acero SAE/AISI 1010.}
+
+\begin{itemize}
+    \item AISI 1010 Steel, cold drawn bar, \SIrange[range-phrase={ - }, range-units=single]{19}{32}{\milli\metre} (\SIrange[range-phrase={ - }, range-units=single]{0,75}{1,25}{\text{in}}) round or thickness.
+    \begin{itemize}
+        \item $\sigma_{y} = \SI{305}{\mega\pascal}$.
+        \item E $= \SI{200}{\giga\pascal}$.
+        \item Dureza = 105 HB.
+        \item Dureza = 108 HV (convertida desde HB).
+        \item Costo= \SIrange[range-phrase={ - }, range-units=single]{0,75}{0,78}{\text{USD}\per\kilogram}.
+        \item Densidad = \SI{7,87}{\gram\per\centi\metre\cubed} = \SI{7870}{\kilogram\per\cubic\metre}.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Acero SAE/AISI 1050}
+
+Acá tenemos que hacer un alto, ya que en CES Edupack no se encuentra el acero SAE/AISI 1045, por lo que hemos decidido usar el SAE/AISI 1050, que es un acero con un contenido de carbono más alto, por lo que sus propiedades mecánicas son mejores.
+
+\begin{itemize}
+    \item AISI 1050 Steel, oil quenched \SI{845}{\celsius} (\SI{1550}{\degree\text{F}}), \SI{540}{\celsius} (\SI{1000}{\degree\text{F}}) temper, \SI{50}{\milli\metre} (\SI{2}{\text{in}}) round.
+    \begin{itemize}
+        \item $\sigma_{y} = \SI{516}{\mega\pascal}$.
+        \item E $= \SI{200}{\giga\pascal}$.
+        \item Dureza = 248 HB.
+        \item Dureza = 261 HV (convertida desde HB).
+        \item Costo= \SIrange[range-phrase={ - }, range-units=single]{0,75}{0,78}{\text{USD}\per\kilogram}.
+        \item Densidad = \SI{7,87}{\gram\per\centi\metre\cubed} = \SI{7870}{\kilogram\per\cubic\metre}.
+    \end{itemize}
+\end{itemize}
+
+
 
 \end{document}
