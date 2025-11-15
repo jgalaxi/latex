@@ -63,7 +63,7 @@
 
 \section{Introducción.}
 
-En el presente trabajo se realizaron ensayos sobre hilo de acero SAE/AISI 1045 de \SI{0,9}{\milli\metre} de diámetro para el ensayo de termofluencia; y \SI{0,6}{\milli\metre} para el ensayo de tracción y el de termofluencia se uso un alambre de aluminio ER 4043 de \SI{1,6}{\milli\metre\diameter} (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
+En el presente trabajo se realizaron ensayos sobre hilo de acero SAE/AISI 1045 de \SI{0,9}{\milli\metre} de diámetro para el ensayo de termofluencia; y \SI{0,6}{\milli\metre} para el ensayo de tracción y un alambre de aluminio ER 4043 de \SI{1,6}{\milli\metre\diameter} (utilizado para ambos ensayos debido a que no se encontraron con alambres con secciones mas pequeñas). 
 
 Para poder medir, graficar y comparar las propiedades mecánicas de los diferentes materiales y la diferencias que existen entre materiales ferrosos y no ferrosos.
 
@@ -75,20 +75,20 @@ Para poder medir, graficar y comparar las propiedades mecánicas de los diferent
 
 Para poder realizar el ensayo de termofluencia se utilizó:
 \begin{itemize}
-    \item Una pistola de calor capaz de alcanzar temperaturas entre \SI{450}{\celsius} y \SI{500}{\celsius}.
+    \item dos pistolas de calor capaz de alcanzar temperaturas entre \SI{450}{\celsius} y \SI{500}{\celsius}.
     \item Pesas de \SI{2,5}{\kilogram}, \SI{5}{\kilogram} y \SI{10}{\kilogram}.
     \item Un soporte y unas agarraderas para poder mantener fijo el alambre en el momento de los ensayos.
     \item Una regla sujeta al soporte para poder medir la deformación.
     \item Una termocupla en un tester para poder medir la temperatura de la probeta.
-    \item Un marcador para dejar dos marcas bien medidas en la probeta.
     \item Un celular para grabar la deformacion de la probeta a tiempo real y otro que tome el tiempo.
+    \item un tubo de acero en donde colocar las probetas.
 \end{itemize}
 
 \subsubsection{Procedimiento.}
 
-Lo primero que se hace es colgar, marcar y medir la probeta, luego se precalienta la probeta durante 2 minutos, después de que pase el tiempo se empieza a grabar la probeta y se cuelgan las pesas a las agarraderas lentamente para no ejercer fuerza más rápido de lo necesario, mientras tanto la pistola sigue calentando entra las marcas de la probeta hasta que la misma se rompa.
+Lo primero que se hace es medir la probeta, pasarla por tubo de acero y sujetarlo al soporte, luego se precalienta la probeta durante 2 minutos haciendo pasar el calor con la pistola de calor por la parte de abajo del tubo, después de que pase el tiempo se empieza a grabar la probeta y se cuelgan las pesas a las agarraderas lentamente para no ejercer fuerza más rápido de lo necesario, mientras tanto la pistola sigue calentando desde abajo del tubo donde esta la probeta hasta que la misma se rompa.
 
-Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurarse de que todo se este realizando correctamente.
+Durante todo el proceso se toma el tiempo y se mide la temperatura para asegurarse de que todo se este realizando correctamente, y pasado un tiempo se cambia de pistola de calor para asegurarse de no romparla al usarla tanto tiempo.
 
 \subsection{Ensayo de tracción.}
 
@@ -217,7 +217,77 @@ Ahora se van a mostrar los resultados de un ensayo realizado al 1045.
 
 \subsection{Ensayo de termofluencia.}
 
-No fue posible realizar el ensayo de termofluencia con el alambre de aluminio, ya que la pistola de calor no podía estar encendida demasiado tiempo; por ende le tuvimos que poner demasiado peso y tardó en romperse alrededor de 20 minutos. Y el alambre no se estiro tanto como nosotros esperábamos, a su vez que no podemos tener las herramientas correctas para medir con exactitud, ni siquiera cerca. Con el acero pasó lo mismo, pero al ser un material ferroso la pistola de calor lo calentaba más rápido y pudimos hacer el ensayo en menos tiempo.
+Los resultados para la probeta de aluminio:
+
+\begin{itemize}
+    \item carga = \SI{16}{\kilo\gram}
+    \item temperatura = \SI{450}{\degreeCelsius}
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{$\varepsilon$ ($\%$)} & \textbf{Tiempo(Min)}\\
+        \midrule
+        0,90 & 2,5\\
+        1,24 & 9,5\\
+        1,57 & 11,5\\
+        1,91 & 15\\
+        2,47 & 21\\
+        3,37 & 23\\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultados del ensayo de termofluencia del aluminio ER4043.}
+\end{table}
+
+Y a partir de estos datos se realizo la grafica.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figuras/aluminio_termo.png}
+    \label{fig:termo_al}
+    \caption{Gráfica del ensayo de termofluencia del aluminio ER4043}
+\end{figure}
+
+Resultados de los ensayos para el acero AISI 1045
+
+\begin{itemize}
+    \item carga = \SI{25}{\kilo\gram}
+    \item temperatura = \SI{450}{\degreeCelsius}
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{$\varepsilon$ ($\%$)} & \textbf{Tiempo(Min)}\\
+        \midrule
+        0,31 & 1,00 \\
+        0,58 & 1,50\\
+        0,83 & 2,50\\
+        1,04 & 4,00\\
+        1,23 & 13,80\\
+        1,42 & 16,60\\
+        1,56 & 25,00\\
+        1,67 & 32,50\\
+        1,81 & 35,70\\
+        1,94 & 41,30\\
+        2,08 & 44,50\\
+        2,42 & 46,10\\
+        2,58 & 47,00\\
+        2,81 & 48,00\\
+        \bottomrule
+    \end{tabular}
+    \caption{Resultados del ensayo de termofluencia del acero AISI/SAE 1045.}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figuras/1045_termo.png}
+    \label{fig:termo_1045}
+    \caption{Gráfica del ensayo de termofluencia del acero AISI/SAE 1045.}
+\end{figure}
 
 \section{Comparando resultados.}
 
@@ -258,5 +328,19 @@ Valores obtenidos en el ensayo.
 \end{itemize}
 
 Comparando los valores obtenidos con los sacados de la hoja, da similires, pero pueden mostrar que el acero paso por un tratamiento termico antes de haber sido utilizado, probablemente de recocido.
+
+Con respecto a los ensayos de termofluencia no se encontraron ni datos ni graficos de ensayos de termofluencia para los materiales trabajados por lo cual no se pueden contrastar datos, pero todovia se pueden calcular valores con estos datos.
+
+\textbf{Propiedades del aluminio ER4043 obtenidas del ensayo.}
+
+\begin{itemize}
+    \item velocidad de fluencia = \SI{0.085}{\per\minute}
+\end{itemize}
+
+\textbf{Propiedades del  obtenidas del ensayo del acero AISI/SAE 1045.}
+
+\begin{itemize}
+    \item velocidad de fluencia = \SI{0.026}{\per\minute}
+\end{itemize}
 
 \end{document}
