@@ -186,7 +186,7 @@ En el trabajo de grado aparece el SAE 1045, Aquí tomamos los datos del CES Edup
         \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{600}{760}{\mega\pascal}.
     \end{itemize}
 \end{itemize}
-\subsubsection{Justificacion matemática del cambio de material:}
+\subsubsection{Justificacion matemática del cambio de material ferroso:}
 Según el criterio de estimación de tresca, la resistencia al corte es aproximadamente igual al 60 porciento de la resistencia a la tracción, entonces:
 
 \begin{equation}
@@ -209,4 +209,28 @@ Según el criterio de estimación de tresca, la resistencia al corte es aproxima
 \begin{equation}
     \sigma_{corte} \approx 0.60 \cdot 760 \, \text{MPa} = 456 \, \text{MPa}
 \end{equation}
+\subsubsection{Alternativa no ferrosa:}
+
+\begin{itemize}
+    \item Nickel-chromium alloy, INCONEL 671, annealed.
+    \begin{itemize}
+        \item Dureza = 170 - 200 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{79,8}{101}{\kilo\joule\per\meter\squared}.
+        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{16,9}{18,5}{\text{USD}\per\kilogram}.
+        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,92}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7920}{\kilogram\per\cubic\metre}.
+        \item Módulo de corte (Shear Modulus) = \SIrange[range-phrase={ - }, range-units=single]{80}{100}{\mega\pascal}.
+        \item Resistencia al corte = \SIrange[range-phrase={ - }, range-units=single]{462}{585}{\mega\pascal}.
+        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{770}{975}{\mega\pascal}.
+    \end{itemize}
+\end{itemize}
+
+Esta alternativa es mecanicamente viable, ya que supera al acero 1045 e inclusive al YS550 en resistencia al corte, pero su costo es mucho mayor, por lo que economicamente es peor, pero gracias a su diferencia en su resistencia se necesitara menos cantidad de material para llegar a los valores de exigencia. Esta aleacion es una alternativa interesante si lo que uni busca el la efficiencia mecanica o la reducción de peso por sobre el costo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/BulonesNF.png}
+    \caption{Diagrama N°2 de CES Edupack Para bulonería.}
+    \label{fig:NF}
+\end{figure}
+
 \end{document}
