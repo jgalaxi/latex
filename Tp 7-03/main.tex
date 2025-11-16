@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[15pt,a4paper]{article}
 
 \include{paquetes}
 
@@ -46,7 +46,8 @@ Entendemos que post-análisis y consulta las propiedades relevantes son:
         \item Coste.
         \item Densidad.
     \end{itemize}
-    \item \textbf{Buloneria:}
+    \item \textbf{Buloneria:}\\
+En el caso de la buloneria las propiedades a considerar estarán relacionadas con la resistencia al corte principalmente ya que es la solicitación predominante en este tipo de piezas.
     \begin{itemize}
         \item Módulo de corte. (G)
         \item Resistencia al corte. ($\tau_{y}$)
@@ -162,28 +163,50 @@ En el trabajo de grado aparece el SAE 1010, Aquí tomamos los datos del CES Edup
     \label{fig:IOP}
 \end{figure}
 
-\subsection{Reemplazo SAE/AISI 1045 - Acero SAE/AISI 1060.}
+\subsection{Reemplazo SAE/AISI 1045 - Acero de baja aleación YS550.}
 
-En el trabajo de grado aparece el SAE 1050, Aquí tomamos los datos del CES Edupack y elegimos el AISI 1060 ya que al tener propiedades mecánicas superiores, nos permite mantener y/o reducir donde es posible las dimensiones originales y obtener menos peso.
+En el trabajo de grado aparece el SAE 1045, Aquí tomamos los datos del CES Edupack y como no se encuentra elegimos el AISI 1050 como parámetro. Como los bulones estan sujeto a esfuerzos cortantes utilizamos el CES Edupack en el que minizamos el coste y densidad y lo analizamos contra el módulo de corte y encontramos este acero especial que mantiene los valores de modulo de corte y nos ofrece una resistencia al corte mayor.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{imagenes/1060solo.png}
+    \includegraphics[width=1\textwidth]{imagenes/bulones.png}
     \caption{Diagrama de CES Edupack Para bulonería.}
     \label{fig:1}
 \end{figure}
 
 \begin{itemize}
-    \item Carbon steel, AISI 1060, oil quenced and tempered at \SI{250}{\celsius}.
+    \item High strenght low alloy steel, YS550, hot rolled.
     \begin{itemize}
-        \item Dureza = 220 - 270 HV.
-        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{5,45}{14,5}{\kilo\joule\per\meter\squared}.
-        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,75}{0,78}{\text{USD}\per\kilogram}.
+        \item Dureza = 186 - 230 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{21,3}{41,9}{\kilo\joule\per\meter\squared}.
+        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,74}{0,77}{\text{USD}\per\kilogram}.
         \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
-        \item Módulo de corte (Shear Modulus) = \SIrange[range-phrase={ - }, range-units=single]{80}{85}{\mega\pascal}.
-        \item Resistencia ala corte = \SIrange[range-phrase={ - }, range-units=single]{700}{860}{\mega\pascal}.
-        \item Límite elástico = \SIrange[range-phrase={ - }, range-units=single]{700}{860}{\mega\pascal}.
+        \item Módulo de corte (Shear Modulus) = \SIrange[range-phrase={ - }, range-units=single]{77,1}{85,1}{\mega\pascal}.
+        \item Resistencia al corte = \SIrange[range-phrase={ - }, range-units=single]{360}{456}{\mega\pascal}.
+        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{600}{760}{\mega\pascal}.
     \end{itemize}
 \end{itemize}
+\subsubsection{Justificacion matemática del cambio de material:}
+Según el criterio de estimación de tresca, la resistencia al corte es aproximadamente igual al 60 porciento de la resistencia a la tracción, entonces:
 
+\begin{equation}
+    \sigma_{corte} \approx 0.60 \cdot \sigma_{tracción}
+\end{equation}
+
+\textbf{Resistencia al corte del acero SAE/AISI 1050:}
+
+\begin{equation}
+    \sigma_{corte} \approx 0.60 \cdot 570 \, \text{MPa} = 342 \, \text{MPa}
+\end{equation}
+\begin{equation}
+    \sigma_{corte} \approx 0.60 \cdot 705 \, \text{MPa} = 423 \, \text{MPa}
+\end{equation}
+\textbf{Resistencia al corte del acero YS550:}
+
+\begin{equation}
+    \sigma_{corte} \approx 0.60 \cdot 600 \, \text{MPa} = 360 \, \text{MPa}
+\end{equation}
+\begin{equation}
+    \sigma_{corte} \approx 0.60 \cdot 760 \, \text{MPa} = 456 \, \text{MPa}
+\end{equation}
 \end{document}
