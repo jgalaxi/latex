@@ -63,37 +63,37 @@ En el caso de la buloneria las propiedades a considerar estarán relacionadas co
     \end{itemize}
 \end{itemize}
 
+Con el coste pasa algo curioso que merece la pena mencionar, ya que en el trabajo de grado no se especifica un coste máximo para cada pieza, por lo que nosotros hemos decidido tomar como referencia el coste del material original y buscar materiales alternativos que tengan un coste similar o menor, pero esto no es posible.
+
+La mayoría de los aceros (ferrosos) tienen un coste muy similar, pero cuando buscamos materiales no ferrosos, el coste se dispara, por lo que en esos casos hemos decidido priorizar las propiedades mecánicas y la densidad por sobre el coste.
+
+Como se puede apreciar en \autoref{fig:costo}, los materiales ferrosos tienen un coste mucho menor que los no ferrosos, por lo que en la mayoría de los casos hemos decidido quedarnos con materiales ferrosos. Y esos son los únicos que cumplen con nuestras exigencias de coste.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=1\textwidth]{imagenes/image copy.png}
+    \caption{Costo de las distintas familias de materiales.}
+    \label{fig:costo}
+\end{figure}
+
 \section{Corroboración de los datos con el software.}
 
 Ya que en el trabajo final de grado no se especificaban todos los requerimientos de las piezas ni la composición exacta (o la más cercana), nosotros supusimos el peor de los casos para cada material, ya que la mayoría de las piezas repite materiales.
 
 \subsection{Peor caso para cada material.}
 
-Apoyandonos con Matweb, buscamos las propiedades mecánicas a mano de los aceros usados, ya que según el tratamiento térmico y las dimensiones con las que se los hizo cambian mínimamente dichas propiedades. A continuación, se detallan los peores casos que encontramos para cada material:
+Para el peor caso de cada material, vamos a tomar valores que estén en CES Edupack, y no los que están en matweb, ya que en varios casos Matweb no tiene datos completos de todos los materiales, y en CES Edupack sí.
 
 \subsubsection{Acero SAE/AISI 1010.}
 
 \begin{itemize}
-    \item AISI 1010 Steel, cold drawn bar, \SIrange[range-phrase={ - }, range-units=single]{19}{32}{\milli\metre} (\SIrange[range-phrase={ - }, range-units=single]{0,75}{1,25}{\text{in}}) round or thickness.
+    \item Carbon Steel, AISI 1010, annealed.
     \begin{itemize}
-        \item $\sigma_{y} = \SI{305}{\mega\pascal}$.
-        \item E $= \SI{200}{\giga\pascal}$.
-        \item Dureza = 105 HB.
-        \item Dureza = 108 HV (convertida desde HB).
+        \item $\sigma_{y} = \SI{172}{\mega\pascal}$.
+        \item E $= \SI{205}{\giga\pascal}$.
+        \item Dureza = 88 HV.
         \item Costo= \SIrange[range-phrase={ - }, range-units=single]{0,75}{0,78}{\text{USD}\per\kilogram}.
-        \item Densidad = \SI{7,87}{\gram\per\centi\metre\cubed} = \SI{7870}{\kilogram\per\cubic\metre}.
-    \end{itemize}
-\end{itemize}
-
-
-
-\begin{itemize}
-    \item Acero dual phase 980 LCe YS600 endurecido en frio (cold rolled).
-    \begin{itemize}
-        \item Dureza = 290 - 323 HV.
-        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{26,8}{53,1}{\kilo\joule\per\meter\squared}.
-        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,81}{0,85}{\text{USD}\per\kilogram}.
-        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
+        \item Densidad = \SI{7,8}{\gram\per\centi\metre\cubed} = \SI{7800}{\kilogram\per\cubic\metre}.
     \end{itemize}
 \end{itemize}
 
@@ -102,30 +102,27 @@ Apoyandonos con Matweb, buscamos las propiedades mecánicas a mano de los aceros
 Acá tenemos que hacer un alto, ya que en CES Edupack no se encuentra el acero SAE/AISI 1045, por lo que hemos decidido usar el SAE/AISI 1050, que es un acero con un contenido de carbono más alto, por lo que sus propiedades mecánicas son mejores.
 
 \begin{itemize}
-    \item AISI 1050 Steel, oil quenched \SI{845}{\celsius} (\SI{1550}{\degree\text{F}}), \SI{540}{\celsius} (\SI{1000}{\degree\text{F}}) temper, \SI{50}{\milli\metre} (\SI{2}{\text{in}}) round.
+    \item Carbon Steel, AISI 1050, oil quenched \& tempered at \SI{540}{\celsius}.
     \begin{itemize}
-        \item $\sigma_{y} = \SI{516}{\mega\pascal}$.
-        \item E $= \SI{200}{\giga\pascal}$.
-        \item Dureza = 248 HB.
-        \item Dureza = 261 HV (convertida desde HB).
+        \item $\sigma_{y} = \SI{520}{\mega\pascal}$.
+        \item E $= \SI{208}{\giga\pascal}$.
+        \item Dureza = 240 HV.
         \item Costo= \SIrange[range-phrase={ - }, range-units=single]{0,75}{0,78}{\text{USD}\per\kilogram}.
-        \item Densidad = \SI{7,87}{\gram\per\centi\metre\cubed} = \SI{7870}{\kilogram\per\cubic\metre}.
+        \item Densidad = \SI{7,8}{\gram\per\centi\metre\cubed} = \SI{7800}{\kilogram\per\cubic\metre}.
     \end{itemize}
 \end{itemize}
-
-
 
 \subsubsection{Acero aleado SAE 94B30.}
 
 Con este acero pasa lo mismo que con el anterior, no se encuentra en CES Edupack, en el trabajo de grado aparece el SAE 9620; por lo que hemos decidido usar un acero aleado (SAE 94B30) con propiedades similares. Aquí vamos a tomar los datos del CES Edupack.
 
 \begin{itemize}
-    \item Low alloy steel, AISI 94B30, oil quenched and tempered at \SI{650}{\celsius}.\\
+    \item Low alloy steel, AISI 94B30, oil quenched \& tempered at \SI{650}{\celsius}.
     \begin{itemize}
-        \item Dureza = 228 - 283 HV.
-        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{11}{27,4}{\kilo\joule\per\meter\squared}.
+        \item Dureza = 228 HV.
+        \item Tenacidad = \SI{11}{\kilo\joule\per\meter\squared}.
         \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,83}{0,87}{\text{USD}\per\kilogram}.
-        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
+        \item Densidad\footnote{Note que pusimos las mismas densidades en los 3 distintos aceros, esto no es coincidencia, ya que lo poco que varía es por el contenido de aleantes. A fines prácticos, hemos decidido que sea igual para todos ellos.} = \SI{7,8}{\gram\per\centi\metre\cubed} = \SI{7800}{\kilogram\per\cubic\metre}.
     \end{itemize}
 \end{itemize}
 
@@ -133,26 +130,106 @@ Con este acero pasa lo mismo que con el anterior, no se encuentra en CES Edupack
 
 Ahora procedemos a reemplazar los aceros que aparecen en la tesis por los que hemos seleccionado, justificando cada elección con los diagramas de Ashby.
 
-\subsection{Reemplazo de SAE/AISI 1010 - acero laminado YS600}
+\subsection{Reemplazo de SAE/AISI 1010 - acero laminado YS600.}
 
-En el trabajo de grado aparece el SAE 1010, Aquí tomamos los datos del CES Edupack y de AcerorMittal y encontramos el YS600, este acero es muy util para piezas estructurales de automotores gracias a que tiene una resistencia a la tracción de \SI{980}{\mega\pascal}.
+En el trabajo de grado aparece el SAE 1010, aquí tomamos los datos del CES Edupack y de AcerorMittal y encontramos el YS600, este acero es muy útil para piezas estructurales de automotores gracias a que tiene una resistencia a la tracción de \SI{980}{\mega\pascal} como mínimo.
+
+Otro buen candidato era el acero YS260 (por su costo, \SIrange[range-phrase={ - }, range-units=single]{0,74}{0,77}{\text{USD}\per\kilogram}) pero sus propiedades mecánicas son mucho menores, por lo que optamos por el YS600.
+
+\begin{itemize}
+    \item \textit{Dual phase steel, YS600, cold rolled}.
+    \begin{itemize}
+        \item Dureza = 290 - 323 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{26,8}{53,1}{\kilo\joule\per\meter\squared}.
+        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,81}{0,85}{\text{USD}\per\kilogram}.
+        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
+    \end{itemize}
+\end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{imagenes/YS600.png}
-    \caption{Diagrama de CES Edupack Para la estructura.}
+    \includegraphics[width=1\textwidth]{imagenes/image.png}
+    \caption{Diagrama de CES Edupack para la estructura.}
     \label{fig:ab}
+\end{figure}
+
+Con esto corroboramos que el acero YS600 cumple con todas las expectativas mínimas, ya que tiene un precio parecido al SAE 1010, una densidad similar (como pasa en la mayoría de los aceros) y mejores propiedades mecánicas.
+
+\subsection{Reemplazo de SAE/AISI 1010 - aleación Ni-Fe-Cr Incoloy 801 envejecida.}
+
+Aunque esta aleación contiene Fe, es no ferrosa, ya que la base es el Ni, no el hierro. Con esto en mente, procedemos a mencionar las propiedades.
+
+\begin{itemize}
+    \item \textit{Nickel-Fe-Cr alloy, INCOLOY 801, aged}.
+    \begin{itemize}
+        \item Dureza = 190 - 230 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{134}{166}{\kilo\joule\per\meter\squared}.
+        \item Costo\footnote{Recordemos que el precio es el más bajo posible, para cumplir la consigna del trabajo.} = \SIrange[range-phrase={ - }, range-units=single]{7,99}{9,08}{\text{USD}\per\kilogram}.
+        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,85}{8,05}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7850}{8050}{\kilogram\per\cubic\metre}.
+    \end{itemize}
+\end{itemize}
+
+Viendo la \autoref{fig:costo} y la \autoref{fig:ab} se ve el porqué elegimos este material no ferroso, ya que cumple con las propiedades mecánicas y de densidad, pero su costo es mucho mayor (aunque el más bajo saliendo de los ferrosos), por lo que no es una opción viable económicamente hablando, pero si se busca un material no ferroso, esta es la mejor opción.
+
+\subsection{Reemplazo SAE/AISI 1045 - Acero al carbono SAE/AISI 1095.}
+
+En el trabajo de grado aparece el SAE 1045, aquí tomamos los datos del CES Edupack y como no se encuentra elegimos el AISI 1050 como parámetro. Como los bulones estan sujeto a esfuerzos cortantes utilizamos el CES Edupack en el que minizamos el coste y densidad y lo analizamos contra el módulo de corte y encontramos este acero especial que mantiene los valores de modulo de corte y nos ofrece una resistencia al corte mayor.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/bulones.png}
+    \caption{Diagrama de CES Edupack para bulonería.}
+    \label{fig:1}
+\end{figure}
+
+\begin{itemize}
+    \item \textit{Carbon steel, AISI 1095, water quenched \& tempered at \SI{205}{\celsius}}.
+    \begin{itemize}
+        \item Dureza = 550 - 650 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{3,76}{10,8}{\kilo\joule\per\meter\squared}.
+        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,74}{0,77}{\text{USD}\per\kilogram}.
+        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
+        \item Módulo de corte (Shear Modulus) = \SIrange[range-phrase={ - }, range-units=single]{77}{84}{\giga\pascal}.
+        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{940}{1160}{\mega\pascal}.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Reemplazo SAE/AISI 1045 - Aleación Ni-Cr, INCONEL 706, recocido.}
+
+Pasa lo mismo que con el caso de reemplazo del SAE 1010, esta aleación contiene Fe, pero es no ferroso, ya que la base es el Ni, no el hierro. Y a su vez, el costo (comparado con los ferrosos) es mucho mayor.
+
+\begin{itemize}
+    \item \textit{Nickel-chromium alloy, INCONEL 706, annealed}.
+    \begin{itemize}
+        \item Dureza = 330 - 400 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{64,3}{79,4}{\kilo\joule\per\meter\squared}.
+        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{9,93}{11,3}{\text{USD}\per\kilogram}.
+        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{8}{8,15}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{8000}{8150}{\kilogram\per\cubic\metre}.
+        \item Módulo de corte (Shear Modulus) = \SIrange[range-phrase={ - }, range-units=single]{75}{85}{\giga\pascal}.
+        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{900}{1110}{\mega\pascal}.
+    \end{itemize}
+\end{itemize}
+
+En la \autoref{fig:1} se puede ver que esta aleación cumple con las propiedades mecánicas y de densidad, pero su costo es mucho mayor (aunque el más bajo saliendo de los ferrosos, \autoref{fig:2}), por lo que no es una opción viable económicamente hablando, pero si se busca un material no ferroso, esta es la mejor opción.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{imagenes/image copy 2.png}
+    \caption{Diagrama de costo de aleaciones ferrosas y no ferrosas.}
+    \label{fig:2}
 \end{figure}
 
 \subsection{Reemplazo Acero aleado SAE 94B30 - AISI 9255}
 
 \begin{itemize}
-    \item Low alloy steel, AISI 9255, oil quenched and tempered at \SI{205}{\celsius}.
+    \item \textit{Low alloy steel, AISI 9255, oil quenched \& tempered at \SI{205}{\celsius}}.
     \begin{itemize}
         \item Dureza = 540 - 660 HV.
-        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{1}{5.04}{\kilo\joule\per\meter\squared}.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{1,07}{5,02}{\kilo\joule\per\meter\squared}.
         \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,77}{0,81}{\text{USD}\per\kilogram}.
         \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
+        \item Módulo flector (Flexural Modulus) = \SIrange[range-phrase={ - }, range-units=single]{206}{216}{\giga\pascal}.
+        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{1890}{2320}{\mega\pascal}.
     \end{itemize}
 \end{itemize}
 
@@ -163,74 +240,65 @@ En el trabajo de grado aparece el SAE 1010, Aquí tomamos los datos del CES Edup
     \label{fig:IOP}
 \end{figure}
 
-\subsection{Reemplazo SAE/AISI 1045 - Acero de baja aleación YS550.}
-
-En el trabajo de grado aparece el SAE 1045, Aquí tomamos los datos del CES Edupack y como no se encuentra elegimos el AISI 1050 como parámetro. Como los bulones estan sujeto a esfuerzos cortantes utilizamos el CES Edupack en el que minizamos el coste y densidad y lo analizamos contra el módulo de corte y encontramos este acero especial que mantiene los valores de modulo de corte y nos ofrece una resistencia al corte mayor.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{imagenes/bulones.png}
-    \caption{Diagrama de CES Edupack Para bulonería.}
-    \label{fig:1}
-\end{figure}
+\subsection{Reemplazo Acero aleado SAE 94B30 - aleación de níquel.}
 
 \begin{itemize}
-    \item High strenght low alloy steel, YS550, hot rolled.
+    \item \textit{Nickel-magnetic alloy, 49Ni-Fe, Alloy 2B, cold rolled, soft}.
     \begin{itemize}
-        \item Dureza = 186 - 230 HV.
-        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{21,3}{41,9}{\kilo\joule\per\meter\squared}.
-        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{0,74}{0,77}{\text{USD}\per\kilogram}.
-        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,9}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7900}{\kilogram\per\cubic\metre}.
-        \item Módulo de corte (Shear Modulus) = \SIrange[range-phrase={ - }, range-units=single]{77,1}{85,1}{\giga\pascal}.
-        \item Resistencia al corte = \SIrange[range-phrase={ - }, range-units=single]{360}{456}{\mega\pascal}.
-        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{600}{760}{\mega\pascal}.
-    \end{itemize}
-\end{itemize}
-\subsubsection{Justificacion matemática del cambio de material ferroso:}
-Según el criterio de estimación de tresca, la resistencia al corte es aproximadamente igual al 60 porciento de la resistencia a la tracción, entonces:
-
-\begin{equation}
-    \sigma_{corte} \approx 0.60 \cdot \sigma_{tracción}
-\end{equation}
-
-\textbf{Resistencia al corte del acero SAE/AISI 1050:}
-
-\begin{equation}
-    \sigma_{corte} \approx 0.60 \cdot 570 \, \text{MPa} = 342 \, \text{MPa}
-\end{equation}
-\begin{equation}
-    \sigma_{corte} \approx 0.60 \cdot 705 \, \text{MPa} = 423 \, \text{MPa}
-\end{equation}
-\textbf{Resistencia al corte del acero YS550:}
-
-\begin{equation}
-    \sigma_{corte} \approx 0.60 \cdot 600 \, \text{MPa} = 360 \, \text{MPa}
-\end{equation}
-\begin{equation}
-    \sigma_{corte} \approx 0.60 \cdot 760 \, \text{MPa} = 456 \, \text{MPa}
-\end{equation}
-\subsubsection{Alternativa no ferrosa:}
-
-\begin{itemize}
-    \item Nickel-chromium alloy, INCONEL 671, annealed.
-    \begin{itemize}
-        \item Dureza = 170 - 200 HV.
-        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{79,8}{101}{\kilo\joule\per\meter\squared}.
-        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{16,9}{18,5}{\text{USD}\per\kilogram}.
-        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{7,8}{7,92}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{7800}{7920}{\kilogram\per\cubic\metre}.
-        \item Módulo de corte (Shear Modulus) = \SIrange[range-phrase={ - }, range-units=single]{80}{100}{\giga\pascal}.
-        \item Resistencia al corte = \SIrange[range-phrase={ - }, range-units=single]{462}{585}{\mega\pascal}.
-        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{770}{975}{\mega\pascal}.
+        \item Dureza = 180 - 230 HV.
+        \item Tenacidad = \SIrange[range-phrase={ - }, range-units=single]{10,5}{13}{\kilo\joule\per\meter\squared}.
+        \item Costo = \SIrange[range-phrase={ - }, range-units=single]{11,2}{12,6}{\text{USD}\per\kilogram}.
+        \item Densidad = \SIrange[range-phrase={ - }, range-units=single]{8,15}{8,35}{\gram\per\centi\metre\cubed} = \SIrange[range-phrase={ - }, range-units=single]{8150}{8350}{\kilogram\per\cubic\metre}.
+        \item Módulo flector (Flexural Modulus) = \SIrange[range-phrase={ - }, range-units=single]{200}{210}{\giga\pascal}.
+        \item Resistencia a la tracción = \SIrange[range-phrase={ - }, range-units=single]{740}{915}{\mega\pascal}.
     \end{itemize}
 \end{itemize}
 
-Esta alternativa es mecanicamente viable, ya que supera al acero 1045 e inclusive al YS550 en resistencia al corte, pero su costo es mucho mayor, por lo que economicamente es peor, pero gracias a su diferencia en su resistencia se necesitara menos cantidad de material para llegar a los valores de exigencia. Esta aleacion es una alternativa interesante si lo que uni busca el la efficiencia mecanica o la reducción de peso por sobre el costo.
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{imagenes/BulonesNF.png}
-    \caption{Diagrama N°2 de CES Edupack Para bulonería.}
-    \label{fig:NF}
+    \includegraphics[width=1\textwidth]{imagenes/image copy 3.png}
+    \caption{Diagrama de costo de aleaciones ferrosas y no ferrosas.}
+    \label{fig:3}
 \end{figure}
+
+Como se ve, en la \autoref{fig:3} esta aleación vale bastante más, pero si nos fijamos en la \autoref{fig:IOP} no llega al nivel que el acero 9255, por lo que (aunque sea el no ferroso más barato) conviene usar el acero 9255, ya que las propiedades mecánicas son bastante mejores que la de la aleación de níquel.
+
+\section{Justificacion matemática del cambio de material ferroso (Caso 1045):}
+
+Según el criterio de estimación de tresca, la resistencia al corte es aproximadamente igual al 60 por ciento de la resistencia a la tracción, entonces:
+
+\begin{equation}
+    \sigma_{corte} = 0,6 \cdot \sigma_{tracci\acute{o}n}
+\end{equation}
+
+\paragraph{Resistencia al corte del acero SAE/AISI 1050:}
+
+\begin{equation}
+    \sigma_{corte} = 0,6 \cdot \SI{785}{\mega\pascal} = \SI{471}{\mega\pascal}
+\end{equation}
+
+\begin{equation}
+    \sigma_{corte} = 0,6 \cdot \SI{970}{\mega\pascal} = \SI{582}{\mega\pascal}
+\end{equation}
+
+\paragraph{Resistencia al corte del acero 1095:}
+
+\begin{equation}
+    \sigma_{corte} = 0,6 \cdot \SI{1340}{\mega\pascal} = \SI{804}{\mega\pascal}
+\end{equation}
+
+\begin{equation}
+    \sigma_{corte} = 0,6 \cdot \SI{1640}{\mega\pascal} = \SI{984}{\mega\pascal}
+\end{equation}
+
+\paragraph{Resistencia al corte del INCONEL 706:}
+
+\begin{equation}
+    \sigma_{corte} = 0,6 \cdot \SI{1170}{\mega\pascal} = \SI{702}{\mega\pascal}
+\end{equation}
+
+\begin{equation}
+    \sigma_{corte} = 0,6 \cdot \SI{1450}{\mega\pascal} = \SI{870}{\mega\pascal}
+\end{equation}
 
 \end{document}
